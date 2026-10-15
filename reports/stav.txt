@@ -20,24 +20,23 @@ Degen [INJURED] $913.22 (-8.68 %) | obchodů 5, úspěšnost 20 %, PF 0.19, max 
    2026-10-15T12:24 HELLCAT·Bwfh: -50.46 $ (-99.9 %) RUG PULL - likvidita zmizela
    2026-10-15T13:20 PONK·4jjQ: -14.89 $ (-29.5 %) stop-loss
 
-Lovec [ALIVE] $997.06 (-0.29 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.0 %, poplatky $1.5
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1018 (-6.4 %) - skóre 1.8
-   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.006444 (+5.0 %) - skóre 1.4
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.0614787 (+0.0 %) - skóre 1.9
+Lovec [ALIVE] $1009.16 (+0.92 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.1 %, poplatky $1.5
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1047 (-3.7 %) - skóre 1.8
+   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.00699 (+13.9 %) - skóre 1.4
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06181 (+0.5 %) - skóre 1.9
 
-Stín [ALIVE] $1002.75 (+0.27 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.83
-   otevřeno ADA/USD: nákup 0.222361, teď 0.22565 (+1.5 %) - sestupný trend, -5.3 % za 24 h
-   otevřeno AVAX/USD: nákup 9.64493, teď 9.76774 (+1.3 %) - sestupný trend, -5.2 % za 24 h
-   otevřeno BCH/USD: nákup 262.205, teď 262.074 (-0.0 %) - sestupný trend, -4.1 % za 24 h
+Stín [ALIVE] $1001.61 (+0.16 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.83
+   otevřeno ADA/USD: nákup 0.222361, teď 0.225805 (+1.5 %) - sestupný trend, -5.3 % za 24 h
+   otevřeno AVAX/USD: nákup 9.64493, teď 9.7305 (+0.9 %) - sestupný trend, -5.2 % za 24 h
+   otevřeno BCH/USD: nákup 262.205, teď 261.757 (-0.2 %) - sestupný trend, -4.1 % za 24 h
    2026-10-15T13:00 AAVE/USD: -4.03 $ (-1.4 %) stop-loss
 
-Věštec [ALIVE] $996.40 (-0.36 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.32
-   otevřeno PM2589812·NO: nákup 0.29, teď 0.26 (-10.3 %) - Grok 62% vs trh 72% (medium)
+Věštec [ALIVE] $998.59 (-0.14 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.32
+   otevřeno PM2589812·NO: nákup 0.29, teď 0.28 (-3.4 %) - Grok 62% vs trh 72% (medium)
 
-CELKEM $9907.99 z $10000 (-0.92 %)
+CELKEM $9921.14 z $10000 (-0.79 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-15T10:48:12+00:00 🎰 Degen (simulace) koupil Nihilism·AkqN za $50, likvidita $34,969 - https://dexscreener.com/solana/2jtmzjecl9bb9zwglseakw4zvgcl61wdjno
    2026-10-15T10:52:11+00:00 🔻 Degen (simulace) prodal Nihilism·AkqN: -23.74 $ (-47 %) - stop-loss
    2026-10-15T11:28:22+00:00 🎰 Degen (simulace) koupil SYCAMORE·3EC7 za $50, likvidita $91,750 - https://dexscreener.com/solana/5cx7awh9czi1vkk2sfabfcszyvbytf7kbex
    2026-10-15T11:30:11+00:00 🔻 Degen (simulace) prodal SYCAMORE·3EC7: -17.98 $ (-36 %) - stop-loss
@@ -53,5 +52,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-15T13:01:12+00:00 🐻 Stín (simulace) otevřel short BCH/USD za $266 @ 262.074, stop 271.909 - sestupný trend, -4.1 % za 24 h
    2026-10-15T13:20:18+00:00 🔻 Degen (simulace) prodal PONK·4jjQ: -14.89 $ (-29 %) - stop-loss
    2026-10-15T13:32:17+00:00 🏹 Lovec (simulace) koupil CATE·Ai66 za $100, likvidita $2,758,034 - https://dexscreener.com/solana/hmzvseemtzhhvznw9uwbag85hctmfnkbhzu
+   2026-10-15T13:35:28+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, SDST, DKI, CCC, HODO, WFF, GP, DRMA, WETO, SXTC, KORU
 
 VĚŠTEC: 5 odhadů z posledního skenu
