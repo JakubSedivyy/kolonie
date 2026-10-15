@@ -1,0 +1,60 @@
+Please make sure you have the correct access rights
+and the repository exists.
+2026-10-15T09:08:26Z fetch selhal (repozitář nebo deploy key ještě nejsou nastavené?)
+Memec sell DOGE/USD nevyplněn, zkusím znovu
+radar fear_greed: offline
+radar gdelt: offline
+radar 4chan_biz: offline
+radar stocktwits: offline
+radar hackernews: offline
+radar google_news: offline
+OK test_wallet_round_trip_costs
+OK test_survival_rules
+OK test_orbit_breakout_and_flatten
+OK test_trend_and_meme_run_and_pay_fees
+OK test_death_in_crash
+OK test_rejected_sell_keeps_position
+OK test_degen_buys_then_rug
+OK test_hunter_only_trending_established
+OK test_whisper_needs_two_sources
+OK test_bear_buys_inverse_etf_when_market_falls
+OK test_shadow_short_profits_when_coin_falls
+OK test_video_helpers
+🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+🟢 Memec KOUPIL DOGE/USD za $100.45 @ 114.098 (objem 11.0x průměru, nové 2h maximum)
+🔻 Memec PRODAL DOGE/USD: -13.03 $ (-13.0 %) - stop-loss
+🟢 Memec KOUPIL DOGE/USD za $247.86 @ 114.098 (objem 11.0x průměru, nové 2h maximum)
+🔻 Memec PRODAL DOGE/USD: -13.94 $ (-5.6 %) - stop-loss
+OK test_live_colony_ticks
+OK test_social_sources
+OK test_trend_radar
+OK test_meme_prefers_hyped_coin
+OK test_wave_swing
+OK test_dashboard_requires_password
+OK test_grok_budget_and_parsing
+OK test_oracle_bets_and_resolves
+OK test_lab_params_apply
+== 1/5 Systémové balíčky
+== 2/5 Python knihovny
+== 3/5 Nastavení
+Memec sell DOGE/USD nevyplněn, zkusím znovu
+radar fear_greed: offline
+radar gdelt: offline
+radar 4chan_biz: offline
+radar stocktwits: offline
+radar hackernews: offline
+radar google_news: offline
+Testy OK
+== 4/5 Služba, která běží nonstop a sama se restartuje
+== 5/5 Dashboard s HTTPS (Caddy + adresa zdarma přes sslip.io)
+
+Hotovo. Kolonie běží.
+
+  DASHBOARD:  https://37-27-159-131.sslip.io
+  jméno: cokoliv   heslo: qRCT8YGa4uolGR4I
+  (první načtení může trvat minutu, než se vystaví HTTPS certifikát)
+
+  Živý log:        journalctl -u colony -f
+  Zastavit:        sudo systemctl stop colony
+  Znovu spustit:   sudo systemctl restart colony
+2026-10-15T09:15:50Z nasazena verze 2f45b3c: Dashboard: detail každého bota se svíčkovým grafem, oprava připojení ke GitHubu
