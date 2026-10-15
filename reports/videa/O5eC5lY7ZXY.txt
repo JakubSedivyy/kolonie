@@ -1,0 +1,14 @@
+URL: https://www.youtube.com/watch?v=O5eC5lY7ZXY
+Název: ?
+Kanál: ?
+Délka: 0 min
+Jazyk přepisu: žádný
+
+POPIS:
+
+
+PŘEPIS:
+
+
+[nepodařilo se stáhnout]
+ERROR: [youtube] O5eC5lY7ZXY: Sign in to confirm you’re not a bot. Use --cookies-from-browser or --cookies for the authentication. See  https://github.com/yt-dlp/yt-dlp/wiki/FAQ#how-do-i-pass-cookies-to-yt-dlp  for how to manually pass cookies. Also see  https://github.com/yt-dlp/yt-dlp/wiki/Extractors#exporting-youtube-cookies  for tips on effectively exporting YouTube cookies

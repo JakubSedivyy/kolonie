@@ -11,27 +11,26 @@ Vlna [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max prop
 
 Šeptač [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen [ALIVE] $998.27 (-0.17 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.3 %, poplatky $0.5
-   otevřeno STREAM·9a98: nákup 0.00472564, teď 0.004614 (-2.4 %) - skóre 5.6
+Medvěd [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $998.19 (-0.18 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $1.0
+Degen [ALIVE] $995.53 (-0.45 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.3 %, poplatky $0.5
+   otevřeno STREAM·9a98: nákup 0.00472564, teď 0.004355 (-7.8 %) - skóre 5.6
+
+Lovec [ALIVE] $998.11 (-0.19 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $1.0
    otevřeno STONK·6GmA: nákup 0.108777, teď 0.1074 (-1.3 %) - skóre 1.8
-   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.006167 (+0.5 %) - skóre 1.4
+   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.006162 (+0.4 %) - skóre 1.4
 
-Věštec [ALIVE] $994.22 (-0.58 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.6 %, poplatky $0.32
-   otevřeno PM2589812·NO: nákup 0.29, teď 0.24 (-17.2 %) - Grok 62% vs trh 72% (medium)
+Stín [ALIVE] $999.09 (-0.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.5
+   otevřeno AAVE/USD: nákup 150.875, teď 150.8 (-0.0 %) - sestupný trend, -5.4 % za 24 h
+   otevřeno ADA/USD: nákup 0.222361, teď 0.22225 (-0.0 %) - sestupný trend, -5.3 % za 24 h
+   otevřeno AVAX/USD: nákup 9.64493, teď 9.64011 (-0.0 %) - sestupný trend, -5.2 % za 24 h
 
-CELKEM $7990.35 z $8000 (-0.12 %)
+Věštec [ALIVE] $995.31 (-0.47 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.6 %, poplatky $0.32
+   otevřeno PM2589812·NO: nákup 0.29, teď 0.25 (-13.8 %) - Grok 62% vs trh 72% (medium)
+
+CELKEM $9987.71 z $10000 (-0.12 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-15T06:44:16+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-15T06:44:27+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
-   2026-10-15T07:14:00+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Degen, Věštec. Příkazy: /stav /pauza /pokracuj /prodej_vse /hodn
-   2026-10-15T07:14:00+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-15T07:14:01+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
-   2026-10-15T07:38:14+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Degen, Lovec, Věštec. Příkazy: /stav /pauza /pokracuj /p
    2026-10-15T07:38:25+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
    2026-10-15T07:38:26+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
@@ -43,5 +42,12 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-15T09:01:28+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
    2026-10-15T09:01:30+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-10-15T09:15:50+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen, Lovec, Stín, Věštec. Příkazy: /stav /pauz
+   2026-10-15T09:15:50+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-10-15T09:15:52+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $293 @ 150.8, stop 155.947 - sestupný trend, -5.4 % za 24 h
+   2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short ADA/USD za $275 @ 0.22225, stop 0.230344 - sestupný trend, -5.3 % za 24 h
+   2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $262 @ 9.64011, stop 10.0079 - sestupný trend, -5.2 % za 24 h
 
 VĚŠTEC: 5 odhadů z posledního skenu

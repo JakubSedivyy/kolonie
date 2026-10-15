@@ -1,6 +1,27 @@
-Please make sure you have the correct access rights
-and the repository exists.
-2026-10-15T09:08:26Z fetch selhal (repozitář nebo deploy key ještě nejsou nastavené?)
+radar fear_greed: offline
+radar gdelt: offline
+radar 4chan_biz: offline
+radar stocktwits: offline
+radar hackernews: offline
+radar google_news: offline
+Testy OK
+== 4/5 Služba, která běží nonstop a sama se restartuje
+== 5/5 Dashboard s HTTPS (Caddy + adresa zdarma přes sslip.io)
+
+Hotovo. Kolonie běží.
+
+  DASHBOARD:  https://37-27-159-131.sslip.io
+  jméno: cokoliv   heslo: qRCT8YGa4uolGR4I
+  (první načtení může trvat minutu, než se vystaví HTTPS certifikát)
+
+  Živý log:        journalctl -u colony -f
+  Zastavit:        sudo systemctl stop colony
+  Znovu spustit:   sudo systemctl restart colony
+2026-10-15T09:15:50Z nasazena verze 2f45b3c: Dashboard: detail každého bota se svíčkovým grafem, oprava připojení ke GitHubu
+remote: 
+remote: Create a pull request for 'reports' on GitHub by visiting:        
+remote:      https://github.com/JakubSedivyy/kolonie/pull/new/reports        
+remote: 
 Memec sell DOGE/USD nevyplněn, zkusím znovu
 radar fear_greed: offline
 radar gdelt: offline
@@ -34,27 +55,6 @@ OK test_dashboard_requires_password
 OK test_grok_budget_and_parsing
 OK test_oracle_bets_and_resolves
 OK test_lab_params_apply
-== 1/5 Systémové balíčky
-== 2/5 Python knihovny
-== 3/5 Nastavení
-Memec sell DOGE/USD nevyplněn, zkusím znovu
-radar fear_greed: offline
-radar gdelt: offline
-radar 4chan_biz: offline
-radar stocktwits: offline
-radar hackernews: offline
-radar google_news: offline
-Testy OK
-== 4/5 Služba, která běží nonstop a sama se restartuje
-== 5/5 Dashboard s HTTPS (Caddy + adresa zdarma přes sslip.io)
-
-Hotovo. Kolonie běží.
-
-  DASHBOARD:  https://37-27-159-131.sslip.io
-  jméno: cokoliv   heslo: qRCT8YGa4uolGR4I
-  (první načtení může trvat minutu, než se vystaví HTTPS certifikát)
-
-  Živý log:        journalctl -u colony -f
-  Zastavit:        sudo systemctl stop colony
-  Znovu spustit:   sudo systemctl restart colony
-2026-10-15T09:15:50Z nasazena verze 2f45b3c: Dashboard: detail každého bota se svíčkovým grafem, oprava připojení ke GitHubu
+2026-10-15T09:30:51Z nasazena verze 8f8eb1b: Hlášení ze serveru bez hesel a bez výpisu testů
+eynxyoKgpng chyba
+O5eC5lY7ZXY chyba
