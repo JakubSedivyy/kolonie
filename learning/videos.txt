@@ -1,0 +1,3 @@
+# Videa o tradingu od Jakuba. Server stáhne přepisy do větve reports (reports/videa/<id>.txt).
+https://youtu.be/eynxyoKgpng
+https://youtu.be/O5eC5lY7ZXY

@@ -293,6 +293,15 @@ def test_shadow_short_profits_when_coin_falls():
     assert not sh2.wallet.lots                                       # v býčím trhu neshortuje
 
 
+def test_video_helpers():
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deploy"))
+    import videa
+    assert videa.video_id("https://youtu.be/eynxyoKgpng?is=abc") == "eynxyoKgpng"
+    assert videa.video_id("https://www.youtube.com/watch?v=O5eC5lY7ZXY&t=3") == "O5eC5lY7ZXY"
+    vtt = "WEBVTT\nKind: captions\n\n00:00:01.000 --> 00:00:02.000\nkup <c>když</c>\n\n00:00:02.000 --> 00:00:03.000\nkup když\nRSI pod 30"
+    assert videa.vtt_to_text(vtt) == "kup když RSI pod 30"
+
+
 # ------------------------------------------------------------------ živá kolonie s falešnou Alpakou
 def test_live_colony_ticks():
     import colony.live as live

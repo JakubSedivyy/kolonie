@@ -21,6 +21,10 @@ git remote set-url origin "$REPO"
 if git fetch -q origin main 2>>"$LOG"; then
   NEW=$(git rev-parse origin/main)
   OLD=$(git rev-parse -q --verify HEAD 2>/dev/null || echo "")
+  # i když je verze stejná, mohl soubory přepsat ruční aktualizátor (zip) -> vrať je do stavu z GitHubu
+  if [ "$NEW" = "$OLD" ] && [ -n "$(git status --porcelain --untracked-files=no)" ]; then
+    git reset -q --hard "$NEW" && systemctl restart colony && log "soubory vráceny na verzi ${NEW:0:7}"
+  fi
   if [ "$NEW" != "$OLD" ]; then
     git reset -q --hard "$NEW"
     .venv/bin/pip install -q -r requirements.txt >> "$LOG" 2>&1
@@ -44,7 +48,14 @@ fi
 
 # ---------------------------------------------------------------- 2) hlášení stavu
 STAMP=state/.last_report
-if [ -f "$STAMP" ] && [ $(( $(date +%s) - $(stat -c %Y "$STAMP") )) -lt 3300 ]; then
+NEWVIDEO=$(python3 - <<'PYV' 2>/dev/null
+import os, re
+ids = set(re.findall(r"(?:youtu\.be/|v=|shorts/)([A-Za-z0-9_-]{11})", open("learning/videos.txt").read())) if os.path.exists("learning/videos.txt") else set()
+have = {f[:11] for f in os.listdir("/root/kolonie-reports/reports/videa")} if os.path.isdir("/root/kolonie-reports/reports/videa") else set()
+print("1" if ids - have else "")
+PYV
+)
+if [ -z "$NEWVIDEO" ] && [ -f "$STAMP" ] && [ $(( $(date +%s) - $(stat -c %Y "$STAMP") )) -lt 3300 ]; then
   exit 0
 fi
 R=/root/kolonie-reports
@@ -68,6 +79,7 @@ for n, w in st.get("wallets", {}).items():
 print(json.dumps(out, ensure_ascii=False, default=str))
 PY
 journalctl -u colony --since "-1h" --no-pager 2>/dev/null | grep -iE "error|traceback|warning" | tail -n 80 > "$R/reports/chyby.txt" || true
+timeout 900 .venv/bin/python deploy/videa.py "$R/reports/videa" >> "$LOG" 2>&1 || log "stahování videí selhalo"
 tail -n 60 "$LOG" > "$R/reports/sync.log"
 git -C "$R" add -A reports
 if ! git -C "$R" diff --cached --quiet; then
