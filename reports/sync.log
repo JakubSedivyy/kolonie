@@ -1,3 +1,5 @@
+== 3/5 Nastavení
+Memec sell DOGE/USD nevyplněn, zkusím znovu
 radar fear_greed: offline
 radar gdelt: offline
 radar 4chan_biz: offline
@@ -11,7 +13,6 @@ Testy OK
 Hotovo. Kolonie běží.
 
   DASHBOARD:  https://37-27-159-131.sslip.io
-  jméno: cokoliv   heslo: qRCT8YGa4uolGR4I
   (první načtení může trvat minutu, než se vystaví HTTPS certifikát)
 
   Živý log:        journalctl -u colony -f
@@ -51,7 +52,6 @@ OK test_social_sources
 OK test_trend_radar
 OK test_meme_prefers_hyped_coin
 OK test_wave_swing
-OK test_dashboard_requires_password
 OK test_grok_budget_and_parsing
 OK test_oracle_bets_and_resolves
 OK test_lab_params_apply

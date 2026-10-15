@@ -4,7 +4,7 @@ Orbit [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pro
 
 Trendy [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Memec [ALIVE] $999.82 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.16
+Memec [ALIVE] $999.82 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.16
    otevřeno PEPE/USD: nákup 3.98796e-06, teď 3.99e-06 (+0.1 %) - objem 6.3x průměru, nové 2h maximum
 
 Vlna [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
@@ -13,28 +13,24 @@ Vlna [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max prop
 
 Medvěd [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen [ALIVE] $995.53 (-0.45 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.3 %, poplatky $0.5
-   otevřeno STREAM·9a98: nákup 0.00472564, teď 0.004355 (-7.8 %) - skóre 5.6
+Degen [ALIVE] $1000.46 (+0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.3 %, poplatky $0.5
+   otevřeno STREAM·9a98: nákup 0.00472564, teď 0.004821 (+2.0 %) - skóre 5.6
 
-Lovec [ALIVE] $998.11 (-0.19 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $1.0
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1074 (-1.3 %) - skóre 1.8
-   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.006162 (+0.4 %) - skóre 1.4
+Lovec [ALIVE] $992.31 (-0.77 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.0 %, poplatky $1.0
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1005 (-7.6 %) - skóre 1.8
+   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.006195 (+0.9 %) - skóre 1.4
 
-Stín [ALIVE] $999.09 (-0.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.5
-   otevřeno AAVE/USD: nákup 150.875, teď 150.8 (-0.0 %) - sestupný trend, -5.4 % za 24 h
-   otevřeno ADA/USD: nákup 0.222361, teď 0.22225 (-0.0 %) - sestupný trend, -5.3 % za 24 h
-   otevřeno AVAX/USD: nákup 9.64493, teď 9.64011 (-0.0 %) - sestupný trend, -5.2 % za 24 h
+Stín [ALIVE] $999.40 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.5
+   otevřeno AAVE/USD: nákup 150.875, teď 151.051 (+0.1 %) - sestupný trend, -5.4 % za 24 h
+   otevřeno ADA/USD: nákup 0.222361, teď 0.221705 (-0.3 %) - sestupný trend, -5.3 % za 24 h
+   otevřeno AVAX/USD: nákup 9.64493, teď 9.65857 (+0.1 %) - sestupný trend, -5.2 % za 24 h
 
 Věštec [ALIVE] $995.31 (-0.47 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.6 %, poplatky $0.32
    otevřeno PM2589812·NO: nákup 0.29, teď 0.25 (-13.8 %) - Grok 62% vs trh 72% (medium)
 
-CELKEM $9987.71 z $10000 (-0.12 %)
+CELKEM $9987.15 z $10000 (-0.13 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-15T07:38:25+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-15T07:38:26+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
-   2026-10-15T07:40:26+00:00 🎰 Degen (simulace) koupil STREAM·9a98 za $50, likvidita $194,569 - https://dexscreener.com/solana/d9nckn3unptvlta56y68j2cxisje9yyye61g
    2026-10-15T08:34:26+00:00 🏹 Lovec (simulace) koupil STONK·6GmA za $100, likvidita $1,953,797 - https://dexscreener.com/solana/zxtpi4btawx3mgdapoezkmd1hxx8cdecfr
    2026-10-15T08:35:26+00:00 🟢 Memec KOUPIL PEPE/USD za $65.66 @ 3.98796e-06 (objem 6.3x průměru, nové 2h maximum)
    2026-10-15T08:46:26+00:00 🏹 Lovec (simulace) koupil JEANPHIL·GTBx za $100, likvidita $379,728 - https://dexscreener.com/solana/4r8cimnjwdnoes3fqi1ccpfjygpxazaha
@@ -49,5 +45,9 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $293 @ 150.8, stop 155.947 - sestupný trend, -5.4 % za 24 h
    2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short ADA/USD za $275 @ 0.22225, stop 0.230344 - sestupný trend, -5.3 % za 24 h
    2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $262 @ 9.64011, stop 10.0079 - sestupný trend, -5.2 % za 24 h
+   2026-10-15T09:30:51+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen, Lovec, Stín, Věštec. Příkazy: /stav /pauz
+   2026-10-15T09:30:51+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-10-15T09:31:03+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
 
 VĚŠTEC: 5 odhadů z posledního skenu
