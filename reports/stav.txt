@@ -7,8 +7,8 @@ Trendy [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.71 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $1003.21 (+0.32 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.25
-   otevřeno BAT/USD: nákup 0.211108, teď 0.21846 (+3.5 %) - vlna: průraz 3denního maxima, +24 % za 24 h
+Vlna [ALIVE] $1003.14 (+0.31 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.25
+   otevřeno BAT/USD: nákup 0.211108, teď 0.21831 (+3.4 %) - vlna: průraz 3denního maxima, +24 % za 24 h
 
 Šeptač [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
@@ -21,13 +21,14 @@ Degen [INJURED] $913.22 (-8.68 %) | obchodů 5, úspěšnost 20 %, PF 0.19, max 
    2026-10-15T12:24 HELLCAT·Bwfh: -50.46 $ (-99.9 %) RUG PULL - likvidita zmizela
    2026-10-15T13:20 PONK·4jjQ: -14.89 $ (-29.5 %) stop-loss
 
-Lovec [ALIVE] $1020.66 (+2.07 %) | obchodů 2, úspěšnost 50 %, PF 1.82, max propad 2.8 %, poplatky $4.06
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.121 (+11.2 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06445 (+4.8 %) - skóre 1.9
-   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004156 (+0.2 %) - skóre 1.9
-   otevřeno OTC·MukL: nákup 0.00875468, teď 0.008388 (-4.2 %) - skóre 4.6
+Lovec [ALIVE] $1009.88 (+0.99 %) | obchodů 3, úspěšnost 33 %, PF 0.91, max propad 2.8 %, poplatky $5.0
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1234 (+13.4 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06398 (+4.1 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.003967 (-4.3 %) - skóre 1.9
+   otevřeno JEANPHIL·GTBx: nákup 0.00832038, teď 0.008394 (+0.9 %) - skóre 1.6
    2026-10-15T15:33 JEANPHIL·GTBx: +23.33 $ (+23.2 %) cíl zisku
    2026-10-15T15:42 CYBERLEEK·ApZu: -12.79 $ (-12.7 %) stop-loss
+   2026-10-15T22:24 OTC·MukL: -12.74 $ (-12.7 %) stop-loss
 
 Stín [ALIVE] $970.84 (-2.92 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 3.6 %, poplatky $2.17
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
@@ -36,17 +37,14 @@ Stín [ALIVE] $970.84 (-2.92 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max pro
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $994.59 (-0.54 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $1.64
+Věštec [ALIVE] $996.98 (-0.30 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $1.64
    otevřeno PM2589812·NO: nákup 0.29, teď 0.28 (-3.4 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.63 (-1.6 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.65 (+1.6 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
 
-CELKEM $9901.13 z $10000 (-0.99 %)
+CELKEM $9892.67 z $10000 (-1.07 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-15T15:33:49+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-15T15:34:07+00:00 ✅ Lovec (simulace) prodal JEANPHIL·GTBx: +23.33 $ (+23 %) - cíl zisku
    2026-10-15T15:42:00+00:00 🔻 Lovec (simulace) prodal CYBERLEEK·ApZu: -12.79 $ (-13 %) - stop-loss
    2026-10-15T16:02:00+00:00 🔻 Stín (simulace) uzavřel short DOGE/USD: -2.49 $ (-0.9 %) - stop-loss
    2026-10-15T16:02:00+00:00 🔻 Stín (simulace) uzavřel short DOT/USD: -1.65 $ (-0.8 %) - stop-loss
@@ -62,5 +60,7 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-15T20:15:12+00:00 📊 Denní souhrn 15.10. · nálada trhu: risk_on
 🟢 Orbit: $999.95 (-0.0 %) · 0 obch. · úspěšnost 0 % · PF 0.00
 🟢 Trendy: $999.95 (-0.0 %) 
+   2026-10-15T22:24:17+00:00 🔻 Lovec (simulace) prodal OTC·MukL: -12.74 $ (-13 %) - stop-loss
+   2026-10-15T22:24:18+00:00 🏹 Lovec (simulace) koupil JEANPHIL·GTBx za $100, likvidita $450,051 - https://dexscreener.com/solana/4r8cimnjwdnoes3fqi1ccpfjygpxazaha
 
 VĚŠTEC: 4 odhadů z posledního skenu
