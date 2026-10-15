@@ -28,6 +28,31 @@ def _jsonable(o):
     return str(o)
 
 
+providers: dict = {}           # "candles": fn(bot, symbol, tf) -> dict  (zaregistruje živá kolonie)
+_cache: dict = {}
+
+
+def candles(query: str) -> bytes:
+    from urllib.parse import parse_qs
+    import time as _t
+    q = {k: v[0] for k, v in parse_qs(query).items()}
+    key = (q.get("bot"), q.get("symbol"), q.get("tf"))
+    hit = _cache.get(key)
+    if hit and _t.time() - hit[0] < 45:
+        return hit[1]
+    fn = providers.get("candles")
+    try:
+        data = fn(q.get("bot", ""), q.get("symbol", ""), q.get("tf", "")) if fn else {"error": "graf není k dispozici"}
+    except Exception as e:                       # graf nesmí shodit dashboard
+        log.warning("candles %s: %s", key, e)
+        data = {"error": str(e)[:200]}
+    body = json.dumps(data, default=_jsonable, separators=(",", ":")).encode()
+    _cache[key] = (_t.time(), body)
+    if len(_cache) > 200:
+        _cache.clear()
+    return body
+
+
 def publish(snapshot: dict):
     data = json.dumps(snapshot, default=_jsonable, separators=(",", ":")).encode()
     with _lock:
@@ -71,10 +96,16 @@ class Handler(BaseHTTPRequestHandler):
             self.send_header("WWW-Authenticate", 'Basic realm="Kolonie", charset="UTF-8"')
             self.end_headers()
             return
-        if self.path.startswith("/api/state"):
+        if self.path.startswith("/api/candles"):
+            body = candles(self.path.partition("?")[2])
+            ctype = "application/json"
+        elif self.path.startswith("/api/state"):
             with _lock:
                 body = _state["json"]
             ctype = "application/json"
+        elif self.path.split("?")[0] == "/lightweight-charts.js":     # knihovna grafů (TradingView, Apache 2.0)
+            body = open(os.path.join(os.path.dirname(HTML_PATH), "lightweight-charts.js"), "rb").read()
+            ctype = "application/javascript"
         elif self.path in ("/", "/index.html"):
             body = open(HTML_PATH, "rb").read()
             ctype = "text/html; charset=utf-8"

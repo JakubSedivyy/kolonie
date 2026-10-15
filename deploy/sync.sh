@@ -9,6 +9,7 @@ cd "$(dirname "$0")/.."
 DIR="$(pwd)"
 REPO="${KOLONIE_REPO:-$(grep '^KOLONIE_REPO=' .env 2>/dev/null | cut -d= -f2-)}"
 REPO="${REPO:-git@github.com:JakubSedivyy/kolonie.git}"
+export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=accept-new -o BatchMode=yes"
 LOG=state/sync.log
 mkdir -p state
 log() { echo "$(date -u +%FT%TZ) $*" >> "$LOG"; tail -n 300 "$LOG" > "$LOG.tmp" && mv "$LOG.tmp" "$LOG"; }

@@ -395,7 +395,10 @@ class Colony:
                             "target": l.target, "opened": l.opened, "reason": l.reason,
                             "pnl": l.qty * last - l.cost, "pnl_pct": (l.qty * last / l.cost - 1) if l.cost else 0,
                             "url": l.meta.get("url", ""), "question": l.meta.get("question", ""),
-                            "side": l.meta.get("side", ""), "p": l.meta.get("p")})
+                            "side": l.meta.get("side", ""), "p": l.meta.get("p"),
+                            "chart_entry": l.meta.get("p0", l.entry),
+                            "chart_stop": l.meta.get("stop_px", l.stop) if l.stop else None,
+                            "chart_target": None if l.meta.get("side") == "short" else l.target})
             bots.append({**s, "asset_class": w.asset_class, "desc": (a.__doc__ or "").strip().split("\n")[0],
                          "start": w.start, "cash": w.cash, "born": w.born, "died": w.died, "age_days": age,
                          "days_left": max(0, config.PROFIT_DEADLINE_DAYS - age), "curve": w.equity_curve[-600:],
@@ -403,6 +406,8 @@ class Colony:
                          "benched": bool(getattr(a, "benched", False)),
                          "lab_warn": bool(getattr(a, "lab_warn", False)),
                          "waiting": (a is self.oracle and not self.grok.enabled),
+                         "symbols": self.chart_symbols(a), "minutes": getattr(a, "minutes", 60),
+                         "bot_trades": [dict(t, bot=w.name) for t in w.trades[-40:]],
                          "profit_factor": None if s["profit_factor"] == float("inf") else s["profit_factor"]})
         trades = sorted((dict(t, bot=w.name) for w in self.wallets for t in w.trades), key=lambda t: t["closed"])
         return {"generated": now.isoformat(timespec="seconds"), "mode": "live" if config.IS_LIVE else "paper",
@@ -420,7 +425,83 @@ class Colony:
                 "eval": [{"bot": w.name, "ok": ok, "checks": c} for w in self.wallets
                          for ok, c in [report.evaluate(w, 0)]]}
 
+    # ------------------------------------------------------------------ grafy pro dashboard
+    TF = {"5": 5, "15": 15, "60": 60, "1440": 1440}
+
+    def chart_symbols(self, a) -> list[str]:
+        """Co má smysl u bota ukázat v grafu: otevřené pozice, poslední obchody, pak jeho trh."""
+        w = a.wallet
+        syms = list(w.lots) + [t["symbol"] for t in reversed(w.trades[-30:])]
+        if isinstance(a, BarAgent):
+            try:
+                syms += a.universe(self.ctx)[:4]
+            except Exception:
+                pass
+        elif a is self.stin:
+            syms += (self.ctx.get("crypto_majors") or ["BTC/USD", "ETH/USD"])[:3]
+        return list(dict.fromkeys(syms))[:10]
+
+    def _dex_pair(self, a, symbol):
+        lot = a.wallet.lots.get(symbol)
+        if lot and lot.meta.get("pair"):
+            return lot.meta["pair"]
+        return next((t.get("pair") for t in reversed(a.wallet.trades) if t["symbol"] == symbol and t.get("pair")), None)
+
+    def candles(self, bot: str, symbol: str, tf: str) -> dict:
+        a = next((x for x in self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle] if x.name == bot), None)
+        if a is None:
+            return {"error": "neznámý bot"}
+        if a in (self.degen, self.lovec):                       # DEX: GeckoTerminal OHLCV podle poolu
+            pair = self._dex_pair(a, symbol)
+            if not pair:
+                return {"error": "u tohoto coinu chybí adresa poolu"}
+            minutes = self.TF.get(tf, 5)
+            unit, agg = ("minute", min(minutes, 15)) if minutes < 60 else ("hour", 1) if minutes == 60 else ("day", 1)
+            r = self.radar.s.get(f"https://api.geckoterminal.com/api/v2/networks/solana/pools/{pair}/ohlcv/{unit}",
+                                 params={"aggregate": agg, "limit": 300}, timeout=15,
+                                 headers={"Accept": "application/json;version=20230302"})
+            r.raise_for_status()
+            rows = ((r.json().get("data") or {}).get("attributes") or {}).get("ohlcv_list") or []
+            bars = [{"t": int(x[0]), "o": x[1], "h": x[2], "l": x[3], "c": x[4], "v": x[5]} for x in reversed(rows)]
+            return {"kind": "candles", "bars": bars, "tf": minutes}
+        if a is self.oracle:                                    # Polymarket: vývoj ceny sázky
+            lot = a.wallet.lots.get(symbol)
+            meta = lot.meta if lot else next((t for t in reversed(a.wallet.trades) if t["symbol"] == symbol), {})
+            mid, side = meta.get("market"), meta.get("side", "YES")
+            if not mid:
+                return {"error": "chybí trh"}
+            m = self.radar.s.get(f"https://gamma-api.polymarket.com/markets/{mid}", timeout=15).json()
+            toks = json.loads(m.get("clobTokenIds") or "[]")
+            if len(toks) < 2:
+                return {"error": "trh nemá historii"}
+            tok = toks[0] if side == "YES" else toks[1]
+            h = self.radar.s.get("https://clob.polymarket.com/prices-history",
+                                 params={"market": tok, "interval": "max", "fidelity": 60}, timeout=15).json()
+            pts = [{"t": int(x["t"]), "c": float(x["p"])} for x in h.get("history", [])]
+            return {"kind": "line", "bars": pts, "tf": 60, "label": f"cena {side}"}
+        minutes = self.TF.get(tf) or getattr(a, "minutes", 60)
+        now = utcnow()
+        span = timedelta(minutes=minutes * 300)
+        if not a.crypto:
+            span *= 3                                            # akcie: noci a víkendy bez svíček
+        df = self.data.bars([symbol], minutes, now - span, crypto=a.crypto).get(symbol)
+        if df is None or df.empty:
+            return {"error": "žádná data"}
+        df = df.tail(400)
+        bars = [{"t": int(ts.timestamp()), "o": float(r.open), "h": float(r.high), "l": float(r.low),
+                 "c": float(r.close), "v": float(r.volume)} for ts, r in df.iterrows()]
+        out = {"kind": "candles", "bars": bars, "tf": minutes}
+        if hasattr(a, "prepare") and isinstance(a, BarAgent) and minutes == a.minutes:
+            try:                                                # čáry, podle kterých bot rozhoduje
+                p = a.prepare(df)
+                out["lines"] = {c: [[int(ts.timestamp()), float(v)] for ts, v in p[c].dropna().items()]
+                                for c in ("ema20", "ema50", "ema200", "vwap", "or_high", "or_low", "hh", "ll", "hh2h", "hh72") if c in p.columns}
+            except Exception as e:
+                log.debug("lines %s: %s", a.name, e)
+        return out
+
     def run(self):
+        dashboard.providers["candles"] = self.candles
         dashboard.serve()
         mode = "SKUTEČNÉ PENÍZE" if config.IS_LIVE else "papírový účet"
         self.tg.send(f"🐣 Kolonie startuje ({mode}). Boti: " + ", ".join(w.name for w in self.wallets)

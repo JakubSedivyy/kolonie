@@ -88,6 +88,26 @@ h2 { font-size: 19px; line-height: 1.2 }
 
 .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px }
 .tablewrap { overflow-x: auto }
+/* Detail bota: svíčkový graf s nákupy/prodeji, čarami stopu a cíle a křivkou peněz */
+.detail { border-top: 4px solid var(--c, var(--line)) }
+.detail-top { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: start }
+@media (max-width: 640px) { .detail-top { grid-template-columns: 1fr } }
+.detail-say { font-size: 14px; background: var(--soft); border-radius: 8px; padding: 8px 12px }
+.dchips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
+.dchips button { font: 500 12.5px var(--mono); padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer }
+.dchips button[aria-pressed="true"] { background: var(--c, var(--ink)); color: #fff; border-color: transparent }
+.dchips .lbl { font-size: 12px; color: var(--muted); margin-right: 2px }
+.candles { height: 400px; position: relative; border: 1px solid var(--line); border-radius: 8px; overflow: hidden }
+@media (max-width: 640px) { .candles { height: 300px } }
+.eqchart { height: 140px; border: 1px solid var(--line); border-radius: 8px; overflow: hidden }
+.cmsg { position: absolute; inset: 0; display: grid; place-items: center; color: var(--muted); font-size: 14px; text-align: center; padding: 16px; pointer-events: none }
+.ckey { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12px; color: var(--muted) }
+.ckey i { display: inline-block; width: 14px; height: 0; border-top: 2px solid; vertical-align: middle; margin-right: 5px }
+.ckey i.dash { border-top-style: dashed }
+.dpos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 8px }
+.dpos div { background: var(--soft); border-radius: 8px; padding: 8px 10px; font-size: 13px; display: grid; gap: 2px }
+.bot .open-detail { justify-self: start; font: 500 13px var(--body); padding: 5px 11px; border-radius: 6px; border: 1px solid var(--line); background: var(--soft); color: var(--ink); cursor: pointer }
+.bot .open-detail:hover { border-color: var(--c) }
 table { width: 100%; border-collapse: collapse; font-size: 14px }
 th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap }
 th:first-child, td:first-child, th.l, td.l { text-align: left }
@@ -184,6 +204,21 @@ footer { font-size: 12.5px; color: var(--muted) }
     <div class="bots" id="bots"></div>
   </section>
 
+  <section class="panel detail" id="detail" aria-label="Detail bota">
+    <div class="panel-h"><h2 id="dtitle">Detail bota</h2><div class="tabs" id="dbots" role="group" aria-label="Vyber bota"></div></div>
+    <div class="detail-top">
+      <div class="detail-say" id="dsay"></div>
+      <div class="dchips" id="dtf" role="group" aria-label="Délka svíčky"></div>
+    </div>
+    <div class="dchips" id="dsyms" role="group" aria-label="Co ukázat v grafu"></div>
+    <div class="candles" id="candles"><div class="cmsg" id="cmsg">Načítám graf…</div></div>
+    <div class="ckey" id="ckey"></div>
+    <div class="dpos" id="dpos"></div>
+    <div class="panel-h"><h2 style="font-size:16px">Peníze bota</h2><span class="small muted">čárkovaná čára = start, červená = smrt</span></div>
+    <div class="eqchart" id="eqchart"></div>
+    <div class="tablewrap" id="dtrades"></div>
+  </section>
+
   <section class="panel">
     <div class="panel-h"><h2>Peníze v čase</h2><div class="legend" id="legend"></div></div>
     <div class="chart" id="chart"></div>
@@ -230,6 +265,7 @@ footer { font-size: 12.5px; color: var(--muted) }
   <footer>Stránka se obnovuje každých 15 sekund. Jen pro čtení, ovládání přes Telegram (/pauza, /prodej_vse). Nejde o finanční poradenství.</footer>
 </div>
 
+<script src="lightweight-charts.js"></script>
 <script>
 const COLORS = { Orbit: "var(--b-orbit)", Trendy: "var(--b-trendy)", Memec: "var(--b-memec)", Vlna: "var(--b-vlna)", Degen: "var(--b-degen)", "Věštec": "var(--b-vestec)", "Šeptač": "var(--b-septac)", Lovec: "var(--b-lovec)", "Medvěd": "var(--b-medved)", "Stín": "var(--b-stin)" };
 const ASSET = { stock: "akcie", crypto: "krypto", meme: "meme coiny", degen: "nové coiny · simulace", dexmeme: "meme coiny na DEXu · simulace", short: "sázky na pokles krypta · simulace", predict: "Polymarket · simulace" };
@@ -315,8 +351,12 @@ function renderBots() {
         <div><span class="k">Max. propad</span><span class="v">${(b.max_drawdown * 100).toFixed(1)} %</span></div>
       </div>
       <div class="desc">${esc(b.desc)}</div>
+      <button type="button" class="open-detail" data-bot="${esc(b.name)}">📈 Graf a obchody</button>
     </article>`;
   }).join("");
+  document.querySelectorAll(".open-detail").forEach(el => el.onclick = () => {
+    selectBot(el.dataset.bot); document.getElementById("detail").scrollIntoView({ behavior: "smooth", block: "start" });
+  });
 }
 
 function renderChart() {
@@ -498,9 +538,166 @@ function renderOracle() {
     : `<div class="empty">Zprávy se načtou do 10 minut od startu.</div>`;
 }
 
+// ---------------------------------------------------------------- detail bota (svíčky, obchody, peníze)
+let dBot = null, dSym = null, dTf = null, dKey = "", dAt = 0, cChart = null, eChart = null;
+try { dBot = localStorage.getItem("dbot"); } catch (e) {}
+const TF_LABEL = { "5": "5 min", "15": "15 min", "60": "1 h", "1440": "1 den" };
+const TZ = -new Date().getTimezoneOffset() * 60;            // grafy ukazují místní čas
+const cssv = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const colorOf = n => { const v = col(n); return v.startsWith("var(") ? cssv(v.slice(4, -1)) : v; };
+const toT = iso => Math.floor(new Date(iso).getTime() / 1000) + TZ;
+const LINE_NAMES = { ema20: "EMA 20", ema50: "EMA 50", ema200: "EMA 200", vwap: "VWAP", or_high: "ranní maximum",
+  or_low: "ranní minimum", hh: "průrazová hranice", ll: "spodní hranice", hh2h: "2h maximum", hh72: "3denní maximum" };
+
+function selectBot(n) {
+  dBot = n; dSym = null; dTf = null;
+  try { localStorage.setItem("dbot", n); } catch (e) {}
+  renderDetail(true);
+}
+
+function chartTheme() {
+  return { layout: { background: { color: cssv("--panel") }, textColor: cssv("--muted"), fontFamily: cssv("--mono") || "monospace" },
+           grid: { vertLines: { color: cssv("--soft") }, horzLines: { color: cssv("--soft") } },
+           rightPriceScale: { borderColor: cssv("--line") }, timeScale: { borderColor: cssv("--line"), timeVisible: true },
+           crosshair: { mode: 0 }, autoSize: true, localization: { locale: "cs-CZ" } };
+}
+
+function cmsg(t) {
+  const m = document.getElementById("cmsg");
+  m.textContent = t || ""; m.hidden = !t;
+}
+
+function renderDetail(force) {
+  if (!S || !S.bots) return;
+  const b = S.bots.find(x => x.name === dBot) || S.bots[0];
+  dBot = b.name;
+  const c = col(b.name);
+  document.getElementById("detail").style.setProperty("--c", c);
+  document.getElementById("dtitle").textContent = "Detail: " + b.name;
+  document.getElementById("dbots").innerHTML = S.bots.map(x =>
+    `<button type="button" aria-pressed="${x.name === b.name}" data-n="${esc(x.name)}">${esc(x.name)}</button>`).join("");
+  document.querySelectorAll("#dbots button").forEach(el => el.onclick = () => selectBot(el.dataset.n));
+  document.getElementById("dsay").innerHTML = `<b>${esc(lastSay(b))}</b><br><span class="muted">${esc(b.desc)}</span>`;
+
+  const syms = b.symbols || [];
+  if (!dSym || !syms.includes(dSym)) dSym = (b.positions[0] && b.positions[0].symbol) || syms[0] || null;
+  const isLine = b.asset_class === "predict";
+  const tfs = isLine ? [] : ["5", "15", "60", "1440"];
+  if (!dTf || !tfs.includes(dTf)) dTf = tfs.includes(String(b.minutes)) ? String(b.minutes) : (tfs[2] || "60");
+  document.getElementById("dtf").innerHTML = tfs.length ? `<span class="lbl">svíčka</span>` + tfs.map(t =>
+    `<button type="button" aria-pressed="${t === dTf}" data-t="${t}">${TF_LABEL[t]}</button>`).join("") : "";
+  document.querySelectorAll("#dtf button").forEach(el => el.onclick = () => { dTf = el.dataset.t; renderDetail(true); });
+  const held = new Set(b.positions.map(p => p.symbol));
+  document.getElementById("dsyms").innerHTML = syms.length ? `<span class="lbl">graf</span>` + syms.map(s =>
+    `<button type="button" aria-pressed="${s === dSym}" data-s="${esc(s)}">${held.has(s) ? "● " : ""}${esc(s.length > 22 ? s.slice(0, 20) + "…" : s)}</button>`).join("") : "";
+  document.querySelectorAll("#dsyms button").forEach(el => el.onclick = () => { dSym = el.dataset.s; renderDetail(true); });
+
+  document.getElementById("dpos").innerHTML = b.positions.map(p => `<div>
+      <b>${esc(p.question || p.symbol)}</b>
+      <span class="num">${p.side === "short" ? "short od" : "nákup"} ${price(p.chart_entry)} → teď ${price(p.side === "short" ? 2 * p.chart_entry - p.last : p.last)}</span>
+      <span class="num ${p.pnl >= 0 ? "pos" : "neg"}">${susd(p.pnl)} (${sgn(p.pnl_pct)})</span>
+      <span class="small muted">${p.chart_stop ? "stop " + price(p.chart_stop) : ""}${p.chart_target ? " · cíl " + price(p.chart_target) : ""} · ${esc(p.reason)}</span>
+    </div>`).join("");
+
+  const tr = (b.bot_trades || []).slice().reverse();
+  document.getElementById("dtrades").innerHTML = tr.length ? `<table><thead><tr><th class="l">Otevřeno</th><th class="l">Zavřeno</th><th class="l">Symbol</th><th>Vstup</th><th>Výstup</th><th>Zisk</th><th class="l">Proč</th></tr></thead><tbody>` +
+    tr.map(t => `<tr><td class="l">${tm(t.opened)}</td><td class="l">${tm(t.closed)}</td><td class="l">${esc(t.symbol)}</td>
+      <td>${price(t.p0 || t.entry)}</td><td>${price(t.p0 ? 2 * t.p0 - t.exit : t.exit)}</td>
+      <td class="${t.pnl >= 0 ? "pos" : "neg"}">${susd(t.pnl)} (${sgn(t.ret)})</td><td class="t">${esc(t.reason)} → ${esc(t.why)}</td></tr>`).join("") + `</tbody></table>`
+    : `<div class="empty">${esc(b.name)} zatím nemá uzavřený obchod.</div>`;
+
+  drawEquity(b);
+  const key = [b.name, dSym, dTf].join("|");
+  if (force || key !== dKey || Date.now() - dAt > 60000) loadCandles(b, key);
+}
+
+function drawEquity(b) {
+  const el = document.getElementById("eqchart");
+  if (!window.LightweightCharts) { el.innerHTML = `<div class="empty">Knihovna grafů se nenačetla.</div>`; return; }
+  if (eChart) { eChart.remove(); eChart = null; }
+  eChart = LightweightCharts.createChart(el, { ...chartTheme(), handleScroll: false, handleScale: false });
+  const s = eChart.addAreaSeries({ lineColor: colorOf(b.name), topColor: colorOf(b.name) + "55", bottomColor: colorOf(b.name) + "05", lineWidth: 2 });
+  const pts = [], seen = new Set();
+  for (const [iso, v] of b.curve || []) { const t = toT(iso); if (!seen.has(t)) { seen.add(t); pts.push({ time: t, value: v }); } }
+  pts.sort((a, z) => a.time - z.time);
+  s.setData(pts);
+  s.createPriceLine({ price: b.start, color: cssv("--muted"), lineStyle: 2, lineWidth: 1, axisLabelVisible: false });
+  s.createPriceLine({ price: S.rules.death, color: cssv("--loss"), lineStyle: 0, lineWidth: 1, axisLabelVisible: false });
+  eChart.timeScale().fitContent();
+}
+
+async function loadCandles(b, key) {
+  dKey = key; dAt = Date.now();
+  const el = document.getElementById("candles");
+  if (cChart) { cChart.remove(); cChart = null; }
+  document.getElementById("ckey").innerHTML = "";
+  if (!window.LightweightCharts) { cmsg("Knihovna grafů se nenačetla (zkontroluj připojení)."); return; }
+  if (!dSym) { cmsg("Bot zatím nic nesleduje ani neobchodoval."); return; }
+  cmsg("Načítám graf " + dSym + "…");
+  let data;
+  try {
+    if (window.__SAMPLE__) data = (window.__SAMPLE_CANDLES__ || (() => ({ error: "V ukázce grafy nejsou." })))(b.name, dSym, dTf);
+    else {
+      const r = await fetch(`api/candles?bot=${encodeURIComponent(b.name)}&symbol=${encodeURIComponent(dSym)}&tf=${dTf}`, { cache: "no-store" });
+      data = await r.json();
+    }
+  } catch (e) { data = { error: "Graf se nepodařilo načíst." }; }
+  if (key !== dKey) return;                                  // mezitím si vybral něco jiného
+  if (!data || data.error || !data.bars || !data.bars.length) { cmsg((data && data.error) || "Pro tenhle symbol nejsou data."); return; }
+  cmsg("");
+  cChart = LightweightCharts.createChart(el, chartTheme());
+  const bars = data.bars.map(x => ({ ...x, time: x.t + TZ })).sort((a, z) => a.time - z.time);
+  const keyHtml = [];
+  let main;
+  if (data.kind === "line") {
+    main = cChart.addLineSeries({ color: colorOf(b.name), lineWidth: 2, priceFormat: { type: "price", precision: 3, minMove: 0.001 } });
+    main.setData(bars.map(x => ({ time: x.time, value: x.c })));
+    keyHtml.push(`<span><i style="border-color:${colorOf(b.name)}"></i>${esc(data.label || "cena")}</span>`);
+  } else {
+    const minP = Math.min(...bars.map(x => x.l)), prec = minP < 0.0001 ? 10 : minP < 0.01 ? 7 : minP < 1 ? 5 : 2;
+    main = cChart.addCandlestickSeries({ upColor: cssv("--gain"), downColor: cssv("--loss"), borderVisible: false,
+      wickUpColor: cssv("--gain"), wickDownColor: cssv("--loss"), priceFormat: { type: "price", precision: prec, minMove: Math.pow(10, -prec) } });
+    main.setData(bars.map(x => ({ time: x.time, open: x.o, high: x.h, low: x.l, close: x.c })));
+    const pal = [colorOf(b.name), cssv("--muted"), cssv("--injured"), cssv("--b-trendy")];
+    Object.entries(data.lines || {}).forEach(([name, pts], i) => {
+      const ls = cChart.addLineSeries({ color: pal[i % pal.length], lineWidth: 1, lineStyle: i > 1 ? 2 : 0, priceLineVisible: false, lastValueVisible: false, crosshairMarkerVisible: false });
+      ls.setData(pts.map(([t, v]) => ({ time: t + TZ, value: v })).filter(p => p.time >= bars[0].time));
+      keyHtml.push(`<span><i class="${i > 1 ? "dash" : ""}" style="border-color:${pal[i % pal.length]}"></i>${esc(LINE_NAMES[name] || name)}</span>`);
+    });
+  }
+  // značky nákupů a prodejů - přichytí se ke svíčce, ve které se obchod stal
+  const times = bars.map(x => x.time);
+  const snap = t => { let lo = 0, hi = times.length - 1; if (t < times[0]) return null; while (lo < hi) { const m = (lo + hi + 1) >> 1; if (times[m] <= t) lo = m; else hi = m - 1; } return times[lo]; };
+  const mk = [];
+  const gain = cssv("--gain"), loss = cssv("--loss"), ink = cssv("--ink");
+  for (const t of (b.bot_trades || []).filter(t => t.symbol === dSym)) {
+    const short = t.side === "short";
+    const a = snap(toT(t.opened)), z = snap(toT(t.closed));
+    if (a) mk.push({ time: a, position: short ? "aboveBar" : "belowBar", color: ink, shape: short ? "arrowDown" : "arrowUp", text: short ? "short" : "nákup" });
+    if (z) mk.push({ time: z, position: short ? "belowBar" : "aboveBar", color: t.pnl >= 0 ? gain : loss, shape: short ? "arrowUp" : "arrowDown", text: sgn(t.ret) });
+  }
+  const pos = b.positions.find(p => p.symbol === dSym);
+  if (pos) {
+    const a = snap(toT(pos.opened));
+    if (a) mk.push({ time: a, position: pos.side === "short" ? "aboveBar" : "belowBar", color: colorOf(b.name), shape: pos.side === "short" ? "arrowDown" : "arrowUp", text: pos.side === "short" ? "short (otevřený)" : "nákup (otevřený)" });
+    if (data.kind !== "line" || b.asset_class === "predict") {
+      main.createPriceLine({ price: pos.chart_entry, color: ink, lineStyle: 2, lineWidth: 1, title: pos.side === "short" ? "short" : "nákup" });
+      if (pos.chart_stop) main.createPriceLine({ price: pos.chart_stop, color: loss, lineStyle: 0, lineWidth: 1, title: "stop" });
+      if (pos.chart_target) main.createPriceLine({ price: pos.chart_target, color: gain, lineStyle: 0, lineWidth: 1, title: "cíl" });
+    }
+    keyHtml.push(`<span><i class="dash" style="border-color:${ink}"></i>vstup</span><span><i style="border-color:${loss}"></i>stop</span>` + (pos.chart_target ? `<span><i style="border-color:${gain}"></i>cíl</span>` : ""));
+  }
+  mk.sort((a, z) => a.time - z.time);
+  main.setMarkers(mk);
+  keyHtml.push(`<span>▲▼ nákupy a prodeje (číslo = výsledek obchodu)</span><span>grafy: <a href="https://www.tradingview.com/" target="_blank" rel="noopener">TradingView</a> Lightweight Charts</span>`);
+  document.getElementById("ckey").innerHTML = keyHtml.join("");
+  const n = bars.length;
+  cChart.timeScale().setVisibleLogicalRange({ from: Math.max(0, n - 160), to: n + 3 });
+}
+
 function render() {
   if (!S || !S.bots || !S.bots.length) { document.getElementById("updated").textContent = "Kolonie se rozjíždí…"; return; }
-  renderTop(); renderVillage(); renderBots(); renderChart(); renderPositions(); renderRadar(); renderEvents(); renderOracle(); renderTrades(); renderEval();
+  renderTop(); renderVillage(); renderBots(); renderChart(); renderPositions(); renderRadar(); renderEvents(); renderOracle(); renderTrades(); renderEval(); renderDetail();
 }
 
 async function load() {
