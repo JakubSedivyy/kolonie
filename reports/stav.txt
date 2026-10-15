@@ -4,8 +4,8 @@ Orbit [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pro
 
 Trendy [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Memec [ALIVE] $998.34 (-0.17 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.16
-   otevřeno PEPE/USD: nákup 3.98796e-06, teď 3.9e-06 (-2.2 %) - objem 6.3x průměru, nové 2h maximum
+Memec [ALIVE] $998.71 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
+   2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
 Vlna [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
@@ -13,35 +13,28 @@ Vlna [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max prop
 
 Medvěd [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen [ALIVE] $962.23 (-3.78 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 5.1 %, poplatky $2.1
-   otevřeno STREAM·9a98: nákup 0.00472564, teď 0.005151 (+9.0 %) - skóre 5.6
+Degen [INJURED] $923.20 (-7.68 %) | obchodů 4, úspěšnost 25 %, PF 0.22, max propad 8.9 %, poplatky $3.81
+   otevřeno PONK·4jjQ: nákup 0.000145745, teď 0.0001329 (-8.8 %) - skóre 6.4
    2026-10-15T10:52 Nihilism·AkqN: -23.74 $ (-47.0 %) stop-loss
    2026-10-15T11:30 SYCAMORE·3EC7: -17.98 $ (-35.6 %) stop-loss
+   2026-10-15T12:18 STREAM·9a98: +20.34 $ (+40.3 %) cíl zisku
+   2026-10-15T12:24 HELLCAT·Bwfh: -50.46 $ (-99.9 %) RUG PULL - likvidita zmizela
 
-Lovec [ALIVE] $998.28 (-0.17 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.0 %, poplatky $1.0
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1009 (-7.2 %) - skóre 1.8
-   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.006539 (+6.5 %) - skóre 1.4
+Lovec [ALIVE] $997.66 (-0.23 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.0 %, poplatky $1.0
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.09993 (-8.1 %) - skóre 1.8
+   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.006556 (+6.8 %) - skóre 1.4
 
-Stín [ALIVE] $1006.36 (+0.64 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.5
-   otevřeno AAVE/USD: nákup 150.875, teď 152.6 (+1.1 %) - sestupný trend, -5.4 % za 24 h
-   otevřeno ADA/USD: nákup 0.222361, teď 0.223002 (+0.3 %) - sestupný trend, -5.3 % za 24 h
-   otevřeno AVAX/USD: nákup 9.64493, teď 9.74482 (+1.0 %) - sestupný trend, -5.2 % za 24 h
+Stín [ALIVE] $1006.79 (+0.68 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.5
+   otevřeno AAVE/USD: nákup 150.875, teď 152.522 (+1.1 %) - sestupný trend, -5.4 % za 24 h
+   otevřeno ADA/USD: nákup 0.222361, teď 0.223751 (+0.6 %) - sestupný trend, -5.3 % za 24 h
+   otevřeno AVAX/USD: nákup 9.64493, teď 9.73226 (+0.9 %) - sestupný trend, -5.2 % za 24 h
 
 Věštec [ALIVE] $997.50 (-0.25 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.6 %, poplatky $0.32
    otevřeno PM2589812·NO: nákup 0.29, teď 0.27 (-6.9 %) - Grok 62% vs trh 72% (medium)
 
-CELKEM $9962.56 z $10000 (-0.37 %)
+CELKEM $9923.71 z $10000 (-0.76 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-15T09:01:28+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-15T09:01:30+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
-   2026-10-15T09:15:50+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen, Lovec, Stín, Věštec. Příkazy: /stav /pauz
-   2026-10-15T09:15:50+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-15T09:15:52+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
-   2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $293 @ 150.8, stop 155.947 - sestupný trend, -5.4 % za 24 h
-   2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short ADA/USD za $275 @ 0.22225, stop 0.230344 - sestupný trend, -5.3 % za 24 h
    2026-10-15T09:16:35+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $262 @ 9.64011, stop 10.0079 - sestupný trend, -5.2 % za 24 h
    2026-10-15T09:30:51+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen, Lovec, Stín, Věštec. Příkazy: /stav /pauz
    2026-10-15T09:30:51+00:00 🧪 Laboratoř: nové nastavení botů
@@ -51,5 +44,13 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-15T10:52:11+00:00 🔻 Degen (simulace) prodal Nihilism·AkqN: -23.74 $ (-47 %) - stop-loss
    2026-10-15T11:28:22+00:00 🎰 Degen (simulace) koupil SYCAMORE·3EC7 za $50, likvidita $91,750 - https://dexscreener.com/solana/5cx7awh9czi1vkk2sfabfcszyvbytf7kbex
    2026-10-15T11:30:11+00:00 🔻 Degen (simulace) prodal SYCAMORE·3EC7: -17.98 $ (-36 %) - stop-loss
+   2026-10-15T12:00:12+00:00 🎰 Degen (simulace) koupil HELLCAT·Bwfh za $50, likvidita $88,798 - https://dexscreener.com/solana/2xdstpwi6pca9tuenf3esana22mwk4bmshgp
+   2026-10-15T12:16:18+00:00 🎰 Degen (simulace) koupil PONK·4jjQ za $50, likvidita $31,157 - https://dexscreener.com/solana/edjt1eqfx2xblmjdqyr2whcs3vzrh2brxg2bmqx
+   2026-10-15T12:18:17+00:00 ✅ Degen (simulace) prodal STREAM·9a98: +20.34 $ (+40 %) - cíl zisku
+   2026-10-15T12:24:17+00:00 💀 Degen (simulace) prodal HELLCAT·Bwfh: -50.46 $ (-100 %) - RUG PULL - likvidita zmizela
+   2026-10-15T12:24:18+00:00 🤕 Degen dnes ztratil 7.6 % - do zítřka nesmí obchodovat
+   2026-10-15T12:30:19+00:00 🔻 Memec PRODAL PEPE/USD: -1.24 $ (-1.9 %) - stop-loss
+   2026-10-15T12:31:17+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
 
 VĚŠTEC: 5 odhadů z posledního skenu
