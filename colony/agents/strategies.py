@@ -315,3 +315,53 @@ class WhisperAgent(BarAgent):
         if r["close"] < r["ema50"]:
             return "hype vyprchal (cena pod EMA 50)"
         return None
+
+
+class BearAgent(BarAgent):
+    """MEDVĚD - vydělává, když trh padá. Kupuje inverzní ETF (rostou, když index klesá):
+    SQQQ (Nasdaq ×3 dolů), SPXS (S&P ×3), SOXS (čipy ×3), SDOW (Dow ×3), TZA (malé firmy ×3), SH, PSQ.
+    Vstup jen když pád potvrzuje trend (cena ETF nad EMA 20 i 50, roste poslední hodinu).
+    Stop 2x ATR, trailing, nejdéle 3 dny (pákové ETF dlouhým držením ztrácejí)."""
+    name = "Medvěd"
+    asset_class = "stock"
+    crypto = False
+    minutes = 15
+    lookback_bars = 160
+    risk_per_trade = 0.01
+    max_position_frac = 0.35
+    max_positions = 2
+    trades_in_risk_off = True
+    inverse = ["SQQQ", "SPXS", "SOXS", "SDOW", "TZA", "SH", "PSQ"]
+    atr_mult = 2.0
+    first_entry, last_entry = dtime(10, 0), dtime(15, 30)
+
+    def universe(self, ctx):
+        return list(self.inverse)
+
+    def prepare(self, df):
+        df = df.copy()
+        df["ema20"], df["ema50"] = ema(df["close"], 20), ema(df["close"], 50)
+        df["atr"] = atr(df, 14)
+        df["rsi"] = rsi(df["close"], 14)
+        df["ret1h"] = df["close"] / df["close"].shift(4) - 1
+        return df
+
+    def can_enter(self, ts):
+        t = ts.tz_convert("America/New_York").time() if ts.tzinfo else ts.time()
+        return self.first_entry <= t <= self.last_entry
+
+    def entry(self, df, i, ctx):
+        if i < 55:
+            return None
+        r = df.iloc[i]
+        if not (r["close"] > r["ema20"] > r["ema50"] and 0.003 <= r["ret1h"] <= 0.06 and r["rsi"] < 78):
+            return None
+        stop_pct = min(0.08, max(0.015, self.atr_mult * r["atr"] / r["close"]))
+        return Entry(stop=r["close"] * (1 - stop_pct), trail_pct=stop_pct, max_hold_min=3 * 24 * 60,
+                     reason=f"trh padá: {ctx.get('symbol', '')} +{r['ret1h']*100:.1f} % za hodinu, nad EMA 20/50")
+
+    def exit_signal(self, df, i, lot):
+        r = df.iloc[i]
+        if r["close"] < r["ema50"]:
+            return "pád se zastavil (ETF pod EMA 50)"
+        return None

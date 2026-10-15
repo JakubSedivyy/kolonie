@@ -16,7 +16,8 @@ from colony import config, survival
 config.TELEGRAM_TOKEN = config.TELEGRAM_CHAT_ID = ""     # testy nikdy nepíšou na skutečný Telegram
 from colony.wallet import Wallet
 from colony.agents.base import Executor, Entry
-from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent
+from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent
+from colony.agents.shadow import ShadowAgent, mirror
 from colony.agents.degen import DegenAgent, HunterAgent
 from colony.broker import SimBroker, Fill
 from colony.engine import replay
@@ -245,6 +246,53 @@ def test_whisper_needs_two_sources():
     assert a.entry(p, i, {"symbol": "DOGE/USD", "radar": two}) is None   # o DOGE se nemluví
 
 
+def test_bear_buys_inverse_etf_when_market_falls():
+    a = BearAgent()
+    assert "SQQQ" in a.universe({})
+    start = pd.Timestamp("2026-01-05 14:30", tz="UTC")             # 9:30 New York
+    df = bars(200, start, 15, drift=0.001, vol=0.003, seed=5)       # inverzní ETF roste = trh padá
+    p = a.prepare(df)
+    hits = [i for i in range(60, len(p)) if a.can_enter(p.index[i]) and a.entry(p, i, {"symbol": "SQQQ"})]
+    assert hits, "medvěd by měl při rostoucím inverzním ETF nakoupit"
+    e = a.entry(p, hits[0], {"symbol": "SQQQ"})
+    assert e.stop < p["close"].iloc[hits[0]] and "padá" in e.reason
+    down = a.prepare(bars(200, start, 15, drift=-0.001, vol=0.003, seed=5))
+    assert not any(a.entry(down, i, {"symbol": "SQQQ"}) for i in range(60, 200))   # trh roste -> nic
+
+
+def test_shadow_short_profits_when_coin_falls():
+    assert abs(mirror(100, 90) - 110) < 1e-9
+    start = pd.Timestamp("2026-01-01", tz="UTC")
+    n = 24 * 8
+    rng = np.random.default_rng(3)
+    close = 100 * np.exp(np.cumsum(np.r_[np.zeros(80), rng.normal(-0.003, 0.008, n - 80)]))
+    idx = pd.date_range(start, periods=n, freq="60min", tz="UTC")
+    full = pd.DataFrame({"open": close * 1.001, "high": close * 1.004, "low": close * 0.996,
+                         "close": close, "volume": 1000.0}, index=idx)
+
+    class D:
+        upto = 100
+        def bars(self, syms, minutes, start, crypto=False):
+            return {"XYZ/USD": full.iloc[:self.upto]}
+    d = D()
+    sh = ShadowAgent(d)
+    msgs = []
+    opened = None
+    for k in range(100, n):
+        d.upto = k
+        now = (idx[k - 1] + pd.Timedelta(minutes=61)).to_pydatetime()
+        sh.tick(now, "neutral", msgs.append, ["XYZ/USD"])
+        if sh.wallet.lots and opened is None:
+            opened = k
+    assert opened, "stín měl při padajícím coinu otevřít short"
+    assert sh.wallet.trades, "short se měl časem uzavřít"
+    assert sh.wallet.trades[0]["pnl"] > 0, sh.wallet.trades[0]
+    assert any("short" in m for m in msgs)
+    sh2 = ShadowAgent(d); d.upto = 120
+    sh2.tick((idx[119] + pd.Timedelta(minutes=61)).to_pydatetime(), "risk_on", msgs.append, ["XYZ/USD"])
+    assert not sh2.wallet.lots                                       # v býčím trhu neshortuje
+
+
 # ------------------------------------------------------------------ živá kolonie s falešnou Alpakou
 def test_live_colony_ticks():
     import colony.live as live
@@ -315,11 +363,11 @@ def test_live_colony_ticks():
     import json
     from colony.dashboard import _jsonable
     snap = json.loads(json.dumps(c.snapshot(now), default=_jsonable))
-    assert len(snap["bots"]) == 8
+    assert len(snap["bots"]) == 10
     assert all(isinstance(ok, bool) for e in snap["eval"] for _, ok in e["checks"])
     c.save()
     c2 = live.Colony()                                # obnovení ze souboru
-    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Degen", "Lovec", "Věštec"]
+    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Degen", "Lovec", "Stín", "Věštec"]
     assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets)) < 1e-6
     print("\n".join(sent[:15]))
 

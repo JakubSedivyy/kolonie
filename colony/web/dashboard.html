@@ -12,7 +12,7 @@
 :root {
   --bg: #f3f5f2; --panel: #ffffff; --ink: #172019; --muted: #5d6b62; --line: #dfe5df; --soft: #eef2ee;
   --alive: #1d8a4e; --injured: #c46a12; --dead: #8a8f8b; --loss: #c2412d; --gain: #1d8a4e; --warn-bg: #fff3e0; --warn-fg: #8a4b00;
-  --b-orbit: #2f62d8; --b-trendy: #0f8a86; --b-memec: #c23b8f; --b-vlna: #c77d0a; --b-degen: #7a4fd0; --b-vestec: #3b7d3f; --b-septac: #b8452f; --b-lovec: #5b6b1f;
+  --b-orbit: #2f62d8; --b-trendy: #0f8a86; --b-memec: #c23b8f; --b-vlna: #c77d0a; --b-degen: #7a4fd0; --b-vestec: #3b7d3f; --b-septac: #b8452f; --b-lovec: #5b6b1f; --b-medved: #6b4a2b; --b-stin: #3d4a5c;
   --sky1: #cfe6f5; --sky2: #eef6fb; --grass: #9fcf8a; --grass2: #7fb86a; --roof: #3a2f2a; --stone: #9aa19c; --wall: #fffaf0;
   --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
   --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -21,12 +21,12 @@
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
   --bg: #0f1411; --panel: #161d19; --ink: #e5ece6; --muted: #92a197; --line: #26302a; --soft: #1c2520;
   --alive: #4cc47f; --injured: #f0a043; --dead: #6d746f; --loss: #f2775f; --gain: #4cc47f; --warn-bg: #2b2112; --warn-fg: #f3c27a;
-  --b-orbit: #6f97ff; --b-trendy: #3cc7c1; --b-memec: #ef6dbd; --b-vlna: #f0ad3a; --b-degen: #a888f2; --b-vestec: #7fcf83; --b-septac: #f2876f; --b-lovec: #b9cc5e;
+  --b-orbit: #6f97ff; --b-trendy: #3cc7c1; --b-memec: #ef6dbd; --b-vlna: #f0ad3a; --b-degen: #a888f2; --b-vestec: #7fcf83; --b-septac: #f2876f; --b-lovec: #b9cc5e; --b-medved: #c9a27a; --b-stin: #9fb0c8;
   --sky1: #14243a; --sky2: #1d3350; --grass: #2b4a2a; --grass2: #213b20; --roof: #0d0f0e; --stone: #5f6763; --wall: #e8e2d4; color-scheme: dark } }
 :root[data-theme="dark"] {
   --bg: #0f1411; --panel: #161d19; --ink: #e5ece6; --muted: #92a197; --line: #26302a; --soft: #1c2520;
   --alive: #4cc47f; --injured: #f0a043; --dead: #6d746f; --loss: #f2775f; --gain: #4cc47f; --warn-bg: #2b2112; --warn-fg: #f3c27a;
-  --b-orbit: #6f97ff; --b-trendy: #3cc7c1; --b-memec: #ef6dbd; --b-vlna: #f0ad3a; --b-degen: #a888f2; --b-vestec: #7fcf83; --b-septac: #f2876f; --b-lovec: #b9cc5e;
+  --b-orbit: #6f97ff; --b-trendy: #3cc7c1; --b-memec: #ef6dbd; --b-vlna: #f0ad3a; --b-degen: #a888f2; --b-vestec: #7fcf83; --b-septac: #f2876f; --b-lovec: #b9cc5e; --b-medved: #c9a27a; --b-stin: #9fb0c8;
   --sky1: #14243a; --sky2: #1d3350; --grass: #2b4a2a; --grass2: #213b20; --roof: #0d0f0e; --stone: #5f6763; --wall: #e8e2d4; color-scheme: dark }
 * { box-sizing: border-box }
 html, body { margin: 0 }
@@ -231,8 +231,8 @@ footer { font-size: 12.5px; color: var(--muted) }
 </div>
 
 <script>
-const COLORS = { Orbit: "var(--b-orbit)", Trendy: "var(--b-trendy)", Memec: "var(--b-memec)", Vlna: "var(--b-vlna)", Degen: "var(--b-degen)", "Věštec": "var(--b-vestec)", "Šeptač": "var(--b-septac)", Lovec: "var(--b-lovec)" };
-const ASSET = { stock: "akcie", crypto: "krypto", meme: "meme coiny", degen: "nové coiny · simulace", dexmeme: "meme coiny na DEXu · simulace", predict: "Polymarket · simulace" };
+const COLORS = { Orbit: "var(--b-orbit)", Trendy: "var(--b-trendy)", Memec: "var(--b-memec)", Vlna: "var(--b-vlna)", Degen: "var(--b-degen)", "Věštec": "var(--b-vestec)", "Šeptač": "var(--b-septac)", Lovec: "var(--b-lovec)", "Medvěd": "var(--b-medved)", "Stín": "var(--b-stin)" };
+const ASSET = { stock: "akcie", crypto: "krypto", meme: "meme coiny", degen: "nové coiny · simulace", dexmeme: "meme coiny na DEXu · simulace", short: "sázky na pokles krypta · simulace", predict: "Polymarket · simulace" };
 const STATUS = { ALIVE: "žije", INJURED: "zraněný", DEAD: "mrtvý" };
 const col = n => COLORS[n] || "var(--muted)";
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));

@@ -17,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 
 from colony import config
 from colony.agents.base import Executor
-from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent
+from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, BearAgent
 from colony.broker import SimBroker
 from colony.engine import replay
 
@@ -47,6 +47,11 @@ VARIANTS = {
         {"atr_mult": 3.0},
         {"atr_mult": 2.5},
         {"atr_mult": 3.5},
+    ]),
+    "Medvěd": (BearAgent, [
+        {"atr_mult": 1.5},
+        {"atr_mult": 2.0},
+        {"atr_mult": 3.0},
     ]),
 }
 MIN_TRADES = 8

@@ -11,8 +11,9 @@ import pandas as pd
 
 from . import config, survival, report
 from .agents.base import Executor, BarAgent
-from .agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent
+from .agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent
 from .agents.degen import DegenAgent, HunterAgent
+from .agents.shadow import ShadowAgent
 from .broker import AlpacaBroker
 from .indicators import ema
 from .market import AlpacaData, AlpacaAssets, DexScreener
@@ -48,9 +49,10 @@ class Colony:
         self.assets = AlpacaAssets(self.broker.tc)
         self.dex = DexScreener()
         self.exec = Executor(self.broker, self.tg.send)
-        self.bar_agents: list[BarAgent] = [OrbitAgent(), TrendAgent(), MemeAgent(), WaveAgent(), WhisperAgent()]
+        self.bar_agents: list[BarAgent] = [OrbitAgent(), TrendAgent(), MemeAgent(), WaveAgent(), WhisperAgent(), BearAgent()]
         self.degen = DegenAgent(self.dex, radar=self.radar)
         self.lovec = HunterAgent(self.dex, radar=self.radar)
+        self.stin = ShadowAgent(self.data)
         self.oracle = OracleAgent(self.grok)
         self.lab, self._lab_mtime, self._lab_checked = {}, 0.0, 0.0
         self.mood, self.mood_at = "neutral", None
@@ -68,7 +70,7 @@ class Colony:
     # ------------------------------------------------------------------ stav
     @property
     def wallets(self) -> list[Wallet]:
-        return [a.wallet for a in self.bar_agents] + [self.degen.wallet, self.lovec.wallet, self.oracle.wallet]
+        return [a.wallet for a in self.bar_agents] + [self.degen.wallet, self.lovec.wallet, self.stin.wallet, self.oracle.wallet]
 
     def save(self):
         st = {"wallets": {w.name: w.to_dict() for w in self.wallets}, "last_bar": self.last_bar,
@@ -87,7 +89,7 @@ class Colony:
         if not os.path.exists(self.state_path):
             return
         st = json.load(open(self.state_path))
-        for a in self.bar_agents + [self.degen, self.lovec, self.oracle]:
+        for a in self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]:
             if a.name in st["wallets"]:
                 a.wallet = Wallet.from_dict(st["wallets"][a.name])
         self.last_bar = st.get("last_bar", {})
@@ -243,7 +245,7 @@ class Colony:
                             self.tg.send(f"🚫 {s} dnes 2x vyhodil stop-loss - kolonie ho do zítřka nebude obchodovat")
 
     def check_survival(self, now):
-        agents = self.bar_agents + [self.degen, self.lovec, self.oracle]
+        agents = self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]
         for a in agents:
             w = a.wallet
             if w.status == "DEAD":
@@ -364,6 +366,11 @@ class Colony:
                     sim.tick(now, "risk_off" if self.paused else m, self.tg.send)  # pauza = jen správa pozic
                 except Exception as e:
                     log.exception("%s: %s", sim.name, e)
+        try:                                           # Stín si sám hlídá hodinové svíčky
+            uni = list(dict.fromkeys((self.ctx.get("crypto_majors") or []) + (self.ctx.get("crypto_memes") or [])))
+            self.stin.tick(now, self.mood, self.tg.send, uni, paused=self.paused)
+        except Exception as e:
+            log.exception("stín: %s", e)
         if int(time.time() // 30) % 20 == 1:           # Věštec každých ~10 minut
             try:
                 self.oracle.tick(now, self.tg.send, paused=self.paused)
@@ -375,7 +382,7 @@ class Colony:
         dashboard.publish(self.snapshot(now))
 
     def snapshot(self, now):
-        agents = self.bar_agents + [self.degen, self.lovec, self.oracle]
+        agents = self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]
         bots = []
         for a in agents:
             w = a.wallet
@@ -392,7 +399,7 @@ class Colony:
             bots.append({**s, "asset_class": w.asset_class, "desc": (a.__doc__ or "").strip().split("\n")[0],
                          "start": w.start, "cash": w.cash, "born": w.born, "died": w.died, "age_days": age,
                          "days_left": max(0, config.PROFIT_DEADLINE_DAYS - age), "curve": w.equity_curve[-600:],
-                         "positions": pos, "simulated": w.asset_class in ("degen", "dexmeme", "predict"),
+                         "positions": pos, "simulated": w.asset_class in ("degen", "dexmeme", "short", "predict"),
                          "benched": bool(getattr(a, "benched", False)),
                          "lab_warn": bool(getattr(a, "lab_warn", False)),
                          "waiting": (a is self.oracle and not self.grok.enabled),

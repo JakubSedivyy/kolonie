@@ -1,6 +1,6 @@
 # Kolonie obchodních botů 🐣
 
-Osm botů, každý s vlastní peněženkou **$1 000**. Obchodují sami a nonstop. Když bot spadne
+Deset botů, každý s vlastní peněženkou **$1 000**. Obchodují sami a nonstop. Když bot spadne
 pod **$800** nebo za **30 dní** nic nevydělá, **umře**. Na všechno se díváš v **dashboardu**
 v prohlížeči nebo na mobilu a zprávy ti chodí do **Telegramu**.
 
@@ -12,7 +12,9 @@ v prohlížeči nebo na mobilu a zprávy ti chodí do **Telegramu**.
 | **Vlna** | krypto i meme coiny | swing: coin v trendu na internetu nebo průraz 3denního maxima, rostoucí trend | 3–7 dní |
 | **Šeptač** | meme coiny na Alpace | kupuje, jen když o coinu mluví aspoň 2 různé zdroje (X, 4chan, StockTwits, Telegram…) a cena to potvrzuje | max. 24 hodin |
 | **Lovec** | zavedené meme coiny na Solaně (3+ dny staré, likvidita od $250k) | **jen simulace**: coiny z radaru, které rostou a kupci převažují; cíl +25 %, stop −10 % | max. 2 dny |
+| **Medvěd** | inverzní ETF (SQQQ, SPXS, SOXS…), které rostou, když trh padá | vstup jen když pád potvrzuje trend; stop 2x ATR, trailing | max. 3 dny |
 | **Degen** | úplně nové meme coiny na Solaně | **jen simulace**: likvidita, stáří, převaha kupců, trend radar, hlídá rug pully | max. 6 hodin |
+| **Stín** | krypto - sázky na pokles (short) | **jen simulace** (Alpaca short krypta neumí): sestupný trend, coin padá 2-15 % za 24 h; nikdy v býčím trhu; poplatky a funding jako na burze | max. 3 dny |
 | **Věštec** | predikční trhy Polymarket | **jen simulace**: Grok přečte X a zprávy, odhadne pravděpodobnost; sází při hraně ≥ 8 b., čtvrtinový Kelly | do vyhodnocení trhu |
 
 ## Trend radar: co je teď „in“ na internetu

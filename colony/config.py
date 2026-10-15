@@ -39,6 +39,7 @@ COSTS = {
     "meme":   {"fee": 0.0025, "slip": 0.0020},
     "degen":  {"fee": 0.0100, "slip": 0.0300},   # DEX swap + MEV + mělká likvidita
     "dexmeme": {"fee": 0.0050, "slip": 0.0100},  # zavedené meme coiny na DEXu: hlubší pooly, menší skluz
+    "short":  {"fee": 0.0006, "slip": 0.0005},   # simulované shorty krypta (perp burza, taker 0,06 %)
     "predict": {"fee": 0.0100, "slip": 0.0},     # Polymarket: kupuje za ask, prodává za bid + rezerva na poplatky
 }
 
