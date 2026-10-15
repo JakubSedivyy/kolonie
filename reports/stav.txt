@@ -20,42 +20,42 @@ Degen [INJURED] $913.22 (-8.68 %) | obchodů 5, úspěšnost 20 %, PF 0.19, max 
    2026-10-15T12:24 HELLCAT·Bwfh: -50.46 $ (-99.9 %) RUG PULL - likvidita zmizela
    2026-10-15T13:20 PONK·4jjQ: -14.89 $ (-29.5 %) stop-loss
 
-Lovec [ALIVE] $1018.04 (+1.80 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.4 %, poplatky $2.0
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1069 (-1.7 %) - skóre 1.8
-   otevřeno JEANPHIL·GTBx: nákup 0.00613878, teď 0.007638 (+24.4 %) - skóre 1.4
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06572 (+6.9 %) - skóre 1.9
-   otevřeno CYBERLEEK·ApZu: nákup 0.00278962, teď 0.002523 (-9.6 %) - skóre 2.8
+Lovec [ALIVE] $1009.06 (+0.91 %) | obchodů 2, úspěšnost 50 %, PF 1.82, max propad 2.3 %, poplatky $4.06
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1092 (+0.4 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06244 (+1.6 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004019 (-3.1 %) - skóre 1.9
+   otevřeno OTC·MukL: nákup 0.00875468, teď 0.008897 (+1.6 %) - skóre 4.6
+   2026-10-15T15:33 JEANPHIL·GTBx: +23.33 $ (+23.2 %) cíl zisku
+   2026-10-15T15:42 CYBERLEEK·ApZu: -12.79 $ (-12.7 %) stop-loss
 
-Stín [ALIVE] $975.93 (-2.41 %) | obchodů 4, úspěšnost 0 %, PF 0.00, max propad 3.1 %, poplatky $1.74
-   otevřeno DOGE/USD: nákup 0.0799119, teď 0.079872 (-0.0 %) - sestupný trend, -3.0 % za 24 h
-   otevřeno DOT/USD: nákup 1.09675, teď 1.0962 (-0.0 %) - sestupný trend, -2.5 % za 24 h
-   otevřeno GRT/USD: nákup 0.0243433, teď 0.0243311 (-0.0 %) - sestupný trend, -3.6 % za 24 h
-   2026-10-15T13:00 AAVE/USD: -4.03 $ (-1.4 %) stop-loss
-   2026-10-15T15:00 ADA/USD: -4.37 $ (-1.6 %) stop-loss
+Stín [ALIVE] $970.84 (-2.92 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 3.6 %, poplatky $2.17
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
+   2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
+   2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
+   2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $997.50 (-0.25 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.32
-   otevřeno PM2589812·NO: nákup 0.29, teď 0.27 (-6.9 %) - Grok 62% vs trh 72% (medium)
+Věštec [ALIVE] $998.59 (-0.14 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.32
+   otevřeno PM2589812·NO: nákup 0.29, teď 0.28 (-3.4 %) - Grok 62% vs trh 72% (medium)
 
-CELKEM $9903.25 z $10000 (-0.97 %)
+CELKEM $9890.27 z $10000 (-1.10 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-15T12:30:19+00:00 🔻 Memec PRODAL PEPE/USD: -1.24 $ (-1.9 %) - stop-loss
-   2026-10-15T12:31:17+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-15T13:01:11+00:00 🔻 Stín (simulace) uzavřel short AAVE/USD: -4.03 $ (-1.4 %) - stop-loss
-   2026-10-15T13:01:12+00:00 🐻 Stín (simulace) otevřel short BCH/USD za $266 @ 262.074, stop 271.909 - sestupný trend, -4.1 % za 24 h
-   2026-10-15T13:20:18+00:00 🔻 Degen (simulace) prodal PONK·4jjQ: -14.89 $ (-29 %) - stop-loss
-   2026-10-15T13:32:17+00:00 🏹 Lovec (simulace) koupil CATE·Ai66 za $100, likvidita $2,758,034 - https://dexscreener.com/solana/hmzvseemtzhhvznw9uwbag85hctmfnkbhzu
-   2026-10-15T13:35:28+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, SDST, DKI, CCC, HODO, WFF, GP, DRMA, WETO, SXTC, KORU
-   2026-10-15T14:44:07+00:00 🏹 Lovec (simulace) koupil CYBERLEEK·ApZu za $100, likvidita $530,904 - https://dexscreener.com/solana/g8kgi7aupex8evr8vmkrth9skev5biet
-   2026-10-15T15:01:49+00:00 🔻 Stín (simulace) uzavřel short ADA/USD: -4.37 $ (-1.6 %) - stop-loss
    2026-10-15T15:01:59+00:00 🔻 Stín (simulace) uzavřel short AVAX/USD: -5.51 $ (-2.1 %) - stop-loss
    2026-10-15T15:01:59+00:00 🔻 Stín (simulace) uzavřel short BCH/USD: -9.36 $ (-3.5 %) - stop-loss
    2026-10-15T15:01:59+00:00 🐻 Stín (simulace) otevřel short DOGE/USD za $293 @ 0.079872, stop 0.0824961 - sestupný trend, -3.0 % za 24 h
    2026-10-15T15:02:00+00:00 🐻 Stín (simulace) otevřel short DOT/USD za $218 @ 1.0962, stop 1.1454 - sestupný trend, -2.5 % za 24 h
    2026-10-15T15:02:00+00:00 🐻 Stín (simulace) otevřel short GRT/USD za $217 @ 0.0243311, stop 0.025426 - sestupný trend, -3.6 % za 24 h
    2026-10-15T15:32:04+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
+   2026-10-15T15:33:39+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen, Lovec, Stín, Věštec. Příkazy: /stav /pauz
+   2026-10-15T15:33:49+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-10-15T15:34:07+00:00 ✅ Lovec (simulace) prodal JEANPHIL·GTBx: +23.33 $ (+23 %) - cíl zisku
+   2026-10-15T15:42:00+00:00 🔻 Lovec (simulace) prodal CYBERLEEK·ApZu: -12.79 $ (-13 %) - stop-loss
+   2026-10-15T16:02:00+00:00 🔻 Stín (simulace) uzavřel short DOGE/USD: -2.49 $ (-0.9 %) - stop-loss
+   2026-10-15T16:02:00+00:00 🔻 Stín (simulace) uzavřel short DOT/USD: -1.65 $ (-0.8 %) - stop-loss
+   2026-10-15T16:02:01+00:00 🔻 Stín (simulace) uzavřel short GRT/USD: -1.74 $ (-0.8 %) - stop-loss
+   2026-10-15T16:10:03+00:00 🏹 Lovec (simulace) koupil fone·CTPo za $100, likvidita $484,531 - https://dexscreener.com/solana/3dcwhqjp6jbtjpq8ga335hwgsqvs7uqmdmex7
+   2026-10-15T16:30:03+00:00 🏹 Lovec (simulace) koupil OTC·MukL za $100, likvidita $569,048 - https://dexscreener.com/solana/da4pm4xsdy4m9v4cgakkbvh1pw1ysctqqa5nek
 
 VĚŠTEC: 5 odhadů z posledního skenu
