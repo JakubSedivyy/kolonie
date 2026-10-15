@@ -457,6 +457,32 @@ def test_trend_radar():
     assert r.snapshot()["metas"][0]["name"] == "AI agenti"
 
 
+def test_radar_pauses_blocked_source():
+    """Zdroj, který vrací 429/403, se hodinu (resp. 6 h) nezkouší; ostatní zdroje běží dál."""
+    import requests
+    from colony.trends import TrendRadar
+
+    class Blocked(FakeSession):
+        calls = 0
+        def get(self, url, **kw):
+            if "stocktwits" in url:
+                Blocked.calls += 1
+                resp = requests.Response(); resp.status_code = 403
+                raise requests.HTTPError("403 Forbidden", response=resp)
+            return super().get(url, **kw)
+
+    r = TrendRadar(session=Blocked())
+    r.maybe_refresh(force=True)
+    assert Blocked.calls == 1 and "stocktwits" in r._paused
+    r.maybe_refresh(force=True)
+    assert Blocked.calls == 1, "pozastavený zdroj se nemá zkoušet znovu"
+    assert r.errors["stocktwits"].startswith("pauza do") and r.score("PEPE/USD") > 0
+    r._paused["stocktwits"] = 0                       # pauza vypršela -> zkusí znovu
+    r.maybe_refresh(force=True)
+    assert Blocked.calls == 2
+    assert "gdelt" not in r._paused                   # obyčejná chyba (offline) pauzu nespouští
+
+
 def test_meme_prefers_hyped_coin():
     class R:
         def score(self, s): return 5.0 if s.startswith("PEPE") else 0.0

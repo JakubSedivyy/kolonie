@@ -118,7 +118,10 @@ class Handler(BaseHTTPRequestHandler):
         self.send_header("Cache-Control", "no-store")
         self.send_header("Content-Length", str(len(body)))
         self.end_headers()
-        self.wfile.write(body)
+        try:
+            self.wfile.write(body)
+        except (BrokenPipeError, ConnectionResetError):   # prohlížeč zavřel spojení dřív - nevadí
+            pass
 
 
 def serve(host=None, port=None):

@@ -83,6 +83,10 @@ class TrendRadar:
         self.updated: str = ""
         self.errors: dict[str, str] = {}
         self._last = 0.0
+        self._paused: dict[str, float] = {}   # zdroj -> do kdy ho přeskakovat (po 429/403)
+
+    # zdroj, který nás odmítá, se chvíli nezkouší (šetří log i jejich limity)
+    PAUSE_SEC = {429: 3600, 403: 6 * 3600}
 
     # ------------------------------------------------------------------ veřejné API
     def score(self, symbol: str) -> float:
@@ -119,11 +123,22 @@ class TrendRadar:
                          ("4chan_biz", self._biz), ("stocktwits", self._stocktwits), ("telegram", self._telegram),
                          ("hackernews", self._hn), ("google_news", self._google_news), ("bluesky", self._bluesky),
                          ("grok", self._grok)):
+            until = self._paused.get(name, 0.0)
+            if until > time.time():
+                self.errors[name] = "pauza do " + datetime.fromtimestamp(until, timezone.utc).strftime("%H:%M UTC")
+                continue
             try:
                 fn(add, tokens)
+                self._paused.pop(name, None)
             except Exception as e:                       # jeden výpadek nesmí shodit radar
                 self.errors[name] = str(e)[:200]
-                log.warning("radar %s: %s", name, e)
+                code = getattr(getattr(e, "response", None), "status_code", None)
+                pause = self.PAUSE_SEC.get(code)
+                if pause:
+                    self._paused[name] = time.time() + pause
+                    log.warning("radar %s: %s -> pauza %d min", name, code, pause // 60)
+                else:
+                    log.warning("radar %s: %s", name, e)
 
         self.hot = dict(sorted(hot.items(), key=lambda kv: -kv[1]["score"]))
         self.tokens = tokens
