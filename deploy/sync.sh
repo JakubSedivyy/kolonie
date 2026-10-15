@@ -29,16 +29,16 @@ if git fetch -q origin main 2>>"$LOG"; then
   if [ "$NEW" != "$OLD" ]; then
     git reset -q --hard "$NEW"
     .venv/bin/pip install -q -r requirements.txt >> "$LOG" 2>&1
-    if .venv/bin/python tests/test_colony.py >> "$LOG" 2>&1; then
+    if .venv/bin/python tests/test_colony.py > state/tests.log 2>&1; then
       # když se změnila instalace (služby, časovače), přeinstaluj; jinak jen restart
       if [ -n "$OLD" ] && git diff --quiet "$OLD" "$NEW" -- deploy/install.sh; then
         systemctl restart colony
       else
-        DEBIAN_FRONTEND=noninteractive bash deploy/install.sh >> "$LOG" 2>&1 || systemctl restart colony
+        DEBIAN_FRONTEND=noninteractive bash deploy/install.sh 2>&1 | grep -v -i "heslo\|password" >> "$LOG" || systemctl restart colony
       fi
       log "nasazena verze ${NEW:0:7}: $(git log -1 --format=%s)"
     else
-      log "TESTY SELHALY pro ${NEW:0:7} - zůstávám na ${OLD:0:7}"
+      log "TESTY SELHALY pro ${NEW:0:7} - zůstávám na ${OLD:0:7}: $(grep -E 'Error|assert' state/tests.log | tail -n 3)"
       [ -n "$OLD" ] && git reset -q --hard "$OLD"
     fi
   fi
@@ -81,7 +81,7 @@ print(json.dumps(out, ensure_ascii=False, default=str))
 PY
 journalctl -u colony --since "-1h" --no-pager 2>/dev/null | grep -iE "error|traceback|warning" | tail -n 80 > "$R/reports/chyby.txt" || true
 timeout 900 .venv/bin/python deploy/videa.py "$R/reports/videa" >> "$LOG" 2>&1 || log "stahování videí selhalo"
-tail -n 60 "$LOG" > "$R/reports/sync.log"
+grep -v -i "heslo\|password" "$LOG" | tail -n 60 > "$R/reports/sync.log"
 git -C "$R" add -A reports
 if ! git -C "$R" diff --cached --quiet; then
   git -C "$R" -c user.name="Kolonie" -c user.email="kolonie@server" commit -q -m "stav $(date -u +%F' '%H:%M) UTC"
