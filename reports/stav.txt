@@ -7,8 +7,8 @@ Trendy [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.71 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $1001.42 (+0.14 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.25
-   otevřeno BAT/USD: nákup 0.211108, teď 0.21471 (+1.7 %) - vlna: průraz 3denního maxima, +24 % za 24 h
+Vlna [ALIVE] $1003.21 (+0.32 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.25
+   otevřeno BAT/USD: nákup 0.211108, teď 0.21846 (+3.5 %) - vlna: průraz 3denního maxima, +24 % za 24 h
 
 Šeptač [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
@@ -22,10 +22,10 @@ Degen [INJURED] $913.22 (-8.68 %) | obchodů 5, úspěšnost 20 %, PF 0.19, max 
    2026-10-15T13:20 PONK·4jjQ: -14.89 $ (-29.5 %) stop-loss
 
 Lovec [ALIVE] $1020.66 (+2.07 %) | obchodů 2, úspěšnost 50 %, PF 1.82, max propad 2.8 %, poplatky $4.06
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1189 (+9.3 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06433 (+4.6 %) - skóre 1.9
-   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004105 (-1.0 %) - skóre 1.9
-   otevřeno OTC·MukL: nákup 0.00875468, teď 0.008681 (-0.8 %) - skóre 4.6
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.121 (+11.2 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06445 (+4.8 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004156 (+0.2 %) - skóre 1.9
+   otevřeno OTC·MukL: nákup 0.00875468, teď 0.008388 (-4.2 %) - skóre 4.6
    2026-10-15T15:33 JEANPHIL·GTBx: +23.33 $ (+23.2 %) cíl zisku
    2026-10-15T15:42 CYBERLEEK·ApZu: -12.79 $ (-12.7 %) stop-loss
 
@@ -36,12 +36,12 @@ Stín [ALIVE] $970.84 (-2.92 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max pro
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $993.50 (-0.65 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.1 %, poplatky $1.64
-   otevřeno PM2589812·NO: nákup 0.29, teď 0.27 (-6.9 %) - Grok 62% vs trh 72% (medium)
+Věštec [ALIVE] $994.59 (-0.54 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $1.64
+   otevřeno PM2589812·NO: nákup 0.29, teď 0.28 (-3.4 %) - Grok 62% vs trh 72% (medium)
    otevřeno PM5170739·NO: nákup 0.64, teď 0.63 (-1.6 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
 
-CELKEM $9898.25 z $10000 (-1.02 %)
+CELKEM $9901.13 z $10000 (-0.99 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-10-15T15:33:49+00:00 🧪 Laboratoř: nové nastavení botů
