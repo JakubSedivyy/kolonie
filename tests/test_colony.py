@@ -1,0 +1,532 @@
+"""Testy bez internetu: syntetická data, falešná Alpaka a DexScreener.
+Spuštění:  python -m pytest -q tests   (nebo python tests/test_colony.py)"""
+import os, sys, tempfile, types, json
+from datetime import datetime, timedelta, timezone
+
+import numpy as np
+import pandas as pd
+
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+os.environ.setdefault("STATE_DIR", tempfile.mkdtemp())
+# testy nikdy nesmí volat placené ani skutečné služby
+for _k in ("XAI_API_KEY", "YOUTUBE_API_KEY", "REDDIT_CLIENT_ID", "REDDIT_CLIENT_SECRET", "COINGECKO_API_KEY"):
+    os.environ[_k] = ""
+
+from colony import config, survival
+config.TELEGRAM_TOKEN = config.TELEGRAM_CHAT_ID = ""     # testy nikdy nepíšou na skutečný Telegram
+from colony.wallet import Wallet
+from colony.agents.base import Executor, Entry
+from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent
+from colony.agents.degen import DegenAgent, HunterAgent
+from colony.broker import SimBroker, Fill
+from colony.engine import replay
+
+
+def bars(n, start, minutes, drift=0.0, vol=0.002, seed=0, p0=100.0, spikes=()):
+    rng = np.random.default_rng(seed)
+    r = rng.normal(drift, vol, n)
+    close = p0 * np.exp(np.cumsum(r))
+    open_ = np.r_[p0, close[:-1]]
+    high = np.maximum(open_, close) * (1 + rng.uniform(0, vol, n))
+    low = np.minimum(open_, close) * (1 - rng.uniform(0, vol, n))
+    volume = rng.uniform(800, 1200, n)
+    for i, mult in spikes:
+        volume[i] *= mult
+    idx = pd.date_range(start, periods=n, freq=f"{minutes}min", tz="UTC")
+    return pd.DataFrame({"open": open_, "high": high, "low": low, "close": close, "volume": volume}, index=idx)
+
+
+# ------------------------------------------------------------------ peněženka
+def test_wallet_round_trip_costs():
+    w = Wallet("t", "crypto")
+    w.open("X", 1.0, 100.0, stop=90)
+    t = w.close("X", 100.0, "test")
+    c = config.COSTS["crypto"]
+    assert t["pnl"] < 0                               # na nulovém pohybu se ztrácí poplatky a skluz
+    expected_loss = 100 * (1 + c["slip"]) * (1 + c["fee"]) - 100 * (1 - c["slip"]) * (1 - c["fee"])
+    assert abs(-t["pnl"] - expected_loss) < 1e-9
+    assert abs(w.cash - (1000 - expected_loss)) < 1e-9
+    w2 = Wallet.from_dict(w.to_dict())
+    assert w2.cash == w.cash and w2.trades == w.trades
+
+
+def test_survival_rules():
+    now = datetime(2026, 1, 1, tzinfo=timezone.utc)
+    w = Wallet("t", "stock", born=now.isoformat())
+    survival.check(w, now, 1000)
+    ev = survival.check(w, now + timedelta(hours=1), 940)
+    assert ("INJURED" in [e[0] for e in ev]) and w.status == "INJURED"
+    ev = survival.check(w, now + timedelta(days=1), 960)
+    assert w.status == "ALIVE" and w.rent_paid == config.RENT_PER_DAY
+    ev = survival.check(w, now + timedelta(days=2), 799)
+    assert ev[-1][0] == "DEATH"
+    w3 = Wallet("t3", "stock", born=now.isoformat())
+    ev = survival.check(w3, now + timedelta(days=31), 999)
+    assert ev[-1][0] == "DEATH" and "nevydělal" in ev[-1][1]
+
+
+# ------------------------------------------------------------------ strategie
+def orb_day(day, breakout=True, seed=1):
+    """Jeden obchodní den 9:30-16:00 NY: klidné rozpětí, pak průraz se silným objemem."""
+    start = pd.Timestamp(f"{day} 09:30", tz="America/New_York").tz_convert("UTC")
+    df = bars(78, start, 5, vol=0.0008, seed=seed)
+    df[["open", "high", "low", "close"]] = df[["open", "high", "low", "close"]].clip(99.0, 100.6)
+    if breakout:
+        for k in range(5, 40):
+            f = 1 + 0.002 * (k - 4)
+            df.iloc[k, :4] = [100.4 * f, 100.6 * f, 100.3 * f, 100.55 * f]
+        df.iloc[5, 4] = 5000
+    return df
+
+
+def test_orbit_breakout_and_flatten():
+    a = OrbitAgent()
+    a.wallet.born = "2026-03-01T00:00:00+00:00"
+    df = pd.concat([orb_day("2026-03-02"), orb_day("2026-03-03", breakout=False, seed=5)])
+    ex = Executor(SimBroker())
+    replay(a, {"SPY": df}, ex)
+    tr = a.wallet.trades
+    assert len(tr) == 1, tr
+    t = tr[0]
+    opened = pd.Timestamp(t["opened"]).tz_convert("America/New_York")
+    closed = pd.Timestamp(t["closed"]).tz_convert("America/New_York")
+    assert opened.time() >= pd.Timestamp("09:45").time()
+    assert closed.date() == opened.date()             # žádné držení přes noc
+    assert t["why"] in ("cíl zisku", "konec obchodního dne", "stop-loss")
+
+
+def test_trend_and_meme_run_and_pay_fees():
+    start = pd.Timestamp("2026-01-01", tz="UTC")
+    # trend: pila nahoru a dolů, ať vzniknou křížení
+    n = 2000
+    x = np.linspace(0, 12 * np.pi, n)
+    df = bars(n, start, 15, vol=0.002, seed=3)
+    wave = 100 * (1 + 0.04 * np.sin(x)) * np.exp(np.linspace(0, 0.6, n))
+    for c in ("open", "high", "low", "close"):
+        df[c] = df[c] / 100 * wave
+    df["high"] = df[["open", "high", "close"]].max(axis=1)
+    df["low"] = df[["open", "low", "close"]].min(axis=1)
+    t = TrendAgent(); t.wallet.born = start.isoformat()
+    replay(t, {"BTC/USD": df}, Executor(SimBroker()))
+    assert len(t.wallet.trades) >= 3
+    assert t.wallet.fees_paid > 0
+    assert not t.wallet.lots                          # na konci testu vše zavřeno
+
+    m = MemeAgent(); m.wallet.born = start.isoformat()
+    md = bars(1500, start, 5, drift=0.0002, vol=0.004, seed=4, spikes=[(400, 8), (900, 10), (1200, 6)])
+    replay(m, {"DOGE/USD": md}, Executor(SimBroker()))
+    s = m.wallet.stats()
+    assert s["equity"] > 0 and m.wallet.status in ("ALIVE", "INJURED", "DEAD")
+
+
+def test_death_in_crash():
+    start = pd.Timestamp("2026-01-01", tz="UTC")
+    m = MemeAgent(); m.wallet.born = start.isoformat()
+    m.max_position_frac = 1.0; m.risk_per_trade = 0.5; m.stop_pct = 0.6   # schválně hazardér
+    orig = m.entry
+    def no_time_limit(df, i, ctx):
+        e = orig(df, i, ctx)
+        if e:
+            e.max_hold_min = None; e.target = None
+        return e
+    m.entry = no_time_limit
+    md = bars(700, start, 5, vol=0.001, seed=7, spikes=[(400, 9)])
+    pv = md["close"].iloc[399]
+    hh = md["high"].iloc[376:400].max()
+    top = max(pv, hh) * 1.004
+    md.iloc[400, :4] = [pv, top * 1.001, pv * 0.999, top]   # průraz 2h maxima s obřím objemem
+    k = np.arange(700 - 401)
+    crash = top * (1 - 0.0015 * k)                     # pak plynulý krach -45 %
+    md.iloc[401:, 0] = crash; md.iloc[401:, 3] = crash * 0.9985
+    md.iloc[401:, 1] = crash * 1.0005; md.iloc[401:, 2] = crash * 0.998
+    replay(m, {"DOGE/USD": md}, Executor(SimBroker()))
+    assert m.wallet.status == "DEAD", m.wallet.stats()
+    assert "zbankrotoval" in m.wallet.cause_of_death
+    assert not m.wallet.lots
+
+
+def test_rejected_sell_keeps_position():
+    class Rejecting(SimBroker):
+        def sell(self, *a, **k):
+            return None
+    a = MemeAgent()
+    ex = Executor(Rejecting())
+    now = datetime(2026, 1, 1, tzinfo=timezone.utc)
+    ex.enter(a, "DOGE/USD", 1.0, Entry(stop=0.9), 100, now)
+    assert ex.exit(a, "DOGE/USD", 0.95, "stop-loss", now) is None
+    assert "DOGE/USD" in a.wallet.lots              # účetnictví neprodá, co broker neprodal
+
+
+# ------------------------------------------------------------------ degen
+class FakeDex:
+    def __init__(self):
+        self.price, self.liq = 0.001, 80_000
+        self.now_ms = int(datetime(2026, 1, 1, 12, tzinfo=timezone.utc).timestamp() * 1000)
+
+    def fresh_tokens(self):
+        return ["TokA", "TokB"]
+
+    def _pair(self, tok):
+        return {"pairAddress": "P" + tok, "url": "https://dexscreener.com/x",
+                "baseToken": {"address": tok, "symbol": tok.upper()}, "quoteToken": {"symbol": "SOL"},
+                "priceUsd": str(self.price), "liquidity": {"usd": self.liq}, "fdv": 2_000_000,
+                "pairCreatedAt": self.now_ms - 2 * 3600 * 1000,
+                "txns": {"m5": {"buys": 60, "sells": 20}}, "priceChange": {"h1": 40, "m5": 3},
+                "volume": {"m5": 9000}}
+
+    def pairs_for_tokens(self, addrs):
+        return [self._pair(a) for a in addrs]
+
+    def pair(self, pa):
+        return self._pair(pa[1:])
+
+
+def test_degen_buys_then_rug():
+    dex = FakeDex()
+    d = DegenAgent(dex)
+    now = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    msgs = []
+    d.tick(now, "neutral", msgs.append)
+    assert len(d.wallet.lots) == 2
+    dex.liq = 10_000                                  # rug pull
+    d.tick(now + timedelta(minutes=5), "neutral", msgs.append)
+    assert not d.wallet.lots
+    assert all(t["ret"] < -0.8 for t in d.wallet.trades)
+    assert "TokA" in d.blacklist
+
+
+class FakeDexEstablished(FakeDex):
+    """Zavedený meme coin: 30 dní starý, hluboký pool, roste v hodině i za 6 h."""
+    def __init__(self):
+        super().__init__()
+        self.price, self.liq = 0.5, 900_000
+
+    def _pair(self, tok):
+        p = super()._pair(tok)
+        p.update({"fdv": 300_000_000, "pairCreatedAt": self.now_ms - 30 * 86400 * 1000,
+                  "txns": {"h1": {"buys": 400, "sells": 250}, "m5": {"buys": 30, "sells": 20}},
+                  "priceChange": {"h1": 4, "h6": 9, "h24": 15, "m5": 0.5}, "volume": {"h1": 60_000, "m5": 5000}})
+        return p
+
+
+def test_hunter_only_trending_established():
+    class R:
+        tokens = {"TokW"}
+    dex = FakeDexEstablished()
+    h = HunterAgent(dex, radar=R())
+    now = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    msgs = []
+    h.tick(now, "neutral", msgs.append)
+    assert list(h.wallet.lots) == ["TOKW·TokW"], h.wallet.lots       # jen coin z radaru, ne čerstvé tokeny
+    assert DegenAgent(FakeDexEstablished()).score(dex._pair("X"), dex.now_ms) is None   # pro Degena moc starý
+    assert h.score(FakeDex()._pair("Y"), dex.now_ms) is None                            # pro Lovce moc nový
+    dex.price *= 1.3
+    h.tick(now + timedelta(hours=1), "neutral", msgs.append)
+    assert not h.wallet.lots and h.wallet.trades[0]["why"] == "cíl zisku"
+    assert any("Lovec" in m for m in msgs)
+
+
+def test_whisper_needs_two_sources():
+    class R:
+        def __init__(self, sources):
+            self.hot = {"PEPE": {"score": 6.0, "sources": sources}}
+        def score(self, s): return self.hot.get(s.split("/")[0], {}).get("score", 0.0)
+    df = bars(200, pd.Timestamp("2026-01-01", tz="UTC"), 15, drift=0.002, vol=0.003, seed=4)
+    a = WhisperAgent()
+    p = a.prepare(df)
+    i = len(p) - 1
+    p.iloc[i, p.columns.get_loc("ret1h")] = 0.02
+    p.iloc[i, p.columns.get_loc("rsi")] = 60
+    one = R(["4chan /biz/", "4chan /biz/: vlákno"])
+    two = R(["4chan /biz/", "X přes Groka", "StockTwits"])
+    assert a.entry(p, i, {"symbol": "PEPE/USD", "radar": one}) is None
+    e = a.entry(p, i, {"symbol": "PEPE/USD", "radar": two})
+    assert e and "3 zdrojů" in e.reason and e.stop < p["close"].iloc[i]
+    assert a.entry(p, i, {"symbol": "DOGE/USD", "radar": two}) is None   # o DOGE se nemluví
+
+
+# ------------------------------------------------------------------ živá kolonie s falešnou Alpakou
+def test_live_colony_ticks():
+    import colony.live as live
+
+    now = pd.Timestamp(datetime.now(timezone.utc)).floor("15min").to_pydatetime() + timedelta(seconds=40)
+    live.utcnow = lambda: now                         # pevný čas = test nezávisí na hodinách
+
+    class FakeData:
+        def bars(self, syms, minutes, start_, end=None, crypto=False):
+            out = {}
+            for k, s in enumerate(syms):
+                n = 450 if minutes < 60 else 300
+                st = pd.Timestamp(now).floor(f"{minutes}min") - pd.Timedelta(minutes=minutes * n)
+                spikes = [(n - 1, 10)] if s == "DOGE/USD" else []
+                df = bars(n, st, minutes, drift=0.0003, vol=0.002, seed=k, spikes=spikes)
+                if s == "DOGE/USD":
+                    top = df["high"].iloc[-25:-1].max() * 1.004
+                    df.iloc[-1, :4] = [df["close"].iloc[-2], top * 1.001, df["close"].iloc[-2] * 0.999, top]
+                out[s] = df
+            return out
+
+        def latest_prices(self, syms, crypto=False):
+            return {s: 100.0 for s in syms}
+
+        def stock_movers(self, top=20):
+            return ["NVDA", "TSLA"]
+
+    class FakeTC:
+        def get_clock(self):
+            return types.SimpleNamespace(is_open=False)
+
+    class FakeBroker(SimBroker):
+        simulated = True
+        def __init__(self):
+            self.tc = FakeTC()
+        def clock(self):
+            return self.tc.get_clock()
+
+    class FakeAssets:
+        def __init__(self, tc): pass
+        def majors(self): return ["BTC/USD", "ETH/USD"]
+        def memes(self): return ["DOGE/USD", "SHIB/USD"]
+
+    live.AlpacaData, live.AlpacaBroker, live.AlpacaAssets = FakeData, FakeBroker, FakeAssets
+    live.DexScreener = FakeDex
+    sent = []
+    c = live.Colony()
+    c.radar.maybe_refresh = lambda force=False: False
+    c.oracle.tick = lambda *a, **k: None
+    assert not c.grok.enabled
+    c.tg.send = sent.append
+    c.exec.notify = sent.append
+    c.tick()
+    c.mood, c.mood_at = "risk_on", now + timedelta(days=1)   # vynutit dobrou náladu
+    held = lambda: {s: l.entry for a in c.bar_agents for s, l in a.wallet.lots.items()}
+    c.data.latest_prices = lambda syms, crypto=False: {s: held().get(s, 100.0) for s in syms}
+    c.last_bar = {}
+    c.tick()
+    assert any("Memec KOUPIL DOGE/USD" in m for m in sent), sent
+    # stop-loss přes guard_stops: cena spadne
+    lot = c.bar_agents[2].wallet.lots["DOGE/USD"]
+    c.data.latest_prices = lambda syms, crypto=False: {s: lot.stop * 0.99 for s in syms}
+    c.guard_stops(now)
+    assert "DOGE/USD" not in c.bar_agents[2].wallet.lots
+    assert any("Memec PRODAL DOGE/USD" in m for m in sent), sent
+    assert os.path.exists(c.state_path)
+    # snapshot pro dashboard: čisté JSON hodnoty (žádné numpy "False" jako text)
+    import json
+    from colony.dashboard import _jsonable
+    snap = json.loads(json.dumps(c.snapshot(now), default=_jsonable))
+    assert len(snap["bots"]) == 8
+    assert all(isinstance(ok, bool) for e in snap["eval"] for _, ok in e["checks"])
+    c.save()
+    c2 = live.Colony()                                # obnovení ze souboru
+    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Degen", "Lovec", "Věštec"]
+    assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets)) < 1e-6
+    print("\n".join(sent[:15]))
+
+
+class FakeResp:
+    def __init__(self, j): self.j = j
+    def raise_for_status(self): pass
+    def json(self): return self.j
+
+
+class FakeSession:
+    headers = {}
+    def get(self, url, **kw):
+        if "coingecko" in url:
+            return FakeResp({"coins": [{"item": {"symbol": "PEPE", "score": 0}}, {"item": {"symbol": "DOGE", "score": 3}}]})
+        if "geckoterminal" in url:
+            return FakeResp({"data": [{"attributes": {"name": "PEPE / SOL"},
+                                       "relationships": {"base_token": {"data": {"id": "solana_AbC123"}}}}]})
+        if "metas/trending" in url:
+            return FakeResp([{"name": "AI agenti", "slug": "ai", "marketCapChange": {"h24": 12.5}, "tokenCount": 9}])
+        if "metas/meta" in url:
+            return FakeResp({"pairs": [{"chainId": "solana", "baseToken": {"symbol": "AIDOG", "address": "Zz9"}}]})
+        if "token-boosts/top" in url:
+            return FakeResp([{"chainId": "solana", "tokenAddress": "Bst1"}, {"chainId": "ethereum", "tokenAddress": "0x1"}])
+        raise RuntimeError("offline")
+    def post(self, *a, **k):
+        raise RuntimeError("offline")
+
+
+class FakeSocialSession(FakeSession):
+    """Odpovědi všech bezplatných sociálních a zpravodajských zdrojů."""
+    def get(self, url, **kw):
+        import time as _t
+        rss = b"<rss><channel><item><title>Solana and PEPE rally as memecoin season returns</title><link>https://x.y</link></item></channel></rss>"
+        if "4cdn.org" in url:
+            now = int(_t.time())
+            return FakeResp([{"threads": [{"sub": "$WIF to the moon", "com": "buying $WIF and pepe", "replies": 250, "last_modified": now},
+                                          {"sub": "old", "com": "$OLD", "replies": 5, "last_modified": now - 99999}]}])
+        if "stocktwits" in url:
+            return FakeResp({"symbols": [{"symbol": "NVDA"}, {"symbol": "DOGE.X"}]})
+        if "t.me/s/" in url:
+            r = FakeResp(None)
+            r.text = f'<div class="tgme_widget_message_text js-message_text" dir="auto">🚨 Binance will list <b>$BONK</b> perpetual ({url[-12:]})</div>'
+            return r
+        if "algolia" in url:
+            return FakeResp({"hits": [{"title": "Bitcoin ETF flows hit record", "url": "https://hn"}]})
+        if "news.google.com" in url or "coindesk" in url or "cointelegraph.com/rss" in url or "decrypt.co" in url:
+            r = FakeResp(None); r.content = rss.replace(b"returns", url.split("/")[2].encode()); return r
+        if "alternative.me" in url:
+            return FakeResp({"data": [{"value": "72", "value_classification": "Greed"}]})
+        if "gdeltproject" in url:
+            return FakeResp({"articles": [{"title": "Fed signals rate cut, bitcoin jumps", "domain": "reuters.com", "url": "https://r"}]})
+        return super().get(url, **kw)
+
+
+def test_social_sources():
+    from colony.trends import TrendRadar
+    r = TrendRadar(session=FakeSocialSession())
+    r.maybe_refresh(force=True)
+    for sym in ("WIF", "NVDA", "DOGE", "BONK", "PEPE", "SOL", "BTC"):
+        assert r.score(sym) > 0, (sym, r.errors)
+    assert "OLD" not in r.hot                                   # staré vlákno se nepočítá
+    assert r.fear_greed["value"] == 72
+    srcs = {w["source"] for w in r.world}
+    assert {"Binance oznámení", "Hacker News", "Google News", "reuters.com"} <= srcs, srcs
+    snap = r.snapshot()
+    assert snap["sources"].get("4chan /biz/") and snap["sources"].get("StockTwits trending")
+    assert not any(k.startswith(("4chan", "stocktwits", "telegram", "hackernews", "google_news", "news", "gdelt", "fear")) for k in r.errors), r.errors
+
+
+def test_trend_radar():
+    from colony.trends import TrendRadar
+    r = TrendRadar(session=FakeSession())
+    r.maybe_refresh(force=True)
+    assert r.score("PEPE/USD") > r.score("DOGE/USD") > 0          # PEPE: CoinGecko #1 + GeckoTerminal
+    assert set(r.hot["PEPE"]["sources"]) == {"CoinGecko trending", "GeckoTerminal trending"}
+    assert {"AbC123", "Zz9", "Bst1"} <= r.tokens and "0x1" not in r.tokens
+    assert r.snapshot()["metas"][0]["name"] == "AI agenti"
+
+
+def test_meme_prefers_hyped_coin():
+    class R:
+        def score(self, s): return 5.0 if s.startswith("PEPE") else 0.0
+    m = MemeAgent()
+    assert m.universe({"crypto_memes": ["DOGE/USD", "PEPE/USD"], "radar": R()})[0] == "PEPE/USD"
+    df = bars(400, pd.Timestamp("2026-01-01", tz="UTC"), 5, seed=2, spikes=[(399, 2.5)])
+    top = df["high"].iloc[375:399].max() * 1.003
+    df.iloc[399, :4] = [df["close"].iloc[398], top * 1.001, df["close"].iloc[398], top]
+    p = m.prepare(df)
+    assert m.entry(p, 399, {"symbol": "DOGE/USD", "radar": R()}) is None       # 2.5x objem nestačí
+    e = m.entry(p, 399, {"symbol": "PEPE/USD", "radar": R()})                  # coin v trendu stačí 2x
+    assert e and "trendu" in e.reason
+
+
+def test_wave_swing():
+    start = pd.Timestamp("2026-01-01", tz="UTC")
+    df = bars(24 * 30, start, 60, drift=0.0015, vol=0.008, seed=11)
+    v = WaveAgent(); v.wallet.born = start.isoformat()
+    replay(v, {"SOL/USD": df}, Executor(SimBroker()))
+    tr = v.wallet.trades
+    assert tr, "vlna by v rostoucím trhu měla obchodovat"
+    held = [(pd.Timestamp(t["closed"]) - pd.Timestamp(t["opened"])).total_seconds() / 86400 for t in tr]
+    assert max(held) <= 7.05
+
+
+def test_dashboard_requires_password():
+    import base64, urllib.request, urllib.error
+    from colony import dashboard
+    os.environ["DASHBOARD_PASSWORD"] = "heslo-test"
+    srv = dashboard.serve(port=18765)
+    dashboard.publish({"bots": [], "x": np.bool_(True)})
+    def get(pw):
+        req = urllib.request.Request("http://127.0.0.1:18765/api/state")
+        if pw:
+            req.add_header("Authorization", "Basic " + base64.b64encode(f"a:{pw}".encode()).decode())
+        try:
+            r = urllib.request.urlopen(req); return r.status, r.read()
+        except urllib.error.HTTPError as e:
+            return e.code, b""
+    assert get(None)[0] == 401 and get("spatne")[0] == 401
+    code, body = get("heslo-test")
+    assert code == 200 and b'"x":true' in body
+    srv.shutdown()
+
+
+class FakeGrokSession:
+    """xAI Responses API: vrátí JSON s odhady a údaje o spotřebě."""
+    def __init__(self, reply):
+        self.reply, self.calls, self.headers = reply, [], {}
+    def post(self, url, json=None, **kw):
+        self.calls.append(json)
+        body = {"output": [{"type": "custom_tool_call", "name": "x_keyword_search"},
+                           {"type": "message", "content": [{"type": "output_text", "text": self.reply}]}],
+                "usage": {"input_tokens": 20000, "output_tokens": 500,
+                          "server_side_tool_usage_details": {"x_posts_fetched": 40, "x_users_fetched": 0}}}
+        r = FakeResp(body); r.status_code = 200; r.text = "ok"
+        return r
+
+
+def test_grok_budget_and_parsing():
+    from colony.grok import Grok
+    os.environ["XAI_API_KEY"] = "test"; os.environ["XAI_DAILY_BUDGET"] = "1.0"
+    g = Grok(session=FakeGrokSession('Here you go: ```json\n{"hot":[{"symbol":"PEPE","buzz":8,"sentiment":0.7}]}\n```'))
+    g.spent = 0; g.day = ""
+    t = g.ask("x")
+    assert "PEPE" in t
+    cost = 20000 * 2e-6 + 500 * 6e-6 + 40 * 0.005
+    assert abs(g.spent - cost) < 1e-9
+    assert g.s.calls[0]["tools"][0]["type"] == "x_search"
+    while g.remaining() >= 0.30:
+        g.ask("x")
+    n = len(g.s.calls)
+    assert g.ask("x") is None and len(g.s.calls) == n         # strop drží - další dotaz se neodešle
+    assert g.spent <= 1.0 + cost
+    os.environ.pop("XAI_API_KEY")
+
+
+class FakeGamma:
+    headers = {}
+    def __init__(self):
+        self.closed = False
+    def get(self, url, params=None, **kw):
+        end = (datetime.now(timezone.utc) + timedelta(days=5)).isoformat().replace("+00:00", "Z")
+        def m(i, q, p, slug="x"):
+            prices = ["1", "0"] if self.closed else [str(p), str(round(1 - p, 3))]
+            return {"id": i, "question": q, "slug": slug, "outcomes": '["Yes", "No"]', "outcomePrices": json.dumps(prices),
+                    "bestBid": p - 0.01, "bestAsk": p + 0.01, "endDate": end, "closed": self.closed,
+                    "liquidity": "50000", "volume24hr": 90000, "acceptingOrders": True}
+        if url.endswith("/markets"):
+            return FakeResp([m(1, "Will the Fed cut rates in October?", 0.40), m(2, "Blues vs. Senators", 0.5, "nhl-x"),
+                             m(3, "Will BTC hit $200k by Friday?", 0.10)])
+        return FakeResp(m(int(url.rsplit("/", 1)[1]), "Will the Fed cut rates in October?", 0.40))
+
+
+def test_oracle_bets_and_resolves():
+    from colony.agents.oracle import OracleAgent
+    class G:
+        enabled = True
+        def ask(self, *a, **k):
+            return '{"markets":[{"id":"1","p_yes":0.62,"confidence":"medium","why":"inflation cooled"},' \
+                   '{"id":"3","p_yes":0.11,"confidence":"high","why":"too far"}]}'
+    gamma = FakeGamma()
+    o = OracleAgent(G(), session=gamma)
+    msgs = []
+    now = datetime.now(timezone.utc)
+    o.tick(now, msgs.append)
+    assert len(o.wallet.lots) == 1, msgs                       # jen trh 1 má hranu >= 8 b.; sport přeskočen
+    lot = next(iter(o.wallet.lots.values()))
+    assert lot.meta["side"] == "YES" and abs(lot.entry - 0.41) < 1e-9
+    stake = lot.cost
+    assert 10 <= stake <= 0.10 * 1000 * 1.02                   # čtvrtinový Kelly, max 10 %
+    gamma.closed = True                                        # trh vyhodnocen YES
+    o.tick(now + timedelta(minutes=10), msgs.append)
+    assert not o.wallet.lots and o.wallet.trades[0]["pnl"] > 0
+    assert any("Věštec" in m for m in msgs)
+
+
+def test_lab_params_apply():
+    t = TrendAgent().apply({"mode": "cross", "minutes": 15, "top_n": 2})
+    assert t.mode == "cross" and t.minutes == 15
+    assert t.universe({"crypto_majors": ["ETH/USD", "BTC/USD", "SOL/USD"]}) == ["BTC/USD", "ETH/USD"]
+    o = OrbitAgent().apply({"or_bars": 6, "last_entry": "14:00"})
+    ts = pd.Timestamp("2026-03-02 13:30", tz="America/New_York")
+    assert o.can_enter(ts) and not o.can_enter(pd.Timestamp("2026-03-02 09:55", tz="America/New_York"))
+
+
+if __name__ == "__main__":
+    for name, fn in list(globals().items()):
+        if name.startswith("test_"):
+            fn(); print("OK", name)

@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kolonie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700&family=Figtree:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: přehled kolonie -> karty botů se "životem" -> křivky -> pozice -> radar + události -> obchody -> hodnocení */
+:root {
+  --bg: #f3f5f2; --panel: #ffffff; --ink: #172019; --muted: #5d6b62; --line: #dfe5df; --soft: #eef2ee;
+  --alive: #1d8a4e; --injured: #c46a12; --dead: #8a8f8b; --loss: #c2412d; --gain: #1d8a4e; --warn-bg: #fff3e0; --warn-fg: #8a4b00;
+  --b-orbit: #2f62d8; --b-trendy: #0f8a86; --b-memec: #c23b8f; --b-vlna: #c77d0a; --b-degen: #7a4fd0; --b-vestec: #3b7d3f; --b-septac: #b8452f; --b-lovec: #5b6b1f;
+  --sky1: #cfe6f5; --sky2: #eef6fb; --grass: #9fcf8a; --grass2: #7fb86a; --roof: #3a2f2a; --stone: #9aa19c; --wall: #fffaf0;
+  --display: "Bricolage Grotesque", "Avenir Next", system-ui, sans-serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0f1411; --panel: #161d19; --ink: #e5ece6; --muted: #92a197; --line: #26302a; --soft: #1c2520;
+  --alive: #4cc47f; --injured: #f0a043; --dead: #6d746f; --loss: #f2775f; --gain: #4cc47f; --warn-bg: #2b2112; --warn-fg: #f3c27a;
+  --b-orbit: #6f97ff; --b-trendy: #3cc7c1; --b-memec: #ef6dbd; --b-vlna: #f0ad3a; --b-degen: #a888f2; --b-vestec: #7fcf83; --b-septac: #f2876f; --b-lovec: #b9cc5e;
+  --sky1: #14243a; --sky2: #1d3350; --grass: #2b4a2a; --grass2: #213b20; --roof: #0d0f0e; --stone: #5f6763; --wall: #e8e2d4; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0f1411; --panel: #161d19; --ink: #e5ece6; --muted: #92a197; --line: #26302a; --soft: #1c2520;
+  --alive: #4cc47f; --injured: #f0a043; --dead: #6d746f; --loss: #f2775f; --gain: #4cc47f; --warn-bg: #2b2112; --warn-fg: #f3c27a;
+  --b-orbit: #6f97ff; --b-trendy: #3cc7c1; --b-memec: #ef6dbd; --b-vlna: #f0ad3a; --b-degen: #a888f2; --b-vestec: #7fcf83; --b-septac: #f2876f; --b-lovec: #b9cc5e;
+  --sky1: #14243a; --sky2: #1d3350; --grass: #2b4a2a; --grass2: #213b20; --roof: #0d0f0e; --stone: #5f6763; --wall: #e8e2d4; color-scheme: dark }
+* { box-sizing: border-box }
+html, body { margin: 0 }
+body { background: var(--bg); color: var(--ink); font: 15px/1.5 var(--body); }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 16px; padding-block: 18px 48px; display: grid; gap: 22px }
+h1, h2 { font-family: var(--display); margin: 0; text-wrap: balance }
+h1 { font-size: clamp(26px, 4vw, 34px); line-height: 1.1 }
+h2 { font-size: 19px; line-height: 1.2 }
+.num { font-family: var(--mono); font-variant-numeric: tabular-nums }
+.muted { color: var(--muted) }
+.small { font-size: 12.5px }
+.pos { color: var(--gain) } .neg { color: var(--loss) }
+
+.top { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 12px }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; align-items: center }
+.chip { font: 500 12px var(--mono); padding: 3px 8px; border-radius: 999px; background: var(--soft); color: var(--muted); border: 1px solid var(--line); white-space: nowrap }
+.chip.live { background: var(--loss); color: #fff; border-color: transparent }
+.chip.warn { background: var(--warn-bg); color: var(--warn-fg); border-color: transparent }
+.chip.on { color: var(--alive) } .chip.off { color: var(--loss) }
+.banner { padding: 10px 14px; border-radius: 8px; background: var(--warn-bg); color: var(--warn-fg); font-size: 14px }
+
+.summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 2px; min-width: 0 }
+.kpi .k { font-size: 12.5px; color: var(--muted) }
+.kpi .v { font: 500 22px var(--mono); font-variant-numeric: tabular-nums }
+
+.bots { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 12px }
+.bot { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; min-width: 0; border-top: 4px solid var(--c) }
+.bot.dead { opacity: .62; filter: grayscale(.7) }
+.bot-h { display: flex; justify-content: space-between; align-items: baseline; gap: 8px }
+.bot-name { font: 700 20px var(--display) }
+.pill { font: 600 11px var(--body); letter-spacing: .04em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; color: #fff; white-space: nowrap }
+.pill.ALIVE { background: var(--alive) } .pill.INJURED { background: var(--injured) } .pill.DEAD { background: var(--dead) }
+.bot-eq { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap }
+.bot-eq .v { font: 500 26px var(--mono); font-variant-numeric: tabular-nums }
+.desc { font-size: 13px; color: var(--muted); min-height: 2.6em }
+.life { display: grid; gap: 4px }
+.life-bar { position: relative; height: 10px; border-radius: 6px; background: linear-gradient(90deg, color-mix(in srgb, var(--loss) 35%, var(--soft)) 0 33.3%, var(--soft) 33.3% 100%); overflow: visible }
+.life-fill { position: absolute; inset: 0 auto 0 0; border-radius: 6px; background: var(--c) }
+.life-tick { position: absolute; top: -3px; bottom: -3px; width: 2px; background: var(--ink); opacity: .55 }
+.life-legend { display: flex; justify-content: space-between; font: 11px var(--mono); color: var(--muted) }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px 10px; border-top: 1px solid var(--line); padding-top: 8px }
+@media (max-width: 420px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)) } }
+.stats div { display: grid; min-width: 0 }
+.stats .k { font-size: 11px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis }
+.stats .v { font: 500 14px var(--mono); font-variant-numeric: tabular-nums }
+.spark { width: 100%; height: 44px; display: block }
+.cause { font-size: 13px; color: var(--loss) }
+
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; display: grid; gap: 10px; min-width: 0 }
+.panel-h { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap }
+.legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; color: var(--muted) }
+.legend button { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 2px 4px; border-radius: 4px }
+.legend button[aria-pressed="false"] { opacity: .35 }
+.legend button:focus-visible, .tabs button:focus-visible { outline: 2px solid var(--b-orbit); outline-offset: 2px }
+.legend i { width: 14px; height: 3px; border-radius: 2px; display: inline-block; background: var(--c) }
+.chart svg { display: block; width: 100%; height: auto }
+.chart text { fill: var(--muted); font: 11px var(--mono) }
+
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px }
+.tablewrap { overflow-x: auto }
+table { width: 100%; border-collapse: collapse; font-size: 14px }
+th, td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: right; white-space: nowrap }
+th:first-child, td:first-child, th.l, td.l { text-align: left }
+th { font: 500 11.5px var(--mono); letter-spacing: .04em; text-transform: uppercase; color: var(--muted) }
+td { font-family: var(--mono); font-variant-numeric: tabular-nums }
+td.t { font-family: var(--body); white-space: normal; min-width: 180px }
+tbody tr:last-child td { border-bottom: 0 }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--c); margin-right: 6px; vertical-align: 1px }
+.empty { color: var(--muted); font-size: 14px; padding: 10px 0 }
+
+.radar-row { display: grid; grid-template-columns: 74px 1fr 38px; gap: 8px; align-items: center; padding: 5px 0; border-bottom: 1px solid var(--line) }
+.radar-row:last-child { border-bottom: 0 }
+.radar-sym { font: 500 13.5px var(--mono) }
+.radar-bar { height: 6px; border-radius: 3px; background: var(--b-memec); opacity: .8 }
+.radar-src { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px; margin-top: -2px }
+.radar-src span { font-size: 11px; color: var(--muted); background: var(--soft); border-radius: 4px; padding: 1px 6px }
+.metas { display: flex; flex-wrap: wrap; gap: 6px }
+.meta { font-size: 12.5px; border: 1px solid var(--line); border-radius: 8px; padding: 4px 8px; display: flex; gap: 6px }
+
+.events { display: grid; gap: 0; max-height: 420px; overflow-y: auto }
+.ev { display: grid; grid-template-columns: 54px 1fr; gap: 10px; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 14px }
+.ev time { font: 12px var(--mono); color: var(--muted); padding-top: 2px }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 4px }
+.tabs button { font: 500 13px var(--body); padding: 5px 11px; border-radius: 6px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); cursor: pointer }
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink) }
+
+.evalg { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px }
+.evalc { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; display: grid; gap: 4px; font-size: 13px }
+.evalc b { font-family: var(--display); font-size: 16px }
+.ok { color: var(--alive) } .no { color: var(--muted) }
+footer { font-size: 12.5px; color: var(--muted) }
+
+/* ---------- vesnička ---------- */
+.village { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: linear-gradient(180deg, var(--sky1), var(--sky2) 55%, var(--grass) 55%, var(--grass2)); }
+.v-sky { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 16px 0; flex-wrap: wrap }
+.v-weather { display: flex; align-items: center; gap: 10px; font-size: 14px }
+.v-weather .ico { font-size: 34px; line-height: 1 }
+.v-weather b { font-family: var(--display); font-size: 17px; display: block }
+.v-houses { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; padding: 8px 12px 6px; align-items: end }
+.house { display: grid; justify-items: center; gap: 4px; min-width: 0; position: relative }
+.house svg { width: 100%; max-width: 132px; height: auto; overflow: visible }
+.house .nm { font: 700 15px var(--display); color: var(--ink); background: var(--panel); padding: 1px 8px; border-radius: 6px; border: 1px solid var(--line) }
+.house .hp { width: 80%; height: 6px; border-radius: 3px; background: color-mix(in srgb, var(--loss) 40%, var(--soft)); overflow: hidden }
+.house .hp i { display: block; height: 100%; background: var(--c) }
+.bubble { font-size: 12px; line-height: 1.3; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 10px; padding: 5px 8px; width: 100%; max-width: 180px; position: relative }
+.bubble span { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; min-height: 2.6em }
+.bubble:after { content: ""; position: absolute; left: 50%; bottom: -6px; width: 10px; height: 10px; background: var(--panel); border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transform: translateX(-50%) rotate(45deg) }
+.v-ticker { background: color-mix(in srgb, var(--panel) 85%, transparent); border-top: 1px solid var(--line); overflow: hidden; white-space: nowrap; font-size: 13px; padding: 7px 0 }
+.v-ticker .track { display: inline-block; padding-left: 16px; animation: ticker 160s linear infinite }
+.v-ticker span { margin-right: 36px }
+.v-ticker b { color: var(--muted); font-weight: 500 }
+@keyframes ticker { to { transform: translateX(-50%) } }
+@keyframes smoke { 0% { opacity: .0; transform: translateY(0) scale(.6) } 30% { opacity: .55 } 100% { opacity: 0; transform: translateY(-26px) scale(1.4) } }
+@keyframes zz { 0% { opacity: 0; transform: translate(0,0) } 40% { opacity: 1 } 100% { opacity: 0; transform: translate(10px,-18px) } }
+.smoke { animation: smoke 3.2s ease-out infinite; transform-box: fill-box; transform-origin: center }
+.smoke.d2 { animation-delay: 1.1s } .smoke.d3 { animation-delay: 2.2s }
+.zz { animation: zz 2.8s ease-in-out infinite; font: 700 14px var(--display); fill: var(--ink) }
+.zz.d2 { animation-delay: 1.4s }
+@media (prefers-reduced-motion: reduce) { .v-ticker .track, .smoke, .zz { animation: none } .v-ticker { white-space: normal; padding: 7px 12px } .v-ticker .track { padding-left: 0 } .v-ticker .dup { display: none } }
+.oracle-row { display: grid; grid-template-columns: 1fr auto; gap: 4px 12px; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px }
+.oracle-row:last-child { border-bottom: 0 }
+.oracle-row .q { font-weight: 500 }
+.oracle-row .why { grid-column: 1 / -1; color: var(--muted); font-size: 12.5px }
+.world-row { display: grid; grid-template-columns: 90px 1fr; gap: 10px; padding: 6px 0; border-bottom: 1px solid var(--line); font-size: 14px }
+.world-row .src { color: var(--muted); font-size: 12px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap }
+.world-row:last-child { border-bottom: 0 }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div style="display:grid;gap:6px">
+      <h1>Kolonie</h1>
+      <div class="chips" id="chips"></div>
+    </div>
+    <div class="small muted" id="updated">Načítám…</div>
+  </div>
+  <div id="banner" class="banner" hidden></div>
+
+  <section class="village" aria-label="Vesnička botů">
+    <div class="v-sky">
+      <div class="v-weather" id="weather"></div>
+      <div class="chips" id="vchips"></div>
+    </div>
+    <div class="v-houses" id="houses"></div>
+    <div class="v-ticker" id="ticker"><div class="track" id="tickertrack"></div></div>
+  </section>
+
+  <div class="summary" id="summary"></div>
+
+  <section style="display:grid;gap:10px">
+    <div class="panel-h"><h2>Boti</h2><span class="small muted">Pruh života: červená zóna = blízko smrti ($<span id="deathv">800</span>), čárka = start</span></div>
+    <div class="bots" id="bots"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-h"><h2>Peníze v čase</h2><div class="legend" id="legend"></div></div>
+    <div class="chart" id="chart"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-h"><h2>Otevřené pozice</h2><span class="small muted" id="poscount"></span></div>
+    <div class="tablewrap" id="positions"></div>
+  </section>
+
+  <div class="two">
+    <section class="panel">
+      <div class="panel-h"><h2>Trend radar</h2><span class="small muted" id="radarinfo"></span></div>
+      <div class="metas" id="metas"></div>
+      <div id="radar"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-h"><h2>Co se děje</h2></div>
+      <div class="events" id="events"></div>
+    </section>
+  </div>
+
+  <div class="two">
+    <section class="panel">
+      <div class="panel-h"><h2>Křišťálová koule Věštce</h2><span class="small muted" id="oracleinfo"></span></div>
+      <div id="oracle"></div>
+    </section>
+    <section class="panel">
+      <div class="panel-h"><h2>Co se děje ve světě</h2><span class="small muted" id="worldinfo"></span></div>
+      <div class="events" id="world"></div>
+    </section>
+  </div>
+
+  <section class="panel">
+    <div class="panel-h"><h2>Obchody</h2><div class="tabs" id="tradetabs" role="group" aria-label="Filtr podle bota"></div></div>
+    <div class="tablewrap" id="trades"></div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-h"><h2>Hodnocení pro reálné peníze</h2><span class="small muted" id="evalinfo"></span></div>
+    <div class="evalg" id="eval"></div>
+  </section>
+
+  <footer>Stránka se obnovuje každých 15 sekund. Jen pro čtení, ovládání přes Telegram (/pauza, /prodej_vse). Nejde o finanční poradenství.</footer>
+</div>
+
+<script>
+const COLORS = { Orbit: "var(--b-orbit)", Trendy: "var(--b-trendy)", Memec: "var(--b-memec)", Vlna: "var(--b-vlna)", Degen: "var(--b-degen)", "Věštec": "var(--b-vestec)", "Šeptač": "var(--b-septac)", Lovec: "var(--b-lovec)" };
+const ASSET = { stock: "akcie", crypto: "krypto", meme: "meme coiny", degen: "nové coiny · simulace", dexmeme: "meme coiny na DEXu · simulace", predict: "Polymarket · simulace" };
+const STATUS = { ALIVE: "žije", INJURED: "zraněný", DEAD: "mrtvý" };
+const col = n => COLORS[n] || "var(--muted)";
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const usd = (x, d = 2) => x == null ? "–" : (x < 0 ? "−$" : "$") + Math.abs(x).toLocaleString("cs-CZ", { minimumFractionDigits: d, maximumFractionDigits: d });
+const sgn = (x, d = 1) => x == null || !isFinite(x) ? "–" : (x >= 0 ? "+" : "−") + Math.abs(x * 100).toFixed(d) + " %";
+const susd = x => (x >= 0 ? "+" : "−") + "$" + Math.abs(x).toFixed(2);
+const price = p => p == null ? "–" : p >= 1000 ? p.toLocaleString("cs-CZ", { maximumFractionDigits: 0 }) : p >= 1 ? p.toFixed(2) : p.toPrecision(3);
+const tm = iso => new Date(iso).toLocaleString("cs-CZ", { day: "numeric", month: "numeric", hour: "2-digit", minute: "2-digit" });
+const hhmm = iso => new Date(iso).toLocaleTimeString("cs-CZ", { hour: "2-digit", minute: "2-digit" });
+let S = null, tradeFilter = "Vše", hidden = new Set();
+try { tradeFilter = localStorage.getItem("tf") || "Vše"; hidden = new Set(JSON.parse(localStorage.getItem("hid") || "[]")); } catch (e) {}
+
+function ago(iso) {
+  const s = (Date.now() - new Date(iso)) / 1000;
+  if (s < 90) return `před ${Math.max(1, Math.round(s))} s`;
+  if (s < 5400) return `před ${Math.round(s / 60)} min`;
+  return tm(iso);
+}
+
+function spark(curve, c, start) {
+  if (!curve || curve.length < 2) return `<svg class="spark" viewBox="0 0 200 44"></svg>`;
+  const v = curve.map(p => p[1]), lo = Math.min(...v, start), hi = Math.max(...v, start);
+  const x = i => 2 + 196 * i / (v.length - 1), y = val => 40 - 36 * (val - lo) / ((hi - lo) || 1);
+  const d = v.map((val, i) => (i ? "L" : "M") + x(i).toFixed(1) + " " + y(val).toFixed(1)).join("");
+  return `<svg class="spark" viewBox="0 0 200 44" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="0" x2="200" y1="${y(start)}" y2="${y(start)}" stroke="var(--line)" stroke-dasharray="3 3"/>
+    <path d="${d}L${x(v.length - 1)} 44L2 44Z" fill="${c}" opacity=".12"/>
+    <path d="${d}" fill="none" stroke="${c}" stroke-width="2" vector-effect="non-scaling-stroke"/>
+    <circle cx="${x(v.length - 1)}" cy="${y(v[v.length - 1])}" r="3" fill="${c}"/></svg>`;
+}
+
+function renderTop() {
+  const chips = [];
+  chips.push(S.mode === "live" ? `<span class="chip live">SKUTEČNÉ PENÍZE</span>` : `<span class="chip">papírový účet</span>`);
+  const mood = { risk_on: ["chuť riskovat", "on"], neutral: ["neutrální trh", ""], risk_off: ["strach na trhu", "off"] }[S.mood] || [S.mood, ""];
+  chips.push(`<span class="chip ${mood[1]}">nálada: ${mood[0]}</span>`);
+  if (S.paused) chips.push(`<span class="chip warn">pozastaveno</span>`);
+  const d = S.days_running || 0;
+  chips.push(`<span class="chip">den ${Math.floor(d) + 1}${d < 10 ? " · hodnocení za " + Math.ceil(10 - d) + " d" : ""}</span>`);
+  if (S.sample) chips.push(`<span class="chip warn">ukázková data</span>`);
+  document.getElementById("chips").innerHTML = chips.join("");
+  document.getElementById("updated").textContent = "Aktualizováno " + ago(S.generated);
+  const stale = (Date.now() - new Date(S.generated)) / 1000 > 180 && !S.sample;
+  const b = document.getElementById("banner");
+  b.hidden = !stale; if (stale) b.textContent = "Kolonie se přes 3 minuty neozvala. Zkontroluj server: journalctl -u colony -f";
+  document.getElementById("deathv").textContent = S.rules.death;
+
+  const bots = S.bots, eq = bots.reduce((a, b) => a + b.equity, 0), st = bots.reduce((a, b) => a + b.start, 0);
+  const alive = bots.filter(b => b.status !== "DEAD").length, open = bots.reduce((a, b) => a + b.positions.length, 0);
+  const tr = bots.reduce((a, b) => a + b.trades, 0), fees = bots.reduce((a, b) => a + b.fees, 0);
+  const k = [["Kolonie celkem", usd(eq), `${sgn(eq / st - 1)} z ${usd(st, 0)}`, eq >= st ? "pos" : "neg"],
+             ["Naživu", `${alive} / ${bots.length}`, alive === bots.length ? "všichni drží" : `${bots.length - alive} mrtví`, ""],
+             ["Otevřené pozice", open, `obchodů celkem ${tr}`, ""],
+             ["Poplatky a nájem", usd(fees + bots.reduce((a, b) => a + b.rent, 0)), "zaplaceno zatím", ""]];
+  document.getElementById("summary").innerHTML = k.map(([a, v, s, c]) =>
+    `<div class="kpi"><span class="k">${a}</span><span class="v ${c}">${v}</span><span class="small muted">${s}</span></div>`).join("");
+}
+
+function renderBots() {
+  const R = S.rules, lo = R.death, hi = R.start + (R.start - R.death) * 2;   // 800 .. 1400
+  document.getElementById("bots").innerHTML = S.bots.map(b => {
+    const c = col(b.name), pctPos = v => Math.max(0, Math.min(100, (v - lo) / (hi - lo) * 100));
+    const toDeath = b.equity - R.death;
+    const pf = b.profit_factor == null ? "∞" : b.profit_factor.toFixed(2);
+    const life = b.status === "DEAD"
+      ? `<div class="cause">✝ ${esc(b.cause_of_death)}</div>`
+      : `<div class="life"><div class="life-bar"><div class="life-fill" style="width:${pctPos(b.equity)}%"></div>
+          <div class="life-tick" style="left:${pctPos(R.start)}%"></div></div>
+          <div class="life-legend"><span>do smrti ${usd(toDeath, 0)}</span><span>${b.return > 0 ? "v zisku" : "na zisk zbývá " + Math.ceil(b.days_left) + " d"}</span></div></div>`;
+    return `<article class="bot ${b.status === "DEAD" ? "dead" : ""}" style="--c:${c}">
+      <div class="bot-h"><span class="bot-name">${esc(b.name)}</span><span class="pill ${b.status}">${b.status === "ALIVE" && b.benched ? "odpočívá" : b.status === "ALIVE" && b.lab_warn ? "na zkoušku" : b.status === "ALIVE" && b.waiting ? "čeká" : STATUS[b.status]}</span></div>
+      <div class="small muted">${ASSET[b.asset_class] || ""} · ${b.positions.length} otevřeno</div>
+      <div class="bot-eq"><span class="v">${usd(b.equity)}</span><span class="num ${b.return >= 0 ? "pos" : "neg"}">${sgn(b.return)}</span></div>
+      ${life}
+      ${spark(b.curve, c, b.start)}
+      <div class="stats">
+        <div><span class="k">Obchody</span><span class="v">${b.trades}</span></div>
+        <div><span class="k">Úspěšnost</span><span class="v">${b.trades ? Math.round(b.win_rate * 100) + " %" : "–"}</span></div>
+        <div><span class="k">Profit factor</span><span class="v">${b.trades ? pf : "–"}</span></div>
+        <div><span class="k">Max. propad</span><span class="v">${(b.max_drawdown * 100).toFixed(1)} %</span></div>
+      </div>
+      <div class="desc">${esc(b.desc)}</div>
+    </article>`;
+  }).join("");
+}
+
+function renderChart() {
+  const series = S.bots.filter(b => b.curve && b.curve.length > 1);
+  document.getElementById("legend").innerHTML = S.bots.map(b =>
+    `<button type="button" data-n="${esc(b.name)}" aria-pressed="${!hidden.has(b.name)}" style="--c:${col(b.name)}"><i></i>${esc(b.name)}</button>`).join("");
+  document.querySelectorAll("#legend button").forEach(btn => btn.onclick = () => {
+    const n = btn.dataset.n; hidden.has(n) ? hidden.delete(n) : hidden.add(n);
+    try { localStorage.setItem("hid", JSON.stringify([...hidden])); } catch (e) {}
+    renderChart();
+  });
+  const vis = series.filter(b => !hidden.has(b.name));
+  if (!vis.length) { document.getElementById("chart").innerHTML = `<div class="empty">Zatím žádná data. Křivky se kreslí každou hodinu.</div>`; return; }
+  const W = 1000, H = 300, L = 56, R = 14, T = 12, B = 28;
+  const all = vis.flatMap(b => b.curve.map(p => [new Date(p[0]).getTime(), p[1]]));
+  const t0 = Math.min(...all.map(p => p[0])), t1 = Math.max(...all.map(p => p[0]));
+  const vals = all.map(p => p[1]).concat([S.rules.death, S.rules.start]);
+  let lo = Math.min(...vals), hi = Math.max(...vals), pad = (hi - lo) * .08 || 20; lo -= pad; hi += pad;
+  const step = [10, 20, 25, 50, 100, 200, 250, 500].find(s => (hi - lo) / s <= 7) || 1000;
+  const x = t => L + (W - L - R) * (t - t0) / ((t1 - t0) || 1), y = v => T + (H - T - B) * (1 - (v - lo) / (hi - lo));
+  let g = "";
+  for (let v = Math.ceil(lo / step) * step; v <= hi; v += step)
+    g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">$${v}</text>`;
+  g += `<line x1="${L}" x2="${W - R}" y1="${y(S.rules.start)}" y2="${y(S.rules.start)}" stroke="var(--muted)" stroke-dasharray="4 4"/>`;
+  g += `<line x1="${L}" x2="${W - R}" y1="${y(S.rules.death)}" y2="${y(S.rules.death)}" stroke="var(--loss)" stroke-dasharray="6 4" stroke-width="1.5"/>`;
+  g += `<text x="${W - R}" y="${y(S.rules.death) - 6}" text-anchor="end" style="fill:var(--loss)">hranice smrti $${S.rules.death}</text>`;
+  const days = Math.max(1, Math.round((t1 - t0) / 864e5)), every = Math.max(1, Math.ceil(days / 7));
+  const d0 = new Date(t0); d0.setHours(0, 0, 0, 0);
+  for (let t = d0.getTime() + 864e5, k = 0; t <= t1; t += 864e5, k++)
+    if (k % every === 0) g += `<text x="${x(t)}" y="${H - 8}" text-anchor="middle">${new Date(t).toLocaleDateString("cs-CZ", { day: "numeric", month: "numeric" })}</text>`;
+  for (const b of vis) {
+    const d = b.curve.map((p, i) => (i ? "L" : "M") + x(new Date(p[0]).getTime()).toFixed(1) + " " + y(p[1]).toFixed(1)).join("");
+    const last = b.curve[b.curve.length - 1];
+    g += `<path d="${d}" fill="none" stroke="${col(b.name)}" stroke-width="2.2" ${b.status === "DEAD" ? 'stroke-dasharray="2 3"' : ""}/>`;
+    g += `<circle cx="${x(new Date(last[0]).getTime())}" cy="${y(last[1])}" r="3.5" fill="${col(b.name)}"/>`;
+  }
+  document.getElementById("chart").innerHTML = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Vývoj peněz botů v čase">${g}</svg>`;
+}
+
+function renderPositions() {
+  const rows = S.bots.flatMap(b => b.positions.map(p => ({ ...p, bot: b.name })));
+  document.getElementById("poscount").textContent = rows.length ? `${rows.length} otevřených` : "";
+  if (!rows.length) { document.getElementById("positions").innerHTML = `<div class="empty">Teď nikdo nic nedrží. Boti čekají na signál.</div>`; return; }
+  document.getElementById("positions").innerHTML = `<table><thead><tr><th>Bot</th><th class="l">Symbol</th><th>Nákup</th><th>Teď</th><th>Zisk</th><th>Stop</th><th>Cíl</th><th class="l">Od</th><th class="l">Proč</th></tr></thead><tbody>` +
+    rows.map(p => `<tr><td style="--c:${col(p.bot)}"><span class="dot"></span>${esc(p.bot)}</td>
+      <td class="l">${p.url ? `<a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.question ? p.side + ": " + p.question.slice(0, 48) : p.symbol)}</a>` : esc(p.symbol)}</td>
+      <td>${price(p.entry)}</td><td>${price(p.last)}</td>
+      <td class="${p.pnl >= 0 ? "pos" : "neg"}">${susd(p.pnl)} (${sgn(p.pnl_pct)})</td>
+      <td>${price(p.stop)}</td><td>${p.target ? price(p.target) : "–"}</td><td class="l">${tm(p.opened)}</td>
+      <td class="t">${esc(p.reason)}</td></tr>`).join("") + `</tbody></table>`;
+}
+
+function renderRadar() {
+  const R = S.radar || {}, hot = R.hot || [];
+  document.getElementById("radarinfo").textContent = R.updated ? `${ago(R.updated)} · ${R.tokens || 0} adres pro Degena` : "čeká na první sken";
+  document.getElementById("metas").innerHTML = (R.metas || []).map(m =>
+    `<span class="meta"><b>${esc(m.name)}</b><span class="num ${m.h24 >= 0 ? "pos" : "neg"}">${m.h24 == null ? "" : (m.h24 >= 0 ? "+" : "") + Number(m.h24).toFixed(1) + " %"}</span></span>`).join("");
+  const max = Math.max(1, ...hot.map(h => h.score));
+  const err = R.errors && Object.keys(R.errors).length ? `<div class="small muted">Nedostupné zdroje: ${esc(Object.keys(R.errors).join(", "))}</div>` : "";
+  const src = R.sources ? Object.entries(R.sources).sort((x, y) => y[1] - x[1]).map(([k, n]) => `<span>${esc(k)} ${n}</span>`).join("") : "";
+  document.getElementById("radar").innerHTML = (hot.length ? hot.slice(0, 12).map(h => `<div class="radar-row">
+      <span class="radar-sym">${esc(h.symbol)}</span><div class="radar-bar" style="width:${(h.score / max * 100).toFixed(0)}%"></div><span class="num small">${h.score.toFixed(1)}</span>
+      <div class="radar-src">${h.sources.map(s => `<span>${esc(s)}</span>`).join("")}</div></div>`).join("")
+    : `<div class="empty">Radar zatím nic nenašel.</div>`) + (src ? `<div class="radar-src" style="margin-top:8px"><span><b>Zdroje:</b></span>${src}</div>` : "") + err;
+}
+
+function renderEvents() {
+  const ev = (S.events || []).slice().reverse();
+  document.getElementById("events").innerHTML = ev.length ? ev.map(([t, m]) =>
+    `<div class="ev"><time datetime="${esc(t)}" title="${esc(tm(t))}">${hhmm(t)}</time><span>${esc(m)}</span></div>`).join("") : `<div class="empty">Zatím ticho.</div>`;
+}
+
+function renderTrades() {
+  const names = ["Vše", ...S.bots.map(b => b.name)];
+  document.getElementById("tradetabs").innerHTML = names.map(n =>
+    `<button type="button" aria-pressed="${n === tradeFilter}" data-n="${esc(n)}">${esc(n)}</button>`).join("");
+  document.querySelectorAll("#tradetabs button").forEach(b => b.onclick = () => {
+    tradeFilter = b.dataset.n; try { localStorage.setItem("tf", tradeFilter); } catch (e) {} renderTrades();
+  });
+  const rows = (S.trades || []).filter(t => tradeFilter === "Vše" || t.bot === tradeFilter).slice().reverse().slice(0, 60);
+  document.getElementById("trades").innerHTML = rows.length ? `<table><thead><tr><th class="l">Zavřeno</th><th class="l">Bot</th><th class="l">Symbol</th><th>Nákup</th><th>Prodej</th><th>Zisk</th><th class="l">Proč prodal</th></tr></thead><tbody>` +
+    rows.map(t => `<tr><td class="l">${tm(t.closed)}</td><td class="l" style="--c:${col(t.bot)}"><span class="dot"></span>${esc(t.bot)}</td>
+      <td class="l">${esc(t.symbol)}</td><td>${price(t.entry)}</td><td>${price(t.exit)}</td>
+      <td class="${t.pnl >= 0 ? "pos" : "neg"}">${susd(t.pnl)} (${sgn(t.ret)})</td><td class="t">${esc(t.why)}</td></tr>`).join("") + `</tbody></table>`
+    : `<div class="empty">Zatím žádné uzavřené obchody.</div>`;
+}
+
+function renderEval() {
+  const d = S.days_running || 0;
+  document.getElementById("evalinfo").textContent = d < 10 ? `předběžně · plné hodnocení za ${Math.ceil(10 - d)} d` : "po 10 dnech";
+  document.getElementById("eval").innerHTML = (S.eval || []).map(e => `<div class="evalc">
+    <b style="color:${col(e.bot)}">${esc(e.bot)} ${e.ok ? "✅" : "❌"}</b>
+    ${e.checks.map(([n, ok]) => `<span class="${ok ? "ok" : "no"}">${ok ? "✓" : "✗"} ${esc(n)}</span>`).join("")}</div>`).join("");
+}
+
+function weather() {
+  const fg = (S.radar && S.radar.fear_greed) || {}, v = fg.value;
+  const m = S.mood, g = S.radar && S.radar.grok_mood;
+  let ico = "⛅", t = "Polojasno", d = "Trh neví, kam se pohnout.";
+  if (m === "risk_on" || v >= 65) { ico = "☀️"; t = "Slunečno"; d = "Na trhu je chuť riskovat."; }
+  if (m === "risk_off" || (v && v <= 30)) { ico = "🌧️"; t = "Prší"; d = "Na trhu je strach - boti sázejí míň."; }
+  if (v && v <= 15) { ico = "⛈️"; t = "Bouřka"; d = "Extrémní strach. Meme boti zůstávají doma."; }
+  const fgs = v ? ` · Fear & Greed ${v} (${esc(fg.label)})` : "";
+  const gs = g ? ` · X/Grok: ${({ risk_on: "optimismus", neutral: "neutrální", risk_off: "strach" })[g] || g}` : "";
+  return `<span class="ico" aria-hidden="true">${ico}</span><span><b>${t}</b><span class="small">${d}${fgs}${gs}</span></span>`;
+}
+
+function houseSvg(b, i) {
+  const c = col(b.name), dead = b.status === "DEAD", sleep = !dead && (b.status === "INJURED" || b.benched || S.paused || b.waiting);
+  const working = !dead && !sleep && b.positions.length > 0;
+  if (dead) return `<svg viewBox="0 0 120 110" role="img" aria-label="${esc(b.name)} je mrtvý">
+      <path d="M38 104 V52 a22 22 0 0 1 44 0 V104 Z" fill="var(--stone)" stroke="var(--roof)" stroke-width="2"/>
+      <text x="60" y="72" text-anchor="middle" style="font:700 13px var(--display);fill:var(--roof)">RIP</text>
+      <text x="60" y="90" text-anchor="middle" style="font:500 10px var(--mono);fill:var(--roof)">${usd(b.equity, 0)}</text>
+      <path d="M20 104 h80" stroke="var(--grass2)" stroke-width="4"/></svg>`;
+  const win = working ? "#ffd75e" : sleep ? "#5b6670" : "#cfe3ff";
+  const smoke = working ? `<circle class="smoke" cx="88" cy="18" r="5" fill="var(--muted)"/><circle class="smoke d2" cx="88" cy="18" r="5" fill="var(--muted)"/><circle class="smoke d3" cx="88" cy="18" r="5" fill="var(--muted)"/>` : "";
+  const zz = sleep ? `<text class="zz" x="94" y="30">z</text><text class="zz d2" x="100" y="22">Z</text>` : "";
+  return `<svg viewBox="0 0 120 110" role="img" aria-label="Domeček bota ${esc(b.name)}">
+    ${smoke}
+    <rect x="82" y="22" width="12" height="22" fill="var(--roof)"/>
+    <path d="M10 56 L60 16 L110 56 Z" fill="${c}"/>
+    <rect x="20" y="54" width="80" height="50" fill="var(--wall)" stroke="${c}" stroke-width="2"/>
+    <rect x="30" y="64" width="18" height="16" rx="2" fill="${win}" stroke="var(--roof)" stroke-width="1.5"/>
+    <rect x="72" y="64" width="18" height="16" rx="2" fill="${win}" stroke="var(--roof)" stroke-width="1.5"/>
+    <rect x="52" y="76" width="16" height="28" rx="2" fill="${c}"/>
+    <circle cx="64" cy="91" r="1.6" fill="var(--wall)"/>
+    ${b.positions.length ? `<g><rect x="0" y="86" width="22" height="16" rx="3" fill="var(--panel)" stroke="${c}"/><text x="11" y="98" text-anchor="middle" style="font:600 10px var(--mono);fill:var(--ink)">${b.positions.length}</text></g>` : ""}
+    ${zz}</svg>`;
+}
+
+function lastSay(b) {
+  const ev = (S.events || []).slice().reverse().find(([, m]) => m.includes(b.name));
+  if (b.status === "DEAD") return "✝ " + (b.cause_of_death || "zemřel");
+  if (b.waiting) return "Čekám na Grok klíč, abych mohl věštit.";
+  if (b.benched) return "Laboratoř mi dala volno - v testu jsem neprošel.";
+  if (b.status === "INJURED") return "Dneska jsem moc ztratil, odpočívám do zítřka.";
+  if (S.paused) return "Kolonie je pozastavená.";
+  if (ev) return ev[1].replace(/^[^\p{L}\p{N}$]+/u, "");
+  if (b.lab_warn && !b.positions.length) return "Zkouším to naostro na papíře, i když mě laboratoř zatím nedoporučila.";
+  return b.positions.length ? `Hlídám ${b.positions.length} pozic.` : "Koukám po trhu a čekám na signál.";
+}
+
+function renderVillage() {
+  document.getElementById("weather").innerHTML = weather();
+  const gk = (S.radar && S.radar.grok) || {};
+  const chips = [];
+  chips.push(gk.enabled ? `<span class="chip">Grok dnes ${usd(gk.spent)} / ${usd(gk.budget)}</span>` : `<span class="chip">Grok vypnutý (bez klíče)</span>`);
+  const alive = S.bots.filter(b => b.status !== "DEAD").length;
+  chips.push(`<span class="chip">${alive} / ${S.bots.length} naživu</span>`);
+  document.getElementById("vchips").innerHTML = chips.join("");
+  const R = S.rules, lo = R.death, hi = R.start + (R.start - R.death) * 2;
+  document.getElementById("houses").innerHTML = S.bots.map((b, i) => `<div class="house" style="--c:${col(b.name)}">
+      <div class="bubble" title="${esc(lastSay(b))}"><span>${esc(lastSay(b))}</span></div>
+      ${houseSvg(b, i)}
+      <span class="nm">${esc(b.name)}</span>
+      ${b.status === "DEAD" ? "" : `<div class="hp" title="${usd(b.equity)}"><i style="width:${Math.max(0, Math.min(100, (b.equity - lo) / (hi - lo) * 100))}%"></i></div>`}
+    </div>`).join("");
+  const w = (S.radar && S.radar.world) || [];
+  const hot = ((S.radar && S.radar.hot) || []).slice(0, 6).map(h => `🔥 ${esc(h.symbol)}`).join("  ");
+  const items = w.slice(0, 18).map(x => `<span><b>${esc(x.source)}:</b> ${esc(x.title)}</span>`).join("");
+  const line = (hot ? `<span><b>V trendu:</b> ${hot}</span>` : "") + (items || "<span>Radar zatím sbírá zprávy ze světa…</span>");
+  document.getElementById("tickertrack").innerHTML = line + `<span class="dup" aria-hidden="true">${line}</span>`;
+}
+
+function renderOracle() {
+  const o = S.oracle || {}, est = (o.estimates || []).slice().reverse();
+  const vb = S.bots.find(b => b.name === "Věštec");
+  document.getElementById("oracleinfo").textContent = o.last_scan ? "naposledy " + ago(o.last_scan) : (vb && vb.waiting ? "čeká na Grok klíč" : "zatím nevěštil");
+  document.getElementById("oracle").innerHTML = est.length ? est.map(e => `<div class="oracle-row">
+      <span class="q">${esc(e.question)}</span>
+      <span class="num"><span class="muted">trh</span> ${Math.round(e.market * 100)} % → <b>Grok ${Math.round(e.grok * 100)} %</b></span>
+      <span class="why">${e.edge >= 0.08 && e.confidence !== "low" ? `🎯 sázka na ${e.side}, hrana ${Math.round(e.edge * 100)} b.` : "bez sázky (malá hrana)"} · jistota ${esc(e.confidence)} · ${esc(e.why)}</span>
+    </div>`).join("") : `<div class="empty">Věštec zatím neodhadoval žádný trh. Potřebuje Grok klíč a jednou za 12 h se podívá na Polymarket.</div>`;
+  const w = (S.radar && S.radar.world) || [];
+  document.getElementById("worldinfo").textContent = w.length ? `${w.length} zpráv` : "";
+  document.getElementById("world").innerHTML = w.length ? w.map(x => `<div class="world-row"><span class="src" title="${esc(x.source)}">${esc(x.source)}</span>
+      <span>${x.url ? `<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a>` : esc(x.title)}${x.impact ? ` <span class="muted small">(${esc(x.impact)})</span>` : ""}</span></div>`).join("")
+    : `<div class="empty">Zprávy se načtou do 10 minut od startu.</div>`;
+}
+
+function render() {
+  if (!S || !S.bots || !S.bots.length) { document.getElementById("updated").textContent = "Kolonie se rozjíždí…"; return; }
+  renderTop(); renderVillage(); renderBots(); renderChart(); renderPositions(); renderRadar(); renderEvents(); renderOracle(); renderTrades(); renderEval();
+}
+
+async function load() {
+  if (window.__SAMPLE__) { S = window.__SAMPLE__; render(); return; }
+  try {
+    const r = await fetch("api/state", { cache: "no-store" });
+    if (!r.ok) throw new Error(r.status);
+    S = await r.json(); render();
+  } catch (e) {
+    const b = document.getElementById("banner");
+    b.hidden = false; b.textContent = "Nepodařilo se načíst data z kolonie. Zkouším znovu…";
+  }
+}
+load();
+setInterval(load, 15000);
+setInterval(() => S && S.generated && (document.getElementById("updated").textContent = "Aktualizováno " + ago(S.generated)), 5000);
+</script>
+</body>
+</html>
