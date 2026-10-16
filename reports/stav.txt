@@ -7,23 +7,24 @@ Trendy [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.66 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $989.60 (-1.04 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.5 %, poplatky $2.31
-   otevřeno UNI/USD: nákup 7.41042, teď 7.4573 (+0.6 %) - vlna: hype 3.0, +5 % za 24 h
+Vlna [ALIVE] $990.37 (-0.96 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.8 %, poplatky $2.31
+   otevřeno UNI/USD: nákup 7.41042, teď 7.423 (+0.2 %) - vlna: hype 3.0, +5 % za 24 h
    otevřeno PEPE/USD: nákup 4.11205e-06, teď 4.13e-06 (+0.4 %) - vlna: hype 5.4, +5 % za 24 h
-   otevřeno BCH/USD: nákup 282.621, teď 281.2 (-0.5 %) - vlna: průraz 3denního maxima, +7 % za 24 h
+   otevřeno BCH/USD: nákup 282.621, teď 283.41 (+0.3 %) - vlna: průraz 3denního maxima, +7 % za 24 h
    2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
 
 Šeptač [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
 Medvěd [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen II [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Degen II [ALIVE] $992.59 (-0.74 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.53
+   2026-10-16T10:18 OWLDACITY·D61p: -7.41 $ (-24.5 %) stop-loss
 
-Lovec [ALIVE] $1016.24 (+1.62 %) | obchodů 5, úspěšnost 40 %, PF 1.24, max propad 4.8 %, poplatky $7.07
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1194 (+9.8 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06407 (+4.2 %) - skóre 1.9
-   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004031 (-2.8 %) - skóre 1.9
-   otevřeno OTC·MukL: nákup 0.00980508, teď 0.009625 (-1.8 %) - skóre 1.8
+Lovec [ALIVE] $1019.16 (+1.92 %) | obchodů 5, úspěšnost 40 %, PF 1.24, max propad 4.8 %, poplatky $7.07
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1167 (+7.3 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06575 (+6.9 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.003907 (-5.8 %) - skóre 1.9
+   otevřeno OTC·MukL: nákup 0.00980508, teď 0.01018 (+3.8 %) - skóre 1.8
    2026-10-15T15:33 JEANPHIL·GTBx: +23.33 $ (+23.2 %) cíl zisku
    2026-10-15T15:42 CYBERLEEK·ApZu: -12.79 $ (-12.7 %) stop-loss
    2026-10-15T22:24 OTC·MukL: -12.74 $ (-12.7 %) stop-loss
@@ -37,7 +38,7 @@ Stín [ALIVE] $970.79 (-2.92 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max pro
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $976.72 (-2.33 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.0 %, poplatky $2.04
+Věštec [ALIVE] $976.72 (-2.33 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.1 %, poplatky $2.04
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
    otevřeno PM5170739·NO: nákup 0.64, teď 0.63 (-1.6 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
@@ -50,14 +51,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10748.49 z $11000 (-2.29 %)
+CELKEM $10744.77 z $11000 (-2.32 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-16T03:54:04+00:00 💀 Degen UMŘEL: zbankrotoval ($799.20 < $800)
-Žil 1 dní, 10 obchodů, úspěšnost 10 %. Odpočívej v pokoji.
-   2026-10-16T03:55:34+00:00 🔻 Vlna PRODAL BAT/USD: -9.86 $ (-9.7 %) - stop-loss
-   2026-10-16T04:36:15+00:00 🏹 Lovec (simulace) koupil OTC·MukL za $100, likvidita $604,795 - https://dexscreener.com/solana/da4pm4xsdy4m9v4cgakkbvh1pw1ysctqqa5nek
-   2026-10-16T05:35:15+00:00 🌡️ Nálada trhu: neutral → risk_on (BTC ↑, S&P ↑)
    2026-10-16T06:11:40+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen, Lovec, Stín, Věštec. Příkazy: /stav /pauz
    2026-10-16T06:11:40+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
@@ -72,5 +68,9 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-16T07:42:22+00:00 🌡️ Nálada trhu: neutral → risk_on (BTC ↑, S&P ↑)
    2026-10-16T08:00:29+00:00 🟢 Vlna KOUPIL PEPE/USD za $244.13 @ 4.11205e-06 (vlna: hype 5.4, +5 % za 24 h)
    2026-10-16T09:00:27+00:00 🟢 Vlna KOUPIL BCH/USD za $243.16 @ 282.621 (vlna: průraz 3denního maxima, +7 % za 24 h)
+   2026-10-16T09:42:46+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↓, S&P ↑)
+   2026-10-16T10:12:16+00:00 🎰 Degen II (simulace) koupil OWLDACITY·D61p za $30, likvidita $107,185 - https://dexscreener.com/solana/ggm3wpy8mtxx7afvs1rsxbztbnz9kk
+   2026-10-16T10:18:15+00:00 🔻 Degen II (simulace) prodal OWLDACITY·D61p: -7.41 $ (-24 %) - stop-loss
+   2026-10-16T10:42:46+00:00 🌡️ Nálada trhu: neutral → risk_on (BTC ↑, S&P ↑)
 
 VĚŠTEC: 5 odhadů z posledního skenu
