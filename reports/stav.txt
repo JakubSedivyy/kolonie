@@ -7,8 +7,8 @@ Trendy [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.66 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $966.54 (-3.35 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 4.2 %, poplatky $2.31
-   otevřeno UNI/USD: nákup 7.41042, teď 7.26948 (-1.9 %) - vlna: hype 3.0, +5 % za 24 h
+Vlna [ALIVE] $965.27 (-3.47 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 4.2 %, poplatky $2.31
+   otevřeno UNI/USD: nákup 7.41042, teď 7.23096 (-2.4 %) - vlna: hype 3.0, +5 % za 24 h
    otevřeno PEPE/USD: nákup 4.11205e-06, teď 3.99e-06 (-3.0 %) - vlna: hype 5.4, +5 % za 24 h
    otevřeno BCH/USD: nákup 282.621, teď 271.2 (-4.0 %) - vlna: průraz 3denního maxima, +7 % za 24 h
    2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
@@ -23,31 +23,31 @@ Degen II [ALIVE] $962.54 (-3.75 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max 
    2026-10-16T10:18 OWLDACITY·D61p: -7.41 $ (-24.5 %) stop-loss
    2026-10-16T19:13 ROADSTER·G3NK: -30.05 $ (-99.2 %) RUG PULL - likvidita zmizela
 
-Lovec [ALIVE] $979.31 (-2.07 %) | obchodů 8, úspěšnost 25 %, PF 0.63, max propad 5.2 %, poplatky $9.4
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1109 (+2.0 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06436 (+4.7 %) - skóre 1.9
-   otevřeno fone·CTPo: nákup 0.00414605, teď 0.00421 (+1.5 %) - skóre 1.9
+Lovec [ALIVE] $991.52 (-0.85 %) | obchodů 8, úspěšnost 25 %, PF 0.63, max propad 5.2 %, poplatky $9.4
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1122 (+3.1 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06287 (+2.3 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004767 (+15.0 %) - skóre 1.9
    2026-10-16T01:25 JEANPHIL·GTBx: -11.99 $ (-11.9 %) stop-loss
    2026-10-16T03:44 CLAUDIA·2j5S: +23.11 $ (+23.0 %) cíl zisku
    2026-10-16T13:04 OTC·MukL: -12.13 $ (-12.1 %) stop-loss
    2026-10-16T18:50 JEANPHIL·GTBx: -12.15 $ (-12.1 %) stop-loss
    2026-10-16T20:49 VEIL·HgTG: -11.96 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $966.22 (-3.38 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.0 %, poplatky $2.59
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.223826 (-0.4 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $965.11 (-3.49 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.1 %, poplatky $2.59
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.2246 (-0.8 %) - sestupný trend, -3.4 % za 24 h
    SHORT BONK/USD: prodáno za 3.01e-06, teď 3.02e-06 (-0.4 %) - sestupný trend, -3.1 % za 24 h
-   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.995e-06 (-1.1 %) - sestupný trend, -5.2 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 4e-06 (-1.2 %) - sestupný trend, -5.2 % za 24 h
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $968.38 (-3.16 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
+Věštec [ALIVE] $970.61 (-2.94 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.56 (-12.5 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.57 (-10.9 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
-   otevřeno PM630964·YES: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 38% (medium)
+   otevřeno PM630964·YES: nákup 0.38, teď 0.38 (+0.0 %) - Grok 48% vs trh 38% (medium)
 
 Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max propad 21.1 %, poplatky $8.05
    2026-10-16T01:06 Motion·87Ss: -19.04 $ (-37.7 %) stop-loss
@@ -56,7 +56,7 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10639.84 z $11000 (-3.27 %)
+CELKEM $10651.90 z $11000 (-3.16 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-10-16T18:46:17+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
