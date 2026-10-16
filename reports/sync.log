@@ -1,4 +1,3 @@
-radar 4chan_biz: offline
 radar stocktwits: offline
 radar hackernews: offline
 radar google_news: offline
@@ -58,3 +57,4 @@ O5eC5lY7ZXY chyba
 2026-10-16T06:11:39Z nasazena verze efa9f33: Orbit konečně může obchodovat, Stín přestal shortovat odrazy
 2026-10-16T06:56:42Z nasazena verze 0b5d553: Boti se učí z vlastních chyb (paměť kolonie) + vzkříšený Degen II
 2026-10-16T07:42:20Z nasazena verze fb6679f: Kronika: boti si pamatují všechno, co viděli a udělali, a učí se i z nekoupených signálů
+2026-10-16T19:07:24Z nasazena verze b88e6cf: Boti umí vydělat i na poklesu: shorty pro Orbita, Trendyho, Memce a Vlnu

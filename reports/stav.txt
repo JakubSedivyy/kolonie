@@ -7,44 +7,45 @@ Trendy [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.66 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $963.06 (-3.69 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 4.1 %, poplatky $2.31
-   otevřeno UNI/USD: nákup 7.41042, teď 7.1349 (-3.7 %) - vlna: hype 3.0, +5 % za 24 h
-   otevřeno PEPE/USD: nákup 4.11205e-06, teď 3.98e-06 (-3.2 %) - vlna: hype 5.4, +5 % za 24 h
-   otevřeno BCH/USD: nákup 282.621, teď 273 (-3.4 %) - vlna: průraz 3denního maxima, +7 % za 24 h
+Vlna [ALIVE] $965.63 (-3.44 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 4.2 %, poplatky $2.31
+   otevřeno UNI/USD: nákup 7.41042, teď 7.242 (-2.3 %) - vlna: hype 3.0, +5 % za 24 h
+   otevřeno PEPE/USD: nákup 4.11205e-06, teď 3.99e-06 (-3.0 %) - vlna: hype 5.4, +5 % za 24 h
+   otevřeno BCH/USD: nákup 282.621, teď 271.2 (-4.0 %) - vlna: průraz 3denního maxima, +7 % za 24 h
    2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
 
 Šeptač [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Medvěd [ALIVE] $1000.92 (+0.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
-   otevřeno SDOW: nákup 24.7524, teď 24.75 (-0.0 %) - trh padá: SDOW +1.1 % za hodinu, nad EMA 20/50
-   otevřeno SOXS: nákup 48.2541, teď 48.58 (+0.7 %) - trh padá: SOXS +2.1 % za hodinu, nad EMA 20/50
+Medvěd [ALIVE] $1001.58 (+0.16 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.0
+   otevřeno SDOW: nákup 24.7524, teď 24.69 (-0.3 %) - trh padá: SDOW +1.1 % za hodinu, nad EMA 20/50
+   otevřeno SOXS: nákup 48.2541, teď 49.005 (+1.6 %) - trh padá: SOXS +2.1 % za hodinu, nad EMA 20/50
 
-Degen II [ALIVE] $992.59 (-0.74 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.53
+Degen II [ALIVE] $962.54 (-3.75 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 3.9 %, poplatky $0.83
    2026-10-16T10:18 OWLDACITY·D61p: -7.41 $ (-24.5 %) stop-loss
+   2026-10-16T19:13 ROADSTER·G3NK: -30.05 $ (-99.2 %) RUG PULL - likvidita zmizela
 
-Lovec [ALIVE] $984.00 (-1.60 %) | obchodů 7, úspěšnost 29 %, PF 0.75, max propad 4.8 %, poplatky $8.46
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1119 (+2.9 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06275 (+2.1 %) - skóre 1.9
-   otevřeno fone·CTPo: nákup 0.00414605, teď 0.003979 (-4.0 %) - skóre 1.9
+Lovec [ALIVE] $986.93 (-1.31 %) | obchodů 7, úspěšnost 29 %, PF 0.75, max propad 5.2 %, poplatky $8.46
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1096 (+0.8 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06407 (+4.2 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004099 (-1.1 %) - skóre 1.9
    2026-10-15T22:24 OTC·MukL: -12.74 $ (-12.7 %) stop-loss
    2026-10-16T01:25 JEANPHIL·GTBx: -11.99 $ (-11.9 %) stop-loss
    2026-10-16T03:44 CLAUDIA·2j5S: +23.11 $ (+23.0 %) cíl zisku
    2026-10-16T13:04 OTC·MukL: -12.13 $ (-12.1 %) stop-loss
    2026-10-16T18:50 JEANPHIL·GTBx: -12.15 $ (-12.1 %) stop-loss
 
-Stín [ALIVE] $970.03 (-3.00 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 3.7 %, poplatky $2.59
-   otevřeno ADA/USD: nákup 0.223117, teď 0.223005 (-0.0 %) - sestupný trend, -3.4 % za 24 h
-   otevřeno BONK/USD: nákup 3.0115e-06, teď 3.01e-06 (-0.0 %) - sestupný trend, -3.1 % za 24 h
-   otevřeno PEPE/USD: nákup 3.95698e-06, teď 3.955e-06 (-0.0 %) - sestupný trend, -5.2 % za 24 h
+Stín [ALIVE] $970.86 (-2.91 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 3.7 %, poplatky $2.59
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.2225 (+0.2 %) - sestupný trend, -3.4 % za 24 h
+   SHORT BONK/USD: prodáno za 3.01e-06, teď 3e-06 (+0.3 %) - sestupný trend, -3.1 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.965e-06 (-0.3 %) - sestupný trend, -5.2 % za 24 h
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $961.24 (-3.88 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
+Věštec [ALIVE] $964.81 (-3.52 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.5 (-21.9 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.53 (-17.2 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 38% (medium)
 
@@ -55,15 +56,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10667.03 z $11000 (-3.03 %)
+CELKEM $10647.54 z $11000 (-3.20 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-16T13:04:09+00:00 🔻 Lovec (simulace) prodal OTC·MukL: -12.13 $ (-12 %) - stop-loss
-   2026-10-16T13:06:08+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-10-16T13:06:09+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↓, S&P ↑)
-   2026-10-16T13:35:09+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, HODO, SXTC, ZTG, DKI, TGL, SDST, RUBI, XLAB, SGRX, WFF
-   2026-10-16T14:06:31+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-10-16T17:04:16+00:00 🏹 Lovec (simulace) koupil JEANPHIL·GTBx za $100, likvidita $438,884 - https://dexscreener.com/solana/4r8cimnjwdnoes3fqi1ccpfjygpxazaha
    2026-10-16T18:46:03+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen II, Lovec, Stín, Věštec, Degen. Příkazy: /
    2026-10-16T18:46:03+00:00 🧪 Laboratoř: nové nastavení botů
@@ -75,5 +70,11 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-16T18:47:08+00:00 🐻 Stín (simulace) otevřel short BONK/USD za $243 @ 3.01e-06, stop 3.1304e-06 - sestupný trend, -3.1 % za 24 h
    2026-10-16T18:47:18+00:00 🐻 Stín (simulace) otevřel short PEPE/USD za $209 @ 3.955e-06, stop 4.13914e-06 - sestupný trend, -5.2 % za 24 h
    2026-10-16T18:50:24+00:00 🔻 Lovec (simulace) prodal JEANPHIL·GTBx: -12.15 $ (-12 %) - stop-loss
+   2026-10-16T18:58:21+00:00 🎰 Degen II (simulace) koupil ROADSTER·G3NK za $30, likvidita $208,822 - https://dexscreener.com/solana/2kduw5gubiappzhzd8gtzlkn9puqhmw
+   2026-10-16T19:07:24+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen II, Lovec, Stín, Věštec, Degen. Příkazy: /
+   2026-10-16T19:07:25+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-10-16T19:07:27+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-10-16T19:13:08+00:00 💀 Degen II (simulace) prodal ROADSTER·G3NK: -30.05 $ (-99 %) - RUG PULL - likvidita zmizela
 
 VĚŠTEC: 5 odhadů z posledního skenu
