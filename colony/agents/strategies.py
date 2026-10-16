@@ -53,6 +53,8 @@ class OrbitAgent(BarAgent):
         df["or_low"] = df["day"].map(first["low"].min())
         df["or_vol"] = df["day"].map(first["volume"].mean())
         df["vwap"] = session_vwap(df, df["day"])
+        # běžný objem posledních hodin (ranní rozpětí má vždy obří objem, srovnání s ním skoro nikdy neprošlo)
+        df["vol_ref"] = df["volume"].rolling(12, min_periods=4).mean().shift(1)
         return df
 
     def can_enter(self, ts):
@@ -73,7 +75,8 @@ class OrbitAgent(BarAgent):
             return None
         prev_close = df["close"].iloc[i - 1] if i > 0 else r["close"]
         broke = r["close"] > r["or_high"] and prev_close <= r["or_high"]
-        if not (broke and r["close"] > r["vwap"] and r["volume"] > self.vol_mult * r["or_vol"]):
+        vol_ref = r["vol_ref"] if not pd.isna(r["vol_ref"]) else r["or_vol"]
+        if not (broke and r["close"] > r["vwap"] and r["volume"] > self.vol_mult * vol_ref):
             return None
         stop = r["or_low"]
         risk = (r["close"] - stop) / r["close"]
@@ -84,7 +87,7 @@ class OrbitAgent(BarAgent):
                 return None
         self.traded_today[sym] = key
         return Entry(stop=stop, target=r["close"] * (1 + self.rr * risk),
-                     reason=f"průraz ranního rozpětí {r['or_high']:.2f}, objem {r['volume']/r['or_vol']:.1f}x")
+                     reason=f"průraz ranního rozpětí {r['or_high']:.2f}, objem {r['volume']/vol_ref:.1f}x běžného")
 
 
 class TrendAgent(BarAgent):

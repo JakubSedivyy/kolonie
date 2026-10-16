@@ -46,6 +46,7 @@ class ShadowAgent:
         df["atr"] = atr(df, 14)
         df["rsi"] = rsi(df["close"], 14)
         df["ret24"] = df["close"] / df["close"].shift(24) - 1
+        df["ema50_slope"] = df["ema50"] / df["ema50"].shift(12) - 1
         return df
 
     def signal(self, df: pd.DataFrame):
@@ -57,7 +58,9 @@ class ShadowAgent:
             return None
         if not (-0.15 <= r["ret24"] <= -0.02) or r["rsi"] < 28:  # padá, ale ještě není vyprodaný
             return None
-        stop_pct = min(0.10, max(0.03, self.atr_mult * r["atr"] / r["close"]))
+        if r["ema50_slope"] >= 0 or r["close"] >= r["open"]:     # dlouhý trend musí klesat a svíčka být červená
+            return None                                            # (po prudkém pádu se často odráží nahoru)
+        stop_pct = min(0.10, max(0.04, self.atr_mult * r["atr"] / r["close"]))
         return stop_pct, f"sestupný trend, {r['ret24']*100:.1f} % za 24 h"
 
     # ------------------------------------------------------------------ hlavní tah
@@ -89,8 +92,6 @@ class ShadowAgent:
             if lot:
                 p0 = lot.meta["p0"]
                 prices[sym] = mirror(p0, p)
-                lot.meta["low"] = min(lot.meta.get("low", p0), float(r["low"]))
-                lot.meta["stop_px"] = min(lot.meta["stop_px"], lot.meta["low"] * (1 + lot.meta["trail"]))
                 held_h = (now - datetime.fromisoformat(lot.opened)).total_seconds() / 3600
                 why = None
                 if float(r["high"]) >= lot.meta["stop_px"]:
@@ -100,6 +101,9 @@ class ShadowAgent:
                     why = "časový limit"
                 elif held_h >= 6 and p > r["ema20"] and r["ema20"] > r["ema50"]:
                     why = "trend se otočil nahoru"
+                if not why:            # trailing stop posouvej až po kontrole (nevíme, jestli minimum svíčky bylo před maximem)
+                    lot.meta["low"] = min(lot.meta.get("low", p0), float(r["low"]))
+                    lot.meta["stop_px"] = min(lot.meta["stop_px"], lot.meta["low"] * (1 + lot.meta["trail"]))
                 if why:
                     funding = self.funding_8h * held_h / 8
                     exit_px = mirror(p0, p) * (1 - funding)

@@ -293,6 +293,38 @@ def test_shadow_short_profits_when_coin_falls():
     assert not sh2.wallet.lots                                       # v býčím trhu neshortuje
 
 
+def test_shadow_trailing_does_not_use_same_bar_twice():
+    """Svíčka s hlubokým minimem i maximem: stop se smí posunout až po kontrole, ne se stejnou svíčkou."""
+    start = pd.Timestamp("2026-01-01", tz="UTC")
+    idx = pd.date_range(start, periods=70, freq="60min", tz="UTC")
+    close = np.full(70, 100.0)
+    df = pd.DataFrame({"open": close, "high": close * 1.001, "low": close * 0.999, "close": close, "volume": 1.0}, index=idx)
+    df.iloc[-1] = [100.0, 102.0, 94.0, 100.0, 1.0]          # minimum -6 %, maximum +2 %
+    class D:
+        def bars(self, syms, minutes, start, crypto=False): return {"X/USD": df}
+    sh = ShadowAgent(D())
+    opened = (idx[-2]).to_pydatetime()
+    sh.wallet.open("X/USD", 1.0, 100.0, stop=96.0, now=opened,
+                   meta={"p0": 100.0, "stop_px": 104.0, "trail": 0.04, "low": 100.0, "side": "short"})
+    sh.tick((idx[-1] + pd.Timedelta(minutes=61)).to_pydatetime(), "neutral", lambda m: None, [])
+    assert "X/USD" in sh.wallet.lots, "maximum 102 nezasáhlo původní stop 104 - short musí zůstat otevřený"
+    assert sh.wallet.lots["X/USD"].meta["stop_px"] < 98.0          # až teď se stop utáhl podle minima 94
+
+
+def test_orbit_breakout_later_in_day():
+    """Průraz v 10:30 s objemem nad běžným objemem (ne nad obřím ranním) musí projít."""
+    o = OrbitAgent().apply({"or_bars": 3, "vol_mult": 1.2, "last_entry": "14:00"})
+    idx = pd.date_range("2026-01-05 14:30", periods=30, freq="5min", tz="UTC")
+    vol = np.r_[np.full(3, 50_000.0), np.full(27, 8_000.0)]
+    close = np.r_[100.5, 101.0, 100.6, np.full(26, 100.8), 101.6]
+    df = pd.DataFrame({"open": close - 0.1, "high": np.r_[101.2, 101.4, 101.0, np.full(26, 101.0), 101.7],
+                       "low": np.r_[99.8, 100.4, 100.2, np.full(26, 100.6), 100.9], "close": close, "volume": vol}, index=idx)
+    df.iloc[-1, df.columns.get_loc("volume")] = 15_000.0      # 1,9x běžného, ale jen 0,3x ranního
+    p = o.prepare(df)
+    e = o.entry(p, len(p) - 1, {"symbol": "NVDA"})
+    assert e and "běžného" in e.reason
+
+
 def test_video_helpers():
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deploy"))
     import videa
