@@ -405,6 +405,71 @@ def test_kronika_records_and_learns_from_missed_signals():
     assert not m.judge("Vlna", {"coin": "SOL/USD"})[0]
 
 
+def test_wallet_short_accounting():
+    w = Wallet("Test", "stock")                                # akcie: bez poplatku, skluz 0,05 %
+    w.open("XYZ", 10, 100.0, stop=0, now=datetime(2026, 1, 1, tzinfo=timezone.utc), meta={"side": "short"},
+           apply_slippage=False)
+    assert w.lots["XYZ"].meta["p0"] == 100.0 and abs(w.cash - 0.0) < 1e-6 + config.START_CAPITAL - 1000
+    w.mark({"XYZ": 90.0})
+    assert abs(w.equity() - (config.START_CAPITAL + 100)) < 1e-6          # cena -10 % -> short +$100
+    w.mark({"XYZ": 120.0})
+    assert abs(w.equity() - (config.START_CAPITAL - 200)) < 1e-6          # cena +20 % -> short -$200
+    t = w.close("XYZ", 90.0, "cíl", apply_slippage=False)
+    assert abs(t["pnl"] - 100) < 1e-6 and t["side"] == "short" and t["p0"] == 100.0
+
+
+def test_executor_short_stock_and_crypto():
+    class B(SimBroker):
+        simulated = False
+        calls = []
+        def short_sell(self, symbol, usd, price):
+            self.calls.append(("short", symbol)); return Fill(int(usd // price), price, "x")
+        def cover(self, symbol, qty, price):
+            self.calls.append(("cover", symbol)); return Fill(qty, price, "x")
+    b, now = B(), datetime(2026, 1, 5, 15, tzinfo=timezone.utc)
+    ex = Executor(b)
+    o = OrbitAgent()
+    lot = ex.enter(o, "NVDA", 100.0, Entry(stop=102.0, target=96.0, reason="test"), 300, now, short=True)
+    assert lot and ("short", "NVDA") in b.calls and lot.meta["stop_px"] == 102.0 and not lot.meta["sim"]
+    assert o.check_exit_short(lot, 101, 99, 100, 100, now) is None
+    assert o.check_exit_short(lot, 99, 95.5, 96, 98, now)[1] == "cíl zisku"
+    t = ex.exit(o, "NVDA", 96.0, "cíl zisku", now)
+    assert ("cover", "NVDA") in b.calls and t["pnl"] > 0
+    v = WaveAgent()                                           # krypto short = jen simulace, broker se nevolá
+    n = len(b.calls)
+    lot = ex.enter(v, "SOL/USD", 100.0, Entry(stop=108.0, trail_pct=0.08, reason="x"), 200, now, short=True)
+    assert lot.meta["sim"] and len(b.calls) == n
+    assert v.check_exit_short(lot, 101, 90, 91, 100, now) is None          # minimum 90 -> trailing se utáhne
+    assert abs(lot.meta["stop_px"] - 90 * 1.08) < 1e-9
+    assert v.check_exit_short(lot, 98, 95, 97, 96, now)[1] == "trailing stop"
+
+
+def test_short_entries_mirror_long_logic():
+    start = pd.Timestamp("2026-01-01", tz="UTC")
+    rng = np.random.default_rng(3)
+    close = 100 * np.exp(np.cumsum(np.r_[np.zeros(100), rng.normal(-0.002, 0.012, 140)]))
+    df = pd.DataFrame({"open": close * 1.002, "high": close * 1.006, "low": close * 0.994, "close": close,
+                       "volume": 1000.0}, index=pd.date_range(start, periods=240, freq="60min", tz="UTC"))
+    v = WaveAgent(); p = v.prepare(df)
+    hits = [i for i in range(80, 240) if v.short_entry(p, i, {})]
+    assert hits, "Vlna má v sestupném trhu shortovat"
+    e = v.short_entry(p, hits[0], {})
+    assert e.stop > p["close"].iloc[hits[0]] and "sestupná" in e.reason
+    up = df.copy(); up[["open", "high", "low", "close"]] = df[["open", "high", "low", "close"]].values[::-1]
+    pu = v.prepare(up)
+    assert not any(v.short_entry(pu, i, {}) for i in range(80, 140))       # v rostoucím trhu ne
+    # Orbit: propad pod ranní minimum
+    o = OrbitAgent().apply({"or_bars": 3, "vol_mult": 1.2, "last_entry": "14:00"})
+    idx = pd.date_range("2026-01-05 14:30", periods=30, freq="5min", tz="UTC")
+    c = np.r_[100.5, 100.0, 100.4, np.full(26, 100.2), 99.4]
+    d = pd.DataFrame({"open": c + 0.1, "high": np.r_[101.0, 100.6, 100.8, np.full(26, 100.4), 100.3],
+                      "low": np.r_[99.8, 99.6, 100.0, np.full(26, 100.0), 99.3], "close": c,
+                      "volume": np.r_[np.full(3, 50_000.0), np.full(26, 8_000.0), 15_000.0]}, index=idx)
+    po = o.prepare(d)
+    e = o.short_entry(po, len(po) - 1, {"symbol": "TSLA"})
+    assert e and e.stop > 99.4 and e.target < 99.4 and "propad" in e.reason
+
+
 def test_video_helpers():
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deploy"))
     import videa

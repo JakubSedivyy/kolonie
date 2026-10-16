@@ -127,6 +127,8 @@ class Kronika:
             else:
                 if stop and b["high"] >= stop:
                     return price / stop - 1, "stop"
+                if target and b["low"] <= target:
+                    return price / target - 1, "cíl"
         last = float(bars["close"].iloc[-1])
         return (price / last - 1 if short else last / price - 1), "konec doby"
 

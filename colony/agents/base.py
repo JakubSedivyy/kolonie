@@ -7,9 +7,25 @@ from datetime import datetime
 import pandas as pd
 
 from .. import config
-from ..wallet import Wallet
+from ..wallet import Wallet, is_short
 
 log = logging.getLogger("colony.agent")
+
+
+class _SimShort:
+    """Krypto shorty se jen simulují - plnění za tržní cenu, skluz a poplatky počítá peněženka."""
+    simulated = True
+
+    def short_sell(self, symbol, usd, price):
+        from ..broker import Fill
+        return Fill(usd / price, price, "sim")
+
+    def cover(self, symbol, qty, price):
+        from ..broker import Fill
+        return Fill(qty, price, "sim")
+
+
+SIM = _SimShort()
 
 
 @dataclass
@@ -62,6 +78,33 @@ class BarAgent:
     def can_enter(self, ts: pd.Timestamp) -> bool:
         return True
 
+    # --- sázky na pokles (short) ---------------------------------------------------
+    can_short = False           # umí bot vydělat i na poklesu?
+
+    def short_entry(self, df: pd.DataFrame, i: int, ctx) -> Entry | None:
+        """Entry.stop je NAD cenou, Entry.target POD cenou (skutečné ceny)."""
+        return None
+
+    def short_exit_signal(self, df: pd.DataFrame, i: int, lot) -> str | None:
+        return None
+
+    @staticmethod
+    def check_exit_short(lot, high: float, low: float, close: float, open_: float, now: datetime):
+        m = lot.meta
+        if high >= m["stop_px"]:
+            why = "trailing stop" if m["stop_px"] < m["p0"] else "stop-loss"
+            return (max(open_, m["stop_px"]), why)
+        if m.get("target_px") and low <= m["target_px"]:
+            return (min(open_, m["target_px"]), "cíl zisku")
+        if m.get("trail"):
+            m["low"] = min(m.get("low", m["p0"]), low)
+            m["stop_px"] = min(m["stop_px"], m["low"] * (1 + m["trail"]))
+        if lot.max_hold_min:
+            held = (now - datetime.fromisoformat(lot.opened)).total_seconds() / 60
+            if held >= lot.max_hold_min:
+                return (close, "časový limit")
+        return None
+
     def must_flatten(self, ts: pd.Timestamp) -> bool:
         return False
 
@@ -105,12 +148,15 @@ class Executor:
         # live: cena plnění je skutečná, skluz už v ní je.
         return not config.IS_LIVE or getattr(self.broker, "simulated", False)
 
-    def enter(self, agent: BarAgent, symbol: str, price: float, e: Entry, usd: float, now: datetime, meta=None):
+    def enter(self, agent: BarAgent, symbol: str, price: float, e: Entry, usd: float, now: datetime, meta=None,
+              short=False):
         w = agent.wallet
         fee_buf = 1 + w.costs["fee"] + w.costs["slip"]
         usd = min(usd, w.cash / fee_buf)
         if usd < config.MIN_ORDER_USD:
             return None
+        if short:
+            return self._enter_short(agent, symbol, price, e, usd, now, meta)
         try:
             f = self.broker.buy_usd(symbol, usd, price, crypto=agent.crypto)
         except Exception as ex:
@@ -126,11 +172,47 @@ class Executor:
         self.notify(f"🟢 {agent.name} KOUPIL {symbol} za ${lot.cost:.2f} @ {lot.entry:.6g} ({e.reason})")
         return lot
 
+    def _enter_short(self, agent, symbol, price, e, usd, now, meta):
+        """Short: akcie skutečně přes Alpaku (paper), krypto jen simulovaně (Alpaca krypto short neumí)."""
+        w = agent.wallet
+        sim = agent.crypto
+        broker = SIM if sim else self.broker
+        try:
+            f = broker.short_sell(symbol, usd, price)
+        except Exception as ex:
+            log.warning("%s short %s failed: %s", agent.name, symbol, ex)
+            return None
+        if not f or f.qty <= 0:
+            return None
+        shift = f.price / price
+        m = dict(meta or {}, side="short", sim=sim, stop_px=e.stop * shift, trail=e.trail_pct,
+                 target_px=e.target * shift if e.target else None, low=f.price)
+        lot = w.open(symbol, f.qty, f.price, stop=0.0, trail_pct=None, max_hold_min=e.max_hold_min,
+                     reason=e.reason, now=now, apply_slippage=self.slip, meta=m)
+        lot.stop = 2 * lot.meta["p0"] - m["stop_px"]          # stop v "zrcadlových" cenách (jen pro přehled)
+        self.notify(f"🐻 {agent.name}{' (simulace)' if sim else ''} SHORT {symbol} za ${lot.cost:.2f} @ {f.price:.6g}, "
+                    f"stop {m['stop_px']:.6g} ({e.reason})")
+        return lot
+
     def exit(self, agent: BarAgent, symbol: str, price: float, why: str, now: datetime):
         w = agent.wallet
         lot = w.lots.get(symbol)
         if not lot:
             return None
+        if is_short(lot):
+            broker = SIM if lot.meta.get("sim") else self.broker
+            try:
+                f = broker.cover(symbol, lot.qty, price)
+            except Exception as ex:
+                log.warning("%s cover %s failed: %s", agent.name, symbol, ex)
+                return None
+            if f is None:
+                log.warning("%s cover %s nevyplněn, zkusím znovu", agent.name, symbol)
+                return None
+            t = w.close(symbol, f.price if f.qty > 0 else price, why, now=now, apply_slippage=self.slip)
+            self.notify(f"{'✅' if t['pnl'] > 0 else '🔻'} {agent.name} UZAVŘEL SHORT {symbol}: "
+                        f"{t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) - {why}")
+            return t
         try:
             f = self.broker.sell(symbol, lot.qty, price, crypto=agent.crypto)
         except Exception as ex:

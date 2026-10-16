@@ -17,6 +17,13 @@ v prohlížeči nebo na mobilu a zprávy ti chodí do **Telegramu**.
 | **Stín** | krypto - sázky na pokles (short) | **jen simulace** (Alpaca short krypta neumí): sestupný trend, coin padá 2-15 % za 24 h; nikdy v býčím trhu; poplatky a funding jako na burze | max. 3 dny |
 | **Věštec** | predikční trhy Polymarket | **jen simulace**: Grok přečte X a zprávy, odhadne pravděpodobnost; sází při hraně ≥ 8 b., čtvrtinový Kelly | do vyhodnocení trhu |
 
+## Obě strany trhu: nákup i short
+Orbit, Trendy, Memec a Vlna umí vydělat i na poklesu - každý má zrcadlový signál (propad pod ranní
+minimum, pod minimum kanálu, výplach s obřím objemem, sestupná vlna). Shorty se neotevírají, když je
+nálada trhu jasně růstová. U akcií (Orbit) jde o skutečný short na papírovém účtu Alpaca (jen akcie,
+které jde půjčit), u krypta je short **simulovaný** (Alpaca krypto short neumí). Dál Medvěd (inverzní ETF)
+a Stín (simulované shorty krypta). Laboratoř zatím ladí jen nákupní stranu.
+
 ## Trend radar: co je teď „in“ na internetu
 Radar každých 10 minut projde tyhle zdroje (všechny zdarma):
 - **CoinGecko Trending:** co lidé nejvíc hledají

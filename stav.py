@@ -29,7 +29,11 @@ def main():
               f"max propad {s['max_drawdown']*100:.1f} %, poplatky ${s['fees']}")
         for sym, lot in w.lots.items():
             p = w.last_prices.get(sym) or lot.entry
-            print(f"   otevřeno {sym}: nákup {lot.entry:.6g}, teď {p:.6g} ({(p/lot.entry-1)*100:+.1f} %) - {lot.reason[:70]}")
+            if (lot.meta or {}).get("side") == "short" and "p0" in lot.meta:
+                p0 = lot.meta["p0"]
+                print(f"   SHORT {sym}: prodáno za {p0:.6g}, teď {2*p0-p:.6g} ({(p/lot.entry-1)*100:+.1f} %) - {lot.reason[:70]}")
+            else:
+                print(f"   otevřeno {sym}: nákup {lot.entry:.6g}, teď {p:.6g} ({(p/lot.entry-1)*100:+.1f} %) - {lot.reason[:70]}")
         for t in w.trades[-5:]:
             print(f"   {t['closed'][:16]} {t['symbol']}: {t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) {t['why']}")
     if start:

@@ -22,7 +22,7 @@ from .trends import TrendRadar
 from .grok import Grok
 from .agents.oracle import OracleAgent
 from . import dashboard
-from .wallet import Wallet, utcnow
+from .wallet import Wallet, utcnow, is_short
 from .memory import Memory, hour_bucket
 from .kronika import Kronika
 
@@ -282,7 +282,7 @@ class Colony:
                 if a.must_flatten(ts):
                     self.exec.exit(a, s, price, "konec obchodního dne", now)
                     continue
-                why = a.exit_signal(df, i, lot)
+                why = a.short_exit_signal(df, i, lot) if is_short(lot) else a.exit_signal(df, i, lot)
                 if why:
                     self.exec.exit(a, s, price, why, now)
                 continue
@@ -293,12 +293,21 @@ class Colony:
             if not a.can_enter(ts):
                 continue
             e = a.entry(df, i, {**self.ctx, "symbol": s})
+            short = False
             if not (e and e.stop < price):
-                continue
+                e = None
+                if a.can_short and self.mood != "risk_on":          # sázka na pokles - ne když trh jasně roste
+                    e = a.short_entry(df, i, {**self.ctx, "symbol": s})
+                    short = bool(e and e.stop > price)
+                if not short:
+                    continue
             # bot vidí signál - zapíše se do kroniky, ať ho koupí, nebo ne (u nekoupených se později dopočítá výsledek)
             feats = self.bar_features(a, s, now)
+            if short:
+                feats["směr"] = "short"
             sig = dict(stop=e.stop, target=e.target, horizon_min=int(e.max_hold_min or a.minutes * 48),
-                       reason=e.reason, features=feats, meta={"minutes": a.minutes, "crypto": a.crypto}, now=now)
+                       reason=e.reason, features=feats, meta={"minutes": a.minutes, "crypto": a.crypto, "short": short},
+                       now=now)
             skip, usd, note = "", 0.0, ""
             if len(w.lots) >= a.max_positions:
                 skip = "plno pozic"
@@ -312,7 +321,8 @@ class Colony:
                     skip = note
                     self._memory_skip(a.name, s, note)
                 else:
-                    usd = a.size_usd(price, e.stop, mult * mem_mult)
+                    risk_stop = 2 * price - e.stop if short else e.stop       # u shortu je riziko nad cenou
+                    usd = a.size_usd(price, risk_stop, mult * mem_mult)
                     if not usd:
                         skip = "málo peněz"
             if skip:
@@ -320,7 +330,7 @@ class Colony:
                 continue
             if note:
                 e.reason += f" · {note}"
-            lot = self.exec.enter(a, s, price, e, usd, now, meta={"features": feats})
+            lot = self.exec.enter(a, s, price, e, usd, now, meta={"features": feats}, short=short)
             self._k(self.kronika.signal, a.name, s, price, taken=bool(lot), skip_reason="" if lot else "příkaz neprošel", **sig)
 
         if isinstance(a, OrbitAgent) and w.lots and a.must_flatten(pd.Timestamp(now)):
@@ -342,7 +352,7 @@ class Colony:
                 lot = w.lots.get(s)
                 if not lot:
                     continue
-                x = a.check_exit(lot, p, p, p, p, now)
+                x = a.check_exit_short(lot, p, p, p, p, now) if is_short(lot) else a.check_exit(lot, p, p, p, p, now)
                 if x:
                     t = self.exec.exit(a, s, p, x[1], now)
                     if t and x[1] == "stop-loss":
@@ -516,7 +526,7 @@ class Colony:
                             "side": l.meta.get("side", ""), "p": l.meta.get("p"),
                             "chart_entry": l.meta.get("p0", l.entry),
                             "chart_stop": l.meta.get("stop_px", l.stop) if l.stop else None,
-                            "chart_target": None if l.meta.get("side") == "short" else l.target})
+                            "chart_target": l.meta.get("target_px") if l.meta.get("side") == "short" else l.target})
             bots.append({**s, "asset_class": w.asset_class, "desc": (a.__doc__ or "").strip().split("\n")[0],
                          "start": w.start, "cash": w.cash, "born": w.born, "died": w.died, "age_days": age,
                          "days_left": max(0, config.PROFIT_DEADLINE_DAYS - age), "curve": w.equity_curve[-600:],

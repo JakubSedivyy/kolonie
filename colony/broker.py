@@ -27,6 +27,12 @@ class SimBroker:
     def sell(self, symbol, qty, price, crypto=False):
         return Fill(qty, price, "sim")
 
+    def short_sell(self, symbol, usd, price):
+        return Fill(usd / price, price, "sim")
+
+    def cover(self, symbol, qty, price):
+        return Fill(qty, price, "sim")
+
 
 class AlpacaBroker:
     simulated = False   # skutečné plnění z Alpaky (paper nebo live)
@@ -102,4 +108,35 @@ class AlpacaBroker:
             return Fill(0, price, "none")
         tif = TimeInForce.GTC if crypto else TimeInForce.DAY
         o = self.tc.submit_order(MarketOrderRequest(symbol=symbol, qty=qty, side=OrderSide.SELL, time_in_force=tif))
+        return self._wait_fill(o.id)
+
+    # ------------------------------------------------------------------ short (jen akcie; krypto short Alpaca neumí)
+    def short_sell(self, symbol, usd, price):
+        """Prodej nakrátko: celé akcie, jen u akcií, které jde půjčit (easy to borrow)."""
+        from alpaca.trading.requests import MarketOrderRequest
+        from alpaca.trading.enums import OrderSide, TimeInForce
+        try:
+            a = self.tc.get_asset(symbol)
+            if not (a.shortable and a.easy_to_borrow):
+                log.info("short %s: akcii nejde půjčit", symbol)
+                return None
+        except Exception as e:
+            log.warning("short %s asset: %s", symbol, e)
+            return None
+        qty = math.floor(usd / price)
+        if qty < 1:
+            return None
+        o = self.tc.submit_order(MarketOrderRequest(symbol=symbol, qty=qty, side=OrderSide.SELL, time_in_force=TimeInForce.DAY))
+        return self._wait_fill(o.id)
+
+    def cover(self, symbol, qty, price):
+        """Zpětný nákup shortu (na účtu je záporná pozice)."""
+        from alpaca.trading.requests import MarketOrderRequest
+        from alpaca.trading.enums import OrderSide, TimeInForce
+        have = -self.position_qty(symbol)            # short = záporné množství
+        qty = min(qty, have)
+        if qty <= 0:
+            log.warning("cover %s: na účtu žádný short", symbol)
+            return Fill(0, price, "none")
+        o = self.tc.submit_order(MarketOrderRequest(symbol=symbol, qty=qty, side=OrderSide.BUY, time_in_force=TimeInForce.DAY))
         return self._wait_fill(o.id)

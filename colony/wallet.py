@@ -26,6 +26,15 @@ class Lot:
     meta: dict = field(default_factory=dict)
 
 
+def mirror(p0: float, p: float) -> float:
+    """Short v peněžence = "zrcadlový" coin s cenou 2*P0 - P: když cena spadne o 10 %, zrcadlo o 10 % vyroste."""
+    return max(2 * p0 - p, 1e-12)
+
+
+def is_short(lot) -> bool:
+    return bool(lot and (lot.meta or {}).get("side") == "short" and "p0" in (lot.meta or {}))
+
+
 @dataclass
 class Wallet:
     name: str
@@ -61,8 +70,12 @@ class Wallet:
         return val
 
     def mark(self, prices: dict, now: datetime | None = None):
-        """Zapíše poslední ceny, aktualizuje drawdown a křivku."""
-        self.last_prices.update({k: v for k, v in prices.items() if v})
+        """Zapíše poslední ceny (skutečné ceny trhu; u shortů se převedou na zrcadlo), drawdown a křivku."""
+        for k, v in prices.items():
+            if not v:
+                continue
+            lot = self.lots.get(k)
+            self.last_prices[k] = mirror(lot.meta["p0"], v) if is_short(lot) else v
         eq = self.equity()
         self.peak_equity = max(self.peak_equity, eq)
         if self.peak_equity > 0:
@@ -77,8 +90,14 @@ class Wallet:
 
     def open(self, symbol, qty, fill_price, *, stop, target=None, trail_pct=None,
              max_hold_min=None, reason="", now=None, meta=None, apply_slippage=True):
-        """Zaúčtuje nákup. fill_price = skutečná cena plnění (live) nebo tržní cena (simulace)."""
-        price = fill_price * (1 + self.costs["slip"]) if apply_slippage else fill_price
+        """Zaúčtuje nákup. fill_price = skutečná cena plnění (live) nebo tržní cena (simulace).
+        Short (meta side="short"): fill_price je cena prodeje nakrátko; peněženka drží zrcadlo s cenou P0."""
+        meta = dict(meta or {})
+        if meta.get("side") == "short":
+            price = fill_price * (1 - self.costs["slip"]) if apply_slippage else fill_price
+            meta["p0"] = price
+        else:
+            price = fill_price * (1 + self.costs["slip"]) if apply_slippage else fill_price
         gross = qty * price
         fee = gross * self.costs["fee"]
         if gross + fee > self.cash + 1e-6:
@@ -87,13 +106,17 @@ class Wallet:
         self.fees_paid += fee
         self.lots[symbol] = Lot(symbol, qty, price, stop, target, trail_pct,
                                 (now or utcnow()).isoformat(), max_hold_min,
-                                high=price, cost=gross + fee, reason=reason, meta=meta or {})
+                                high=price, cost=gross + fee, reason=reason, meta=meta)
         return self.lots[symbol]
 
     def close(self, symbol, fill_price, why, now=None, apply_slippage=True, qty=None):
         lot = self.lots.pop(symbol)
         q = lot.qty if qty is None else min(qty, lot.qty)
-        price = fill_price * (1 - self.costs["slip"]) if apply_slippage else fill_price
+        if is_short(lot):            # fill_price = skutečná cena zpětného nákupu
+            real = fill_price * (1 + self.costs["slip"]) if apply_slippage else fill_price
+            price = mirror(lot.meta["p0"], real)
+        else:
+            price = fill_price * (1 - self.costs["slip"]) if apply_slippage else fill_price
         gross = q * price
         fee = gross * self.costs["fee"]
         self.cash += gross - fee

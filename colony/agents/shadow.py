@@ -18,8 +18,7 @@ from ..memory import hour_bucket, num_bucket
 log = logging.getLogger("colony.shadow")
 
 
-def mirror(p0: float, p: float) -> float:
-    return max(2 * p0 - p, 1e-9)
+from ..wallet import mirror  # noqa: F401  (zrcadlová cena shortu - účetnictví dělá peněženka)
 
 
 class ShadowAgent:
@@ -103,7 +102,7 @@ class ShadowAgent:
             lot = w.lots.get(sym)
             if lot:
                 p0 = lot.meta["p0"]
-                prices[sym] = mirror(p0, p)
+                prices[sym] = p                          # skutečná cena; peněženka si ji převede na zrcadlo
                 held_h = (now - datetime.fromisoformat(lot.opened)).total_seconds() / 3600
                 why = None
                 if float(r["high"]) >= lot.meta["stop_px"]:
@@ -118,8 +117,7 @@ class ShadowAgent:
                     lot.meta["stop_px"] = min(lot.meta["stop_px"], lot.meta["low"] * (1 + lot.meta["trail"]))
                 if why:
                     funding = self.funding_8h * held_h / 8
-                    exit_px = mirror(p0, p) * (1 - funding)
-                    t = w.close(sym, exit_px, why, now=now)
+                    t = w.close(sym, p * (1 + funding), why, now=now)   # funding = za držení shortu se platí
                     notify(f"{'✅' if t['pnl'] > 0 else '🔻'} Stín (simulace) uzavřel short {sym}: "
                            f"{t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) - {why}")
                 continue
@@ -143,10 +141,10 @@ class ShadowAgent:
             usd = min(eq * self.risk_per_trade * mult / stop_pct, eq * self.max_position_frac, w.cash * 0.95)
             if usd < config.MIN_ORDER_USD:
                 continue
-            qty = usd / (p * (1 + w.costs["slip"]))
+            qty = usd / p
             w.open(sym, qty, p, stop=p * (1 - stop_pct), reason=why, now=now,
-                   meta={"p0": p, "stop_px": p * (1 + stop_pct), "trail": stop_pct, "low": p, "side": "short",
-                         "features": feats})
+                   meta={"stop_px": p * (1 + stop_pct), "trail": stop_pct, "low": p, "side": "short",
+                         "features": feats, "sim": True})
             notify(f"🐻 Stín (simulace) otevřel short {sym} za ${usd:.0f} @ {p:.6g}, stop {p*(1+stop_pct):.6g} - {why}")
         # ceny otevřených pozic, které nepřišly v datech, nech beze změny
         w.mark({s: v for s, v in prices.items() if s in w.lots}, now)

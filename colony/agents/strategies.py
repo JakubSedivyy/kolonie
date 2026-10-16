@@ -89,6 +89,32 @@ class OrbitAgent(BarAgent):
         return Entry(stop=stop, target=r["close"] * (1 + self.rr * risk),
                      reason=f"průraz ranního rozpětí {r['or_high']:.2f}, objem {r['volume']/vol_ref:.1f}x běžného")
 
+    can_short = True
+
+    def short_entry(self, df, i, ctx):
+        """Zrcadlo průrazu: cena propadne pod ranní minimum se silným objemem a pod VWAP -> short."""
+        r = df.iloc[i]
+        if r["bar_no"] < self.or_bars or pd.isna(r["or_low"]):
+            return None
+        key, sym = f'{r["day"]}', ctx.get("symbol")
+        if self.traded_today.get(sym) == key:
+            return None
+        prev_close = df["close"].iloc[i - 1] if i > 0 else r["close"]
+        vol_ref = r["vol_ref"] if not pd.isna(r["vol_ref"]) else r["or_vol"]
+        broke = r["close"] < r["or_low"] and prev_close >= r["or_low"]
+        if not (broke and r["close"] < r["vwap"] and r["volume"] > self.vol_mult * vol_ref):
+            return None
+        stop = r["or_high"]
+        risk = (stop - r["close"]) / r["close"]
+        if risk > self.max_stop_pct:
+            stop = (r["or_high"] + r["or_low"]) / 2
+            risk = (stop - r["close"]) / r["close"]
+            if risk > self.max_stop_pct or risk <= 0:
+                return None
+        self.traded_today[sym] = key
+        return Entry(stop=stop, target=r["close"] * (1 - self.rr * risk),
+                     reason=f"propad pod ranní minimum {r['or_low']:.2f}, objem {r['volume']/vol_ref:.1f}x běžného")
+
 
 class TrendAgent(BarAgent):
     """TRENDY - velké kryptoměny 24/7, sleduje trend.
@@ -150,6 +176,38 @@ class TrendAgent(BarAgent):
             return "pád pod minimum kanálu"
         return None
 
+    can_short = True
+
+    def short_entry(self, df, i, ctx):
+        """Zrcadlo: sestupný trend pod EMA 200 a propad pod minimum kanálu (nebo EMA20 pod EMA50)."""
+        if i < 210:
+            return None
+        r, p = df.iloc[i], df.iloc[i - 1]
+        if r["close"] >= r["ema200"]:
+            return None
+        lo = df["low"].rolling(self.donchian_n).min().shift(1)
+        if self.mode == "cross":
+            sig, why = p["ema20"] >= p["ema50"] and r["ema20"] < r["ema50"], "EMA20 klesla pod EMA50"
+        else:
+            sig, why = r["close"] < lo.iloc[i] and p["close"] >= lo.iloc[i - 1], f"propad pod {self.donchian_n}-svíčkové minimum"
+        if not sig:
+            return None
+        atr_pct = r["atr"] / r["close"]
+        if not (0.002 <= atr_pct <= 0.04):
+            return None
+        stop_pct = self.atr_mult * atr_pct
+        return Entry(stop=r["close"] * (1 + stop_pct), trail_pct=stop_pct, max_hold_min=7 * 24 * 60,
+                     reason=f"{why} pod EMA 200, ATR {atr_pct*100:.2f} %")
+
+    def short_exit_signal(self, df, i, lot):
+        r = df.iloc[i]
+        hh = df["high"].rolling(max(2, self.donchian_n // 2)).max().shift(1).iloc[i]
+        if self.mode == "cross" and r["ema20"] > r["ema50"]:
+            return "trend se otočil nahoru"
+        if self.mode == "donchian" and r["close"] > hh:
+            return "průraz nad maximum kanálu"
+        return None
+
 
 class MemeAgent(BarAgent):
     """MEMEC - meme coiny na Alpace (DOGE, SHIB, PEPE…), 5min svíčky.
@@ -197,6 +255,22 @@ class MemeAgent(BarAgent):
                 why += f", v trendu na internetu (hype {hype:.1f})"
             return Entry(stop=r["close"] * (1 - self.stop_pct), target=r["close"] * (1 + self.target_pct),
                          trail_pct=self.stop_pct, max_hold_min=240, reason=why)
+        return None
+
+    can_short = True
+
+    def short_entry(self, df, i, ctx):
+        """Zrcadlo: výplach - obří objem, nové 2h minimum, červená svíčka -> short (simulace)."""
+        r = df.iloc[i]
+        if pd.isna(r["vol_avg"]) or r["vol_avg"] <= 0:
+            return None
+        ll2h = df["low"].rolling(24).min().shift(1).iloc[i]
+        if pd.isna(ll2h):
+            return None
+        if r["volume"] > self.vol_mult * r["vol_avg"] and r["close"] < ll2h and r["close"] < r["open"] and r["rsi"] > 15:
+            return Entry(stop=r["close"] * (1 + self.stop_pct), target=r["close"] * (1 - self.target_pct),
+                         trail_pct=self.stop_pct, max_hold_min=240,
+                         reason=f"výplach: objem {r['volume']/r['vol_avg']:.1f}x průměru, nové 2h minimum")
         return None
 
 
@@ -254,6 +328,30 @@ class WaveAgent(BarAgent):
         r = df.iloc[i]
         if held_h >= self.min_hold_hours and r["ema20"] < r["ema50"] and r["close"] < r["ema50"]:
             return "vlna opadla (trend se otočil)"
+        return None
+
+    can_short = True
+
+    def short_entry(self, df, i, ctx):
+        """Zrcadlo: sestupná vlna - pod EMA 50, EMA20 pod EMA50, propad pod 3denní minimum, ještě ne vyprodané."""
+        if i < 80:
+            return None
+        r = df.iloc[i]
+        ll72 = df["low"].rolling(72).min().shift(1).iloc[i]
+        downtrend = r["close"] < r["ema50"] and r["ema20"] < r["ema50"]
+        not_sold_out = -0.40 <= r["ret24"] <= -0.02 and r["rsi"] > 22
+        if not (downtrend and not_sold_out and r["close"] < ll72):
+            return None
+        stop_pct = min(0.15, max(0.06, self.atr_mult * r["atr"] / r["close"]))
+        return Entry(stop=r["close"] * (1 + stop_pct), trail_pct=stop_pct, max_hold_min=7 * 24 * 60,
+                     reason=f"sestupná vlna: propad pod 3denní minimum, {r['ret24']*100:.0f} % za 24 h")
+
+    def short_exit_signal(self, df, i, lot):
+        from datetime import datetime
+        held_h = (df.index[i].to_pydatetime() - datetime.fromisoformat(lot.opened)).total_seconds() / 3600
+        r = df.iloc[i]
+        if held_h >= self.min_hold_hours and r["ema20"] > r["ema50"] and r["close"] > r["ema50"]:
+            return "sestupná vlna skončila (trend se otočil nahoru)"
         return None
 
 
