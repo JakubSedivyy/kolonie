@@ -368,6 +368,43 @@ def test_degen_skips_what_memory_forbids():
     assert d2.wallet.lots and all("features" in l.meta for l in d2.wallet.lots.values())
 
 
+def test_kronika_records_and_learns_from_missed_signals():
+    from colony.kronika import Kronika
+    from colony.memory import Memory
+    k = Kronika(os.path.join(tempfile.mkdtemp(), "k.db"))
+    t0 = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    k.signal("Vlna", "SOL/USD", 100.0, taken=False, skip_reason="plno pozic", stop=95, target=110, horizon_min=60,
+             features={"coin": "SOL/USD"}, meta={"minutes": 15, "crypto": True}, now=t0)
+    k.signal("Vlna", "SOL/USD", 101.0, taken=False, skip_reason="plno pozic", horizon_min=60, now=t0 + timedelta(minutes=5))
+    k.signal("Vlna", "ETH/USD", 50.0, taken=True, horizon_min=60, now=t0)
+    assert k.bot_summary("Vlna")["signals"] == 2                 # stejný nekoupený signál se nezapíše dvakrát
+    assert k.due_signals(t0 + timedelta(minutes=30)) == []       # ještě neuplynula doba
+    due = k.due_signals(t0 + timedelta(minutes=61))
+    assert len(due) == 1 and due[0]["features"] == {"coin": "SOL/USD"}
+    idx = pd.date_range(t0 + timedelta(minutes=15), periods=4, freq="15min", tz="UTC")
+    up = pd.DataFrame({"open": [100, 103, 106, 109.0], "high": [103, 106, 111, 112.0], "low": [99, 102, 105, 108.0],
+                       "close": [103, 106, 109, 111.0]}, index=idx)
+    ret, note = Kronika.simulate(100, 95, 110, up)
+    assert note == "cíl" and abs(ret - 0.10) < 1e-9
+    down = up.copy(); down["low"] = [99, 94, 90, 90.0]; down["high"] = [101, 111, 100, 95.0]
+    assert Kronika.simulate(100, 95, 110, down)[1] == "stop"     # stop i cíl ve stejné svíčce -> počítá stop
+    assert Kronika.simulate(100, 105, None, up, short=True)[1] == "stop"
+    k.resolve(due[0]["id"], 0.10, "cíl")
+    s = k.bot_summary("Vlna")
+    assert s["missed_resolved"] == 1 and s["missed_would_win"] == 1
+    w = Wallet("Vlna", "crypto"); w.trades.append({"symbol": "ETH/USD", "opened": "a", "closed": "b", "entry": 1, "exit": 2,
+                                                   "ret": 0.5, "pnl": 1, "why": "cíl", "reason": "x", "features": {}})
+    k.trades([w]); k.trades([w])
+    k.radar_snapshot(t0, "neutral", {"hot": [{"symbol": "PEPE", "score": 5, "sources": ["4chan"]}], "fear_greed": {"value": 30}})
+    rep = k.report(days=36500)
+    assert "1 obchodů" in rep and "PEPE (1h)" in rep and "vyhrálo by 1" in rep
+    m = Memory(os.path.join(tempfile.mkdtemp(), "m.json"))
+    for i in range(12):
+        m.record("Vlna", {"coin": "SOL/USD"}, -0.2, weight=0.5)          # stínové obchody mají poloviční váhu
+    assert m.stats("Vlna")["coin = SOL/USD"][0] == 6.0
+    assert not m.judge("Vlna", {"coin": "SOL/USD"})[0]
+
+
 def test_video_helpers():
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deploy"))
     import videa
@@ -448,6 +485,8 @@ def test_live_colony_ticks():
     from colony.dashboard import _jsonable
     snap = json.loads(json.dumps(c.snapshot(now), default=_jsonable))
     assert len(snap["bots"]) == 10
+    assert all("kronika" in b and "lessons" in b for b in snap["bots"])
+    assert os.path.exists(os.path.join(config.STATE_DIR, "kronika.txt"))     # hodinový přehled kroniky vznikl
     assert all(isinstance(ok, bool) for e in snap["eval"] for _, ok in e["checks"])
     c.save()
     st = json.load(open(c.state_path))                # původní mrtvý Degen ze starší verze -> hřbitov

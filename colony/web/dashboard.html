@@ -605,8 +605,10 @@ function renderDetail(force) {
       <span class="small muted">${p.chart_stop ? "stop " + price(p.chart_stop) : ""}${p.chart_target ? " · cíl " + price(p.chart_target) : ""} · ${esc(p.reason)}</span>
     </div>`).join("");
 
-  const L = b.lessons || [];
-  document.getElementById("dlessons").innerHTML = `<h3>🧠 Co se ${esc(b.name)} naučil z vlastních obchodů</h3>` + (L.length
+  const L = b.lessons || [], K = b.kronika || {};
+  const kline = K.signals ? `<div class="small muted">📜 Kronika: viděl <b>${K.signals}</b> signálů, koupil <b>${K.taken}</b>` +
+    (K.missed_resolved ? `; z ${K.missed_resolved} nekoupených by <b>${K.missed_would_win}</b> vyhrálo (průměr ${sgn(K.missed_avg || 0)}) - i z toho se učí` : "") + `</div>` : "";
+  document.getElementById("dlessons").innerHTML = `<h3>🧠 Co se ${esc(b.name)} naučil z vlastních obchodů</h3>` + kline + (L.length
     ? L.map(l => `<div class="lesson"><span>když <b>${esc(l.when)}</b></span><span class="num ${l.avg >= 0 ? "pos" : "neg"}">${l.n}× · průměr ${sgn(l.avg)}</span>
         <span class="tag ${l.verdict === "vyhýbá se" ? "avoid" : l.verdict === "daří se" ? "good" : "watch"}">${esc(l.verdict)}</span></div>`).join("")
     : `<div class="empty">Zatím málo obchodů na poučení. Po každém uzavřeném obchodu si zapíše, v jaké situaci koupil a jak to dopadlo; kde opakovaně prodělá (6+ obchodů), tam už nekoupí.</div>`);

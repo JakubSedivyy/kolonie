@@ -34,6 +34,18 @@ class DegenAgent:
     use_fresh = True              # brát i úplně nové tokeny z DexScreeneru
 
     memory = None                 # paměť kolonie (zapojí ji živá kolonie)
+    kronika = None                # trvalý archiv signálů
+
+    def _log_signal(self, p, sym, price, taken, skip, feats, note, now):
+        if not self.kronika:
+            return
+        try:
+            self.kronika.signal(self.name, sym, price, taken=taken, skip_reason=skip,
+                                stop=price * (1 - self.stop_loss), target=price * (1 + self.take_profit),
+                                horizon_min=self.max_hold_min, reason=note, features=feats, now=now,
+                                meta={"pair": p.get("pairAddress"), "liq": float((p.get("liquidity") or {}).get("usd") or 0)})
+        except Exception as e:
+            log.warning("kronika: %s", e)
 
     def features(self, p: dict, now: datetime, trending: bool) -> dict:
         try:
@@ -145,12 +157,16 @@ class DegenAgent:
                     s += self.trend_bonus                 # internet o něm mluví
                 cands.append((s, p, tok in trending))
         cands.sort(key=lambda x: -x[0])
-        for s, p, trend in cands:
-            if len(w.lots) >= self.max_positions:
-                break
+        for s, p, trend in cands[:12]:
             feats = self.features(p, now, trend)
+            sym = f'{p["baseToken"]["symbol"]}·{p["baseToken"]["address"][:4]}'
+            px = float(p.get("priceUsd") or 0)
+            if len(w.lots) >= self.max_positions:
+                self._log_signal(p, sym, px, False, "plno pozic", feats, f"skóre {s:.1f}", now)
+                continue
             ok, mult, note = self.memory.judge(self.name, feats) if self.memory else (True, 1.0, "")
             if not ok:
+                self._log_signal(p, sym, px, False, note, feats, f"skóre {s:.1f}", now)
                 continue
             usd = min(self.position_usd * mult, w.cash * 0.9 / (1 + config.COSTS[self.asset_class]["fee"]))
             if usd < config.MIN_ORDER_USD:
@@ -164,6 +180,7 @@ class DegenAgent:
                    meta={"pair": p["pairAddress"], "token": p["baseToken"]["address"], "liq": liq,
                          "url": p.get("url", ""), "features": feats})
             held.add(p["baseToken"]["address"])
+            self._log_signal(p, sym, float(p["priceUsd"]), True, "", feats, f"skóre {s:.1f}", now)
             notify(f"{self.icon} {self.name} (simulace) koupil {sym} za ${usd:.0f}, likvidita ${liq:,.0f} - {p.get('url','')}")
 
 

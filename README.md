@@ -42,6 +42,16 @@ u DEX coinů likvidita, stáří, růst a převaha kupců). Po prodeji si zapí�
 - Situaci, ve které prodělal aspoň 6x a v průměru výrazně, už nekoupí (a napíše to do Telegramu 🧠).
 - Kde se mu daří, sází víc (až 1,5x), kde ne, méně (až 0,5x).
 - Paměť drží posledních 400 obchodů, staré lekce postupně vyprchají. Co se naučil, vidíš v detailu bota.
+
+
+## Kronika: boti si pamatují všechno
+Trvalý archiv `state/kronika.db` (nic se nemaže):
+- **každý signál**, který bot uvidí - koupený i nekoupený, a proč ne (plno pozic, paměť, kolega drží coin…),
+- **každý obchod** se vším kolem, **každou hodinu snímek radaru** (o čem se mluví, nálada, Fear & Greed), všechny události.
+U nekoupených signálů kolonie po čase dopočítá, jak by obchod dopadl („stínový obchod“), a zapíše to do paměti
+s poloviční váhou. Boti se tak učí i z toho, co jen viděli, ne jen z toho, co udělali - dat je mnohem víc.
+Přehled: `state/kronika.txt` (posílá se i do hlášení na GitHub).
+
 Tři úrovně zlepšování: paměť (po každém obchodu), laboratoř (každých 6 h ladí parametry),
 Claude (každé ráno čte výsledky a opravuje kód).
 

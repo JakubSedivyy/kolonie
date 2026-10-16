@@ -71,6 +71,7 @@ mkdir -p "$R/reports"
 cp -f state/lab.txt "$R/reports/lab.txt" 2>/dev/null || true
 cp -f state/lab.json "$R/reports/lab.json" 2>/dev/null || true
 cp -f state/memory.json "$R/reports/pamet.json" 2>/dev/null || true
+cp -f state/kronika.txt "$R/reports/kronika.txt" 2>/dev/null || true
 .venv/bin/python - > "$R/reports/obchody.json" <<'PY' 2>/dev/null || true
 import json
 st = json.load(open("state/colony.json"))

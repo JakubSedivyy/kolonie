@@ -24,6 +24,7 @@ from .agents.oracle import OracleAgent
 from . import dashboard
 from .wallet import Wallet, utcnow
 from .memory import Memory, hour_bucket
+from .kronika import Kronika
 
 log = logging.getLogger("colony")
 PRAGUE = ZoneInfo("Europe/Prague")
@@ -57,10 +58,13 @@ class Colony:
         self.oracle = OracleAgent(self.grok)
         self.lab, self._lab_mtime, self._lab_checked = {}, 0.0, 0.0
         self.memory = Memory(os.path.join(config.STATE_DIR, "memory.json"))
+        self.kronika = Kronika(os.path.join(config.STATE_DIR, "kronika.db"))
+        self._kronika_hour = ""
         self._skip_told: set = set()
         self.graveyard: list[Wallet] = []          # mrtví boti, kteří už nemají agenta (např. původní Degen)
         for ag in (self.degen, self.lovec, self.stin):
             ag.memory = self.memory
+            ag.kronika = self.kronika
         self.mood, self.mood_at = "neutral", None
         self.ctx = {"radar": self.radar}
         self.last_bar: dict[str, str] = {}
@@ -175,6 +179,61 @@ class Colony:
         return {"coin": symbol, "denní doba": hour_bucket(now), "nálada trhu": self.mood,
                 "o coinu se mluví": "ano" if hype >= 3 else "ne"}
 
+    def _k(self, fn, *args, **kw):
+        """Kronika nesmí nikdy shodit obchodování."""
+        try:
+            return fn(*args, **kw)
+        except Exception as e:
+            log.warning("kronika: %s", e)
+
+    def chronicle_hour(self, now):
+        """Jednou za hodinu: snímek radaru, archiv obchodů a událostí, dopočet stínových obchodů."""
+        hour = now.strftime("%Y-%m-%dT%H")
+        if self._kronika_hour == hour:
+            return
+        self._kronika_hour = hour
+        self._k(self.kronika.radar_snapshot, now, self.mood, self.radar.snapshot(25))
+        self._k(self.kronika.trades, self.wallets)
+        self._k(self.kronika.events, self.events)
+        learned = 0
+        for sgn in (self._k(self.kronika.due_signals, now) or []):
+            ret, note = self._k(self.shadow_outcome, sgn) or (None, "chyba")
+            self._k(self.kronika.resolve, sgn["id"], ret, note)
+            if ret is not None:
+                self.memory.record(sgn["bot"], sgn["features"], ret, sgn["t"].isoformat(), weight=0.5)
+                learned += 1
+        if learned:
+            self.memory.save()
+            log.info("kronika: %d stínových obchodů dopočítáno a zapsáno do paměti", learned)
+        try:
+            open(os.path.join(config.STATE_DIR, "kronika.txt"), "w").write(self.kronika.report())
+        except Exception as e:
+            log.warning("kronika report: %s", e)
+
+    def shadow_outcome(self, sgn):
+        """Jak by dopadl nekoupený signál."""
+        meta, end = sgn["meta"], sgn["t"] + timedelta(minutes=sgn["horizon_min"])
+        if meta.get("pair"):                                   # DEX coin: známe jen cenu teď (po uplynutí doby)
+            p = self.dex.pair(meta["pair"])
+            if not p:
+                return None, "pool nenalezen"
+            now_px = float(p.get("priceUsd") or 0)
+            liq = float((p.get("liquidity") or {}).get("usd") or 0)
+            if liq < meta.get("liq", 0) * 0.5:
+                return -0.9, "rug pull"
+            ret = now_px / sgn["price"] - 1
+            lo = sgn["stop"] / sgn["price"] - 1 if sgn["stop"] else -1
+            hi = sgn["target"] / sgn["price"] - 1 if sgn["target"] else 10
+            return max(lo, min(hi, ret)), "cena po uplynutí doby"
+        minutes, crypto = meta.get("minutes", 60), meta.get("crypto", True)
+        bars = self.data.bars([sgn["symbol"]], minutes, sgn["t"], end, crypto=crypto).get(sgn["symbol"])
+        if bars is None or bars.empty:
+            return None, "chybí data"
+        bars = bars[bars.index > pd.Timestamp(sgn["t"])]
+        ret, note = Kronika.simulate(sgn["price"], sgn["stop"], sgn["target"], bars, short=meta.get("short", False))
+        cost = 2 * (config.COSTS["short" if meta.get("short") else ("crypto" if crypto else "stock")]["fee"] + 0.0005)
+        return (None if ret is None else ret - cost), note
+
     def _memory_skip(self, bot, symbol, note):
         key = (bot, symbol, utcnow().strftime("%Y-%m-%d %H"))
         if key not in self._skip_told:                 # stejnou věc hlas nejvýš jednou za hodinu
@@ -227,26 +286,42 @@ class Colony:
                 if why:
                     self.exec.exit(a, s, price, why, now)
                 continue
-            if self.paused or a.benched or w.status != "ALIVE" or len(w.lots) >= a.max_positions:
+            if self.paused or a.benched or w.status != "ALIVE":
                 continue
             if self.mood == "risk_off" and not a.trades_in_risk_off and not config.RISK_OFF_TRADING:
                 continue
-            if self.blacklist.get(s, 0) >= 2 or not a.can_enter(ts):
+            if not a.can_enter(ts):
                 continue
-            if any(s in o.wallet.lots for o in self.bar_agents if o is not a):
-                continue                                # coin už drží kolega - na účtu se pozice nesmí míchat
             e = a.entry(df, i, {**self.ctx, "symbol": s})
-            if e and e.stop < price:
-                feats = self.bar_features(a, s, now)
+            if not (e and e.stop < price):
+                continue
+            # bot vidí signál - zapíše se do kroniky, ať ho koupí, nebo ne (u nekoupených se později dopočítá výsledek)
+            feats = self.bar_features(a, s, now)
+            sig = dict(stop=e.stop, target=e.target, horizon_min=int(e.max_hold_min or a.minutes * 48),
+                       reason=e.reason, features=feats, meta={"minutes": a.minutes, "crypto": a.crypto}, now=now)
+            skip, usd, note = "", 0.0, ""
+            if len(w.lots) >= a.max_positions:
+                skip = "plno pozic"
+            elif self.blacklist.get(s, 0) >= 2:
+                skip = "dnes už 2x stop-loss"
+            elif any(s in o.wallet.lots for o in self.bar_agents if o is not a):
+                skip = "coin drží kolega"            # na účtu se pozice nesmí míchat
+            else:
                 ok, mem_mult, note = self.memory.judge(a.name, feats)
                 if not ok:
+                    skip = note
                     self._memory_skip(a.name, s, note)
-                    continue
-                usd = a.size_usd(price, e.stop, mult * mem_mult)
-                if usd:
-                    if note:
-                        e.reason += f" · {note}"
-                    self.exec.enter(a, s, price, e, usd, now, meta={"features": feats})
+                else:
+                    usd = a.size_usd(price, e.stop, mult * mem_mult)
+                    if not usd:
+                        skip = "málo peněz"
+            if skip:
+                self._k(self.kronika.signal, a.name, s, price, taken=False, skip_reason=skip, **sig)
+                continue
+            if note:
+                e.reason += f" · {note}"
+            lot = self.exec.enter(a, s, price, e, usd, now, meta={"features": feats})
+            self._k(self.kronika.signal, a.name, s, price, taken=bool(lot), skip_reason="" if lot else "příkaz neprošel", **sig)
 
         if isinstance(a, OrbitAgent) and w.lots and a.must_flatten(pd.Timestamp(now)):
             self._close_all(a, "konec obchodního dne", now)
@@ -415,6 +490,8 @@ class Colony:
                 self.tg.send(msg)
         except Exception as e:
             log.exception("paměť: %s", e)
+        if self.kronika:
+            self._k(self.chronicle_hour, now)
         self.daily(now)
         self.save()
         dashboard.publish(self.snapshot(now))
@@ -449,6 +526,7 @@ class Colony:
                          "waiting": (a is self.oracle and not self.grok.enabled),
                          "symbols": self.chart_symbols(a), "minutes": getattr(a, "minutes", 60),
                          "lessons": self.memory.lessons(a.name),
+                         "kronika": self._k(self.kronika.bot_summary, a.name) or {},
                          "bot_trades": [dict(t, bot=w.name) for t in w.trades[-40:]],
                          "profit_factor": None if s["profit_factor"] == float("inf") else s["profit_factor"]})
         trades = sorted((dict(t, bot=w.name) for w in self.wallets for t in w.trades), key=lambda t: t["closed"])

@@ -34,11 +34,21 @@ class ShadowAgent:
     max_hold_h = 72
     funding_8h = 0.0001
     memory = None
+    kronika = None
 
     def __init__(self, data, wallet: Wallet | None = None):
         self.data = data
         self.wallet = wallet or Wallet(self.name, self.asset_class)
         self.last_bar = ""
+
+    def _log(self, sym, p, stop_pct, taken, skip, why, feats, now):
+        if self.kronika:
+            try:
+                self.kronika.signal(self.name, sym, p, taken=taken, skip_reason=skip, stop=p * (1 + stop_pct),
+                                    horizon_min=self.max_hold_h * 60, reason=why, features=feats, now=now,
+                                    meta={"minutes": 60, "crypto": True, "short": True})
+            except Exception as e:
+                log.warning("kronika: %s", e)
 
     # ------------------------------------------------------------------ signál
     @staticmethod
@@ -114,7 +124,7 @@ class ShadowAgent:
                            f"{t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) - {why}")
                 continue
             prices[sym] = p
-            if paused or w.status != "ALIVE" or mood == "risk_on" or len(w.lots) >= self.max_positions:
+            if paused or w.status != "ALIVE" or mood == "risk_on":
                 continue
             sig = self.signal(df)
             if not sig:
@@ -123,7 +133,9 @@ class ShadowAgent:
             feats = {"coin": sym, "denní doba": hour_bucket(now), "nálada trhu": mood,
                      "pád za 24 h": num_bucket(-float(df["ret24"].iloc[-1]), [0.04, 0.08], ["2-4 %", "4-8 %", "přes 8 %"])}
             ok, mult, note = self.memory.judge(self.name, feats) if self.memory else (True, 1.0, "")
-            if not ok:
+            skip = "plno pozic" if len(w.lots) >= self.max_positions else ("" if ok else note)
+            self._log(sym, p, stop_pct, not skip, skip, why, feats, now)
+            if skip:
                 continue
             if note:
                 why += f" · {note}"

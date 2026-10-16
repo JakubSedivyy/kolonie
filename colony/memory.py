@@ -20,7 +20,7 @@ log = logging.getLogger("colony.memory")
 MIN_N = 6            # kolik obchodů v dané situaci musí být, než z toho bot vyvodí zákaz
 PRIOR = 5            # smrštění průměru k nule
 AVOID_BELOW = -0.02  # smrštěný průměr horší než -2 % na obchod -> situaci se vyhnout
-MAX_TRADES = 400
+MAX_TRADES = 1500    # skutečné i stínové obchody; rozhoduje se podle nich, starší vyprchají
 
 
 def hour_bucket(dt: datetime) -> str:
@@ -53,11 +53,12 @@ class Memory:
         os.replace(tmp, self.path)
 
     # ------------------------------------------------------------------ zápis
-    def record(self, bot: str, features: dict, ret: float, when: str = ""):
+    def record(self, bot: str, features: dict, ret: float, when: str = "", weight: float = 1.0):
+        """weight 1 = skutečný obchod, 0.5 = stínový (signál, který bot viděl, ale nekoupil)."""
         if not features:
             return
         rows = self.data["bots"].setdefault(bot, [])
-        rows.append({"f": {k: str(v) for k, v in features.items()}, "r": float(ret), "t": when})
+        rows.append({"f": {k: str(v) for k, v in features.items()}, "r": float(ret), "t": when, "w": weight})
         del rows[:-MAX_TRADES]
 
     def learn_from(self, wallets) -> list[str]:
@@ -73,7 +74,7 @@ class Memory:
             self.data["seen"][w.name] = len(w.trades)
             for key, n, avg in self.avoid_list(w.name):
                 if key not in before:
-                    news.append(f"🧠 {w.name} se poučil: když {key}, prodělal {n}x (průměr {avg*100:+.1f} %) - příště to nekoupí")
+                    news.append(f"🧠 {w.name} se poučil: když {key}, prodělal {n:g}x (průměr {avg*100:+.1f} %) - příště to nekoupí")
         if news or any(len(w.trades) for w in wallets):
             self.save()
         return news
@@ -82,11 +83,13 @@ class Memory:
     def stats(self, bot: str) -> dict:
         out: dict = {}
         for row in self.data["bots"].get(bot, []):
+            wt = row.get("w", 1.0)
             for k, v in row["f"].items():
-                s = out.setdefault(f"{k} = {v}", [0, 0.0])
-                s[0] += 1
-                s[1] += row["r"]
-        return {k: (n, tot / (n + PRIOR), tot / n) for k, (n, tot) in out.items()}   # n, smrštěný, hrubý průměr
+                s = out.setdefault(f"{k} = {v}", [0.0, 0.0])
+                s[0] += wt
+                s[1] += wt * row["r"]
+        # n = vážený počet (stínový obchod = půlka), smrštěný průměr, hrubý průměr
+        return {k: (round(n, 1), tot / (n + PRIOR), tot / n) for k, (n, tot) in out.items() if n > 0}
 
     def avoid_list(self, bot: str):
         return sorted(((k, n, raw) for k, (n, shr, raw) in self.stats(bot).items()
@@ -101,7 +104,7 @@ class Memory:
         for k in keys:
             n, shr, raw = st.get(k, (0, 0.0, 0.0))
             if n >= MIN_N and shr < AVOID_BELOW:
-                return False, 0.0, f"paměť: když {k}, prodělal jsem {n}x (průměr {raw*100:+.1f} %)"
+                return False, 0.0, f"paměť: když {k}, prodělal jsem {n:g}x (průměr {raw*100:+.1f} %)"
         known = [st[k][1] for k in keys if k in st and st[k][0] >= 3]
         if not known:
             return True, 1.0, ""
