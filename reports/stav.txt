@@ -7,10 +7,10 @@ Trendy [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.66 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $974.75 (-2.52 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 3.1 %, poplatky $2.31
+Vlna [ALIVE] $974.78 (-2.52 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 3.4 %, poplatky $2.31
    otevřeno UNI/USD: nákup 7.41042, teď 7.25596 (-2.1 %) - vlna: hype 3.0, +5 % za 24 h
    otevřeno PEPE/USD: nákup 4.11205e-06, teď 4.04e-06 (-1.8 %) - vlna: hype 5.4, +5 % za 24 h
-   otevřeno BCH/USD: nákup 282.621, teď 277.84 (-1.7 %) - vlna: průraz 3denního maxima, +7 % za 24 h
+   otevřeno BCH/USD: nákup 282.621, teď 277.87 (-1.7 %) - vlna: průraz 3denního maxima, +7 % za 24 h
    2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
 
 Šeptač [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
@@ -22,23 +22,23 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-Lovec [ALIVE] $1012.52 (+1.25 %) | obchodů 6, úspěšnost 33 %, PF 0.94, max propad 4.8 %, poplatky $7.51
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1168 (+7.4 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06687 (+8.8 %) - skóre 1.9
-   otevřeno fone·CTPo: nákup 0.00414605, teď 0.004193 (+1.1 %) - skóre 1.9
+Lovec [ALIVE] $1002.70 (+0.27 %) | obchodů 6, úspěšnost 33 %, PF 0.94, max propad 4.8 %, poplatky $7.51
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1162 (+6.8 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.0643 (+4.6 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.003982 (-4.0 %) - skóre 1.9
    2026-10-15T15:42 CYBERLEEK·ApZu: -12.79 $ (-12.7 %) stop-loss
    2026-10-15T22:24 OTC·MukL: -12.74 $ (-12.7 %) stop-loss
    2026-10-16T01:25 JEANPHIL·GTBx: -11.99 $ (-11.9 %) stop-loss
    2026-10-16T03:44 CLAUDIA·2j5S: +23.11 $ (+23.0 %) cíl zisku
    2026-10-16T13:04 OTC·MukL: -12.13 $ (-12.1 %) stop-loss
 
-Věštec [ALIVE] $969.57 (-3.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.4 %, poplatky $2.04
+Věštec [ALIVE] $969.57 (-3.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.7 %, poplatky $2.04
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
    otevřeno PM5170739·NO: nákup 0.64, teď 0.57 (-10.9 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 38% (medium)
 
-CELKEM $7752.03 z $8000 (-3.10 %)
+CELKEM $7742.24 z $8000 (-3.22 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-10-16T07:42:22+00:00 🌡️ Nálada trhu: neutral → risk_on (BTC ↑, S&P ↑)
