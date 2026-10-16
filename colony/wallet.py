@@ -103,7 +103,7 @@ class Wallet:
         t = {"symbol": symbol, "opened": lot.opened, "closed": (now or utcnow()).isoformat(),
              "entry": lot.entry, "exit": price, "qty": q, "pnl": round(pnl, 4),
              "ret": pnl / cost if cost else 0, "why": why, "reason": lot.reason}
-        for k in ("pair", "market", "side", "p0"):          # pro grafy v dashboardu (DEX pool, Polymarket trh, short)
+        for k in ("pair", "market", "side", "p0", "features"):          # pro grafy v dashboardu (DEX pool, Polymarket trh, short)
             if k in (lot.meta or {}):
                 t[k] = lot.meta[k]
         self.trades.append(t)

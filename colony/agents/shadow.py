@@ -13,6 +13,7 @@ import pandas as pd
 from .. import config
 from ..indicators import ema, atr, rsi
 from ..wallet import Wallet
+from ..memory import hour_bucket, num_bucket
 
 log = logging.getLogger("colony.shadow")
 
@@ -32,6 +33,7 @@ class ShadowAgent:
     atr_mult = 2.5
     max_hold_h = 72
     funding_8h = 0.0001
+    memory = None
 
     def __init__(self, data, wallet: Wallet | None = None):
         self.data = data
@@ -118,13 +120,21 @@ class ShadowAgent:
             if not sig:
                 continue
             stop_pct, why = sig
+            feats = {"coin": sym, "denní doba": hour_bucket(now), "nálada trhu": mood,
+                     "pád za 24 h": num_bucket(-float(df["ret24"].iloc[-1]), [0.04, 0.08], ["2-4 %", "4-8 %", "přes 8 %"])}
+            ok, mult, note = self.memory.judge(self.name, feats) if self.memory else (True, 1.0, "")
+            if not ok:
+                continue
+            if note:
+                why += f" · {note}"
             eq = w.equity()
-            usd = min(eq * self.risk_per_trade / stop_pct, eq * self.max_position_frac, w.cash * 0.95)
+            usd = min(eq * self.risk_per_trade * mult / stop_pct, eq * self.max_position_frac, w.cash * 0.95)
             if usd < config.MIN_ORDER_USD:
                 continue
             qty = usd / (p * (1 + w.costs["slip"]))
             w.open(sym, qty, p, stop=p * (1 - stop_pct), reason=why, now=now,
-                   meta={"p0": p, "stop_px": p * (1 + stop_pct), "trail": stop_pct, "low": p, "side": "short"})
+                   meta={"p0": p, "stop_px": p * (1 + stop_pct), "trail": stop_pct, "low": p, "side": "short",
+                         "features": feats})
             notify(f"🐻 Stín (simulace) otevřel short {sym} za ${usd:.0f} @ {p:.6g}, stop {p*(1+stop_pct):.6g} - {why}")
         # ceny otevřených pozic, které nepřišly v datech, nech beze změny
         w.mark({s: v for s, v in prices.items() if s in w.lots}, now)

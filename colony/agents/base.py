@@ -105,7 +105,7 @@ class Executor:
         # live: cena plnění je skutečná, skluz už v ní je.
         return not config.IS_LIVE or getattr(self.broker, "simulated", False)
 
-    def enter(self, agent: BarAgent, symbol: str, price: float, e: Entry, usd: float, now: datetime):
+    def enter(self, agent: BarAgent, symbol: str, price: float, e: Entry, usd: float, now: datetime, meta=None):
         w = agent.wallet
         fee_buf = 1 + w.costs["fee"] + w.costs["slip"]
         usd = min(usd, w.cash / fee_buf)
@@ -122,7 +122,7 @@ class Executor:
         shift = f.price / price
         lot = w.open(symbol, f.qty, f.price, stop=e.stop * shift,
                      target=e.target * shift if e.target else None, trail_pct=e.trail_pct,
-                     max_hold_min=e.max_hold_min, reason=e.reason, now=now, apply_slippage=self.slip)
+                     max_hold_min=e.max_hold_min, reason=e.reason, now=now, apply_slippage=self.slip, meta=meta)
         self.notify(f"🟢 {agent.name} KOUPIL {symbol} za ${lot.cost:.2f} @ {lot.entry:.6g} ({e.reason})")
         return lot
 

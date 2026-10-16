@@ -161,7 +161,7 @@ def test_rejected_sell_keeps_position():
 # ------------------------------------------------------------------ degen
 class FakeDex:
     def __init__(self):
-        self.price, self.liq = 0.001, 80_000
+        self.price, self.liq = 0.001, 150_000
         self.now_ms = int(datetime(2026, 1, 1, 12, tzinfo=timezone.utc).timestamp() * 1000)
 
     def fresh_tokens(self):
@@ -325,6 +325,49 @@ def test_orbit_breakout_later_in_day():
     assert e and "běžného" in e.reason
 
 
+def test_memory_learns_to_avoid_losing_situation():
+    from colony.memory import Memory
+    m = Memory(os.path.join(tempfile.mkdtemp(), "mem.json"))
+    w = Wallet("Degen II", "degen")
+    bad = {"likvidita": "do 150k $", "denní doba": "noc (0-6 UTC)"}
+    good = {"likvidita": "nad 2M $", "denní doba": "ráno (6-12 UTC)"}
+    for i in range(8):
+        w.trades.append({"symbol": f"B{i}", "ret": -0.30, "pnl": -9, "closed": "x", "features": bad})
+    for i in range(6):
+        w.trades.append({"symbol": f"G{i}", "ret": 0.20, "pnl": 6, "closed": "x", "features": good})
+    news = m.learn_from([w])
+    assert any("poučil" in n and "do 150k" in n for n in news), news
+    ok, mult, note = m.judge("Degen II", bad)
+    assert not ok and "prodělal jsem 8x" in note
+    ok, mult, note = m.judge("Degen II", good)
+    assert ok and mult > 1.2                                  # kde se daří, vsadí víc
+    ok, mult, _ = m.judge("Degen II", {"likvidita": "neznámá"})
+    assert ok and mult == 1.0                                 # neznámá situace = normální sázka
+    assert m.learn_from([w]) == []                            # stejné obchody se nepočítají dvakrát
+    m2 = Memory(m.path)                                       # paměť přežije restart
+    assert not m2.judge("Degen II", bad)[0]
+    les = m2.lessons("Degen II")
+    assert les[0]["verdict"] == "vyhýbá se" and any(l["verdict"] == "daří se" for l in les)
+
+
+def test_degen_skips_what_memory_forbids():
+    from colony.memory import Memory
+    dex = FakeDex()
+    d = DegenAgent(dex)
+    now = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    feats = d.features(dex._pair("TokA"), now, False)
+    assert feats["likvidita"] == "150-500k $" and feats["v trendu na internetu"] == "ne"
+    m = Memory(os.path.join(tempfile.mkdtemp(), "mem.json"))
+    for i in range(7):
+        m.record(d.name, {"likvidita": "150-500k $"}, -0.25)
+    d.memory = m
+    d.tick(now, "neutral", lambda x: None)
+    assert not d.wallet.lots                                  # paměť nákup zakázala
+    d.tick(now, "neutral", lambda x: None, allow_entries=False)
+    d2 = DegenAgent(dex); d2.tick(now, "neutral", lambda x: None)
+    assert d2.wallet.lots and all("features" in l.meta for l in d2.wallet.lots.values())
+
+
 def test_video_helpers():
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deploy"))
     import videa
@@ -407,9 +450,16 @@ def test_live_colony_ticks():
     assert len(snap["bots"]) == 10
     assert all(isinstance(ok, bool) for e in snap["eval"] for _, ok in e["checks"])
     c.save()
+    st = json.load(open(c.state_path))                # původní mrtvý Degen ze starší verze -> hřbitov
+    old = Wallet("Degen", "degen"); old.status, old.cause_of_death, old.cash = "DEAD", "pod $800", 796.78
+    st["wallets"]["Degen"] = old.to_dict()
+    json.dump(st, open(c.state_path, "w"))
     c2 = live.Colony()                                # obnovení ze souboru
-    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Degen", "Lovec", "Stín", "Věštec"]
-    assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets)) < 1e-6
+    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Degen II", "Lovec", "Stín", "Věštec", "Degen"]
+    assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets) - 796.78) < 1e-6
+    snap2 = c2.snapshot(datetime.now(timezone.utc))
+    ghost = [b for b in snap2["bots"] if b["name"] == "Degen"][0]
+    assert ghost["status"] == "DEAD" and "lessons" in ghost
     print("\n".join(sent[:15]))
 
 

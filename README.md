@@ -13,7 +13,7 @@ v prohlížeči nebo na mobilu a zprávy ti chodí do **Telegramu**.
 | **Šeptač** | meme coiny na Alpace | kupuje, jen když o coinu mluví aspoň 2 různé zdroje (X, 4chan, StockTwits, Telegram…) a cena to potvrzuje | max. 24 hodin |
 | **Lovec** | zavedené meme coiny na Solaně (3+ dny staré, likvidita od $250k) | **jen simulace**: coiny z radaru, které rostou a kupci převažují; cíl +25 %, stop −10 % | max. 2 dny |
 | **Medvěd** | inverzní ETF (SQQQ, SPXS, SOXS…), které rostou, když trh padá | vstup jen když pád potvrzuje trend; stop 2x ATR, trailing | max. 3 dny |
-| **Degen** | úplně nové meme coiny na Solaně | **jen simulace**: likvidita, stáří, převaha kupců, trend radar, hlídá rug pully | max. 6 hodin |
+| **Degen II** | úplně nové meme coiny na Solaně | **jen simulace**, vzkříšený po smrti prvního Degena: až 2 h staré coiny, likvidita od $100k, 3% sázky, hlídání každých 30 s | max. 4 hodiny |
 | **Stín** | krypto - sázky na pokles (short) | **jen simulace** (Alpaca short krypta neumí): sestupný trend, coin padá 2-15 % za 24 h; nikdy v býčím trhu; poplatky a funding jako na burze | max. 3 dny |
 | **Věštec** | predikční trhy Polymarket | **jen simulace**: Grok přečte X a zprávy, odhadne pravděpodobnost; sází při hraně ≥ 8 b., čtvrtinový Kelly | do vyhodnocení trhu |
 
@@ -35,6 +35,15 @@ Z toho vznikne **skóre hype**. Podle něj:
 - **Zprávy:** GDELT (zprávy z celého světa), CoinDesk, Cointelegraph, Decrypt
 - **YouTube** (volitelně, klíč zdarma): nejsledovanější krypto videa za 12 h
 - **Fear & Greed index:** nálada krypto trhu 0–100 = „počasí“ ve vesničce
+
+## Paměť: boti se učí z vlastních chyb
+Každý bot si u nákupu zapíše, v jaké byl situaci (denní doba, nálada trhu, coin, jestli se o něm mluví,
+u DEX coinů likvidita, stáří, růst a převaha kupců). Po prodeji si zapíše výsledek.
+- Situaci, ve které prodělal aspoň 6x a v průměru výrazně, už nekoupí (a napíše to do Telegramu 🧠).
+- Kde se mu daří, sází víc (až 1,5x), kde ne, méně (až 0,5x).
+- Paměť drží posledních 400 obchodů, staré lekce postupně vyprchají. Co se naučil, vidíš v detailu bota.
+Tři úrovně zlepšování: paměť (po každém obchodu), laboratoř (každých 6 h ladí parametry),
+Claude (každé ráno čte výsledky a opravuje kód).
 
 ## Laboratoř: poctivé ladění botů
 Každých 6 hodin laboratoř stáhne 90 dní dat. Varianty botů trénuje na prvních 60 dnech a vítěze ověří na posledních 30 dnech, které při výběru neviděl. Když vydělává i tam, bude nasazen. Když ne, na papíře obchoduje dál **na zkoušku** (chceme vidět živé výsledky), ale u reálných peněz by **odpočíval**. Na papíře se dá odpočinek vynutit: `LAB_BENCH_ON_PAPER=yes`. Výsledek: `state/lab.txt`.

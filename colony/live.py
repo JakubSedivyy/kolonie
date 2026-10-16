@@ -23,6 +23,7 @@ from .grok import Grok
 from .agents.oracle import OracleAgent
 from . import dashboard
 from .wallet import Wallet, utcnow
+from .memory import Memory, hour_bucket
 
 log = logging.getLogger("colony")
 PRAGUE = ZoneInfo("Europe/Prague")
@@ -55,6 +56,11 @@ class Colony:
         self.stin = ShadowAgent(self.data)
         self.oracle = OracleAgent(self.grok)
         self.lab, self._lab_mtime, self._lab_checked = {}, 0.0, 0.0
+        self.memory = Memory(os.path.join(config.STATE_DIR, "memory.json"))
+        self._skip_told: set = set()
+        self.graveyard: list[Wallet] = []          # mrtví boti, kteří už nemají agenta (např. původní Degen)
+        for ag in (self.degen, self.lovec, self.stin):
+            ag.memory = self.memory
         self.mood, self.mood_at = "neutral", None
         self.ctx = {"radar": self.radar}
         self.last_bar: dict[str, str] = {}
@@ -70,7 +76,7 @@ class Colony:
     # ------------------------------------------------------------------ stav
     @property
     def wallets(self) -> list[Wallet]:
-        return [a.wallet for a in self.bar_agents] + [self.degen.wallet, self.lovec.wallet, self.stin.wallet, self.oracle.wallet]
+        return [a.wallet for a in self.bar_agents] + [self.degen.wallet, self.lovec.wallet, self.stin.wallet, self.oracle.wallet] + self.graveyard
 
     def save(self):
         st = {"wallets": {w.name: w.to_dict() for w in self.wallets}, "last_bar": self.last_bar,
@@ -89,9 +95,13 @@ class Colony:
         if not os.path.exists(self.state_path):
             return
         st = json.load(open(self.state_path))
+        names = set()
         for a in self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]:
+            names.add(a.name)
             if a.name in st["wallets"]:
                 a.wallet = Wallet.from_dict(st["wallets"][a.name])
+        self.graveyard = [Wallet.from_dict(d) for n, d in st["wallets"].items()
+                          if n not in names and d.get("status") == "DEAD"]
         self.last_bar = st.get("last_bar", {})
         self.bar_agents[0].traded_today = st.get("orbit_traded", {})
         self.degen.blacklist = set(st.get("degen_blacklist", []))
@@ -159,6 +169,20 @@ class Colony:
         for s in list(agent.wallet.lots):
             self.exec.exit(agent, s, prices.get(s, agent.wallet.lots[s].entry), why, now)
 
+    # ------------------------------------------------------------------ paměť (učení z vlastních obchodů)
+    def bar_features(self, a, symbol, now) -> dict:
+        hype = self.radar.score(symbol) if self.radar else 0.0
+        return {"coin": symbol, "denní doba": hour_bucket(now), "nálada trhu": self.mood,
+                "o coinu se mluví": "ano" if hype >= 3 else "ne"}
+
+    def _memory_skip(self, bot, symbol, note):
+        key = (bot, symbol, utcnow().strftime("%Y-%m-%d %H"))
+        if key not in self._skip_told:                 # stejnou věc hlas nejvýš jednou za hodinu
+            self._skip_told.add(key)
+            log.info("%s nekoupil %s - %s", bot, symbol, note)
+            self.events.append((utcnow().isoformat(timespec="seconds"), f"🧠 {bot} nekoupil {symbol} - {note}"))
+            del self.events[:-150]
+
     def run_bar_agent(self, a: BarAgent, now):
         w = a.wallet
         if w.status == "DEAD":
@@ -213,9 +237,16 @@ class Colony:
                 continue                                # coin už drží kolega - na účtu se pozice nesmí míchat
             e = a.entry(df, i, {**self.ctx, "symbol": s})
             if e and e.stop < price:
-                usd = a.size_usd(price, e.stop, mult)
+                feats = self.bar_features(a, s, now)
+                ok, mem_mult, note = self.memory.judge(a.name, feats)
+                if not ok:
+                    self._memory_skip(a.name, s, note)
+                    continue
+                usd = a.size_usd(price, e.stop, mult * mem_mult)
                 if usd:
-                    self.exec.enter(a, s, price, e, usd, now)
+                    if note:
+                        e.reason += f" · {note}"
+                    self.exec.enter(a, s, price, e, usd, now, meta={"features": feats})
 
         if isinstance(a, OrbitAgent) and w.lots and a.must_flatten(pd.Timestamp(now)):
             self._close_all(a, "konec obchodního dne", now)
@@ -359,13 +390,15 @@ class Colony:
             self.guard_stops(now)
         except Exception as e:
             log.exception("stops: %s", e)
-        if int(time.time() // 30) % 4 == 0:            # degen a lovec každé ~2 minuty
-            for sim in (self.degen, self.lovec):
-                try:
-                    m = "neutral" if self.mood == "risk_off" and config.RISK_OFF_TRADING else self.mood
-                    sim.tick(now, "risk_off" if self.paused else m, self.tg.send)  # pauza = jen správa pozic
-                except Exception as e:
-                    log.exception("%s: %s", sim.name, e)
+        entries = int(time.time() // 30) % 4 == 0      # nové nákupy degen/lovec každé ~2 min, hlídání pozic každých 30 s
+        for sim in (self.degen, self.lovec):
+            if not (entries or sim.wallet.lots):
+                continue
+            try:
+                m = "neutral" if self.mood == "risk_off" and config.RISK_OFF_TRADING else self.mood
+                sim.tick(now, "risk_off" if self.paused else m, self.tg.send, allow_entries=entries)
+            except Exception as e:
+                log.exception("%s: %s", sim.name, e)
         try:                                           # Stín si sám hlídá hodinové svíčky
             uni = list(dict.fromkeys((self.ctx.get("crypto_majors") or []) + (self.ctx.get("crypto_memes") or [])))
             self.stin.tick(now, self.mood, self.tg.send, uni, paused=self.paused)
@@ -377,12 +410,20 @@ class Colony:
             except Exception as e:
                 log.exception("oracle: %s", e)
         self.check_survival(now)
+        try:
+            for msg in self.memory.learn_from(self.wallets):
+                self.tg.send(msg)
+        except Exception as e:
+            log.exception("paměť: %s", e)
         self.daily(now)
         self.save()
         dashboard.publish(self.snapshot(now))
 
     def snapshot(self, now):
-        agents = self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]
+        class _Ghost:                                   # mrtvý bot bez agenta - jen na hřbitov v dashboardu
+            def __init__(self, w):
+                self.name, self.wallet, self.__doc__ = w.name, w, f"{w.name} - zemřel: {w.cause_of_death}"
+        agents = self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle] + [_Ghost(w) for w in self.graveyard]
         bots = []
         for a in agents:
             w = a.wallet
@@ -407,6 +448,7 @@ class Colony:
                          "lab_warn": bool(getattr(a, "lab_warn", False)),
                          "waiting": (a is self.oracle and not self.grok.enabled),
                          "symbols": self.chart_symbols(a), "minutes": getattr(a, "minutes", 60),
+                         "lessons": self.memory.lessons(a.name),
                          "bot_trades": [dict(t, bot=w.name) for t in w.trades[-40:]],
                          "profit_factor": None if s["profit_factor"] == float("inf") else s["profit_factor"]})
         trades = sorted((dict(t, bot=w.name) for w in self.wallets for t in w.trades), key=lambda t: t["closed"])

@@ -105,6 +105,11 @@ h2 { font-size: 19px; line-height: 1.2 }
 .ckey i { display: inline-block; width: 14px; height: 0; border-top: 2px solid; vertical-align: middle; margin-right: 5px }
 .ckey i.dash { border-top-style: dashed }
 .dpos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 8px }
+.lessons { display: grid; gap: 6px }
+.lessons h3 { font: 600 15px var(--display); margin: 0 }
+.lesson { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 10px; align-items: baseline; font-size: 13.5px; padding: 6px 10px; border-radius: 8px; background: var(--soft) }
+.lesson .tag { font: 500 11.5px var(--mono); padding: 2px 8px; border-radius: 999px; white-space: nowrap }
+.lesson .tag.avoid { background: var(--loss); color: #fff } .lesson .tag.good { background: var(--gain); color: #fff } .lesson .tag.watch { background: var(--line); color: var(--muted) }
 .dpos div { background: var(--soft); border-radius: 8px; padding: 8px 10px; font-size: 13px; display: grid; gap: 2px }
 .bot .open-detail { justify-self: start; font: 500 13px var(--body); padding: 5px 11px; border-radius: 6px; border: 1px solid var(--line); background: var(--soft); color: var(--ink); cursor: pointer }
 .bot .open-detail:hover { border-color: var(--c) }
@@ -214,6 +219,7 @@ footer { font-size: 12.5px; color: var(--muted) }
     <div class="candles" id="candles"><div class="cmsg" id="cmsg">Načítám graf…</div></div>
     <div class="ckey" id="ckey"></div>
     <div class="dpos" id="dpos"></div>
+    <div class="lessons" id="dlessons"></div>
     <div class="panel-h"><h2 style="font-size:16px">Peníze bota</h2><span class="small muted">čárkovaná čára = start, červená = smrt</span></div>
     <div class="eqchart" id="eqchart"></div>
     <div class="tablewrap" id="dtrades"></div>
@@ -267,7 +273,7 @@ footer { font-size: 12.5px; color: var(--muted) }
 
 <script src="lightweight-charts.js"></script>
 <script>
-const COLORS = { Orbit: "var(--b-orbit)", Trendy: "var(--b-trendy)", Memec: "var(--b-memec)", Vlna: "var(--b-vlna)", Degen: "var(--b-degen)", "Věštec": "var(--b-vestec)", "Šeptač": "var(--b-septac)", Lovec: "var(--b-lovec)", "Medvěd": "var(--b-medved)", "Stín": "var(--b-stin)" };
+const COLORS = { Orbit: "var(--b-orbit)", Trendy: "var(--b-trendy)", Memec: "var(--b-memec)", Vlna: "var(--b-vlna)", Degen: "var(--b-degen)", "Degen II": "var(--b-degen)", "Věštec": "var(--b-vestec)", "Šeptač": "var(--b-septac)", Lovec: "var(--b-lovec)", "Medvěd": "var(--b-medved)", "Stín": "var(--b-stin)" };
 const ASSET = { stock: "akcie", crypto: "krypto", meme: "meme coiny", degen: "nové coiny · simulace", dexmeme: "meme coiny na DEXu · simulace", short: "sázky na pokles krypta · simulace", predict: "Polymarket · simulace" };
 const STATUS = { ALIVE: "žije", INJURED: "zraněný", DEAD: "mrtvý" };
 const col = n => COLORS[n] || "var(--muted)";
@@ -599,6 +605,11 @@ function renderDetail(force) {
       <span class="small muted">${p.chart_stop ? "stop " + price(p.chart_stop) : ""}${p.chart_target ? " · cíl " + price(p.chart_target) : ""} · ${esc(p.reason)}</span>
     </div>`).join("");
 
+  const L = b.lessons || [];
+  document.getElementById("dlessons").innerHTML = `<h3>🧠 Co se ${esc(b.name)} naučil z vlastních obchodů</h3>` + (L.length
+    ? L.map(l => `<div class="lesson"><span>když <b>${esc(l.when)}</b></span><span class="num ${l.avg >= 0 ? "pos" : "neg"}">${l.n}× · průměr ${sgn(l.avg)}</span>
+        <span class="tag ${l.verdict === "vyhýbá se" ? "avoid" : l.verdict === "daří se" ? "good" : "watch"}">${esc(l.verdict)}</span></div>`).join("")
+    : `<div class="empty">Zatím málo obchodů na poučení. Po každém uzavřeném obchodu si zapíše, v jaké situaci koupil a jak to dopadlo; kde opakovaně prodělá (6+ obchodů), tam už nekoupí.</div>`);
   const tr = (b.bot_trades || []).slice().reverse();
   document.getElementById("dtrades").innerHTML = tr.length ? `<table><thead><tr><th class="l">Otevřeno</th><th class="l">Zavřeno</th><th class="l">Symbol</th><th>Vstup</th><th>Výstup</th><th>Zisk</th><th class="l">Proč</th></tr></thead><tbody>` +
     tr.map(t => `<tr><td class="l">${tm(t.opened)}</td><td class="l">${tm(t.closed)}</td><td class="l">${esc(t.symbol)}</td>

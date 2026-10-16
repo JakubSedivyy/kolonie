@@ -20,10 +20,12 @@ Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, 
    Nová logika = nový test.
 4. Změny dělej malé a vysvětlitelné. Do commit zprávy napiš česky co a proč.
 5. Nepřeceňuj výsledky: pár dní papíru je statisticky málo. Při hodnocení uváděj počet obchodů.
-6. Pravidla přežití (smrt pod $800, 30 dní bez zisku) neměň bez souhlasu Jakuba.
+6. Pravidla přežití (smrt pod $800, 30 dní bez zisku) neměň bez souhlasu Jakuba. Mrtvé boty nevzkřišuj
+   bez jeho souhlasu (16. 10. sám požádal o vzkříšení Degena -> Degen II, původní je na hřbitově).
 
 ## Denní kontrola (naplánovaná úloha)
-1. Přečti `reports/stav.txt`, `chyby.txt`, `sync.log`, `lab.txt`.
+1. Přečti `reports/stav.txt`, `chyby.txt`, `sync.log`, `lab.txt` a `pamet.json` (co se boti naučili -
+   `colony/memory.py`; když paměť něco zakazuje opakovaně, zvaž úpravu strategie přímo v kódu).
 2. Oprav chyby z logu (výpadky zdrojů, výjimky).
 3. U botů s dostatkem obchodů (≥ 10) hledej, proč prodělávají; uprav parametry/logiku, ověř backtestem
    (`python backtest.py --days 60` potřebuje Alpaca klíče – v cloudu nejsou, takže spoléhej na testy
