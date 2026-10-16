@@ -7,31 +7,31 @@ Trendy [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.66 (-0.13 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $992.84 (-0.72 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.1 %, poplatky $0.86
-   otevřeno BAT/USD: nákup 0.211108, teď 0.1986 (-5.9 %) - vlna: průraz 3denního maxima, +24 % za 24 h
-   otevřeno UNI/USD: nákup 7.41042, teď 7.4038 (-0.1 %) - vlna: hype 3.0, +5 % za 24 h
+Vlna [ALIVE] $989.46 (-1.05 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.5 %, poplatky $1.09
+   otevřeno UNI/USD: nákup 7.41042, teď 7.4114 (+0.0 %) - vlna: hype 3.0, +5 % za 24 h
+   2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
 
 Šeptač [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
 Medvěd [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen [INJURED] $802.28 (-19.77 %) | obchodů 9, úspěšnost 11 %, PF 0.10, max propad 21.0 %, poplatky $7.66
-   otevřeno OWLDACITY·D61p: nákup 0.000823794, teď 0.000722 (-12.4 %) - skóre 4.4
-   2026-10-15T13:20 PONK·4jjQ: -14.89 $ (-29.5 %) stop-loss
+Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max propad 21.1 %, poplatky $8.05
    2026-10-16T01:06 Motion·87Ss: -19.04 $ (-37.7 %) stop-loss
    2026-10-16T01:09 FTR·DFMt: -14.53 $ (-28.8 %) stop-loss
    2026-10-16T01:12 Starman·H2pk: -50.48 $ (-100.0 %) RUG PULL - likvidita zmizela
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
+   2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-Lovec [ALIVE] $997.67 (-0.23 %) | obchodů 4, úspěšnost 25 %, PF 0.62, max propad 4.8 %, poplatky $5.95
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.117 (+7.6 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06031 (-1.9 %) - skóre 1.9
-   otevřeno fone·CTPo: nákup 0.00414605, teď 0.003964 (-4.4 %) - skóre 1.9
-   otevřeno CLAUDIA·2j5S: nákup 0.00487224, teď 0.005488 (+12.6 %) - skóre 1.6
+Lovec [ALIVE] $1005.16 (+0.52 %) | obchodů 5, úspěšnost 40 %, PF 1.24, max propad 4.8 %, poplatky $7.07
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1179 (+8.4 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06014 (-2.2 %) - skóre 1.9
+   otevřeno fone·CTPo: nákup 0.00414605, teď 0.003894 (-6.1 %) - skóre 1.9
+   otevřeno OTC·MukL: nákup 0.00980508, teď 0.009624 (-1.8 %) - skóre 1.8
    2026-10-15T15:33 JEANPHIL·GTBx: +23.33 $ (+23.2 %) cíl zisku
    2026-10-15T15:42 CYBERLEEK·ApZu: -12.79 $ (-12.7 %) stop-loss
    2026-10-15T22:24 OTC·MukL: -12.74 $ (-12.7 %) stop-loss
    2026-10-16T01:25 JEANPHIL·GTBx: -11.99 $ (-11.9 %) stop-loss
+   2026-10-16T03:44 CLAUDIA·2j5S: +23.11 $ (+23.0 %) cíl zisku
 
 Stín [ALIVE] $970.79 (-2.92 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 3.6 %, poplatky $2.17
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
@@ -40,18 +40,14 @@ Stín [ALIVE] $970.79 (-2.92 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max pro
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $992.16 (-0.78 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $1.64
-   otevřeno PM2589812·NO: nákup 0.29, teď 0.28 (-3.4 %) - Grok 62% vs trh 72% (medium)
+Věštec [ALIVE] $979.05 (-2.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $1.64
+   otevřeno PM2589812·NO: nákup 0.29, teď 0.16 (-44.8 %) - Grok 62% vs trh 72% (medium)
    otevřeno PM5170739·NO: nákup 0.64, teď 0.61 (-4.7 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
 
-CELKEM $9754.10 z $10000 (-2.46 %)
+CELKEM $9739.60 z $10000 (-2.60 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-16T00:00:56+00:00 💪 Degen se vyléčil a zase obchoduje
-   2026-10-16T00:06:28+00:00 🎰 Degen (simulace) koupil OWLDACITY·D61p za $50, likvidita $78,580 - https://dexscreener.com/solana/ggm3wpy8mtxx7afvs1rsxbztbnz9kk1heg
-   2026-10-16T00:10:28+00:00 🎰 Degen (simulace) koupil Starman·H2pk za $50, likvidita $77,700 - https://dexscreener.com/solana/aw1npki2jc6zw17huv4gttimdecoengd6ewg
-   2026-10-16T00:32:28+00:00 🎰 Degen (simulace) koupil FTR·DFMt za $50, likvidita $140,911 - https://dexscreener.com/solana/fk5mugv2h3qpt6axdhs2khgdl2os424bvfeoqfn
    2026-10-16T00:54:28+00:00 🎰 Degen (simulace) koupil Motion·87Ss za $50, likvidita $30,752 - https://dexscreener.com/solana/9frmm2cdxwjxusexqby8ekdrebasb5kfnmde2
    2026-10-16T01:02:10+00:00 🎰 Degen (simulace) koupil SYCAMORE·3EC7 za $50, likvidita $47,967 - https://dexscreener.com/solana/5cx7awh9czi1vkk2sfabfcszyvbytf7kbex
    2026-10-16T01:06:29+00:00 🔻 Degen (simulace) prodal Motion·87Ss: -19.04 $ (-38 %) - stop-loss
@@ -63,5 +59,10 @@ POSLEDNÍ UDÁLOSTI:
    2026-10-16T02:36:30+00:00 🏹 Lovec (simulace) koupil CLAUDIA·2j5S za $100, likvidita $287,097 - https://dexscreener.com/solana/fe7bpdycs74gqicuf14hwgumtopkv1d9md
    2026-10-16T03:16:00+00:00 🔻 Degen (simulace) prodal SYCAMORE·3EC7: -20.16 $ (-40 %) - stop-loss
    2026-10-16T03:35:14+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↓, S&P ↑)
+   2026-10-16T03:44:04+00:00 ✅ Lovec (simulace) prodal CLAUDIA·2j5S: +23.11 $ (+23 %) - cíl zisku
+   2026-10-16T03:54:04+00:00 💀 Degen UMŘEL: zbankrotoval ($799.20 < $800)
+Žil 1 dní, 10 obchodů, úspěšnost 10 %. Odpočívej v pokoji.
+   2026-10-16T03:55:34+00:00 🔻 Vlna PRODAL BAT/USD: -9.86 $ (-9.7 %) - stop-loss
+   2026-10-16T04:36:15+00:00 🏹 Lovec (simulace) koupil OTC·MukL za $100, likvidita $604,795 - https://dexscreener.com/solana/da4pm4xsdy4m9v4cgakkbvh1pw1ysctqqa5nek
 
 VĚŠTEC: 4 odhadů z posledního skenu
