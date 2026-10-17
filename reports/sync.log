@@ -1,4 +1,3 @@
-radar hackernews: offline
 radar google_news: offline
 Testy OK
 == 4/5 Služba, která běží nonstop a sama se restartuje
@@ -58,3 +57,4 @@ O5eC5lY7ZXY chyba
 2026-10-16T07:42:20Z nasazena verze fb6679f: Kronika: boti si pamatují všechno, co viděli a udělali, a učí se i z nekoupených signálů
 2026-10-16T19:07:24Z nasazena verze b88e6cf: Boti umí vydělat i na poklesu: shorty pro Orbita, Trendyho, Memce a Vlnu
 2026-10-17T05:59:42Z nasazena verze 4e184f6: Degen II a Lovec si pamatují pauzu po prodeji i přes restart
+2026-10-17T10:31:37Z nasazena verze c571bfd: Degen II a Lovec už nekupují znovu coin, který jim vyhodil stop-loss

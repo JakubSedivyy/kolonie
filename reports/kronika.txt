@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 42 signálů, 36 obchodů, 22 hodinových snímků radaru, 78 událostí
+Celkem zapsáno: 53 signálů, 37 obchodů, 23 hodinových snímků radaru, 82 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
 
@@ -9,7 +9,7 @@ UZAVŘENÉ OBCHODY:
   Lovec     |  10 obchodů, 3 výher, průměr -0.9 %, celkem -8.64 $
   Memec     |   1 obchodů, 0 výher, průměr -1.9 %, celkem -1.24 $
   Stín      |   7 obchodů, 0 výher, průměr -1.6 %, celkem -29.16 $
-  Vlna      |   2 obchodů, 0 výher, průměr -5.9 %, celkem -15.06 $
+  Vlna      |   3 obchodů, 0 výher, průměr -5.2 %, celkem -23.90 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (22h), 1 (20h), ETH (18h), CATE (18h), DACITY (15h), STREAM (14h), SUI (13h), PRL (13h), INJ (11h), PENGU (11h), QTC (10h), PUMP (10h), SOL (7h), TIA (7h), PEPE (6h), NEAR (6h), ZEC (5h), IGNITION (4h), HYPE (3h), GME (2h)
+  BTC (23h), 1 (21h), CATE (19h), ETH (18h), DACITY (15h), STREAM (14h), SUI (14h), PRL (13h), INJ (12h), PENGU (12h), QTC (10h), PUMP (10h), SOL (8h), TIA (8h), PEPE (6h), NEAR (6h), ZEC (5h), IGNITION (4h), HYPE (3h), GME (2h)
