@@ -470,6 +470,21 @@ def test_short_entries_mirror_long_logic():
     assert e and e.stop > 99.4 and e.target < 99.4 and "propad" in e.reason
 
 
+def test_dex_bot_never_rebuys_coin_after_stop_loss():
+    """Degen II koupil NUBI 4x po sobě a pokaždé prodělal 25 % - po stop-lossu už ten coin nesmí znovu koupit."""
+    dex = FakeDex()
+    d = DegenAgent(dex)
+    now = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    d.tick(now, "neutral", lambda m: None)
+    assert "TOKA·TokA" in d.wallet.lots
+    dex.price *= 0.7                                          # -30 % -> stop-loss
+    d.tick(now + timedelta(minutes=5), "neutral", lambda m: None, allow_entries=False)
+    assert "TokA" in d.blacklist and not d.wallet.lots
+    dex.price /= 0.7
+    d.tick(now + timedelta(days=2), "neutral", lambda m: None)
+    assert not d.wallet.lots                                  # ani po dvou dnech
+
+
 def test_video_helpers():
     sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "deploy"))
     import videa

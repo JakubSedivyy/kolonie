@@ -121,6 +121,7 @@ class DegenAgent:
                 self.blacklist.add(lot.meta["token"])
             elif price <= lot.entry * (1 - self.stop_loss):
                 why = "stop-loss"
+                self.blacklist.add(lot.meta["token"])      # coin, který jednou vyhodil stop, už znovu nekupuje
             elif price >= lot.entry * (1 + self.take_profit):
                 why = "cíl zisku"
             elif (now - datetime.fromisoformat(lot.opened)).total_seconds() / 60 >= self.max_hold_min:
