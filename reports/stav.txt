@@ -2,10 +2,10 @@
 
 Orbit [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Trendy [ALIVE] $996.99 (-0.30 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.3 %, poplatky $1.75
-   SHORT BTC/USD: prodáno za 81003.4, teď 81148.5 (-0.2 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.35 %
-   SHORT ETH/USD: prodáno za 2376.38, teď 2385.8 (-0.4 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.63 %
-   SHORT SOL/USD: prodáno za 102.104, teď 101.937 (+0.2 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.79 %
+Trendy [ALIVE] $993.95 (-0.60 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.75
+   SHORT BTC/USD: prodáno za 81003.4, teď 81266 (-0.3 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.35 %
+   SHORT ETH/USD: prodáno za 2376.38, teď 2393.21 (-0.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.63 %
+   SHORT SOL/USD: prodáno za 102.104, teď 102.9 (-0.8 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.79 %
 
 Memec [ALIVE] $998.51 (-0.15 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.49
    SHORT DOGE/USD: prodáno za 0.0782325, teď 0.078157 (+0.1 %) - výplach: objem 46.7x průměru, nové 2h minimum
@@ -30,27 +30,27 @@ Degen II [ALIVE] $943.23 (-5.68 %) | obchodů 6, úspěšnost 0 %, PF 0.00, max 
    2026-10-17T07:47 NUBI·2e3z: -3.77 $ (-24.9 %) stop-loss
    2026-10-17T09:05 NUBI·2e3z: -3.75 $ (-24.8 %) stop-loss
 
-Lovec [ALIVE] $1001.54 (+0.15 %) | obchodů 12, úspěšnost 33 %, PF 0.95, max propad 5.2 %, poplatky $12.54
-   otevřeno CLAUDIA·2j5S: nákup 0.00662257, teď 0.007056 (+6.5 %) - skóre 2.0
+Lovec [ALIVE] $999.85 (-0.01 %) | obchodů 12, úspěšnost 33 %, PF 0.95, max propad 5.2 %, poplatky $12.54
+   otevřeno CLAUDIA·2j5S: nákup 0.00662257, teď 0.006944 (+4.9 %) - skóre 2.0
    2026-10-16T20:49 VEIL·HgTG: -11.96 $ (-11.9 %) stop-loss
    2026-10-16T21:53 fone·CTPo: +23.73 $ (+23.6 %) cíl zisku
    2026-10-17T08:34 STONK·6GmA: -5.05 $ (-5.0 %) časový limit
    2026-10-17T13:32 CATE·Ai66: +16.08 $ (+16.0 %) časový limit
    2026-10-17T15:38 OTC·MukL: -11.85 $ (-11.8 %) stop-loss
 
-Stín [ALIVE] $978.75 (-2.12 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.216905 (+2.7 %) - sestupný trend, -3.4 % za 24 h
-   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.83e-06 (+3.1 %) - sestupný trend, -5.2 % za 24 h
-   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0783072 (-0.1 %) - sestupný trend, -2.4 % za 24 h
+Stín [ALIVE] $973.86 (-2.61 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.219031 (+1.7 %) - sestupný trend, -3.4 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.84e-06 (+2.9 %) - sestupný trend, -5.2 % za 24 h
+   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0789724 (-0.9 %) - sestupný trend, -2.4 % za 24 h
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
    2026-10-17T22:00 BONK/USD: -4.47 $ (-1.8 %) stop-loss
 
-Věštec [ALIVE] $962.38 (-3.76 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
+Věštec [ALIVE] $965.95 (-3.40 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.51 (-20.3 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.54 (-15.6 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 38% (medium)
 
@@ -61,7 +61,7 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10644.40 z $11000 (-3.23 %)
+CELKEM $10638.35 z $11000 (-3.29 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-10-17T13:32:40+00:00 ✅ Lovec (simulace) prodal CATE·Ai66: +16.08 $ (+16 %) - časový limit
