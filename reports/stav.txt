@@ -26,17 +26,16 @@ Degen II [ALIVE] $943.23 (-5.68 %) | obchodů 6, úspěšnost 0 %, PF 0.00, max 
    2026-10-17T07:47 NUBI·2e3z: -3.77 $ (-24.9 %) stop-loss
    2026-10-17T09:05 NUBI·2e3z: -3.75 $ (-24.8 %) stop-loss
 
-Lovec [ALIVE] $1006.64 (+0.66 %) | obchodů 10, úspěšnost 30 %, PF 0.89, max propad 5.2 %, poplatky $11.01
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.07178 (+16.8 %) - skóre 1.9
-   otevřeno OTC·MukL: nákup 0.00805677, teď 0.008026 (-0.4 %) - skóre 1.7
-   2026-10-16T13:04 OTC·MukL: -12.13 $ (-12.1 %) stop-loss
+Lovec [ALIVE] $1002.64 (+0.26 %) | obchodů 11, úspěšnost 36 %, PF 1.09, max propad 5.2 %, poplatky $11.59
+   otevřeno OTC·MukL: nákup 0.00805677, teď 0.007718 (-4.2 %) - skóre 1.7
    2026-10-16T18:50 JEANPHIL·GTBx: -12.15 $ (-12.1 %) stop-loss
    2026-10-16T20:49 VEIL·HgTG: -11.96 $ (-11.9 %) stop-loss
    2026-10-16T21:53 fone·CTPo: +23.73 $ (+23.6 %) cíl zisku
    2026-10-17T08:34 STONK·6GmA: -5.05 $ (-5.0 %) časový limit
+   2026-10-17T13:32 CATE·Ai66: +16.08 $ (+16.0 %) časový limit
 
-Stín [ALIVE] $975.33 (-2.47 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.220785 (+0.9 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $975.67 (-2.43 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.220472 (+1.1 %) - sestupný trend, -3.4 % za 24 h
    SHORT BONK/USD: prodáno za 3.01e-06, teď 2.99e-06 (+0.6 %) - sestupný trend, -3.1 % za 24 h
    SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.93e-06 (+0.6 %) - sestupný trend, -5.2 % za 24 h
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
@@ -58,11 +57,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10659.56 z $11000 (-3.09 %)
+CELKEM $10655.90 z $11000 (-3.13 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-17T05:59:43+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-10-17T05:59:45+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-10-17T06:09:35+00:00 🔻 Degen II (simulace) prodal NUBI·2e3z: -4.16 $ (-27 %) - stop-loss
    2026-10-17T07:22:26+00:00 🎰 Degen II (simulace) koupil NUBI·2e3z za $15, likvidita $105,722 - https://dexscreener.com/solana/265gq6qkcegwncwsl8csjzd3iddruzwj7k9
@@ -79,5 +76,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-17T11:22:11+00:00 🏹 Lovec (simulace) koupil OTC·MukL za $100, likvidita $548,538 - https://dexscreener.com/solana/da4pm4xsdy4m9v4cgakkbvh1pw1ysctqqa5nek
    2026-10-17T12:31:39+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
+   2026-10-17T13:32:40+00:00 ✅ Lovec (simulace) prodal CATE·Ai66: +16.08 $ (+16 %) - časový limit
 
 VĚŠTEC: 5 odhadů z posledního skenu
