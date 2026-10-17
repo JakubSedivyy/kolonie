@@ -86,6 +86,9 @@ class Colony:
         st = {"wallets": {w.name: w.to_dict() for w in self.wallets}, "last_bar": self.last_bar,
               "orbit_traded": self.bar_agents[0].traded_today, "degen_blacklist": sorted(self.degen.blacklist),
               "lovec_blacklist": sorted(self.lovec.blacklist),
+              "cooldowns": {a.name: {t: d.isoformat() for t, d in a.cooldown.items()
+                                     if (utcnow() - d).total_seconds() < a.cooldown_min * 60}
+                            for a in (self.degen, self.lovec)},
               "oracle": {"last_scan": self.oracle.last_scan, "evaluated": self.oracle.evaluated,
                          "estimates": self.oracle.last_estimates},
               "paused": self.paused, "started": self.started, "last_summary": self.last_summary,
@@ -110,6 +113,11 @@ class Colony:
         self.bar_agents[0].traded_today = st.get("orbit_traded", {})
         self.degen.blacklist = set(st.get("degen_blacklist", []))
         self.lovec.blacklist = set(st.get("lovec_blacklist", []))
+        for a in (self.degen, self.lovec):          # pauza po prodeji přežije restart (nasazení nové verze)
+            try:
+                a.cooldown = {t: datetime.fromisoformat(d) for t, d in st.get("cooldowns", {}).get(a.name, {}).items()}
+            except (TypeError, ValueError):
+                a.cooldown = {}
         o = st.get("oracle", {})
         self.oracle.last_scan, self.oracle.evaluated = o.get("last_scan", ""), o.get("evaluated", {})
         self.oracle.last_estimates = o.get("estimates", [])

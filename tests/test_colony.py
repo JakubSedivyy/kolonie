@@ -558,7 +558,15 @@ def test_live_colony_ticks():
     old = Wallet("Degen", "degen"); old.status, old.cause_of_death, old.cash = "DEAD", "pod $800", 796.78
     st["wallets"]["Degen"] = old.to_dict()
     json.dump(st, open(c.state_path, "w"))
+    c.degen.cooldown["TokCool"] = now - timedelta(minutes=10)      # čerstvě prodaný coin
+    c.degen.cooldown["TokOld"] = now - timedelta(days=2)           # pauza dávno vypršela
+    c.lovec.cooldown["TokL"] = now - timedelta(hours=1)
+    c.save()
+    st2 = json.load(open(c.state_path)); st2["wallets"]["Degen"] = old.to_dict()
+    json.dump(st2, open(c.state_path, "w"))
     c2 = live.Colony()                                # obnovení ze souboru
+    assert "TokCool" in c2.degen.cooldown and "TokOld" not in c2.degen.cooldown, c2.degen.cooldown
+    assert "TokL" in c2.lovec.cooldown                # pauza po prodeji přežije restart
     assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Degen II", "Lovec", "Stín", "Věštec", "Degen"]
     assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets) - 796.78) < 1e-6
     snap2 = c2.snapshot(datetime.now(timezone.utc))
