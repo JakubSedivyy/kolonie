@@ -7,8 +7,8 @@ Trendy [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.61 (-0.14 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $975.79 (-2.42 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 4.2 %, poplatky $2.91
-   otevřeno PEPE/USD: nákup 4.11205e-06, teď 4.02e-06 (-2.2 %) - vlna: hype 5.4, +5 % za 24 h
+Vlna [ALIVE] $974.60 (-2.54 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 4.2 %, poplatky $2.91
+   otevřeno PEPE/USD: nákup 4.11205e-06, teď 4e-06 (-2.7 %) - vlna: hype 5.4, +5 % za 24 h
    otevřeno BCH/USD: nákup 282.621, teď 279.9 (-1.0 %) - vlna: průraz 3denního maxima, +7 % za 24 h
    2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
    2026-10-17T05:00 UNI/USD: -5.20 $ (-2.1 %) vlna opadla (trend se otočil)
@@ -19,34 +19,34 @@ Medvěd [ALIVE] $1001.61 (+0.16 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
    otevřeno SDOW: nákup 24.7524, teď 24.63 (-0.5 %) - trh padá: SDOW +1.1 % za hodinu, nad EMA 20/50
    otevřeno SOXS: nákup 48.2541, teď 49.24 (+2.0 %) - trh padá: SOXS +2.1 % za hodinu, nad EMA 20/50
 
-Degen II [ALIVE] $953.88 (-4.61 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 4.8 %, poplatky $1.51
-   otevřeno NUBI·2e3z: nákup 0.00176542, teď 0.001662 (-5.9 %) - skóre 4.8 · paměť: podobné obchody -18.6 % -> sázka 0.5x
+Degen II [ALIVE] $950.75 (-4.92 %) | obchodů 4, úspěšnost 0 %, PF 0.00, max propad 5.0 %, poplatky $1.62
    2026-10-16T10:18 OWLDACITY·D61p: -7.41 $ (-24.5 %) stop-loss
    2026-10-16T19:13 ROADSTER·G3NK: -30.05 $ (-99.2 %) RUG PULL - likvidita zmizela
    2026-10-17T02:21 NUBI·2e3z: -7.58 $ (-25.0 %) stop-loss
+   2026-10-17T06:09 NUBI·2e3z: -4.16 $ (-27.5 %) stop-loss
 
-Lovec [ALIVE] $1005.72 (+0.57 %) | obchodů 9, úspěšnost 33 %, PF 0.95, max propad 5.2 %, poplatky $10.03
-   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1085 (-0.3 %) - skóre 1.8
-   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.06803 (+10.7 %) - skóre 1.9
+Lovec [ALIVE] $1015.59 (+1.56 %) | obchodů 9, úspěšnost 33 %, PF 0.95, max propad 5.2 %, poplatky $10.03
+   otevřeno STONK·6GmA: nákup 0.108777, teď 0.1071 (-1.5 %) - skóre 1.8
+   otevřeno CATE·Ai66: nákup 0.0614787, teď 0.07489 (+21.8 %) - skóre 1.9
    2026-10-16T03:44 CLAUDIA·2j5S: +23.11 $ (+23.0 %) cíl zisku
    2026-10-16T13:04 OTC·MukL: -12.13 $ (-12.1 %) stop-loss
    2026-10-16T18:50 JEANPHIL·GTBx: -12.15 $ (-12.1 %) stop-loss
    2026-10-16T20:49 VEIL·HgTG: -11.96 $ (-11.9 %) stop-loss
    2026-10-16T21:53 fone·CTPo: +23.73 $ (+23.6 %) cíl zisku
 
-Stín [ALIVE] $960.19 (-3.98 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.22465 (-0.8 %) - sestupný trend, -3.4 % za 24 h
-   SHORT BONK/USD: prodáno za 3.01e-06, teď 3.06e-06 (-1.7 %) - sestupný trend, -3.1 % za 24 h
-   SHORT PEPE/USD: prodáno za 3.955e-06, teď 4.03e-06 (-1.9 %) - sestupný trend, -5.2 % za 24 h
+Stín [ALIVE] $962.17 (-3.78 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.224051 (-0.5 %) - sestupný trend, -3.4 % za 24 h
+   SHORT BONK/USD: prodáno za 3.01e-06, teď 3.05e-06 (-1.4 %) - sestupný trend, -3.1 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 4.02e-06 (-1.7 %) - sestupný trend, -5.2 % za 24 h
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $969.37 (-3.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
+Věštec [ALIVE] $970.56 (-2.94 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.56 (-12.5 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.57 (-10.9 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.38 (+0.0 %) - Grok 48% vs trh 38% (medium)
 
@@ -57,14 +57,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10661.55 z $11000 (-3.08 %)
+CELKEM $10670.27 z $11000 (-3.00 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-16T18:50:24+00:00 🔻 Lovec (simulace) prodal JEANPHIL·GTBx: -12.15 $ (-12 %) - stop-loss
-   2026-10-16T18:58:21+00:00 🎰 Degen II (simulace) koupil ROADSTER·G3NK za $30, likvidita $208,822 - https://dexscreener.com/solana/2kduw5gubiappzhzd8gtzlkn9puqhmw
-   2026-10-16T19:07:24+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen II, Lovec, Stín, Věštec, Degen. Příkazy: /
-   2026-10-16T19:07:25+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
    2026-10-16T19:07:27+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-10-16T19:13:08+00:00 💀 Degen II (simulace) prodal ROADSTER·G3NK: -30.05 $ (-99 %) - RUG PULL - likvidita zmizela
    2026-10-16T20:04:29+00:00 🏹 Lovec (simulace) koupil VEIL·HgTG za $100, likvidita $251,050 - https://dexscreener.com/solana/4mwjp1abqqe9y6ic5cd3nrvvwwchsn2lgpjwy
@@ -79,5 +74,10 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-17T02:21:20+00:00 🔻 Degen II (simulace) prodal NUBI·2e3z: -7.58 $ (-25 %) - stop-loss
    2026-10-17T03:58:21+00:00 🎰 Degen II (simulace) koupil NUBI·2e3z za $15, likvidita $121,140 - https://dexscreener.com/solana/265gq6qkcegwncwsl8csjzd3iddruzwj7k9
    2026-10-17T05:00:31+00:00 🔻 Vlna PRODAL UNI/USD: -5.20 $ (-2.1 %) - vlna opadla (trend se otočil)
+   2026-10-17T05:59:43+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen II, Lovec, Stín, Věštec, Degen. Příkazy: /
+   2026-10-17T05:59:43+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
+   2026-10-17T05:59:45+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-10-17T06:09:35+00:00 🔻 Degen II (simulace) prodal NUBI·2e3z: -4.16 $ (-27 %) - stop-loss
 
 VĚŠTEC: 5 odhadů z posledního skenu

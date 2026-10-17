@@ -1,6 +1,6 @@
 LABORATOŘ 2026-10-17: trénink 2026-07-19..2026-09-17, test 2026-09-17..2026-10-17
 Orbit: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'or_bars': 3, 'vol_mult': 1.5, 'last_entry': '11:30'} | trénink +1.9 % | test -3.2 % (12 obch., PF 0.21)
-Trendy: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink +2.5 % | test -0.4 % (26 obch., PF 0.93)
+Trendy: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink +2.8 % | test -0.4 % (26 obch., PF 0.93)
 Memec: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'vol_mult': 4.0, 'stop_pct': 0.06, 'target_pct': 0.2} | trénink -6.3 % | test -9.9 % (65 obch., PF 0.31)
-Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 2.5} | trénink +19.6 % | test -7.9 % (42 obch., PF 0.74)
+Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 2.5} | trénink +19.6 % | test -7.8 % (42 obch., PF 0.75)
 Medvěd: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 2.0} | trénink -9.7 % | test +5.2 % (34 obch., PF 1.62)
