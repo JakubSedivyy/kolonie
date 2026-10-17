@@ -7,8 +7,8 @@ Trendy [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 Memec [ALIVE] $998.61 (-0.14 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.33
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
 
-Vlna [ALIVE] $968.24 (-3.18 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 4.2 %, poplatky $3.5
-   otevřeno BCH/USD: nákup 282.621, teď 274.352 (-2.9 %) - vlna: průraz 3denního maxima, +7 % za 24 h
+Vlna [ALIVE] $969.20 (-3.08 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 4.2 %, poplatky $3.5
+   otevřeno BCH/USD: nákup 282.621, teď 275.471 (-2.5 %) - vlna: průraz 3denního maxima, +7 % za 24 h
    2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
    2026-10-17T05:00 UNI/USD: -5.20 $ (-2.1 %) vlna opadla (trend se otočil)
    2026-10-17T10:00 PEPE/USD: -8.84 $ (-3.6 %) vlna opadla (trend se otočil)
@@ -26,17 +26,17 @@ Degen II [ALIVE] $943.23 (-5.68 %) | obchodů 6, úspěšnost 0 %, PF 0.00, max 
    2026-10-17T07:47 NUBI·2e3z: -3.77 $ (-24.9 %) stop-loss
    2026-10-17T09:05 NUBI·2e3z: -3.75 $ (-24.8 %) stop-loss
 
-Lovec [ALIVE] $1002.64 (+0.26 %) | obchodů 11, úspěšnost 36 %, PF 1.09, max propad 5.2 %, poplatky $11.59
-   otevřeno OTC·MukL: nákup 0.00805677, teď 0.007718 (-4.2 %) - skóre 1.7
+Lovec [ALIVE] $1001.70 (+0.17 %) | obchodů 11, úspěšnost 36 %, PF 1.09, max propad 5.2 %, poplatky $11.59
+   otevřeno OTC·MukL: nákup 0.00805677, teď 0.007642 (-5.1 %) - skóre 1.7
    2026-10-16T18:50 JEANPHIL·GTBx: -12.15 $ (-12.1 %) stop-loss
    2026-10-16T20:49 VEIL·HgTG: -11.96 $ (-11.9 %) stop-loss
    2026-10-16T21:53 fone·CTPo: +23.73 $ (+23.6 %) cíl zisku
    2026-10-17T08:34 STONK·6GmA: -5.05 $ (-5.0 %) časový limit
    2026-10-17T13:32 CATE·Ai66: +16.08 $ (+16.0 %) časový limit
 
-Stín [ALIVE] $975.67 (-2.43 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.220472 (+1.1 %) - sestupný trend, -3.4 % za 24 h
-   SHORT BONK/USD: prodáno za 3.01e-06, teď 2.99e-06 (+0.6 %) - sestupný trend, -3.1 % za 24 h
+Stín [ALIVE] $973.34 (-2.67 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.221868 (+0.5 %) - sestupný trend, -3.4 % za 24 h
+   SHORT BONK/USD: prodáno za 3.01e-06, teď 3e-06 (+0.3 %) - sestupný trend, -3.1 % za 24 h
    SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.93e-06 (+0.6 %) - sestupný trend, -5.2 % za 24 h
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
@@ -57,7 +57,7 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10655.90 z $11000 (-3.13 %)
+CELKEM $10653.59 z $11000 (-3.15 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-10-17T05:59:45+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
