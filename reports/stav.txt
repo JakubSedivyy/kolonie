@@ -33,19 +33,19 @@ Lovec [ALIVE] $995.50 (-0.45 %) | obchodů 12, úspěšnost 33 %, PF 0.95, max p
    2026-10-17T13:32 CATE·Ai66: +16.08 $ (+16.0 %) časový limit
    2026-10-17T15:38 OTC·MukL: -11.85 $ (-11.8 %) stop-loss
 
-Stín [ALIVE] $981.83 (-1.82 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.220195 (+1.2 %) - sestupný trend, -3.4 % za 24 h
-   SHORT BONK/USD: prodáno za 3.01e-06, teď 2.96e-06 (+1.6 %) - sestupný trend, -3.1 % za 24 h
-   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.865e-06 (+2.2 %) - sestupný trend, -5.2 % za 24 h
+Stín [ALIVE] $976.48 (-2.35 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.59
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.221673 (+0.5 %) - sestupný trend, -3.4 % za 24 h
+   SHORT BONK/USD: prodáno za 3.01e-06, teď 2.99e-06 (+0.6 %) - sestupný trend, -3.1 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.89e-06 (+1.6 %) - sestupný trend, -5.2 % za 24 h
    2026-10-15T15:00 AVAX/USD: -5.51 $ (-2.1 %) stop-loss
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
 
-Věštec [ALIVE] $965.95 (-3.40 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
+Věštec [ALIVE] $969.52 (-3.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.04
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.54 (-15.6 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.57 (-10.9 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 38% (medium)
 
@@ -56,10 +56,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10647.97 z $11000 (-3.20 %)
+CELKEM $10646.19 z $11000 (-3.22 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-17T08:48:04+00:00 🎰 Degen II (simulace) koupil NUBI·2e3z za $15, likvidita $111,003 - https://dexscreener.com/solana/265gq6qkcegwncwsl8csjzd3iddruzwj7k9
    2026-10-17T09:05:34+00:00 🔻 Degen II (simulace) prodal NUBI·2e3z: -3.75 $ (-25 %) - stop-loss
    2026-10-17T09:05:34+00:00 🧠 Degen II se poučil: když v trendu na internetu = ano, prodělal 6x (průměr -37.6 %) - příště to nekoupí
    2026-10-17T10:00:45+00:00 🔻 Vlna PRODAL PEPE/USD: -8.84 $ (-3.6 %) - vlna opadla (trend se otočil)
@@ -77,5 +76,7 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-17T17:38:46+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-10-17T17:38:48+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-10-17T18:39:15+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
 
 VĚŠTEC: 5 odhadů z posledního skenu
