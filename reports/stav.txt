@@ -24,35 +24,35 @@ Medvěd [ALIVE] $1001.56 (+0.16 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
    otevřeno SDOW: nákup 24.7524, teď 24.63 (-0.5 %) - trh padá: SDOW +1.1 % za hodinu, nad EMA 20/50
    otevřeno SOXS: nákup 48.2541, teď 49.24 (+2.0 %) - trh padá: SOXS +2.1 % za hodinu, nad EMA 20/50
 
-Degen II [ALIVE] $944.22 (-5.58 %) | obchodů 6, úspěšnost 0 %, PF 0.00, max propad 5.9 %, poplatky $2.3
-   otevřeno MINTER·3Nxf: nákup 0.0180971, teď 0.01953 (+7.9 %) - skóre 3.5 · paměť: podobné obchody -11.6 % -> sázka 0.5x
+Degen II [ALIVE] $946.08 (-5.39 %) | obchodů 6, úspěšnost 0 %, PF 0.00, max propad 5.9 %, poplatky $2.3
+   otevřeno MINTER·3Nxf: nákup 0.0180971, teď 0.02178 (+20.4 %) - skóre 3.5 · paměť: podobné obchody -11.6 % -> sázka 0.5x
    2026-10-16T19:13 ROADSTER·G3NK: -30.05 $ (-99.2 %) RUG PULL - likvidita zmizela
    2026-10-17T02:21 NUBI·2e3z: -7.58 $ (-25.0 %) stop-loss
    2026-10-17T06:09 NUBI·2e3z: -4.16 $ (-27.5 %) stop-loss
    2026-10-17T07:47 NUBI·2e3z: -3.77 $ (-24.9 %) stop-loss
    2026-10-17T09:05 NUBI·2e3z: -3.75 $ (-24.8 %) stop-loss
 
-Lovec [ALIVE] $1003.63 (+0.36 %) | obchodů 14, úspěšnost 36 %, PF 1.08, max propad 5.2 %, poplatky $14.63
-   otevřeno CATE·Ai66: nákup 0.07878, teď 0.07563 (-4.0 %) - skóre 1.7
+Lovec [ALIVE] $1004.81 (+0.48 %) | obchodů 14, úspěšnost 36 %, PF 1.08, max propad 5.2 %, poplatky $14.63
+   otevřeno CATE·Ai66: nákup 0.07878, teď 0.07655 (-2.8 %) - skóre 1.7
    2026-10-17T08:34 STONK·6GmA: -5.05 $ (-5.0 %) časový limit
    2026-10-17T13:32 CATE·Ai66: +16.08 $ (+16.0 %) časový limit
    2026-10-17T15:38 OTC·MukL: -11.85 $ (-11.8 %) stop-loss
    2026-10-17T23:58 CLAUDIA·2j5S: +24.76 $ (+24.6 %) cíl zisku
    2026-10-18T07:37 CLAUDIA·2j5S: -12.02 $ (-11.8 %) stop-loss
 
-Stín [ALIVE] $972.81 (-2.72 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.2191 (+1.7 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $973.14 (-2.69 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.21885 (+1.8 %) - sestupný trend, -3.4 % za 24 h
    SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.86e-06 (+2.4 %) - sestupný trend, -5.2 % za 24 h
-   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0789295 (-0.8 %) - sestupný trend, -2.4 % za 24 h
+   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0789087 (-0.8 %) - sestupný trend, -2.4 % za 24 h
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
    2026-10-17T22:00 BONK/USD: -4.47 $ (-1.8 %) stop-loss
 
-Věštec [ALIVE] $970.55 (-2.94 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
+Věštec [ALIVE] $971.75 (-2.83 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.58 (-9.4 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.59 (-7.8 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 38% (medium)
    otevřeno PM5784290·YES: nákup 0.19, teď 0.19 (+0.0 %) - Grok 28% vs trh 18% (medium)
@@ -65,10 +65,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10635.07 z $11000 (-3.32 %)
+CELKEM $10639.64 z $11000 (-3.28 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-18T00:11:06+00:00 🔮 Věštec (simulace) vsadil $27 na YES: „Next White House Press Secretary announced by October 31, 2026?“ - Grok 28%, trh 18%
    2026-10-18T00:11:06+00:00 🔮 Věštec (simulace) vsadil $61 na NO: „Will oil be at least $85 on November 2 and the Democrats win the Senate?“ - Grok 45%, trh 60%
    2026-10-18T01:35:50+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -1.40 $ (-2.1 %) - časový limit
    2026-10-18T01:39:50+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
@@ -84,5 +83,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-10-18T06:48:08+00:00 🏹 Lovec (simulace) koupil CLAUDIA·2j5S za $101, likvidita $422,897 - https://dexscreener.com/solana/fe7bpdycs74gqicuf14hwgumtopkv1d9md
    2026-10-18T07:37:13+00:00 🔻 Lovec (simulace) prodal CLAUDIA·2j5S: -12.02 $ (-12 %) - stop-loss
    2026-10-18T07:58:44+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-10-18T08:58:44+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
 
 VĚŠTEC: 5 odhadů z posledního skenu
