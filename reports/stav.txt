@@ -2,9 +2,9 @@
 
 Orbit [ALIVE] $999.80 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Trendy [ALIVE] $984.07 (-1.59 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 1.6 %, poplatky $4.44
-   SHORT ETH/USD: prodáno za 2333.93, teď 2336.75 (-0.1 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.69 % · paměť: podobn
-   SHORT SOL/USD: prodáno za 100.645, teď 100.82 (-0.2 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.83 % · paměť: podobn
+Trendy [ALIVE] $982.03 (-1.80 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 1.8 %, poplatky $4.44
+   SHORT ETH/USD: prodáno za 2333.93, teď 2350.1 (-0.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.69 % · paměť: podobn
+   SHORT SOL/USD: prodáno za 100.645, teď 101.3 (-0.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.83 % · paměť: podobn
    2026-10-18T01:42 SOL/USD: -4.98 $ (-2.5 %) stop-loss
    2026-10-18T01:46 ETH/USD: -5.50 $ (-2.2 %) stop-loss
    2026-10-18T03:06 BTC/USD: -3.72 $ (-1.5 %) stop-loss
@@ -46,10 +46,10 @@ Lovec [ALIVE] $983.72 (-1.63 %) | obchodů 16, úspěšnost 31 %, PF 0.87, max p
    2026-10-18T14:38 MISTAKE·HKZD: -12.16 $ (-12.6 %) stop-loss
    2026-10-18T16:34 CATE·Ai66: -12.30 $ (-12.1 %) stop-loss
 
-Stín [ALIVE] $993.19 (-0.68 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.211747 (+5.0 %) - sestupný trend, -3.4 % za 24 h
-   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.78e-06 (+4.4 %) - sestupný trend, -5.2 % za 24 h
-   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0762933 (+2.5 %) - sestupný trend, -2.4 % za 24 h
+Stín [ALIVE] $989.67 (-1.03 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.212979 (+4.4 %) - sestupný trend, -3.4 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.8e-06 (+3.9 %) - sestupný trend, -5.2 % za 24 h
+   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0766535 (+2.1 %) - sestupný trend, -2.4 % za 24 h
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
@@ -71,7 +71,7 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10626.87 z $11000 (-3.39 %)
+CELKEM $10621.31 z $11000 (-3.44 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-10-18T13:58:48+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
