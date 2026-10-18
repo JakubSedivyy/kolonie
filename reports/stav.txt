@@ -31,27 +31,27 @@ Degen II [ALIVE] $939.30 (-6.07 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max 
    2026-10-17T09:05 NUBI·2e3z: -3.75 $ (-24.8 %) stop-loss
    2026-10-18T10:27 MINTER·3Nxf: -3.88 $ (-25.6 %) stop-loss
 
-Lovec [ALIVE] $1003.13 (+0.31 %) | obchodů 14, úspěšnost 36 %, PF 1.08, max propad 5.2 %, poplatky $14.63
-   otevřeno CATE·Ai66: nákup 0.07878, teď 0.07524 (-4.5 %) - skóre 1.7
+Lovec [ALIVE] $1002.42 (+0.24 %) | obchodů 14, úspěšnost 36 %, PF 1.08, max propad 5.2 %, poplatky $14.63
+   otevřeno CATE·Ai66: nákup 0.07878, teď 0.07469 (-5.2 %) - skóre 1.7
    2026-10-17T08:34 STONK·6GmA: -5.05 $ (-5.0 %) časový limit
    2026-10-17T13:32 CATE·Ai66: +16.08 $ (+16.0 %) časový limit
    2026-10-17T15:38 OTC·MukL: -11.85 $ (-11.8 %) stop-loss
    2026-10-17T23:58 CLAUDIA·2j5S: +24.76 $ (+24.6 %) cíl zisku
    2026-10-18T07:37 CLAUDIA·2j5S: -12.02 $ (-11.8 %) stop-loss
 
-Stín [ALIVE] $969.02 (-3.10 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.219954 (+1.3 %) - sestupný trend, -3.4 % za 24 h
-   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.89e-06 (+1.6 %) - sestupný trend, -5.2 % za 24 h
-   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0793418 (-1.4 %) - sestupný trend, -2.4 % za 24 h
+Stín [ALIVE] $968.37 (-3.16 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.22015 (+1.2 %) - sestupný trend, -3.4 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.9e-06 (+1.3 %) - sestupný trend, -5.2 % za 24 h
+   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0793105 (-1.3 %) - sestupný trend, -2.4 % za 24 h
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
    2026-10-17T22:00 BONK/USD: -4.47 $ (-1.8 %) stop-loss
 
-Věštec [ALIVE] $973.25 (-2.68 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
+Věštec [ALIVE] $972.05 (-2.79 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.6 (-6.2 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.59 (-7.8 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 38% (medium)
    otevřeno PM5784290·YES: nákup 0.19, teď 0.19 (+0.0 %) - Grok 28% vs trh 18% (medium)
@@ -64,7 +64,7 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10628.56 z $11000 (-3.38 %)
+CELKEM $10626.00 z $11000 (-3.40 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-10-18T01:35:50+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -1.40 $ (-2.1 %) - časový limit
