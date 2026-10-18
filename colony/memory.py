@@ -21,6 +21,8 @@ MIN_N = 6            # kolik obchodů v dané situaci musí být, než z toho bo
 PRIOR = 5            # smrštění průměru k nule
 AVOID_BELOW = -0.02  # smrštěný průměr horší než -2 % na obchod -> situaci se vyhnout
 MAX_TRADES = 1500    # skutečné i stínové obchody; rozhoduje se podle nich, starší vyprchají
+COVER_MAX = 0.9      # rys, který měl skoro každý obchod (např. "v trendu = ano" u Degena), nic nerozlišuje:
+                     # zákaz podle něj by znamenal "už nikdy nic nekupuj" -> podle takového rysu nezakazujeme
 
 
 def hour_bucket(dt: datetime) -> str:
@@ -91,19 +93,27 @@ class Memory:
         # n = vážený počet (stínový obchod = půlka), smrštěný průměr, hrubý průměr
         return {k: (round(n, 1), tot / (n + PRIOR), tot / n) for k, (n, tot) in out.items() if n > 0}
 
+    def total_weight(self, bot: str) -> float:
+        return sum(row.get("w", 1.0) for row in self.data["bots"].get(bot, []))
+
+    def _forbids(self, n: float, shr: float, total: float) -> bool:
+        return n >= MIN_N and shr < AVOID_BELOW and n < COVER_MAX * total
+
     def avoid_list(self, bot: str):
+        total = self.total_weight(bot)
         return sorted(((k, n, raw) for k, (n, shr, raw) in self.stats(bot).items()
-                       if n >= MIN_N and shr < AVOID_BELOW), key=lambda x: x[2])
+                       if self._forbids(n, shr, total)), key=lambda x: x[2])
 
     def judge(self, bot: str, features: dict) -> tuple[bool, float, str]:
         """(smí koupit?, násobek sázky, důvod)."""
         if not features:
             return True, 1.0, ""
         st = self.stats(bot)
+        total = self.total_weight(bot)
         keys = [f"{k} = {v}" for k, v in features.items()]
         for k in keys:
             n, shr, raw = st.get(k, (0, 0.0, 0.0))
-            if n >= MIN_N and shr < AVOID_BELOW:
+            if self._forbids(n, shr, total):
                 return False, 0.0, f"paměť: když {k}, prodělal jsem {n:g}x (průměr {raw*100:+.1f} %)"
         known = [st[k][1] for k in keys if k in st and st[k][0] >= 3]
         if not known:
@@ -114,9 +124,10 @@ class Memory:
 
     def lessons(self, bot: str, top: int = 6) -> list[dict]:
         """Pro dashboard: co se bot zatím naučil (nejhorší a nejlepší situace)."""
+        total = self.total_weight(bot)
         st = [(k, n, shr, raw) for k, (n, shr, raw) in self.stats(bot).items() if n >= 3]
         worst = sorted(st, key=lambda x: x[2])[:top // 2]
         best = sorted((x for x in st if x[2] > 0), key=lambda x: -x[2])[:top // 2]
         return [{"when": k, "n": n, "avg": raw, "score": shr,
-                 "verdict": "vyhýbá se" if n >= MIN_N and shr < AVOID_BELOW else "daří se" if shr > 0 else "sleduje"}
+                 "verdict": "vyhýbá se" if self._forbids(n, shr, total) else "daří se" if shr > 0 else "sleduje"}
                 for k, n, shr, raw in worst + [b for b in best if b not in worst]]

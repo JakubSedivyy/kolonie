@@ -350,6 +350,19 @@ def test_memory_learns_to_avoid_losing_situation():
     assert les[0]["verdict"] == "vyhýbá se" and any(l["verdict"] == "daří se" for l in les)
 
 
+def test_memory_ignores_feature_every_trade_had():
+    from colony.memory import Memory
+    m = Memory(os.path.join(tempfile.mkdtemp(), "mem.json"))
+    for i in range(6):                                        # jako Degen II: všechny obchody "v trendu = ano"
+        m.record("Degen II", {"v trendu na internetu": "ano", "likvidita": "do 150k $"}, -0.25)
+    ok, mult, _ = m.judge("Degen II", {"v trendu na internetu": "ano", "likvidita": "150-500k $"})
+    assert ok and mult < 1.0                                  # nezakáže všechno, jen vsadí míň
+    assert m.avoid_list("Degen II") == []
+    for i in range(6):                                        # když rys začne rozlišovat, zákaz zase platí
+        m.record("Degen II", {"v trendu na internetu": "ne", "likvidita": "150-500k $"}, 0.05)
+    assert not m.judge("Degen II", {"v trendu na internetu": "ano"})[0]
+
+
 def test_degen_skips_what_memory_forbids():
     from colony.memory import Memory
     dex = FakeDex()
@@ -360,6 +373,7 @@ def test_degen_skips_what_memory_forbids():
     m = Memory(os.path.join(tempfile.mkdtemp(), "mem.json"))
     for i in range(7):
         m.record(d.name, {"likvidita": "150-500k $"}, -0.25)
+        m.record(d.name, {"likvidita": "do 150k $"}, 0.0)
     d.memory = m
     d.tick(now, "neutral", lambda x: None)
     assert not d.wallet.lots                                  # paměť nákup zakázala
@@ -401,6 +415,7 @@ def test_kronika_records_and_learns_from_missed_signals():
     m = Memory(os.path.join(tempfile.mkdtemp(), "m.json"))
     for i in range(12):
         m.record("Vlna", {"coin": "SOL/USD"}, -0.2, weight=0.5)          # stínové obchody mají poloviční váhu
+        m.record("Vlna", {"coin": "ETH/USD"}, 0.0, weight=0.5)
     assert m.stats("Vlna")["coin = SOL/USD"][0] == 6.0
     assert not m.judge("Vlna", {"coin": "SOL/USD"})[0]
 
