@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 106 signálů, 48 obchodů, 46 hodinových snímků radaru, 117 událostí
+Celkem zapsáno: 106 signálů, 49 obchodů, 47 hodinových snímků radaru, 118 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když v trendu na internetu = ano, prod |   4x, vyhrálo by 3, průměr +21.3 %
@@ -8,7 +8,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
 
 UZAVŘENÉ OBCHODY:
   Degen     |  10 obchodů, 1 výher, průměr -40.2 %, celkem -203.12 $
-  Degen II  |   6 obchodů, 0 výher, průměr -37.6 %, celkem -56.72 $
+  Degen II  |   7 obchodů, 0 výher, průměr -35.9 %, celkem -60.60 $
   Lovec     |  14 obchodů, 5 výher, průměr +0.6 %, celkem +8.33 $
   Memec     |   3 obchodů, 0 výher, průměr -2.2 %, celkem -4.34 $
   Stín      |   8 obchodů, 0 výher, průměr -1.6 %, celkem -33.62 $
@@ -16,4 +16,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   4 obchodů, 0 výher, průměr -5.0 %, celkem -34.99 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (46h), CATE (42h), 1 (33h), SUI (28h), PRL (23h), FTR (23h), PENGU (22h), NEAR (21h), ETH (19h), INJ (16h), QTC (16h), PUMP (16h), DACITY (15h), STREAM (14h), Q (14h), ELON (13h), SOL (10h), TIA (10h), ZEC (7h), QNT (7h)
+  BTC (47h), CATE (43h), 1 (33h), SUI (29h), PRL (24h), FTR (23h), NEAR (22h), PENGU (22h), ETH (19h), INJ (16h), QTC (16h), PUMP (16h), DACITY (15h), Q (15h), STREAM (14h), ELON (14h), SOL (10h), TIA (10h), ZEC (7h), QNT (7h)
