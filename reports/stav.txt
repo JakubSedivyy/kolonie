@@ -7,12 +7,12 @@ Trendy [ALIVE] $985.60 (-1.44 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max pr
    2026-10-18T01:46 ETH/USD: -5.50 $ (-2.2 %) stop-loss
    2026-10-18T03:06 BTC/USD: -3.72 $ (-1.5 %) stop-loss
 
-Memec [ALIVE] $995.05 (-0.50 %) | obchodů 4, úspěšnost 25 %, PF 0.03, max propad 1.7 %, poplatky $1.48
-   SHORT DOGE/USD: prodáno za 0.0774375, teď 0.0778815 (-0.6 %) - výplach: objem 17.9x průměru, nové 2h minimum
+Memec [ALIVE] $994.75 (-0.53 %) | obchodů 5, úspěšnost 20 %, PF 0.03, max propad 1.7 %, poplatky $1.64
    2026-10-15T12:30 PEPE/USD: -1.24 $ (-1.9 %) stop-loss
    2026-10-18T01:35 DOGE/USD: -1.40 $ (-2.1 %) časový limit
    2026-10-18T04:00 SHIB/USD: -1.70 $ (-2.6 %) časový limit
    2026-10-18T18:05 WIF/USD: +0.13 $ (+0.2 %) časový limit
+   2026-10-18T18:35 DOGE/USD: -0.84 $ (-1.3 %) časový limit
 
 Vlna [ALIVE] $961.94 (-3.81 %) | obchodů 4, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $4.8
    SHORT TRUMP/USD: prodáno za 1.70418, teď 1.73161 (-1.6 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
@@ -43,19 +43,19 @@ Lovec [ALIVE] $983.72 (-1.63 %) | obchodů 16, úspěšnost 31 %, PF 0.87, max p
    2026-10-18T14:38 MISTAKE·HKZD: -12.16 $ (-12.6 %) stop-loss
    2026-10-18T16:34 CATE·Ai66: -12.30 $ (-12.1 %) stop-loss
 
-Stín [ALIVE] $980.72 (-1.93 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
-   SHORT ADA/USD: prodáno za 0.223005, teď 0.215323 (+3.4 %) - sestupný trend, -3.4 % za 24 h
-   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.86e-06 (+2.4 %) - sestupný trend, -5.2 % za 24 h
-   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0776989 (+0.7 %) - sestupný trend, -2.4 % za 24 h
+Stín [ALIVE] $980.34 (-1.97 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $2.88
+   SHORT ADA/USD: prodáno za 0.223005, teď 0.2155 (+3.3 %) - sestupný trend, -3.4 % za 24 h
+   SHORT PEPE/USD: prodáno za 3.955e-06, teď 3.87e-06 (+2.1 %) - sestupný trend, -5.2 % za 24 h
+   SHORT DOGE/USD: prodáno za 0.078268, teď 0.0775876 (+0.9 %) - sestupný trend, -2.4 % za 24 h
    2026-10-15T15:00 BCH/USD: -9.36 $ (-3.5 %) stop-loss
    2026-10-15T16:00 DOGE/USD: -2.49 $ (-0.9 %) stop-loss
    2026-10-15T16:00 DOT/USD: -1.65 $ (-0.8 %) stop-loss
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
    2026-10-17T22:00 BONK/USD: -4.47 $ (-1.8 %) stop-loss
 
-Věštec [ALIVE] $965.95 (-3.40 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
+Věštec [ALIVE] $964.76 (-3.52 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
    otevřeno PM2589812·NO: nákup 0.29, teď 0.13 (-55.2 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.53 (-17.2 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.52 (-18.8 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.38 (+0.0 %) - Grok 48% vs trh 38% (medium)
    otevřeno PM5784290·YES: nákup 0.19, teď 0.19 (+0.0 %) - Grok 28% vs trh 18% (medium)
@@ -68,10 +68,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10610.27 z $11000 (-3.54 %)
+CELKEM $10608.40 z $11000 (-3.56 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-18T06:48:08+00:00 🏹 Lovec (simulace) koupil CLAUDIA·2j5S za $101, likvidita $422,897 - https://dexscreener.com/solana/fe7bpdycs74gqicuf14hwgumtopkv1d9md
    2026-10-18T07:37:13+00:00 🔻 Lovec (simulace) prodal CLAUDIA·2j5S: -12.02 $ (-12 %) - stop-loss
    2026-10-18T07:58:44+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-10-18T08:58:44+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
@@ -86,5 +85,6 @@ POSLEDNÍ UDÁLOSTI:
    2026-10-18T15:00:36+00:00 🐻 Vlna (simulace) SHORT SUSHI/USD za $96.47 @ 0.210689, stop 0.22333 (sestupná vlna: propad pod 3denní minimum, -4 % za 24 h)
    2026-10-18T16:34:39+00:00 🔻 Lovec (simulace) prodal CATE·Ai66: -12.30 $ (-12 %) - stop-loss
    2026-10-18T18:05:50+00:00 ✅ Memec UZAVŘEL SHORT WIF/USD: +0.13 $ (+0.2 %) - časový limit
+   2026-10-18T18:35:48+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -0.84 $ (-1.3 %) - časový limit
 
 VĚŠTEC: 2 odhadů z posledního skenu
