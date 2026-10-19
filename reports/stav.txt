@@ -31,16 +31,16 @@ Medvěd [ALIVE] $1001.51 (+0.15 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
    otevřeno SDOW: nákup 24.7524, teď 24.63 (-0.5 %) - trh padá: SDOW +1.1 % za hodinu, nad EMA 20/50
    otevřeno SOXS: nákup 48.2541, teď 49.24 (+2.0 %) - trh padá: SOXS +2.1 % za hodinu, nad EMA 20/50
 
-Degen II [ALIVE] $941.49 (-5.85 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 6.2 %, poplatky $2.57
-   otevřeno startupSI·EKos: nákup 0.00413442, teď 0.004792 (+15.9 %) - skóre 8.9 · paměť: podobné obchody -14.2 % -> sázka 0.5x
-   2026-10-17T02:21 NUBI·2e3z: -7.58 $ (-25.0 %) stop-loss
+Degen II [ALIVE] $943.84 (-5.62 %) | obchodů 8, úspěšnost 12 %, PF 0.08, max propad 6.2 %, poplatky $2.77
    2026-10-17T06:09 NUBI·2e3z: -4.16 $ (-27.5 %) stop-loss
    2026-10-17T07:47 NUBI·2e3z: -3.77 $ (-24.9 %) stop-loss
    2026-10-17T09:05 NUBI·2e3z: -3.75 $ (-24.8 %) stop-loss
    2026-10-18T10:27 MINTER·3Nxf: -3.88 $ (-25.6 %) stop-loss
+   2026-10-19T01:21 startupSI·EKos: +4.59 $ (+30.3 %) cíl zisku
 
-Lovec [ALIVE] $986.48 (-1.35 %) | obchodů 16, úspěšnost 31 %, PF 0.87, max propad 5.2 %, poplatky $16.33
-   otevřeno STONK·6GmA: nákup 0.0960914, teď 0.1004 (+4.5 %) - skóre 2.7 · paměť: podobné obchody -2.9 % -> sázka 0.7x
+Lovec [ALIVE] $987.39 (-1.26 %) | obchodů 16, úspěšnost 31 %, PF 0.87, max propad 5.2 %, poplatky $16.71
+   otevřeno STONK·6GmA: nákup 0.0960914, teď 0.1008 (+4.9 %) - skóre 2.7 · paměť: podobné obchody -2.9 % -> sázka 0.7x
+   otevřeno DOPE·33jE: nákup 0.00398041, teď 0.004033 (+1.3 %) - skóre 1.7 · paměť: podobné obchody -2.5 % -> sázka 0.7x
    2026-10-17T15:38 OTC·MukL: -11.85 $ (-11.8 %) stop-loss
    2026-10-17T23:58 CLAUDIA·2j5S: +24.76 $ (+24.6 %) cíl zisku
    2026-10-18T07:37 CLAUDIA·2j5S: -12.02 $ (-11.8 %) stop-loss
@@ -54,9 +54,9 @@ Stín [ALIVE] $966.72 (-3.33 %) | obchodů 11, úspěšnost 18 %, PF 0.10, max p
    2026-10-18T23:00 DOGE/USD: -2.99 $ (-1.2 %) stop-loss
    2026-10-18T23:00 PEPE/USD: +0.18 $ (+0.1 %) trailing stop
 
-Věštec [ALIVE] $976.14 (-2.39 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
+Věštec [ALIVE] $979.71 (-2.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
    otevřeno PM2589812·NO: nákup 0.29, teď 0.12 (-58.6 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.62 (-3.1 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.65 (+1.6 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.38 (+0.0 %) - Grok 48% vs trh 38% (medium)
    otevřeno PM5784290·YES: nákup 0.19, teď 0.19 (+0.0 %) - Grok 28% vs trh 18% (medium)
@@ -69,11 +69,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10603.99 z $11000 (-3.60 %)
+CELKEM $10610.82 z $11000 (-3.54 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-18T18:05:50+00:00 ✅ Memec UZAVŘEL SHORT WIF/USD: +0.13 $ (+0.2 %) - časový limit
-   2026-10-18T18:35:48+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -0.84 $ (-1.3 %) - časový limit
    2026-10-18T19:35:25+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $62.82 @ 0.0767995, stop 0.0814075 (výplach: objem 26.1x průměru, nové 2h minimum · paměť: podobn
    2026-10-18T20:00:27+00:00 🐻 Trendy (simulace) SHORT ETH/USD za $211.44 @ 2335.09, stop 2375.37 (propad pod 24-svíčkové minimum pod EMA 200, ATR 0.69 % · paměť: 
    2026-10-18T20:00:27+00:00 🐻 Trendy (simulace) SHORT SOL/USD za $176.41 @ 100.695, stop 102.776 (propad pod 24-svíčkové minimum pod EMA 200, ATR 0.83 % · paměť: 
@@ -89,5 +87,7 @@ POSLEDNÍ UDÁLOSTI:
    2026-10-18T23:00:53+00:00 ✅ Stín (simulace) uzavřel short PEPE/USD: +0.18 $ (+0.1 %) - trailing stop
    2026-10-18T23:35:36+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -2.31 $ (-3.7 %) - časový limit
    2026-10-19T00:00:06+00:00 🎰 Degen II (simulace) koupil startupSI·EKos za $15, likvidita $181,645 - https://dexscreener.com/solana/ascpffyzxmnhhfhqqwawtcrmasguzc
+   2026-10-19T00:54:21+00:00 🏹 Lovec (simulace) koupil DOPE·33jE za $75, likvidita $254,141 - https://dexscreener.com/solana/6iep3egqksbzwgzmbcyajtivtvykcgl9bnpbew
+   2026-10-19T01:21:40+00:00 ✅ Degen II (simulace) prodal startupSI·EKos: +4.59 $ (+30 %) - cíl zisku
 
 VĚŠTEC: 5 odhadů z posledního skenu
