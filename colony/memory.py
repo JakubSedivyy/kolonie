@@ -23,6 +23,9 @@ AVOID_BELOW = -0.02  # smrštěný průměr horší než -2 % na obchod -> situa
 MAX_TRADES = 1500    # skutečné i stínové obchody; rozhoduje se podle nich, starší vyprchají
 COVER_MAX = 0.9      # rys, který měl skoro každý obchod (např. "v trendu = ano" u Degena), nic nerozlišuje:
                      # zákaz podle něj by znamenal "už nikdy nic nekupuj" -> podle takového rysu nezakazujeme
+MIN_REST = 2         # zákaz jen když máme s čím srovnat: aspoň tolik obchodů BEZ toho rysu, a ty dopadly líp
+                     # (Lovec 19. 10.: "stáří přes týden" průměr -5,9 %, ale jediný mladší coin -11,9 % ->
+                     # rys nebyl příčinou ztrát, jen ho měl skoro každý obchod)
 
 
 def hour_bucket(dt: datetime) -> str:
@@ -96,24 +99,34 @@ class Memory:
     def total_weight(self, bot: str) -> float:
         return sum(row.get("w", 1.0) for row in self.data["bots"].get(bot, []))
 
-    def _forbids(self, n: float, shr: float, total: float) -> bool:
-        return n >= MIN_N and shr < AVOID_BELOW and n < COVER_MAX * total
+    def _totals(self, bot: str) -> tuple[float, float]:
+        rows = self.data["bots"].get(bot, [])
+        return sum(r.get("w", 1.0) for r in rows), sum(r.get("w", 1.0) * r["r"] for r in rows)
+
+    def _forbids(self, n: float, shr: float, total: float, raw: float = 0.0, total_sum: float = 0.0) -> bool:
+        if not (n >= MIN_N and shr < AVOID_BELOW and n < COVER_MAX * total):
+            return False
+        rest_n = total - n                                   # obchody bez tohoto rysu
+        if rest_n < MIN_REST:
+            return False
+        rest_avg = (total_sum - raw * n) / rest_n
+        return raw < rest_avg                                # rys musí dopadat hůř než zbytek
 
     def avoid_list(self, bot: str):
-        total = self.total_weight(bot)
+        total, tsum = self._totals(bot)
         return sorted(((k, n, raw) for k, (n, shr, raw) in self.stats(bot).items()
-                       if self._forbids(n, shr, total)), key=lambda x: x[2])
+                       if self._forbids(n, shr, total, raw, tsum)), key=lambda x: x[2])
 
     def judge(self, bot: str, features: dict) -> tuple[bool, float, str]:
         """(smí koupit?, násobek sázky, důvod)."""
         if not features:
             return True, 1.0, ""
         st = self.stats(bot)
-        total = self.total_weight(bot)
+        total, tsum = self._totals(bot)
         keys = [f"{k} = {v}" for k, v in features.items()]
         for k in keys:
             n, shr, raw = st.get(k, (0, 0.0, 0.0))
-            if self._forbids(n, shr, total):
+            if self._forbids(n, shr, total, raw, tsum):
                 return False, 0.0, f"paměť: když {k}, prodělal jsem {n:g}x (průměr {raw*100:+.1f} %)"
         known = [st[k][1] for k in keys if k in st and st[k][0] >= 3]
         if not known:
@@ -124,10 +137,10 @@ class Memory:
 
     def lessons(self, bot: str, top: int = 6) -> list[dict]:
         """Pro dashboard: co se bot zatím naučil (nejhorší a nejlepší situace)."""
-        total = self.total_weight(bot)
+        total, tsum = self._totals(bot)
         st = [(k, n, shr, raw) for k, (n, shr, raw) in self.stats(bot).items() if n >= 3]
         worst = sorted(st, key=lambda x: x[2])[:top // 2]
         best = sorted((x for x in st if x[2] > 0), key=lambda x: -x[2])[:top // 2]
         return [{"when": k, "n": n, "avg": raw, "score": shr,
-                 "verdict": "vyhýbá se" if self._forbids(n, shr, total) else "daří se" if shr > 0 else "sleduje"}
+                 "verdict": "vyhýbá se" if self._forbids(n, shr, total, raw, tsum) else "daří se" if shr > 0 else "sleduje"}
                 for k, n, shr, raw in worst + [b for b in best if b not in worst]]

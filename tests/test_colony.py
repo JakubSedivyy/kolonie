@@ -363,6 +363,18 @@ def test_memory_ignores_feature_every_trade_had():
     assert not m.judge("Degen II", {"v trendu na internetu": "ano"})[0]
 
 
+def test_memory_forbids_only_feature_worse_than_rest():
+    from colony.memory import Memory
+    m = Memory(os.path.join(tempfile.mkdtemp(), "mem.json"))
+    m.record("Lovec", {"stáří coinu": "1-7 dní"}, -0.12)      # jako Lovec 19. 10.: jediný mladší coin dopadl hůř
+    for r in (-0.12, 0.25, -0.12, -0.13, -0.12, -0.12):
+        m.record("Lovec", {"stáří coinu": "přes týden"}, r)
+    assert m.avoid_list("Lovec") == []                        # rys nerozlišuje -> žádný zákaz
+    assert m.judge("Lovec", {"stáří coinu": "přes týden"})[0]
+    m.record("Lovec", {"stáří coinu": "1-7 dní"}, 0.10)       # zbytek je teď lepší (2 obchody, průměr -1 %)
+    assert not m.judge("Lovec", {"stáří coinu": "přes týden"})[0]
+
+
 def test_degen_skips_what_memory_forbids():
     from colony.memory import Memory
     dex = FakeDex()
