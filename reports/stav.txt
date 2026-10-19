@@ -2,8 +2,8 @@
 
 Orbit [ALIVE] $999.75 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Trendy [ALIVE] $974.34 (-2.57 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $5.99
-   otevřeno BTC/USD: nákup 82694.5, teď 82562.2 (-0.2 %) - průraz 24-svíčkového maxima, ATR 0.42 %
+Trendy [ALIVE] $974.45 (-2.55 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $5.99
+   otevřeno BTC/USD: nákup 82694.5, teď 82600 (-0.1 %) - průraz 24-svíčkového maxima, ATR 0.42 %
    2026-10-18T01:42 SOL/USD: -4.98 $ (-2.5 %) stop-loss
    2026-10-18T01:46 ETH/USD: -5.50 $ (-2.2 %) stop-loss
    2026-10-18T03:06 BTC/USD: -3.72 $ (-1.5 %) stop-loss
@@ -19,9 +19,10 @@ Memec [ALIVE] $990.87 (-0.91 %) | obchodů 6, úspěšnost 17 %, PF 0.02, max pr
    2026-10-18T18:35 DOGE/USD: -0.84 $ (-1.3 %) časový limit
    2026-10-18T23:35 DOGE/USD: -2.31 $ (-3.7 %) časový limit
 
-Vlna [ALIVE] $960.26 (-3.97 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $5.03
-   SHORT TRUMP/USD: prodáno za 1.70418, teď 1.66471 (+2.3 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
+Vlna [ALIVE] $957.27 (-4.27 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max propad 4.7 %, poplatky $5.45
+   SHORT TRUMP/USD: prodáno za 1.70418, teď 1.7019 (+0.1 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
    SHORT GRT/USD: prodáno za 0.0233136, teď 0.02386 (-2.3 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h
+   otevřeno SOL/USD: nákup 105.703, teď 105.4 (-0.3 %) - vlna: hype 6.7, +2 % za 24 h
    2026-10-16T03:55 BAT/USD: -9.86 $ (-9.7 %) stop-loss
    2026-10-17T05:00 UNI/USD: -5.20 $ (-2.1 %) vlna opadla (trend se otočil)
    2026-10-17T10:00 PEPE/USD: -8.84 $ (-3.6 %) vlna opadla (trend se otočil)
@@ -41,29 +42,29 @@ Degen II [ALIVE] $943.84 (-5.62 %) | obchodů 8, úspěšnost 12 %, PF 0.08, max
    2026-10-18T10:27 MINTER·3Nxf: -3.88 $ (-25.6 %) stop-loss
    2026-10-19T01:21 startupSI·EKos: +4.59 $ (+30.3 %) cíl zisku
 
-Lovec [ALIVE] $983.96 (-1.60 %) | obchodů 17, úspěšnost 29 %, PF 0.82, max propad 5.2 %, poplatky $17.04
-   otevřeno STONK·6GmA: nákup 0.0960914, teď 0.1091 (+13.5 %) - skóre 2.7 · paměť: podobné obchody -2.9 % -> sázka 0.7x
+Lovec [ALIVE] $983.74 (-1.63 %) | obchodů 17, úspěšnost 29 %, PF 0.82, max propad 5.2 %, poplatky $17.04
+   otevřeno STONK·6GmA: nákup 0.0960914, teď 0.1088 (+13.2 %) - skóre 2.7 · paměť: podobné obchody -2.9 % -> sázka 0.7x
    2026-10-17T23:58 CLAUDIA·2j5S: +24.76 $ (+24.6 %) cíl zisku
    2026-10-18T07:37 CLAUDIA·2j5S: -12.02 $ (-11.8 %) stop-loss
    2026-10-18T14:38 MISTAKE·HKZD: -12.16 $ (-12.6 %) stop-loss
    2026-10-18T16:34 CATE·Ai66: -12.30 $ (-12.1 %) stop-loss
    2026-10-19T05:03 DOPE·33jE: -8.90 $ (-11.8 %) stop-loss
 
-Stín [ALIVE] $965.53 (-3.45 %) | obchodů 11, úspěšnost 18 %, PF 0.10, max propad 4.7 %, poplatky $3.53
-   SHORT BAT/USD: prodáno za 0.174333, teď 0.174834 (-0.3 %) - sestupný trend, -2.5 % za 24 h
-   SHORT TRUMP/USD: prodáno za 1.71424, teď 1.71803 (-0.2 %) - sestupný trend, -2.8 % za 24 h
+Stín [ALIVE] $964.02 (-3.60 %) | obchodů 11, úspěšnost 18 %, PF 0.10, max propad 4.7 %, poplatky $3.53
+   SHORT BAT/USD: prodáno za 0.174333, teď 0.177218 (-1.7 %) - sestupný trend, -2.5 % za 24 h
+   SHORT TRUMP/USD: prodáno za 1.71424, teď 1.71385 (+0.0 %) - sestupný trend, -2.8 % za 24 h
    2026-10-15T16:00 GRT/USD: -1.74 $ (-0.8 %) stop-loss
    2026-10-17T22:00 BONK/USD: -4.47 $ (-1.8 %) stop-loss
    2026-10-18T23:00 ADA/USD: +3.36 $ (+1.4 %) trailing stop
    2026-10-18T23:00 DOGE/USD: -2.99 $ (-1.2 %) stop-loss
    2026-10-18T23:00 PEPE/USD: +0.18 $ (+0.1 %) trailing stop
 
-Věštec [ALIVE] $977.70 (-2.23 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
+Věštec [ALIVE] $977.48 (-2.25 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 4.3 %, poplatky $2.92
    otevřeno PM2589812·NO: nákup 0.29, teď 0.12 (-58.6 %) - Grok 62% vs trh 72% (medium)
-   otevřeno PM5170739·NO: nákup 0.64, teď 0.67 (+4.7 %) - Grok 25% vs trh 36% (medium)
+   otevřeno PM5170739·NO: nákup 0.64, teď 0.68 (+6.2 %) - Grok 25% vs trh 36% (medium)
    otevřeno PM630963·NO: nákup 0.38, teď 0.37 (-2.6 %) - Grok 48% vs trh 62% (medium)
    otevřeno PM630964·YES: nákup 0.38, teď 0.38 (+0.0 %) - Grok 48% vs trh 38% (medium)
-   otevřeno PM5784290·YES: nákup 0.19, teď 0.16 (-15.8 %) - Grok 28% vs trh 18% (medium)
+   otevřeno PM5784290·YES: nákup 0.19, teď 0.15 (-21.1 %) - Grok 28% vs trh 18% (medium)
    otevřeno PM5611882·NO: nákup 0.397, teď 0.407 (+2.5 %) - Grok 45% vs trh 60% (medium)
 
 Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max propad 21.1 %, poplatky $8.05
@@ -73,12 +74,9 @@ Degen [DEAD] $796.78 (-20.32 %) | obchodů 10, úspěšnost 10 %, PF 0.09, max p
    2026-10-16T03:16 SYCAMORE·3EC7: -20.16 $ (-39.9 %) stop-loss
    2026-10-16T03:54 OWLDACITY·D61p: -12.18 $ (-24.1 %) smrt bota
 
-CELKEM $10594.34 z $11000 (-3.69 %)
+CELKEM $10589.51 z $11000 (-3.73 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-10-18T23:00:53+00:00 🔻 Stín (simulace) uzavřel short DOGE/USD: -2.99 $ (-1.2 %) - stop-loss
-   2026-10-18T23:00:53+00:00 ✅ Stín (simulace) uzavřel short PEPE/USD: +0.18 $ (+0.1 %) - trailing stop
-   2026-10-18T23:35:36+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -2.31 $ (-3.7 %) - časový limit
    2026-10-19T00:00:06+00:00 🎰 Degen II (simulace) koupil startupSI·EKos za $15, likvidita $181,645 - https://dexscreener.com/solana/ascpffyzxmnhhfhqqwawtcrmasguzc
    2026-10-19T00:54:21+00:00 🏹 Lovec (simulace) koupil DOPE·33jE za $75, likvidita $254,141 - https://dexscreener.com/solana/6iep3egqksbzwgzmbcyajtivtvykcgl9bnpbew
    2026-10-19T01:21:40+00:00 ✅ Degen II (simulace) prodal startupSI·EKos: +4.59 $ (+30 %) - cíl zisku
@@ -91,5 +89,9 @@ POSLEDNÍ UDÁLOSTI:
    2026-10-19T05:04:04+00:00 🧠 Lovec se poučil: když stáří coinu = přes týden, prodělal 6x (průměr -5.9 %) - příště to nekoupí
    2026-10-19T05:05:44+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $106.26 @ 0.0792021, stop 0.0839543 (výplach: objem 12.1x průměru, nové 2h minimum · paměť: podob
    2026-10-19T05:27:14+00:00 🔻 Vlna UZAVŘEL SHORT SUSHI/USD: -3.99 $ (-4.1 %) - stop-loss
+   2026-10-19T05:59:40+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Degen II, Lovec, Stín, Věštec, Degen. Příkazy: /
+   2026-10-19T05:59:40+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
+   2026-10-19T06:01:03+00:00 🟢 Vlna KOUPIL SOL/USD za $165.20 @ 105.703 (vlna: hype 6.7, +2 % za 24 h)
 
 VĚŠTEC: 5 odhadů z posledního skenu

@@ -1,4 +1,3 @@
-Testy OK
 == 4/5 Služba, která běží nonstop a sama se restartuje
 == 5/5 Dashboard s HTTPS (Caddy + adresa zdarma přes sslip.io)
 
@@ -58,3 +57,4 @@ O5eC5lY7ZXY chyba
 2026-10-17T05:59:42Z nasazena verze 4e184f6: Degen II a Lovec si pamatují pauzu po prodeji i přes restart
 2026-10-17T10:31:37Z nasazena verze c571bfd: Degen II a Lovec už nekupují znovu coin, který jim vyhodil stop-loss
 2026-10-18T05:58:09Z nasazena verze 92a8e11: Paměť už nezakazuje rys, který měl skoro každý obchod
+2026-10-19T05:59:39Z nasazena verze a0da1fa: Paměť zakáže rys jen když dopadá hůř než obchody bez něj
