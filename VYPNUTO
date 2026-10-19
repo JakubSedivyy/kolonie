@@ -1,0 +1,4 @@
+Kolonie je vypnutá na přání Jakuba (19. 10. 2026).
+Boti neobchodují, laboratoř neběží, Grok (xAI) se nevolá.
+Pro opětovné zapnutí smaž tento soubor, pushni do main a na serveru spusť:
+  systemctl enable --now colony colony-lab.timer

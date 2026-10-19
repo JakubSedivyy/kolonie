@@ -46,3 +46,11 @@ COSTS = {
 MIN_ORDER_USD = 10.0
 LOOP_SECONDS = 30               # jak často kolonie "dýchá"
 STATE_DIR = os.getenv("STATE_DIR", "state")
+
+
+STOP_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "VYPNUTO")
+
+
+def is_stopped(path: str = None) -> bool:
+    """Kolonie je vypnutá majitelem, když v kořeni repozitáře existuje soubor VYPNUTO."""
+    return os.path.exists(path or STOP_FILE)

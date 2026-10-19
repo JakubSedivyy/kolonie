@@ -145,4 +145,6 @@ def main():
 
 
 if __name__ == "__main__":
+    if config.is_stopped():
+        raise SystemExit("Kolonie je vypnutá (soubor VYPNUTO) - laboratoř neběží.")
     main()

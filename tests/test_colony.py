@@ -845,6 +845,16 @@ def test_lab_params_apply():
     assert o.can_enter(ts) and not o.can_enter(pd.Timestamp("2026-03-02 09:55", tz="America/New_York"))
 
 
+def test_stop_file():
+    import tempfile
+    from colony import config
+    d = tempfile.mkdtemp()
+    f = os.path.join(d, "VYPNUTO")
+    assert not config.is_stopped(f)
+    open(f, "w").write("x")
+    assert config.is_stopped(f)
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

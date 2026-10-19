@@ -47,6 +47,15 @@ else
   exit 0
 fi
 
+# ---------------------------------------------------------------- vypnutí majitelem
+if [ -f VYPNUTO ]; then
+  if systemctl is-active --quiet colony || systemctl is-enabled --quiet colony-lab.timer 2>/dev/null; then
+    systemctl stop colony colony-lab.timer colony-lab.service 2>/dev/null
+    systemctl disable colony colony-lab.timer 2>/dev/null
+    log "KOLONIE VYPNUTA (soubor VYPNUTO) - boti, laboratoř i Grok stojí"
+  fi
+fi
+
 # ---------------------------------------------------------------- 2) hlášení stavu
 STAMP=state/.last_report
 NEWVIDEO=$(python3 - <<'PYV' 2>/dev/null
