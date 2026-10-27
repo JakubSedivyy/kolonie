@@ -44,6 +44,7 @@ COSTS = {
 }
 
 MIN_ORDER_USD = 10.0
+FEE_STOP_MULT = 4                # stop musí být aspoň 4x dál než poplatky+skluz tam i zpět (krypto ~2,4 %, meme ~3,6 %)
 LOOP_SECONDS = 30               # jak často kolonie "dýchá"
 STATE_DIR = os.getenv("STATE_DIR", "state")
 

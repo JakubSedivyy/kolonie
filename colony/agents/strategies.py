@@ -466,3 +466,65 @@ class BearAgent(BarAgent):
         if r["close"] < r["ema50"]:
             return "pád se zastavil (ETF pod EMA 50)"
         return None
+
+
+class CaptainAgent(BarAgent):
+    """KAPITÁN - pomalý trend na velkých kryptoměnách (podle výzkumu "time-series momentum").
+    Proč: krátké obchody na Alpace sežerou poplatky (0,25 % za nákup i prodej). Studie ukazují, že
+    u krypta vydrží trendy týdny až měsíce, takže stačí málo obchodů.
+    Signál: tři páry průměrů (8/24, 16/48 a 32/96 dní). Koupí, když roste aspoň 2 ze 3,
+    prodá až když neroste žádný (méně zbytečných obchodů). Sázka podle kolísavosti:
+    klidný coin dostane víc peněz, divoký méně (tzv. volatility targeting). Nouzový stop podle
+    kolísavosti 6-25 % s posouváním nahoru. Svíčky 4 h, ale rozhoduje podle denních průměrů."""
+    name = "Kapitán"
+    asset_class = "crypto"
+    crypto = True
+    minutes = 240
+    BARS_PER_DAY = 6
+    lookback_bars = 6 * 140            # 96denní průměr potřebuje historii
+    risk_per_trade = 0.02              # při nouzovém stopu ztratí max 2 % peněženky
+    max_position_frac = 0.30
+    max_positions = 4
+    pairs = ((8, 24), (16, 48), (32, 96))
+    vol_days = 30
+    stop_mult = 3.0
+    top_n = 5
+    preferred = ["BTC/USD", "ETH/USD", "SOL/USD", "XRP/USD", "LINK/USD", "LTC/USD", "AVAX/USD", "DOT/USD"]
+
+    def universe(self, ctx):
+        avail = ctx.get("crypto_majors") or self.preferred
+        return [s for s in self.preferred if s in avail][: self.top_n] or avail[: self.top_n]
+
+    def prepare(self, df):
+        df = df.copy()
+        d = self.BARS_PER_DAY
+        votes = 0
+        for fast, slow in self.pairs:
+            votes = votes + (ema(df["close"], fast * d) > ema(df["close"], slow * d)).astype(int)
+        df["votes"] = votes
+        daily = df["close"].pct_change(d)                         # denní změna (z 4h svíček)
+        df["dvol"] = daily.rolling(self.vol_days * d).std()
+        return df
+
+    def _ready(self, df, i):
+        return i >= self.pairs[-1][1] * self.BARS_PER_DAY and not np.isnan(df["dvol"].iloc[i])
+
+    def stop_pct(self, dvol: float) -> float:
+        # ~3 týdenní pohyby; sizing podle stopu = sázka nepřímo úměrná kolísavosti
+        return float(min(0.25, max(0.06, self.stop_mult * dvol * np.sqrt(7))))
+
+    def entry(self, df, i, ctx):
+        if not self._ready(df, i):
+            return None
+        r = df.iloc[i]
+        if r["votes"] < 2:
+            return None
+        sp = self.stop_pct(r["dvol"])
+        return Entry(stop=r["close"] * (1 - sp), trail_pct=sp,
+                     reason=f"dlouhodobý trend nahoru ({int(r['votes'])}/3 průměrů roste), "
+                            f"denní kolísání {r['dvol']*100:.1f} %, stop {sp*100:.0f} %")
+
+    def exit_signal(self, df, i, lot):
+        if df["votes"].iloc[i] == 0:
+            return "trend se otočil (žádný průměr neroste)"
+        return None

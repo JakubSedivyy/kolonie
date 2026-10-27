@@ -54,6 +54,9 @@ if [ -f VYPNUTO ]; then
     systemctl disable colony colony-lab.timer 2>/dev/null
     log "KOLONIE VYPNUTA (soubor VYPNUTO) - boti, laboratoř i Grok stojí"
   fi
+elif ! systemctl is-enabled --quiet colony 2>/dev/null; then
+  # VYPNUTO zmizelo (Jakub chce kolonii zpátky) -> znovu zapnout boty i laboratoř
+  systemctl enable --now colony colony-lab.timer 2>/dev/null && log "KOLONIE ZNOVU ZAPNUTA"
 fi
 
 # ---------------------------------------------------------------- 2) hlášení stavu

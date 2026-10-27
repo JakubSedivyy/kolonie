@@ -13,6 +13,7 @@ v prohlížeči nebo na mobilu a zprávy ti chodí do **Telegramu**.
 | **Šeptač** | meme coiny na Alpace | kupuje, jen když o coinu mluví aspoň 2 různé zdroje (X, 4chan, StockTwits, Telegram…) a cena to potvrzuje | max. 24 hodin |
 | **Lovec** | zavedené meme coiny na Solaně (3+ dny staré, likvidita od $250k) | **jen simulace**: coiny z radaru, které rostou a kupci převažují; cíl +25 %, stop −10 % | max. 2 dny |
 | **Medvěd** | inverzní ETF (SQQQ, SPXS, SOXS…), které rostou, když trh padá | vstup jen když pád potvrzuje trend; stop 2x ATR, trailing | max. 3 dny |
+| **Kapitán** | velké kryptoměny (BTC, ETH, SOL…) | pomalý trend: tři páry denních průměrů (8/24, 16/48, 32/96 dní), koupí když rostou aspoň 2 ze 3, prodá až když neroste žádný; sázka podle kolísavosti | týdny až měsíce |
 | **Degen II** | úplně nové meme coiny na Solaně | **jen simulace**, vzkříšený po smrti prvního Degena: až 2 h staré coiny, likvidita od $100k, 3% sázky, hlídání každých 30 s | max. 4 hodiny |
 | **Stín** | krypto - sázky na pokles (short) | **jen simulace** (Alpaca short krypta neumí): sestupný trend, coin padá 2-15 % za 24 h; nikdy v býčím trhu; poplatky a funding jako na burze | max. 3 dny |
 | **Věštec** | predikční trhy Polymarket | **jen simulace**: Grok přečte X a zprávy, odhadne pravděpodobnost; sází při hraně ≥ 8 b., čtvrtinový Kelly | do vyhodnocení trhu |
@@ -166,3 +167,9 @@ Degen zůstává vždy simulace. Zisky z obchodování se v Česku daní. Tohle 
 | restart po změně .env | `sudo systemctl restart colony` |
 | zastavit | `sudo systemctl stop colony` |
 | testy | `.venv/bin/python tests/test_colony.py` |
+
+## Poplatky (od 27. 10. 2026)
+Alpaca bere u krypta 0,25 % za nákup i prodej, se skluzem je to asi 0,6 % za celý obchod.
+Krypto a meme boti proto nekoupí, když je stop-loss blíž než 4x tyto náklady
+(krypto ~2,4 %, meme ~3,6 %). Takové obchody by po poplatcích skoro nikdy nevydělaly
+(Lovec i Trendy zaplatili na poplatcích skoro tolik, kolik prodělali).

@@ -11,7 +11,7 @@ import pandas as pd
 
 from . import config, survival, report
 from .agents.base import Executor, BarAgent
-from .agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent
+from .agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent
 from .agents.degen import DegenAgent, HunterAgent
 from .agents.shadow import ShadowAgent
 from .broker import AlpacaBroker
@@ -51,7 +51,8 @@ class Colony:
         self.assets = AlpacaAssets(self.broker.tc)
         self.dex = DexScreener()
         self.exec = Executor(self.broker, self.tg.send)
-        self.bar_agents: list[BarAgent] = [OrbitAgent(), TrendAgent(), MemeAgent(), WaveAgent(), WhisperAgent(), BearAgent()]
+        self.bar_agents: list[BarAgent] = [OrbitAgent(), TrendAgent(), MemeAgent(), WaveAgent(), WhisperAgent(), BearAgent(),
+                                           CaptainAgent()]
         self.degen = DegenAgent(self.dex, radar=self.radar)
         self.lovec = HunterAgent(self.dex, radar=self.radar)
         self.stin = ShadowAgent(self.data)
@@ -319,6 +320,8 @@ class Colony:
             skip, usd, note = "", 0.0, ""
             if len(w.lots) >= a.max_positions:
                 skip = "plno pozic"
+            elif not a.fees_ok(price, e.stop):
+                skip = "poplatky by sežraly zisk (stop moc blízko)"
             elif self.blacklist.get(s, 0) >= 2:
                 skip = "dnes už 2x stop-loss"
             elif any(s in o.wallet.lots for o in self.bar_agents if o is not a):

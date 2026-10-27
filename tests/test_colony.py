@@ -16,7 +16,7 @@ from colony import config, survival
 config.TELEGRAM_TOKEN = config.TELEGRAM_CHAT_ID = ""     # testy nikdy nepíšou na skutečný Telegram
 from colony.wallet import Wallet
 from colony.agents.base import Executor, Entry
-from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent
+from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent
 from colony.agents.shadow import ShadowAgent, mirror
 from colony.agents.degen import DegenAgent, HunterAgent
 from colony.broker import SimBroker, Fill
@@ -591,7 +591,7 @@ def test_live_colony_ticks():
     import json
     from colony.dashboard import _jsonable
     snap = json.loads(json.dumps(c.snapshot(now), default=_jsonable))
-    assert len(snap["bots"]) == 10
+    assert len(snap["bots"]) == 11
     assert all("kronika" in b and "lessons" in b for b in snap["bots"])
     assert os.path.exists(os.path.join(config.STATE_DIR, "kronika.txt"))     # hodinový přehled kroniky vznikl
     assert all(isinstance(ok, bool) for e in snap["eval"] for _, ok in e["checks"])
@@ -609,7 +609,7 @@ def test_live_colony_ticks():
     c2 = live.Colony()                                # obnovení ze souboru
     assert "TokCool" in c2.degen.cooldown and "TokOld" not in c2.degen.cooldown, c2.degen.cooldown
     assert "TokL" in c2.lovec.cooldown                # pauza po prodeji přežije restart
-    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Degen II", "Lovec", "Stín", "Věštec", "Degen"]
+    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Kapitán", "Degen II", "Lovec", "Stín", "Věštec", "Degen"]
     assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets) - 796.78) < 1e-6
     snap2 = c2.snapshot(datetime.now(timezone.utc))
     ghost = [b for b in snap2["bots"] if b["name"] == "Degen"][0]
@@ -853,6 +853,43 @@ def test_stop_file():
     assert not config.is_stopped(f)
     open(f, "w").write("x")
     assert config.is_stopped(f)
+
+
+def _bars4h(closes):
+    idx = pd.date_range("2026-01-01", periods=len(closes), freq="4h", tz="UTC")
+    c = pd.Series(closes, index=idx, dtype=float)
+    return pd.DataFrame({"open": c, "high": c * 1.005, "low": c * 0.995, "close": c, "volume": 1.0})
+
+
+def test_captain_slow_trend():
+    rng = np.random.default_rng(1)
+    n = 6 * 150
+    a = CaptainAgent()
+    # pomalý růst s šumem -> koupí, stop 6-25 %, velikost podle kolísavosti
+    up = _bars4h(100 * np.exp(np.cumsum(0.002 + rng.normal(0, 0.01, n))))
+    df = a.prepare(up)
+    e = a.entry(df, len(df) - 1, {})
+    assert e and 0.06 <= (1 - e.stop / df["close"].iloc[-1]) <= 0.25 and e.trail_pct
+    assert a.exit_signal(df, len(df) - 1, None) is None
+    # krátká historie -> nic nedělá (96denní průměr ještě není)
+    assert a.entry(a.prepare(up.iloc[:300]), 299, {}) is None
+    # dlouhý pokles -> nekoupí, držená pozice se prodá
+    down = _bars4h(100 * np.exp(np.cumsum(-0.002 + rng.normal(0, 0.01, n))))
+    dd = a.prepare(down)
+    assert a.entry(dd, len(dd) - 1, {}) is None
+    assert a.exit_signal(dd, len(dd) - 1, None)
+    # klidnější coin dostane větší sázku než divoký
+    a.wallet = Wallet("Kapitán", "crypto")
+    assert a.size_usd(100, 100 * (1 - a.stop_pct(0.02))) > a.size_usd(100, 100 * (1 - a.stop_pct(0.05)))
+
+
+def test_fee_filter():
+    t = TrendAgent()                          # krypto: poplatky+skluz 0,6 % tam i zpět
+    assert not t.fees_ok(100, 98.5)           # stop 1,5 % -> poplatky by sežraly zisk
+    assert t.fees_ok(100, 97)                 # stop 3 % -> ok
+    assert t.fees_ok(100, 103)                # short (stop nad cenou) taky
+    assert OrbitAgent().fees_ok(100, 99.8)    # akcie bez poplatku -> nefiltruje
+    assert MemeAgent().fees_ok(100, 96)       # Memec se stopem 4 % pořád obchoduje
 
 
 if __name__ == "__main__":

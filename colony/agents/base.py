@@ -109,6 +109,16 @@ class BarAgent:
         return False
 
     # --- společná logika ----------------------------------------------------------
+    def fees_ok(self, price: float, stop: float) -> bool:
+        """Obchod má smysl, jen když je stop aspoň FEE_STOP_MULT x (4x) dál než cena nákupu+prodeje.
+        Jinak i úspěšné obchody končí po poplatcích skoro na nule a každý stop bolí dvojnásob
+        (to potopilo Trendyho: stopy ~1-2 %, poplatky a skluz 0,6 % za obchod)."""
+        c = self.wallet.costs
+        if c["fee"] <= 0:                     # akcie na Alpace jsou bez poplatku
+            return True
+        round_trip = 2 * (c["fee"] + c["slip"])
+        return abs(price - stop) / price >= config.FEE_STOP_MULT * round_trip
+
     def size_usd(self, price: float, stop: float, mood_mult: float = 1.0) -> float:
         w = self.wallet
         eq = w.equity()
