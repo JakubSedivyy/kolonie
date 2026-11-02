@@ -1,9 +1,9 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 20 signálů, 0 obchodů, 2 hodinových snímků radaru, 10 událostí
+Celkem zapsáno: 24 signálů, 0 obchodů, 3 hodinových snímků radaru, 11 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
 
 UZAVŘENÉ OBCHODY:
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (2h), CATE (2h), DACITYCOIN (2h), ANAKIN (2h), GTA6 (2h), PEARL (2h), HYPE (2h), KNTQ (2h), STONK (1h), SOL (1h), SUI (1h), MON (1h)
+  BTC (3h), CATE (3h), DACITYCOIN (3h), ANAKIN (3h), GTA6 (3h), PEARL (3h), HYPE (2h), KNTQ (2h), STONK (1h), SOL (1h), SUI (1h), MON (1h), KAS (1h), SI (1h), XRP (1h), NEAR (1h)
