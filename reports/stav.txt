@@ -6,7 +6,8 @@ Trendy [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max p
 
 Memec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Vlna [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Vlna [ALIVE] $999.42 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.25
+   SHORT CRV/USD: prodáno za 0.270893, teď 0.2718 (-0.3 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
 
 Šeptač [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
@@ -18,14 +19,14 @@ Degen II [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max
 
 Lovec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Stín [ALIVE] $999.18 (-0.08 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.45
-   SHORT AAVE/USD: prodáno za 130.781, teď 130.846 (-0.1 %) - sestupný trend, -4.3 % za 24 h
-   SHORT AVAX/USD: prodáno za 8.55122, teď 8.5555 (-0.1 %) - sestupný trend, -2.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.85e-06 (-0.1 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $998.98 (-0.10 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.45
+   SHORT AAVE/USD: prodáno za 130.781, teď 131.361 (-0.4 %) - sestupný trend, -4.3 % za 24 h
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.5584 (-0.1 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.84e-06 (+0.3 %) - sestupný trend, -3.4 % za 24 h
 
 Věštec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10999.18 z $11000 (-0.01 %)
+CELKEM $10998.40 z $11000 (-0.01 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-02T11:46:37+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
@@ -35,3 +36,8 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-02T11:47:31+00:00 🐻 Stín (simulace) otevřel short BONK/USD za $250 @ 2.85e-06, stop 2.964e-06 - sestupný trend, -3.4 % za 24 h
    2026-11-02T11:48:27+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
    2026-11-02T11:48:28+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-02T12:00:48+00:00 🐻 Vlna (simulace) SHORT CRV/USD za $100.20 @ 0.271029, stop 0.28729 (sestupná vlna: propad pod 3denní minimum, -5 % za 24 h)
+   2026-11-02T12:04:46+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
+   2026-11-02T12:04:58+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-02T12:23:59+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
