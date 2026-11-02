@@ -1,1 +1,37 @@
-Kolonie ještě neuložila žádný stav.
+ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
+
+Orbit [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Trendy [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Memec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Vlna [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Šeptač [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Medvěd [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Kapitán [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Degen II [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Lovec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+Stín [ALIVE] $999.18 (-0.08 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.45
+   SHORT AAVE/USD: prodáno za 130.781, teď 130.846 (-0.1 %) - sestupný trend, -4.3 % za 24 h
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.5555 (-0.1 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.85e-06 (-0.1 %) - sestupný trend, -3.4 % za 24 h
+
+Věštec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+
+CELKEM $10999.18 z $11000 (-0.01 %)
+
+POSLEDNÍ UDÁLOSTI:
+   2026-11-02T11:46:37+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
+   2026-11-02T11:46:38+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-02T11:47:31+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $250 @ 130.846, stop 136.08 - sestupný trend, -4.3 % za 24 h
+   2026-11-02T11:47:31+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $250 @ 8.5555, stop 8.89772 - sestupný trend, -2.7 % za 24 h
+   2026-11-02T11:47:31+00:00 🐻 Stín (simulace) otevřel short BONK/USD za $250 @ 2.85e-06, stop 2.964e-06 - sestupný trend, -3.4 % za 24 h
+   2026-11-02T11:48:27+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
+   2026-11-02T11:48:28+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
