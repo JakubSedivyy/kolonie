@@ -51,6 +51,26 @@ class Memory:
         self.data.setdefault("bots", {})
         self.data.setdefault("seen", {})
 
+    def import_once(self, path: str) -> int:
+        """Převezme zkušenosti ze staré paměti (např. z minulého serveru). Každý soubor jen jednou.
+        Staré řádky jdou před nové, takže nejnovější obchody mají pořád přednost a MAX_TRADES platí."""
+        tag = os.path.basename(path)
+        if tag in self.data.setdefault("imported", []) or not os.path.exists(path):
+            return 0
+        try:
+            old = json.load(open(path)).get("bots", {})
+        except Exception as e:
+            log.warning("import paměti %s: %s", path, e)
+            return 0
+        n = 0
+        for bot, rows in old.items():
+            cur = self.data["bots"].setdefault(bot, [])
+            self.data["bots"][bot] = (list(rows) + cur)[-MAX_TRADES:]
+            n += len(rows)
+        self.data["imported"].append(tag)
+        self.save()
+        return n
+
     def save(self):
         os.makedirs(os.path.dirname(self.path) or ".", exist_ok=True)
         tmp = self.path + ".tmp"

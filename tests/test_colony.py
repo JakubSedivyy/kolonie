@@ -892,6 +892,20 @@ def test_fee_filter():
     assert MemeAgent().fees_ok(100, 96)       # Memec se stopem 4 % pořád obchoduje
 
 
+def test_memory_import_once():
+    from colony.memory import Memory
+    d = tempfile.mkdtemp()
+    old = os.path.join(d, "stara.json")
+    json.dump({"bots": {"Lovec": [{"f": {"a": "1"}, "r": -0.1, "t": "x", "w": 1.0}]}, "seen": {"Lovec": 17}}, open(old, "w"))
+    m = Memory(os.path.join(d, "memory.json"))
+    m.record("Lovec", {"a": "2"}, 0.05)
+    assert m.import_once(old) == 1
+    assert [r["f"]["a"] for r in m.data["bots"]["Lovec"]] == ["1", "2"]     # staré před novými
+    assert m.data["seen"] == {}                                              # počítadla se nepřebírají
+    assert Memory(os.path.join(d, "memory.json")).import_once(old) == 0     # podruhé už ne
+    assert m.import_once(os.path.join(d, "neni.json")) == 0
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

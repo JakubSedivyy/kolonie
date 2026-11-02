@@ -59,6 +59,11 @@ class Colony:
         self.oracle = OracleAgent(self.grok)
         self.lab, self._lab_mtime, self._lab_checked = {}, 0.0, 0.0
         self.memory = Memory(os.path.join(config.STATE_DIR, "memory.json"))
+        # zkušenosti z prvního běhu (14.-19. 10. 2026, starý server) - převezmou se jen jednou
+        n = self.memory.import_once(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                                                 "learning", "pamet-2026-10-19.json"))
+        if n:
+            log.info("paměť: převzato %d zkušeností z minulého běhu", n)
         self.kronika = Kronika(os.path.join(config.STATE_DIR, "kronika.db"))
         self._kronika_hour = ""
         self._skip_told: set = set()
