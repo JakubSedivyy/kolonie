@@ -20,14 +20,14 @@ Degen II [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max
 Lovec [ALIVE] $991.07 (-0.89 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.62
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
 
-Stín [ALIVE] $995.14 (-0.49 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.45
-   SHORT AAVE/USD: prodáno za 130.781, teď 131.987 (-0.9 %) - sestupný trend, -4.3 % za 24 h
-   SHORT AVAX/USD: prodáno za 8.55122, teď 8.58915 (-0.4 %) - sestupný trend, -2.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.86e-06 (-0.4 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $999.31 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.45
+   SHORT AAVE/USD: prodáno za 130.781, teď 131.6 (-0.6 %) - sestupný trend, -4.3 % za 24 h
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.5615 (-0.1 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.83e-06 (+0.7 %) - sestupný trend, -3.4 % za 24 h
 
 Věštec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10985.63 z $11000 (-0.13 %)
+CELKEM $10989.80 z $11000 (-0.09 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-02T11:46:37+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
