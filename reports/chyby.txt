@@ -1,7 +1,6 @@
-Nov 02 20:06:42 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 20:06:42,960 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 20:10:42 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 20:10:42,483 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 20:20:43 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 20:20:43,070 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 20:30:45 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 20:30:45,818 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 20:40:43 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 20:40:43,312 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 20:48:22 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 20:48:22,730 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 02 20:50:42 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 20:50:42,883 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 21:10:41 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 21:10:41,320 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 21:20:41 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 21:20:41,232 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 21:30:42 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 21:30:42,661 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 21:40:41 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 21:40:41,116 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 21:49:50 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 21:49:50,445 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 02 21:50:50 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 21:50:50,985 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
