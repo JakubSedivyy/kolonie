@@ -4,11 +4,12 @@ Orbit [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max pr
 
 Trendy [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Memec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Memec [ALIVE] $999.61 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.15
+   SHORT DOGE/USD: prodáno za 0.0736065, teď 0.0738916 (-0.4 %) - výplach: objem 119.0x průměru, nové 2h minimum · paměť: podobné obchod
 
-Vlna [ALIVE] $998.31 (-0.17 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.3 %, poplatky $0.75
-   SHORT CRV/USD: prodáno za 0.270893, teď 0.27113 (-0.1 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
-   SHORT BCH/USD: prodáno za 274.668, teď 274.91 (-0.1 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
+Vlna [ALIVE] $1000.16 (+0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.3 %, poplatky $0.75
+   SHORT CRV/USD: prodáno za 0.270893, teď 0.268727 (+0.8 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
+   SHORT BCH/USD: prodáno za 274.668, teď 272.27 (+0.9 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
    SHORT BONK/USD: prodáno za 2.8086e-06, teď 2.83e-06 (-0.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h
 
 Šeptač [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
@@ -22,17 +23,16 @@ Degen II [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max
 Lovec [ALIVE] $991.07 (-0.89 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $0.62
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
 
-Stín [ALIVE] $1005.22 (+0.52 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.45
-   SHORT AAVE/USD: prodáno za 130.781, teď 130.445 (+0.3 %) - sestupný trend, -4.3 % za 24 h
-   SHORT AVAX/USD: prodáno za 8.55122, teď 8.4949 (+0.7 %) - sestupný trend, -2.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.81e-06 (+1.4 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $1008.73 (+0.87 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.45
+   SHORT AAVE/USD: prodáno za 130.781, teď 129.75 (+0.8 %) - sestupný trend, -4.3 % za 24 h
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.45039 (+1.2 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.8e-06 (+1.7 %) - sestupný trend, -3.4 % za 24 h
 
 Věštec [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10994.60 z $11000 (-0.05 %)
+CELKEM $10999.57 z $11000 (-0.00 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-02T11:46:38+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-02T11:47:31+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $250 @ 130.846, stop 136.08 - sestupný trend, -4.3 % za 24 h
    2026-11-02T11:47:31+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $250 @ 8.5555, stop 8.89772 - sestupný trend, -2.7 % za 24 h
    2026-11-02T11:47:31+00:00 🐻 Stín (simulace) otevřel short BONK/USD za $250 @ 2.85e-06, stop 2.964e-06 - sestupný trend, -3.4 % za 24 h
@@ -48,3 +48,4 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-02T14:50:54+00:00 🔻 Lovec (simulace) prodal DESSA·npz2: -8.93 $ (-13 %) - stop-loss
    2026-11-02T16:01:23+00:00 🐻 Vlna (simulace) SHORT BCH/USD za $100.14 @ 274.805, stop 291.293 (sestupná vlna: propad pod 3denní minimum, -3 % za 24 h)
    2026-11-02T16:01:24+00:00 🐻 Vlna (simulace) SHORT BONK/USD za $100.12 @ 2.81e-06, stop 2.9786e-06 (sestupná vlna: propad pod 3denní minimum, -4 % za 24 h)
+   2026-11-02T17:40:47+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $61.11 @ 0.073754, stop 0.0781792 (výplach: objem 119.0x průměru, nové 2h minimum · paměť: podobn
