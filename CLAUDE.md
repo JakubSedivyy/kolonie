@@ -3,7 +3,7 @@
 Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, bez žargonu.
 
 ## Jak to běží
-- Server Hetzner 37.27.159.131 spouští kolonii (`run.py`, služba `colony`) 24/7 na **papírovém** účtu Alpaca.
+- Server Hetzner 2.29.158.122 spouští kolonii (`run.py`, služba `colony`) 24/7 na **papírovém** účtu Alpaca.
 - Server každých 15 min stáhne větev `main` (`deploy/sync.sh`). Nasadí ji jen když projdou testy
   `python tests/test_colony.py`, jinak zůstane na staré verzi.
 - Jednou za hodinu server nahraje do větve `reports` složku `reports/`:
