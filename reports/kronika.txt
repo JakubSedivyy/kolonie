@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 27 signálů, 1 obchodů, 5 hodinových snímků radaru, 14 událostí
+Celkem zapsáno: 34 signálů, 1 obchodů, 6 hodinových snímků radaru, 16 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
 
@@ -7,4 +7,4 @@ UZAVŘENÉ OBCHODY:
   Lovec     |   1 obchodů, 0 výher, průměr -13.4 %, celkem -8.93 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (5h), CATE (5h), DACITYCOIN (5h), ANAKIN (5h), GTA6 (5h), PEARL (3h), SOL (3h), SI (3h), XRP (3h), HYPE (2h), KNTQ (2h), NEAR (2h), WASTED (2h), STONK (1h), SUI (1h), MON (1h), KAS (1h), ETH (1h)
+  BTC (6h), CATE (6h), DACITYCOIN (6h), ANAKIN (6h), GTA6 (5h), SI (4h), XRP (4h), PEARL (3h), SOL (3h), KNTQ (3h), WASTED (3h), STONK (2h), HYPE (2h), NEAR (2h), ETH (2h), SUI (1h), MON (1h), KAS (1h)
