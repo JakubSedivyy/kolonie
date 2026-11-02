@@ -1,6 +1,7 @@
-Nov 02 13:10:35 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 13:10:35,082 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 13:16:47 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 13:16:47,783 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 02 13:20:35 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 13:20:35,390 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 13:30:36 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 13:30:36,189 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 13:40:35 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 13:40:35,100 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 02 13:50:35 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 13:50:35,318 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 14:10:44 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 14:10:44,351 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 14:20:54 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 14:20:54,697 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 14:28:55 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 14:28:55,022 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 02 14:30:46 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 14:30:46,287 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 14:35:13 ubuntu-1gb-hel1-1 python[4230]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+Nov 02 14:40:45 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 14:40:45,320 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 02 14:50:55 ubuntu-1gb-hel1-1 python[4230]: 2026-11-02 14:50:55,056 WARNING colony.grok: grok: HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
