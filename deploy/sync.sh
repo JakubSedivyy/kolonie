@@ -9,6 +9,9 @@ cd "$(dirname "$0")/.."
 DIR="$(pwd)"
 REPO="${KOLONIE_REPO:-$(grep '^KOLONIE_REPO=' .env 2>/dev/null | cut -d= -f2-)}"
 REPO="${REPO:-git@github.com:JakubSedivyy/kolonie.git}"
+# kód se stahuje přes HTTPS (repozitář je veřejný, funguje i bez klíče);
+# SSH deploy key je potřeba jen pro odeslání hlášení do větve reports
+PUB="https://github.com/JakubSedivyy/kolonie.git"
 export GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=accept-new -o BatchMode=yes"
 LOG=state/sync.log
 mkdir -p state
@@ -16,9 +19,9 @@ log() { echo "$(date -u +%FT%TZ) $*" >> "$LOG"; tail -n 300 "$LOG" > "$LOG.tmp" 
 
 # ---------------------------------------------------------------- 1) nová verze
 if [ ! -d .git ]; then
-  git init -q && git remote add origin "$REPO"
+  git init -q && git remote add origin "$PUB"
 fi
-git remote set-url origin "$REPO"
+git remote set-url origin "$PUB"
 if git fetch -q origin main 2>>"$LOG"; then
   NEW=$(git rev-parse origin/main)
   OLD=$(git rev-parse -q --verify HEAD 2>/dev/null || echo "")
@@ -74,9 +77,10 @@ fi
 R=/root/kolonie-reports
 if [ ! -d "$R/.git" ]; then
   rm -rf "$R"
-  git clone -q --branch reports "$REPO" "$R" 2>/dev/null || {
-    git init -q "$R" && git -C "$R" remote add origin "$REPO" && git -C "$R" checkout -q --orphan reports; }
+  git clone -q --branch reports "$PUB" "$R" 2>/dev/null || {
+    git init -q "$R" && git -C "$R" remote add origin "$PUB" && git -C "$R" checkout -q --orphan reports; }
 fi
+git -C "$R" remote set-url origin "$PUB"
 git -C "$R" pull -q --rebase origin reports 2>/dev/null || true
 mkdir -p "$R/reports"
 .venv/bin/python stav.py > "$R/reports/stav.txt" 2>&1
@@ -99,7 +103,7 @@ grep -v -i "heslo\|password" "$LOG" | tail -n 60 > "$R/reports/sync.log"
 git -C "$R" add -A reports
 if ! git -C "$R" diff --cached --quiet; then
   git -C "$R" -c user.name="Kolonie" -c user.email="kolonie@server" commit -q -m "stav $(date -u +%F' '%H:%M) UTC"
-  git -C "$R" push -q origin reports 2>>"$LOG" && touch "$STAMP" || log "push reportu selhal"
+  git -C "$R" push -q "$REPO" HEAD:reports 2>>"$LOG" && touch "$STAMP" || log "push reportu selhal"
 else
   touch "$STAMP"
 fi
