@@ -2,8 +2,8 @@
 
 Orbit [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Trendy [ALIVE] $999.99 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
-   SHORT SOL/USD: prodáno za 92.02, teď 91.764 (+0.3 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
+Trendy [ALIVE] $998.97 (-0.10 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
+   SHORT SOL/USD: prodáno za 92.02, teď 92.42 (-0.4 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
 
 Memec [ALIVE] $999.42 (-0.06 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.3
    2026-11-02T21:41 DOGE/USD: -0.53 $ (-0.9 %) časový limit
@@ -21,18 +21,18 @@ Kapitán [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
 
 Degen II [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $989.34 (-1.07 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $0.91
-   otevřeno FLOAT·Bv1a: nákup 0.00386325, teď 0.00377 (-2.4 %) - skóre 2.8 · paměť: podobné obchody -4.2 % -> sázka 0.6x
+Lovec [ALIVE] $991.92 (-0.81 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $0.91
+   otevřeno FLOAT·Bv1a: nákup 0.00386325, teď 0.003943 (+2.1 %) - skóre 2.8 · paměť: podobné obchody -4.2 % -> sázka 0.6x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
 
-Stín [ALIVE] $1018.06 (+1.81 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $0.45
-   SHORT AAVE/USD: prodáno za 130.781, teď 126.356 (+3.4 %) - sestupný trend, -4.3 % za 24 h
-   SHORT AVAX/USD: prodáno za 8.55122, teď 8.381 (+2.0 %) - sestupný trend, -2.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.79e-06 (+2.1 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $1017.38 (+1.74 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $0.45
+   SHORT AAVE/USD: prodáno za 130.781, teď 126.181 (+3.5 %) - sestupný trend, -4.3 % za 24 h
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.386 (+1.9 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.8e-06 (+1.7 %) - sestupný trend, -3.4 % za 24 h
 
 Věštec [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11008.21 z $11000 (+0.07 %)
+CELKEM $11009.09 z $11000 (+0.08 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-02T11:48:28+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
