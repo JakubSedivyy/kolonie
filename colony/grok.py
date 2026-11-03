@@ -20,6 +20,7 @@ URL = "https://api.x.ai/v1/responses"
 PRICE_IN, PRICE_OUT = 2.0 / 1e6, 6.0 / 1e6
 PRICE_POST, PRICE_USER = 5.0 / 1000, 10.0 / 1000
 PRICE_WEB = 10.0 / 1000          # odhad za 1 webové hledání
+KEY_PAUSE_H = 6                  # pauza po odmítnutém API klíči
 
 
 def extract_json(text: str):
@@ -43,6 +44,7 @@ class Grok:
         self.s = session or requests.Session()
         self.path = os.path.join(config.STATE_DIR, "grok_budget.json")
         self.day, self.spent, self.calls, self.last_error = "", 0.0, 0, ""
+        self.paused_until = None        # po špatném klíči nezkoušej Grok každých 10 min znovu
         self._load()
 
     @property
@@ -79,6 +81,8 @@ class Grok:
         reserve = kolik si musí nechat v rozpočtu, aby vůbec začal (hrubý odhad ceny 1 dotazu)."""
         if not self.enabled or self.remaining() < reserve:
             return None
+        if self.paused_until and datetime.now(timezone.utc) < self.paused_until:
+            return None
         body = {"input": [{"role": "user", "content": prompt}], "max_turns": max_turns}
         if x_search:
             frm = (datetime.now(timezone.utc) - timedelta(hours=hours)).strftime("%Y-%m-%d")
@@ -99,7 +103,12 @@ class Grok:
                 continue
             if r.status_code != 200:
                 self.last_error = f"HTTP {r.status_code}: {r.text[:200]}"
-                log.warning("grok: %s", self.last_error)
+                if r.status_code in (400, 401, 403) and "api key" in r.text.lower():
+                    self.paused_until = datetime.now(timezone.utc) + timedelta(hours=KEY_PAUSE_H)
+                    log.warning("grok: neplatný XAI_API_KEY - pauza %d h (oprav klíč v .env na serveru): %s",
+                                KEY_PAUSE_H, self.last_error)
+                else:
+                    log.warning("grok: %s", self.last_error)
                 return None
             j = r.json()
             self._account(j)

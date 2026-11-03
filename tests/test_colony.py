@@ -796,6 +796,24 @@ def test_grok_budget_and_parsing():
     os.environ.pop("XAI_API_KEY")
 
 
+def test_grok_bad_key_pauses():
+    from colony.grok import Grok
+    class BadKey:
+        def __init__(self): self.n = 0
+        def post(self, url, json=None, **kw):
+            self.n += 1
+            r = FakeResp({}); r.status_code = 400
+            r.text = '{"code":"invalid-argument","error":"Incorrect API key provided."}'
+            return r
+    os.environ["XAI_API_KEY"] = "spatny"
+    g = Grok(session=BadKey()); g.spent = 0; g.day = ""
+    assert g.ask("x") is None and g.s.n == 1
+    assert g.ask("x") is None and g.s.n == 1                  # během pauzy se dotaz neodešle
+    g.paused_until = datetime.now(timezone.utc) - timedelta(seconds=1)
+    g.ask("x"); assert g.s.n == 2                             # po pauze to zkusí znovu
+    os.environ.pop("XAI_API_KEY")
+
+
 class FakeGamma:
     headers = {}
     def __init__(self):
