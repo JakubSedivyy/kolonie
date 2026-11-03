@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 123 signálů, 5 obchodů, 25 hodinových snímků radaru, 37 událostí
+Celkem zapsáno: 125 signálů, 5 obchodů, 26 hodinových snímků radaru, 39 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 0, průměr -49.3 %
@@ -12,4 +12,4 @@ UZAVŘENÉ OBCHODY:
   Stín      |   1 obchodů, 1 výher, průměr +1.4 %, celkem +3.43 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (25h), CATE (25h), ANAKIN (23h), XRP (23h), DACITYCOIN (18h), ETH (15h), SOL (14h), SUI (14h), HYPE (12h), SI (11h), NEAR (10h), WASTED (9h), ANSEM (8h), PEARL (7h), GTA6 (6h), MON (6h), KNTQ (4h), CAPY (4h), PUMP (3h), STONK (2h)
+  BTC (26h), CATE (26h), XRP (24h), ANAKIN (23h), DACITYCOIN (19h), SUI (15h), ETH (15h), SOL (14h), HYPE (12h), SI (12h), NEAR (11h), WASTED (10h), ANSEM (8h), PEARL (7h), GTA6 (6h), MON (6h), CAPY (5h), KNTQ (4h), PUMP (3h), STONK (2h)
