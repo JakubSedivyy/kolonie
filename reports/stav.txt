@@ -2,15 +2,15 @@
 
 Orbit [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Trendy [ALIVE] $1000.07 (+0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
-   SHORT SOL/USD: prodáno za 92.02, teď 91.71 (+0.3 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
+Trendy [ALIVE] $999.34 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
+   SHORT SOL/USD: prodáno za 92.02, teď 92.179 (-0.2 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
 
 Memec [ALIVE] $998.75 (-0.13 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.61
    2026-11-02T21:41 DOGE/USD: -0.53 $ (-0.9 %) časový limit
    2026-11-03T06:10 DOGE/USD: -0.67 $ (-1.1 %) časový limit
 
-Vlna [ALIVE] $1003.62 (+0.36 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.75
-   SHORT CRV/USD: prodáno za 0.270893, teď 0.26094 (+3.7 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
+Vlna [ALIVE] $1003.25 (+0.32 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.75
+   SHORT CRV/USD: prodáno za 0.270893, teď 0.261938 (+3.3 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
    SHORT BCH/USD: prodáno za 274.668, teď 275.421 (-0.3 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
    SHORT BONK/USD: prodáno za 2.8086e-06, teď 2.78e-06 (+1.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h
 
@@ -22,21 +22,20 @@ Kapitán [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
 
 Degen II [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $991.79 (-0.82 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.4 %, poplatky $0.91
-   otevřeno FLOAT·Bv1a: nákup 0.00386325, teď 0.003934 (+1.8 %) - skóre 2.8 · paměť: podobné obchody -4.2 % -> sázka 0.6x
+Lovec [ALIVE] $986.98 (-1.30 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.4 %, poplatky $0.91
+   otevřeno FLOAT·Bv1a: nákup 0.00386325, teď 0.003612 (-6.5 %) - skóre 2.8 · paměť: podobné obchody -4.2 % -> sázka 0.6x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
 
-Stín [ALIVE] $1018.42 (+1.84 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.8 %, poplatky $0.45
-   SHORT AAVE/USD: prodáno za 130.781, teď 127.609 (+2.4 %) - sestupný trend, -4.3 % za 24 h
-   SHORT AVAX/USD: prodáno za 8.55122, teď 8.37695 (+2.0 %) - sestupný trend, -2.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.76e-06 (+3.1 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $1012.77 (+1.28 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 1.4 %, poplatky $0.6
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.45544 (+1.1 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.77e-06 (+2.8 %) - sestupný trend, -3.4 % za 24 h
+   2026-11-03T10:00 AAVE/USD: +3.43 $ (+1.4 %) trailing stop
 
 Věštec [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11012.35 z $11000 (+0.11 %)
+CELKEM $11000.79 z $11000 (+0.01 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-03T00:38:29+00:00 🏹 Lovec (simulace) koupil FLOAT·Bv1a za $58, likvidita $403,463 - https://dexscreener.com/solana/fjk9sajdc2q4herppu3ylzkmf2zbyzkpihqlv
    2026-11-03T02:10:21+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $61.05 @ 0.07396, stop 0.0783976 (výplach: objem 8.1x průměru, nové 2h minimum · paměť: podobné o
    2026-11-03T06:10:47+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -0.67 $ (-1.1 %) - časový limit
    2026-11-03T06:15:43+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
@@ -55,3 +54,4 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-03T07:03:23+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-11-03T07:03:25+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-03T10:01:05+00:00 ✅ Stín (simulace) uzavřel short AAVE/USD: +3.43 $ (+1.4 %) - trailing stop
