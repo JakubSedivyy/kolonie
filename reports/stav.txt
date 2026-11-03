@@ -2,16 +2,16 @@
 
 Orbit [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Trendy [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
-   SHORT SOL/USD: prodáno za 92.02, teď 91.948 (+0.1 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
+Trendy [ALIVE] $1000.07 (+0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
+   SHORT SOL/USD: prodáno za 92.02, teď 91.71 (+0.3 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
 
 Memec [ALIVE] $998.75 (-0.13 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.61
    2026-11-02T21:41 DOGE/USD: -0.53 $ (-0.9 %) časový limit
    2026-11-03T06:10 DOGE/USD: -0.67 $ (-1.1 %) časový limit
 
-Vlna [ALIVE] $1004.18 (+0.42 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.75
-   SHORT CRV/USD: prodáno za 0.270893, teď 0.26038 (+3.9 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
-   SHORT BCH/USD: prodáno za 274.668, teď 274.446 (+0.1 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
+Vlna [ALIVE] $1003.62 (+0.36 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.75
+   SHORT CRV/USD: prodáno za 0.270893, teď 0.26094 (+3.7 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
+   SHORT BCH/USD: prodáno za 274.668, teď 275.421 (-0.3 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
    SHORT BONK/USD: prodáno za 2.8086e-06, teď 2.78e-06 (+1.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h
 
 Šeptač [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
@@ -22,18 +22,18 @@ Kapitán [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
 
 Degen II [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $988.85 (-1.12 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.4 %, poplatky $0.91
-   otevřeno FLOAT·Bv1a: nákup 0.00386325, teď 0.003737 (-3.3 %) - skóre 2.8 · paměť: podobné obchody -4.2 % -> sázka 0.6x
+Lovec [ALIVE] $991.79 (-0.82 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.4 %, poplatky $0.91
+   otevřeno FLOAT·Bv1a: nákup 0.00386325, teď 0.003934 (+1.8 %) - skóre 2.8 · paměť: podobné obchody -4.2 % -> sázka 0.6x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
 
-Stín [ALIVE] $1021.93 (+2.19 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $0.45
-   SHORT AAVE/USD: prodáno za 130.781, teď 126.957 (+2.9 %) - sestupný trend, -4.3 % za 24 h
-   SHORT AVAX/USD: prodáno za 8.55122, teď 8.32937 (+2.6 %) - sestupný trend, -2.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.75e-06 (+3.5 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $1018.42 (+1.84 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.8 %, poplatky $0.45
+   SHORT AAVE/USD: prodáno za 130.781, teď 127.609 (+2.4 %) - sestupný trend, -4.3 % za 24 h
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.37695 (+2.0 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.76e-06 (+3.1 %) - sestupný trend, -3.4 % za 24 h
 
 Věštec [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11013.11 z $11000 (+0.12 %)
+CELKEM $11012.35 z $11000 (+0.11 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-03T00:38:29+00:00 🏹 Lovec (simulace) koupil FLOAT·Bv1a za $58, likvidita $403,463 - https://dexscreener.com/solana/fjk9sajdc2q4herppu3ylzkmf2zbyzkpihqlv
