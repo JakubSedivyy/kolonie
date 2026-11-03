@@ -22,25 +22,24 @@ Kapitán [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
 
 Degen II [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $986.07 (-1.39 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $1.43
-   otevřeno STONK·6GmA: nákup 0.107767, teď 0.1123 (+4.2 %) - skóre 2.2 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+Lovec [ALIVE] $985.68 (-1.43 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $1.43
+   otevřeno STONK·6GmA: nákup 0.107767, teď 0.1115 (+3.5 %) - skóre 2.2 · paměť: podobné obchody -4.8 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $999.26 (-0.07 %) | obchodů 3, úspěšnost 67 %, PF 2.08, max propad 2.7 %, poplatky $1.32
-   SHORT CRV/USD: prodáno za 0.262099, teď 0.264108 (-0.8 %) - sestupný trend, -3.7 % za 24 h
-   SHORT BAT/USD: prodáno za 0.126472, teď 0.12657 (-0.1 %) - sestupný trend, -3.5 % za 24 h
-   SHORT TRUMP/USD: prodáno za 1.5968, teď 1.5976 (-0.1 %) - sestupný trend, -2.2 % za 24 h
+Stín [ALIVE] $997.80 (-0.22 %) | obchodů 3, úspěšnost 67 %, PF 2.08, max propad 2.8 %, poplatky $1.32
+   SHORT CRV/USD: prodáno za 0.262099, teď 0.264 (-0.7 %) - sestupný trend, -3.7 % za 24 h
+   SHORT BAT/USD: prodáno za 0.126472, teď 0.126866 (-0.3 %) - sestupný trend, -3.5 % za 24 h
+   SHORT TRUMP/USD: prodáno za 1.5968, teď 1.6055 (-0.5 %) - sestupný trend, -2.2 % za 24 h
    2026-11-03T10:00 AAVE/USD: +3.43 $ (+1.4 %) trailing stop
    2026-11-03T13:00 AVAX/USD: -1.80 $ (-0.7 %) stop-loss
    2026-11-03T13:00 BONK/USD: +0.32 $ (+0.1 %) trailing stop
 
 Věštec [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10983.02 z $11000 (-0.15 %)
+CELKEM $10981.17 z $11000 (-0.17 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-03T06:17:49+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
    2026-11-03T06:17:49+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-11-03T06:17:51+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
@@ -57,3 +56,4 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-03T13:02:00+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $249 @ 0.126535, stop 0.131596 - sestupný trend, -3.5 % za 24 h
    2026-11-03T13:02:00+00:00 ✅ Stín (simulace) uzavřel short BONK/USD: +0.32 $ (+0.1 %) - trailing stop
    2026-11-03T14:01:13+00:00 🐻 Stín (simulace) otevřel short TRUMP/USD za $200 @ 1.5976, stop 1.67632 - sestupný trend, -2.2 % za 24 h
+   2026-11-03T14:35:14+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, HUBC, MERC, INLF, RBNE, SGRX, SOXL, SHFS, PARA, SURG, GRAB
