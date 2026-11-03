@@ -2,8 +2,8 @@
 
 Orbit [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Trendy [ALIVE] $1000.60 (+0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
-   SHORT SOL/USD: prodáno za 92.02, teď 91.37 (+0.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
+Trendy [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.36
+   SHORT SOL/USD: prodáno za 92.02, teď 91.948 (+0.1 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: podobn
 
 Memec [ALIVE] $998.75 (-0.13 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.61
    2026-11-02T21:41 DOGE/USD: -0.53 $ (-0.9 %) časový limit
@@ -26,21 +26,16 @@ Lovec [ALIVE] $988.85 (-1.12 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max pro
    otevřeno FLOAT·Bv1a: nákup 0.00386325, teď 0.003737 (-3.3 %) - skóre 2.8 · paměť: podobné obchody -4.2 % -> sázka 0.6x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
 
-Stín [ALIVE] $1026.59 (+2.66 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $0.45
-   SHORT AAVE/USD: prodáno za 130.781, teď 125.495 (+4.0 %) - sestupný trend, -4.3 % za 24 h
-   SHORT AVAX/USD: prodáno za 8.55122, teď 8.29559 (+3.0 %) - sestupný trend, -2.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.74e-06 (+3.8 %) - sestupný trend, -3.4 % za 24 h
+Stín [ALIVE] $1021.93 (+2.19 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $0.45
+   SHORT AAVE/USD: prodáno za 130.781, teď 126.957 (+2.9 %) - sestupný trend, -4.3 % za 24 h
+   SHORT AVAX/USD: prodáno za 8.55122, teď 8.32937 (+2.6 %) - sestupný trend, -2.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.84858e-06, teď 2.75e-06 (+3.5 %) - sestupný trend, -3.4 % za 24 h
 
 Věštec [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11018.67 z $11000 (+0.17 %)
+CELKEM $11013.11 z $11000 (+0.12 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-02T18:01:06+00:00 🐻 Trendy (simulace) SHORT SOL/USD za $143.77 @ 92.066, stop 94.3382 (propad pod 24-svíčkové minimum pod EMA 200, ATR 0.99 % · paměť: p
-   2026-11-02T21:15:10+00:00 📊 Denní souhrn 02.11. · nálada trhu: risk_off
-🟢 Orbit: $1000.00 (+0.0 %) · 0 obch. · úspěšnost 0 % · PF 0.00
-🟢 Trendy: $1000.32 (+0.0 
-   2026-11-02T21:41:10+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -0.53 $ (-0.9 %) - časový limit
    2026-11-03T00:38:29+00:00 🏹 Lovec (simulace) koupil FLOAT·Bv1a za $58, likvidita $403,463 - https://dexscreener.com/solana/fjk9sajdc2q4herppu3ylzkmf2zbyzkpihqlv
    2026-11-03T02:10:21+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $61.05 @ 0.07396, stop 0.0783976 (výplach: objem 8.1x průměru, nové 2h minimum · paměť: podobné o
    2026-11-03T06:10:47+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -0.67 $ (-1.1 %) - časový limit
@@ -56,3 +51,7 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-03T06:17:49+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-11-03T06:17:51+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-03T07:03:23+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
+   2026-11-03T07:03:23+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
+   2026-11-03T07:03:25+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
