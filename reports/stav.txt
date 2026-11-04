@@ -13,32 +13,32 @@ Memec [ALIVE] $994.38 (-0.56 %) | obchodů 6, úspěšnost 17 %, PF 0.03, max pr
    2026-11-04T11:45 BONK/USD: -0.26 $ (-0.2 %) časový limit
    2026-11-04T12:20 DOGE/USD: -2.18 $ (-2.1 %) časový limit
 
-Vlna [ALIVE] $993.79 (-0.62 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.5 %, poplatky $1.23
+Vlna [ALIVE] $992.51 (-0.75 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.6 %, poplatky $1.23
    SHORT CRV/USD: prodáno za 0.270893, teď 0.271037 (-0.1 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
-   SHORT BCH/USD: prodáno za 274.668, teď 273.383 (+0.5 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
-   otevřeno UNI/USD: nákup 7.32627, teď 7.3106 (-0.2 %) - vlna: hype 3.2, +4 % za 24 h
+   SHORT BCH/USD: prodáno za 274.668, teď 274.8 (-0.0 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
+   otevřeno UNI/USD: nákup 7.32627, teď 7.2532 (-1.0 %) - vlna: hype 3.2, +4 % za 24 h
    2026-11-04T06:00 BONK/USD: -5.57 $ (-5.6 %) sestupná vlna skončila (trend se otočil nahoru)
 
 Šeptač [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Medvěd [ALIVE] $995.11 (-0.49 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $0.0
-   otevřeno SQQQ: nákup 42.6213, teď 42.73 (+0.3 %) - trh padá: SQQQ +0.7 % za hodinu, nad EMA 20/50
+Medvěd [ALIVE] $987.46 (-1.25 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 1.8 %, poplatky $0.0
    2026-11-03T20:47 SOXS: -5.69 $ (-2.7 %) stop-loss
+   2026-11-04T14:30 SQQQ: -6.75 $ (-1.9 %) stop-loss
 
 Kapitán [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
 Degen II [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $998.09 (-0.19 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 2.1 %, poplatky $2.23
-   otevřeno STONK·6GmA: nákup 0.107767, teď 0.1222 (+13.4 %) - skóre 2.2 · paměť: podobné obchody -4.8 % -> sázka 0.5x
-   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.03949 (+2.6 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
-   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.0462 (+8.7 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
-   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01129 (+4.1 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
+Lovec [ALIVE] $999.71 (-0.03 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 2.1 %, poplatky $2.23
+   otevřeno STONK·6GmA: nákup 0.107767, teď 0.1241 (+15.2 %) - skóre 2.2 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.03922 (+1.9 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
+   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04688 (+10.3 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01134 (+4.5 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1010.40 (+1.04 %) | obchodů 6, úspěšnost 50 %, PF 1.37, max propad 2.8 %, poplatky $1.81
-   SHORT TRUMP/USD: prodáno za 1.51415, teď 1.41666 (+6.4 %) - sestupný trend, -3.5 % za 24 h
+Stín [ALIVE] $1010.86 (+1.09 %) | obchodů 6, úspěšnost 50 %, PF 1.37, max propad 2.8 %, poplatky $1.81
+   SHORT TRUMP/USD: prodáno za 1.51415, teď 1.411 (+6.8 %) - sestupný trend, -3.5 % za 24 h
    2026-11-03T13:00 AVAX/USD: -1.80 $ (-0.7 %) stop-loss
    2026-11-03T13:00 BONK/USD: +0.32 $ (+0.1 %) trailing stop
    2026-11-04T05:00 BAT/USD: -4.95 $ (-2.0 %) stop-loss
@@ -47,11 +47,9 @@ Stín [ALIVE] $1010.40 (+1.04 %) | obchodů 6, úspěšnost 50 %, PF 1.37, max p
 
 Věštec [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10992.30 z $11000 (-0.07 %)
+CELKEM $10985.45 z $11000 (-0.13 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-04T04:35:42+00:00 ✅ Memec UZAVŘEL SHORT DOGE/USD: +0.16 $ (+0.3 %) - časový limit
-   2026-11-04T04:52:13+00:00 🏹 Lovec (simulace) koupil GATO·Hspr za $55, likvidita $336,606 - https://dexscreener.com/solana/5e3dxlxgwmtdcoka51wyyakttjfzbwqcoyuhbu
    2026-11-04T05:01:36+00:00 🔻 Stín (simulace) uzavřel short BAT/USD: -4.95 $ (-2.0 %) - stop-loss
    2026-11-04T05:01:36+00:00 ✅ Stín (simulace) uzavřel short TRUMP/USD: +5.69 $ (+2.9 %) - trailing stop
    2026-11-04T05:55:19+00:00 🟢 Memec KOUPIL SHIB/USD za $62.03 @ 4.73345e-06 (objem 4.6x průměru, nové 2h maximum · paměť: podobné obchody -0.7 % -> sázka 0.9x)
@@ -65,3 +63,5 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-04T09:57:11+00:00 🔻 Memec PRODAL SHIB/USD: -2.04 $ (-3.3 %) - časový limit
    2026-11-04T11:45:50+00:00 🔻 Memec PRODAL BONK/USD: -0.26 $ (-0.2 %) - časový limit
    2026-11-04T12:20:47+00:00 🔻 Memec PRODAL DOGE/USD: -2.18 $ (-2.1 %) - časový limit
+   2026-11-04T14:30:52+00:00 🔻 Medvěd PRODAL SQQQ: -6.75 $ (-1.9 %) - stop-loss
+   2026-11-04T14:35:35+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, NWGL, CRIS, HPAI, SOXL, FTCI, SOXS, KORU, DKI, XXII, SNXX
