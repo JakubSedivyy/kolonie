@@ -6,13 +6,14 @@ Orbit [ALIVE] $1003.25 (+0.33 %) | obchodů 1, úspěšnost 100 %, PF ∞, max p
 Trendy [ALIVE] $997.68 (-0.23 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.3 %, poplatky $0.71
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
 
-Memec [ALIVE] $998.70 (-0.13 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.61
+Memec [ALIVE] $998.68 (-0.13 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.2 %, poplatky $0.76
+   SHORT DOGE/USD: prodáno za 0.0738846, teď 0.0737277 (+0.2 %) - výplach: objem 216.9x průměru, nové 2h minimum · paměť: podobné obchod
    2026-11-02T21:41 DOGE/USD: -0.53 $ (-0.9 %) časový limit
    2026-11-03T06:10 DOGE/USD: -0.67 $ (-1.1 %) časový limit
 
-Vlna [ALIVE] $1003.02 (+0.30 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.6 %, poplatky $0.75
+Vlna [ALIVE] $1003.89 (+0.39 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.6 %, poplatky $0.75
    SHORT CRV/USD: prodáno za 0.270893, teď 0.25984 (+4.1 %) - sestupná vlna: propad pod 3denní minimum, -5 % za 24 h
-   SHORT BCH/USD: prodáno za 274.668, teď 276.087 (-0.5 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
+   SHORT BCH/USD: prodáno za 274.668, teď 273.7 (+0.4 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
    SHORT BONK/USD: prodáno za 2.8086e-06, teď 2.8e-06 (+0.3 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h
 
 Šeptač [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
@@ -25,27 +26,26 @@ Kapitán [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
 
 Degen II [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $991.00 (-0.90 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 1.9 %, poplatky $1.96
-   otevřeno STONK·6GmA: nákup 0.107767, teď 0.1198 (+11.2 %) - skóre 2.2 · paměť: podobné obchody -4.8 % -> sázka 0.5x
-   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.03893 (+1.1 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
-   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04358 (+2.5 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+Lovec [ALIVE] $989.96 (-1.00 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 1.9 %, poplatky $1.96
+   otevřeno STONK·6GmA: nákup 0.107767, teď 0.1178 (+9.3 %) - skóre 2.2 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.03765 (-2.2 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
+   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04498 (+5.8 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $999.41 (-0.06 %) | obchodů 3, úspěšnost 67 %, PF 2.08, max propad 2.8 %, poplatky $1.32
-   SHORT CRV/USD: prodáno za 0.262099, teď 0.260913 (+0.5 %) - sestupný trend, -3.7 % za 24 h
-   SHORT BAT/USD: prodáno za 0.126472, teď 0.128885 (-1.9 %) - sestupný trend, -3.5 % za 24 h
-   SHORT TRUMP/USD: prodáno za 1.5968, teď 1.584 (+0.8 %) - sestupný trend, -2.2 % za 24 h
+Stín [ALIVE] $1012.80 (+1.28 %) | obchodů 3, úspěšnost 67 %, PF 2.08, max propad 2.8 %, poplatky $1.32
+   SHORT CRV/USD: prodáno za 0.262099, teď 0.257051 (+1.9 %) - sestupný trend, -3.7 % za 24 h
+   SHORT BAT/USD: prodáno za 0.126472, teď 0.12805 (-1.2 %) - sestupný trend, -3.5 % za 24 h
+   SHORT TRUMP/USD: prodáno za 1.5968, teď 1.51948 (+4.8 %) - sestupný trend, -2.2 % za 24 h
    2026-11-03T10:00 AAVE/USD: +3.43 $ (+1.4 %) trailing stop
    2026-11-03T13:00 AVAX/USD: -1.80 $ (-0.7 %) stop-loss
    2026-11-03T13:00 BONK/USD: +0.32 $ (+0.1 %) trailing stop
 
 Věštec [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10987.77 z $11000 (-0.11 %)
+CELKEM $11000.97 z $11000 (+0.01 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-03T13:02:00+00:00 🔻 Stín (simulace) uzavřel short AVAX/USD: -1.80 $ (-0.7 %) - stop-loss
    2026-11-03T13:02:00+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $249 @ 0.126535, stop 0.131596 - sestupný trend, -3.5 % za 24 h
    2026-11-03T13:02:00+00:00 ✅ Stín (simulace) uzavřel short BONK/USD: +0.32 $ (+0.1 %) - trailing stop
    2026-11-03T14:01:13+00:00 🐻 Stín (simulace) otevřel short TRUMP/USD za $200 @ 1.5976, stop 1.67632 - sestupný trend, -2.2 % za 24 h
@@ -62,3 +62,4 @@ POSLEDNÍ UDÁLOSTI:
 🟢 Orbit: $1003.30 (+0.3 %) · 1 obch. · úspěšnost 100 % · PF ∞
 🟢 Trendy: $997.73 (-0.2 %) 
    2026-11-04T00:07:24+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-04T00:35:24+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $60.86 @ 0.0740327, stop 0.0784746 (výplach: objem 216.9x průměru, nové 2h minimum · paměť: podob
