@@ -1,5 +1,2 @@
-Nov 04 13:49:09 ubuntu-1gb-hel1-1 python[44683]: 2026-11-04 13:49:09,666 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
-Nov 04 14:30:00 ubuntu-1gb-hel1-1 python[44683]: 2026-11-04 14:30:00,205 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 04 14:30:52 ubuntu-1gb-hel1-1 python[44683]: 2026-11-04 14:30:52,420 WARNING colony.agent: Medvěd sell SQQQ nevyplněn, zkusím znovu
-Nov 04 14:30:52 ubuntu-1gb-hel1-1 python[44683]: 2026-11-04 14:30:52,762 WARNING colony.broker: sell SQQQ: na účtu nic není
-Nov 04 14:35:34 ubuntu-1gb-hel1-1 python[44683]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+Nov 04 15:10:30 ubuntu-1gb-hel1-1 python[44683]: 2026-11-04 15:10:30,330 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 04 15:31:13 ubuntu-1gb-hel1-1 python[44683]: 2026-11-04 15:31:13,403 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
