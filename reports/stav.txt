@@ -13,9 +13,9 @@ Memec [ALIVE] $992.92 (-0.71 %) | obchodů 9, úspěšnost 22 %, PF 0.40, max pr
    2026-11-04T19:10 BONK/USD: -5.65 $ (-5.2 %) časový limit
    2026-11-04T21:10 TRUMP/USD: +4.50 $ (+4.2 %) časový limit
 
-Vlna [ALIVE] $984.95 (-1.51 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
-   otevřeno UNI/USD: nákup 7.32627, teď 7.587 (+3.6 %) - vlna: hype 3.2, +4 % za 24 h
-   otevřeno ADA/USD: nákup 0.197599, teď 0.1962 (-0.7 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
+Vlna [ALIVE] $989.30 (-1.07 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
+   otevřeno UNI/USD: nákup 7.32627, teď 7.7393 (+5.6 %) - vlna: hype 3.2, +4 % za 24 h
+   otevřeno ADA/USD: nákup 0.197599, teď 0.19944 (+0.9 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
    otevřeno AVAX/USD: nákup 8.97555, teď 8.7562 (-2.4 %) - vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1
    2026-11-04T06:00 BONK/USD: -5.57 $ (-5.6 %) sestupná vlna skončila (trend se otočil nahoru)
    2026-11-04T14:48 CRV/USD: -2.56 $ (-2.6 %) stop-loss
@@ -30,12 +30,13 @@ Medvěd [ALIVE] $984.80 (-1.52 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max p
 
 Kapitán [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen II [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Degen II [ALIVE] $1002.19 (+0.22 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.15
+   otevřeno GTA·7F8B: nákup 0.00213622, teď 0.002484 (+16.3 %) - skóre 4.8 · paměť: podobné obchody -9.5 % -> sázka 0.5x
 
-Lovec [ALIVE] $1001.35 (+0.14 %) | obchodů 3, úspěšnost 33 %, PF 0.75, max propad 2.1 %, poplatky $2.55
-   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.0397 (+3.1 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
-   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04579 (+7.7 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
-   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01095 (+0.9 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
+Lovec [ALIVE] $1001.13 (+0.11 %) | obchodů 3, úspěšnost 33 %, PF 0.75, max propad 2.1 %, poplatky $2.55
+   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.03965 (+3.0 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
+   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04575 (+7.6 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01093 (+0.8 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
    2026-11-04T15:13 STONK·6GmA: +11.87 $ (+22.8 %) cíl zisku
@@ -49,10 +50,9 @@ Stín [ALIVE] $1018.54 (+1.85 %) | obchodů 7, úspěšnost 57 %, PF 3.71, max p
 
 Věštec [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10983.09 z $11000 (-0.15 %)
+CELKEM $10989.51 z $11000 (-0.10 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-04T15:13:35+00:00 ✅ Lovec (simulace) prodal STONK·6GmA: +11.87 $ (+23 %) - cíl zisku
    2026-11-04T15:13:36+00:00 🧠 Lovec se poučil: když kupci/prodejci = do 1,5x, prodělal 7x (průměr -7.0 %) - příště to nekoupí
    2026-11-04T15:13:36+00:00 🧠 Lovec se poučil: když likvidita = 150-500k $, prodělal 7x (průměr -7.0 %) - příště to nekoupí
    2026-11-04T15:48:57+00:00 🔻 Vlna UZAVŘEL SHORT BCH/USD: -3.39 $ (-3.4 %) - stop-loss
@@ -69,3 +69,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-04T21:15:32+00:00 📊 Denní souhrn 04.11. · nálada trhu: neutral
 🟢 Orbit: $1003.25 (+0.3 %) · 1 obch. · úspěšnost 100 % · PF ∞
 🟢 Trendy: $997.68 (-0.2 %) 
+   2026-11-04T22:28:06+00:00 🎰 Degen II (simulace) koupil GTA·7F8B za $15, likvidita $120,715 - https://dexscreener.com/solana/dmcn25okj7zciws9ss1bxeo6qbzgb8r9ta6c
