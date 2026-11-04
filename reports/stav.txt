@@ -6,8 +6,8 @@ Orbit [ALIVE] $1003.25 (+0.33 %) | obchodů 1, úspěšnost 100 %, PF ∞, max p
 Trendy [ALIVE] $997.68 (-0.23 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.3 %, poplatky $0.71
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
 
-Memec [ALIVE] $993.58 (-0.64 %) | obchodů 6, úspěšnost 17 %, PF 0.03, max propad 0.7 %, poplatky $2.8
-   otevřeno DOGE/USD: nákup 0.0762883, teď 0.077213 (+1.2 %) - objem 5.7x průměru, nové 2h maximum · paměť: podobné obchody -0.7 % ->
+Memec [ALIVE] $994.15 (-0.59 %) | obchodů 6, úspěšnost 17 %, PF 0.03, max propad 0.8 %, poplatky $2.8
+   otevřeno DOGE/USD: nákup 0.0762883, teď 0.0776227 (+1.7 %) - objem 5.7x průměru, nové 2h maximum · paměť: podobné obchody -0.7 % ->
    otevřeno BONK/USD: nákup 3.19638e-06, teď 3.15e-06 (-1.5 %) - objem 116.9x průměru, nové 2h maximum · paměť: podobné obchody -0.6 % 
    2026-11-03T06:10 DOGE/USD: -0.67 $ (-1.1 %) časový limit
    2026-11-04T04:35 DOGE/USD: +0.16 $ (+0.3 %) časový limit
@@ -15,12 +15,13 @@ Memec [ALIVE] $993.58 (-0.64 %) | obchodů 6, úspěšnost 17 %, PF 0.03, max pr
    2026-11-04T11:45 BONK/USD: -0.26 $ (-0.2 %) časový limit
    2026-11-04T12:20 DOGE/USD: -2.18 $ (-2.1 %) časový limit
 
-Vlna [ALIVE] $996.54 (-0.35 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 1.9 %, poplatky $1.83
-   SHORT BCH/USD: prodáno za 274.668, teď 274.8 (-0.0 %) - sestupná vlna: propad pod 3denní minimum, -3 % za 24 h
-   otevřeno UNI/USD: nákup 7.32627, teď 7.62182 (+4.0 %) - vlna: hype 3.2, +4 % za 24 h
-   otevřeno ADA/USD: nákup 0.197599, teď 0.2 (+1.2 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
+Vlna [ALIVE] $992.88 (-0.71 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 1.9 %, poplatky $2.57
+   otevřeno UNI/USD: nákup 7.32627, teď 7.6747 (+4.8 %) - vlna: hype 3.2, +4 % za 24 h
+   otevřeno ADA/USD: nákup 0.197599, teď 0.198435 (+0.4 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
+   otevřeno AVAX/USD: nákup 8.97555, teď 8.991 (+0.2 %) - vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1
    2026-11-04T06:00 BONK/USD: -5.57 $ (-5.6 %) sestupná vlna skončila (trend se otočil nahoru)
    2026-11-04T14:48 CRV/USD: -2.56 $ (-2.6 %) stop-loss
+   2026-11-04T15:48 BCH/USD: -3.39 $ (-3.4 %) stop-loss
 
 Šeptač [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
@@ -32,16 +33,16 @@ Kapitán [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max 
 
 Degen II [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Lovec [ALIVE] $1013.21 (+1.32 %) | obchodů 3, úspěšnost 33 %, PF 0.75, max propad 2.1 %, poplatky $2.55
-   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.04293 (+11.5 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
-   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04862 (+14.3 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
-   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01172 (+8.0 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
+Lovec [ALIVE] $1012.71 (+1.27 %) | obchodů 3, úspěšnost 33 %, PF 0.75, max propad 2.1 %, poplatky $2.55
+   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.04238 (+10.1 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
+   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04623 (+8.7 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01235 (+13.9 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
    2026-11-04T15:13 STONK·6GmA: +11.87 $ (+22.8 %) cíl zisku
 
-Stín [ALIVE] $1009.68 (+0.97 %) | obchodů 6, úspěšnost 50 %, PF 1.37, max propad 2.8 %, poplatky $1.81
-   SHORT TRUMP/USD: prodáno za 1.51415, teď 1.42545 (+5.9 %) - sestupný trend, -3.5 % za 24 h
+Stín [ALIVE] $1009.82 (+0.98 %) | obchodů 6, úspěšnost 50 %, PF 1.37, max propad 2.8 %, poplatky $1.81
+   SHORT TRUMP/USD: prodáno za 1.51415, teď 1.42369 (+6.0 %) - sestupný trend, -3.5 % za 24 h
    2026-11-03T13:00 AVAX/USD: -1.80 $ (-0.7 %) stop-loss
    2026-11-03T13:00 BONK/USD: +0.32 $ (+0.1 %) trailing stop
    2026-11-04T05:00 BAT/USD: -4.95 $ (-2.0 %) stop-loss
@@ -50,12 +51,9 @@ Stín [ALIVE] $1009.68 (+0.97 %) | obchodů 6, úspěšnost 50 %, PF 1.37, max p
 
 Věštec [ALIVE] $999.90 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11001.00 z $11000 (+0.01 %)
+CELKEM $10997.55 z $11000 (-0.02 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-04T07:45:50+00:00 🟢 Memec KOUPIL BONK/USD za $105.87 @ 3.0561e-06 (objem 13.5x průměru, nové 2h maximum · paměť: podobné obchody -0.8 % -> sázka 0.9x)
-   2026-11-04T08:20:38+00:00 🟢 Memec KOUPIL DOGE/USD za $105.69 @ 0.0755098 (objem 19.0x průměru, nové 2h maximum · paměť: podobné obchody -0.8 % -> sázka 0.9x)
-   2026-11-04T09:57:11+00:00 🔻 Memec PRODAL SHIB/USD: -2.04 $ (-3.3 %) - časový limit
    2026-11-04T11:45:50+00:00 🔻 Memec PRODAL BONK/USD: -0.26 $ (-0.2 %) - časový limit
    2026-11-04T12:20:47+00:00 🔻 Memec PRODAL DOGE/USD: -2.18 $ (-2.1 %) - časový limit
    2026-11-04T14:30:52+00:00 🔻 Medvěd PRODAL SQQQ: -6.75 $ (-1.9 %) - stop-loss
@@ -68,3 +66,6 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-04T15:13:35+00:00 ✅ Lovec (simulace) prodal STONK·6GmA: +11.87 $ (+23 %) - cíl zisku
    2026-11-04T15:13:36+00:00 🧠 Lovec se poučil: když kupci/prodejci = do 1,5x, prodělal 7x (průměr -7.0 %) - příště to nekoupí
    2026-11-04T15:13:36+00:00 🧠 Lovec se poučil: když likvidita = 150-500k $, prodělal 7x (průměr -7.0 %) - příště to nekoupí
+   2026-11-04T15:48:57+00:00 🔻 Vlna UZAVŘEL SHORT BCH/USD: -3.39 $ (-3.4 %) - stop-loss
+   2026-11-04T16:01:43+00:00 🟢 Vlna KOUPIL AVAX/USD za $197.83 @ 8.97555 (vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1.9 % -> sázka 0.8x)
+   2026-11-04T16:11:18+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↑, S&P ↓)
