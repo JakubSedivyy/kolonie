@@ -6,18 +6,17 @@ Orbit [ALIVE] $1003.20 (+0.32 %) | obchodů 1, úspěšnost 100 %, PF ∞, max p
 Trendy [ALIVE] $997.63 (-0.24 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.71
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
 
-Memec [ALIVE] $992.20 (-0.78 %) | obchodů 9, úspěšnost 22 %, PF 0.40, max propad 1.1 %, poplatky $4.15
-   SHORT TRUMP/USD: prodáno za 1.25948, teď 1.264 (-0.4 %) - výplach: objem 12.5x průměru, nové 2h minimum · paměť: podobné obchody
-   2026-11-04T11:45 BONK/USD: -0.26 $ (-0.2 %) časový limit
+Memec [ALIVE] $991.71 (-0.83 %) | obchodů 10, úspěšnost 20 %, PF 0.36, max propad 1.1 %, poplatky $4.43
    2026-11-04T12:20 DOGE/USD: -2.18 $ (-2.1 %) časový limit
    2026-11-04T18:45 DOGE/USD: -0.32 $ (-0.3 %) časový limit
    2026-11-04T19:10 BONK/USD: -5.65 $ (-5.2 %) časový limit
    2026-11-04T21:10 TRUMP/USD: +4.50 $ (+4.2 %) časový limit
+   2026-11-05T04:05 TRUMP/USD: -1.16 $ (-1.1 %) časový limit
 
-Vlna [ALIVE] $990.67 (-0.93 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
-   otevřeno UNI/USD: nákup 7.32627, teď 7.769 (+6.0 %) - vlna: hype 3.2, +4 % za 24 h
-   otevřeno ADA/USD: nákup 0.197599, teď 0.199046 (+0.7 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
-   otevřeno AVAX/USD: nákup 8.97555, teď 8.81571 (-1.8 %) - vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1
+Vlna [ALIVE] $987.69 (-1.23 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
+   otevřeno UNI/USD: nákup 7.32627, teď 7.688 (+4.9 %) - vlna: hype 3.2, +4 % za 24 h
+   otevřeno ADA/USD: nákup 0.197599, teď 0.1984 (+0.4 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
+   otevřeno AVAX/USD: nákup 8.97555, teď 8.75017 (-2.5 %) - vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1
    2026-11-04T06:00 BONK/USD: -5.57 $ (-5.6 %) sestupná vlna skončila (trend se otočil nahoru)
    2026-11-04T14:48 CRV/USD: -2.56 $ (-2.6 %) stop-loss
    2026-11-04T15:48 BCH/USD: -3.39 $ (-3.4 %) stop-loss
@@ -36,9 +35,9 @@ Degen II [ALIVE] $996.18 (-0.38 %) | obchodů 3, úspěšnost 33 %, PF 0.54, max
    2026-11-05T01:16 GTA·7F8B: -4.11 $ (-27.1 %) stop-loss
    2026-11-05T03:49 PIRATE·2StN: -3.87 $ (-25.6 %) stop-loss
 
-Lovec [ALIVE] $1009.33 (+0.93 %) | obchodů 4, úspěšnost 50 %, PF 1.50, max propad 2.1 %, poplatky $2.87
-   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.03998 (+3.9 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
-   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01087 (+0.2 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
+Lovec [ALIVE] $1008.66 (+0.87 %) | obchodů 4, úspěšnost 50 %, PF 1.50, max propad 2.1 %, poplatky $2.87
+   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.04037 (+4.9 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
+   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01063 (-2.0 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
    2026-11-04T15:13 STONK·6GmA: +11.87 $ (+22.8 %) cíl zisku
@@ -53,10 +52,9 @@ Stín [ALIVE] $1018.49 (+1.85 %) | obchodů 7, úspěšnost 57 %, PF 3.71, max p
 
 Věštec [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10992.00 z $11000 (-0.07 %)
+CELKEM $10987.86 z $11000 (-0.11 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-04T18:45:46+00:00 🔻 Memec PRODAL DOGE/USD: -0.32 $ (-0.3 %) - časový limit
    2026-11-04T19:03:09+00:00 ✅ Stín (simulace) uzavřel short TRUMP/USD: +16.07 $ (+12.9 %) - trailing stop
    2026-11-04T19:10:44+00:00 🔻 Memec PRODAL BONK/USD: -5.65 $ (-5.2 %) - časový limit
    2026-11-04T20:12:38+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↑, S&P ↓)
@@ -73,3 +71,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-05T03:47:59+00:00 ✅ Lovec (simulace) prodal ANSEM·9cRC: +11.77 $ (+23 %) - cíl zisku
    2026-11-05T03:50:01+00:00 🔻 Degen II (simulace) prodal PIRATE·2StN: -3.87 $ (-26 %) - stop-loss
    2026-11-05T03:50:02+00:00 🧠 Degen II se poučil: když růst za hodinu = 20-60 %, prodělal 6x (průměr -33.3 %) - příště to nekoupí
+   2026-11-05T04:05:40+00:00 🔻 Memec UZAVŘEL SHORT TRUMP/USD: -1.16 $ (-1.1 %) - časový limit
