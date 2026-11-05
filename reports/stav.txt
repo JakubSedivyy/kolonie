@@ -3,13 +3,13 @@
 Orbit [ALIVE] $1003.20 (+0.32 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
-Trendy [ALIVE] $998.33 (-0.17 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.28
-   SHORT ETH/USD: prodáno za 2248.22, teď 2233.41 (+0.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
-   SHORT SOL/USD: prodáno za 90.0489, teď 89.65 (+0.4 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.36 % · paměť: podobn
+Trendy [ALIVE] $997.66 (-0.23 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.28
+   SHORT ETH/USD: prodáno za 2248.22, teď 2238.3 (+0.4 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
+   SHORT SOL/USD: prodáno za 90.0489, teď 89.999 (+0.1 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.36 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
 
-Memec [ALIVE] $997.25 (-0.27 %) | obchodů 13, úspěšnost 31 %, PF 0.84, max propad 1.1 %, poplatky $5.99
-   otevřeno DOGE/USD: nákup 0.0728113, teď 0.0724524 (-0.5 %) - objem 19.3x průměru, nové 2h maximum · paměť: podobné obchody -0.7 % -
+Memec [ALIVE] $996.93 (-0.31 %) | obchodů 13, úspěšnost 31 %, PF 0.84, max propad 1.1 %, poplatky $5.99
+   otevřeno DOGE/USD: nákup 0.0728113, teď 0.07207 (-1.0 %) - objem 19.3x průměru, nové 2h maximum · paměť: podobné obchody -0.7 % -
    2026-11-04T21:10 TRUMP/USD: +4.50 $ (+4.2 %) časový limit
    2026-11-05T04:05 TRUMP/USD: -1.16 $ (-1.1 %) časový limit
    2026-11-05T16:35 PEPE/USD: +2.80 $ (+2.6 %) časový limit
@@ -37,7 +37,8 @@ Medvěd [ALIVE] $1036.97 (+3.70 %) | obchodů 5, úspěšnost 20 %, PF 2.35, max
 
 Kapitán [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen II [ALIVE] $996.18 (-0.38 %) | obchodů 3, úspěšnost 33 %, PF 0.54, max propad 0.9 %, poplatky $0.87
+Degen II [ALIVE] $1000.27 (+0.03 %) | obchodů 3, úspěšnost 33 %, PF 0.54, max propad 1.0 %, poplatky $1.02
+   otevřeno COGE·8UQd: nákup 0.00217227, teď 0.002787 (+28.3 %) - skóre 2.4 · paměť: podobné obchody -7.9 % -> sázka 0.5x
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
    2026-11-05T01:16 GTA·7F8B: -4.11 $ (-27.1 %) stop-loss
    2026-11-05T03:49 PIRATE·2StN: -3.87 $ (-25.6 %) stop-loss
@@ -49,10 +50,10 @@ Lovec [ALIVE] $997.46 (-0.25 %) | obchodů 6, úspěšnost 33 %, PF 0.91, max pr
    2026-11-05T07:18 GATO·Hspr: -7.16 $ (-13.0 %) stop-loss
    2026-11-05T15:40 CATE·Ai66: -3.06 $ (-5.7 %) časový limit
 
-Stín [ALIVE] $1030.79 (+3.08 %) | obchodů 10, úspěšnost 70 %, PF 5.60, max propad 2.8 %, poplatky $3.02
-   SHORT ADA/USD: prodáno za 0.183683, teď 0.183775 (-0.1 %) - sestupný trend, -6.3 % za 24 h · paměť: podobné obchody -1.1 % -> sázk
-   SHORT AVAX/USD: prodáno za 8.33798, teď 8.34215 (-0.1 %) - sestupný trend, -4.9 % za 24 h · paměť: podobné obchody -1.1 % -> sázk
-   SHORT WIF/USD: prodáno za 0.164183, teď 0.164265 (-0.1 %) - sestupný trend, -3.3 % za 24 h · paměť: podobné obchody -1.0 % -> sázk
+Stín [ALIVE] $1037.37 (+3.74 %) | obchodů 10, úspěšnost 70 %, PF 5.60, max propad 2.8 %, poplatky $3.02
+   SHORT ADA/USD: prodáno za 0.183683, teď 0.181635 (+1.1 %) - sestupný trend, -6.3 % za 24 h · paměť: podobné obchody -1.1 % -> sázk
+   SHORT AVAX/USD: prodáno za 8.33798, teď 8.2605 (+0.9 %) - sestupný trend, -4.9 % za 24 h · paměť: podobné obchody -1.1 % -> sázk
+   SHORT WIF/USD: prodáno za 0.164183, teď 0.162871 (+0.8 %) - sestupný trend, -3.3 % za 24 h · paměť: podobné obchody -1.0 % -> sázk
    2026-11-04T06:00 CRV/USD: -0.12 $ (-0.0 %) trailing stop
    2026-11-04T19:00 TRUMP/USD: +16.07 $ (+12.9 %) trailing stop
    2026-11-05T20:00 DOT/USD: +1.98 $ (+0.9 %) trailing stop
@@ -61,11 +62,9 @@ Stín [ALIVE] $1030.79 (+3.08 %) | obchodů 10, úspěšnost 70 %, PF 5.60, max 
 
 Věštec [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11010.80 z $11000 (+0.10 %)
+CELKEM $11020.48 z $11000 (+0.19 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-05T18:01:15+00:00 🟢 Medvěd KOUPIL SQQQ za $183.71 @ 49.0599 (trh padá: SQQQ +1.9 % za hodinu, nad EMA 20/50 · paměť: podobné obchody +2.9 % -> sázka 1.3
-   2026-11-05T18:40:49+00:00 ✅ Memec UZAVŘEL SHORT DOGE/USD: +4.03 $ (+3.7 %) - časový limit
    2026-11-05T19:48:34+00:00 🔻 Medvěd PRODAL SOXS: -5.44 $ (-5.1 %) - stop-loss
    2026-11-05T19:49:05+00:00 🔻 Medvěd PRODAL SQQQ: -5.22 $ (-2.8 %) - stop-loss
    2026-11-05T19:55:33+00:00 🔻 Memec UZAVŘEL SHORT SHIB/USD: -0.84 $ (-1.3 %) - časový limit
@@ -81,3 +80,5 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-05T21:15:32+00:00 📊 Denní souhrn 05.11. · nálada trhu: risk_off
 🟢 Orbit: $1003.20 (+0.3 %) · 1 obch. · úspěšnost 100 % · PF ∞
 🟢 Trendy: $998.44 (-0.2 %)
+   2026-11-05T21:54:30+00:00 🎰 Degen II (simulace) koupil COGE·8UQd za $15, likvidita $118,115 - https://dexscreener.com/solana/8gjmy6ipysxfmwwrpu9c7atssorjg6al88d
+   2026-11-05T22:01:18+00:00 🧠 Vlna nekoupil XRP/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
