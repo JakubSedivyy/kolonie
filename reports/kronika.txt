@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 193 signálů, 37 obchodů, 78 hodinových snímků radaru, 126 událostí
+Celkem zapsáno: 193 signálů, 39 obchodů, 79 hodinových snímků radaru, 128 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 0, průměr -49.3 %
@@ -11,17 +11,17 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Memec     | plno pozic                                    |   1x, vyhrálo by 0, průměr -4.1 %
-  Stín      | plno pozic                                    |  23x, vyhrálo by 0, průměr -3.5 %
+  Stín      | plno pozic                                    |  24x, vyhrálo by 0, průměr -3.6 %
 
 UZAVŘENÉ OBCHODY:
   Degen II  |   3 obchodů, 1 výher, průměr -8.1 %, celkem -3.67 $
   Lovec     |   6 obchodů, 2 výher, průměr +0.2 %, celkem -2.39 $
-  Medvěd    |   2 obchodů, 0 výher, průměr -2.3 %, celkem -12.44 $
-  Memec     |  10 obchodů, 2 výher, průměr -1.0 %, celkem -8.14 $
+  Medvěd    |   3 obchodů, 1 výher, průměr +7.7 %, celkem +41.95 $
+  Memec     |  11 obchodů, 3 výher, průměr -0.7 %, celkem -5.34 $
   Orbit     |   1 obchodů, 1 výher, průměr +1.8 %, celkem +3.35 $
   Stín      |   7 obchodů, 4 výher, průměr +2.1 %, celkem +18.64 $
   Trendy    |   1 obchodů, 0 výher, průměr -1.5 %, celkem -2.22 $
   Vlna      |   7 obchodů, 0 výher, průměr -4.8 %, celkem -46.25 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (78h), CATE (78h), XRP (67h), DACITYCOIN (49h), ETH (46h), PENGU (37h), PEARL (34h), SUI (31h), NEAR (31h), TRUMP (29h), SOL (24h), HYPE (24h), LIT (24h), ANAKIN (23h), CAPY (23h), SI (18h), WASTED (15h), KNTQ (12h), CARDS (11h), XMR (10h)
+  BTC (79h), CATE (79h), XRP (68h), DACITYCOIN (49h), ETH (47h), PENGU (38h), PEARL (35h), NEAR (32h), SUI (31h), TRUMP (30h), HYPE (25h), LIT (25h), SOL (24h), ANAKIN (23h), CAPY (23h), SI (18h), WASTED (15h), KNTQ (12h), CARDS (11h), XMR (10h)
