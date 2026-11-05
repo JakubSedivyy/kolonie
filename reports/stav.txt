@@ -13,9 +13,9 @@ Memec [ALIVE] $991.71 (-0.83 %) | obchodů 10, úspěšnost 20 %, PF 0.36, max p
    2026-11-04T21:10 TRUMP/USD: +4.50 $ (+4.2 %) časový limit
    2026-11-05T04:05 TRUMP/USD: -1.16 $ (-1.1 %) časový limit
 
-Vlna [ALIVE] $987.56 (-1.24 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
-   otevřeno UNI/USD: nákup 7.32627, teď 7.549 (+3.0 %) - vlna: hype 3.2, +4 % za 24 h
-   otevřeno ADA/USD: nákup 0.197599, teď 0.19936 (+0.9 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
+Vlna [ALIVE] $984.96 (-1.50 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
+   otevřeno UNI/USD: nákup 7.32627, teď 7.412 (+1.2 %) - vlna: hype 3.2, +4 % za 24 h
+   otevřeno ADA/USD: nákup 0.197599, teď 0.198282 (+0.3 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
    otevřeno AVAX/USD: nákup 8.97555, teď 8.7977 (-2.0 %) - vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1
    2026-11-04T06:00 BONK/USD: -5.57 $ (-5.6 %) sestupná vlna skončila (trend se otočil nahoru)
    2026-11-04T14:48 CRV/USD: -2.56 $ (-2.6 %) stop-loss
@@ -35,16 +35,16 @@ Degen II [ALIVE] $996.18 (-0.38 %) | obchodů 3, úspěšnost 33 %, PF 0.54, max
    2026-11-05T01:16 GTA·7F8B: -4.11 $ (-27.1 %) stop-loss
    2026-11-05T03:49 PIRATE·2StN: -3.87 $ (-25.6 %) stop-loss
 
-Lovec [ALIVE] $1004.16 (+0.42 %) | obchodů 5, úspěšnost 40 %, PF 1.03, max propad 2.1 %, poplatky $3.11
-   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.04129 (+7.3 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
+Lovec [ALIVE] $1004.03 (+0.40 %) | obchodů 5, úspěšnost 40 %, PF 1.03, max propad 2.1 %, poplatky $3.11
+   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.0412 (+7.0 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
    2026-11-04T15:13 STONK·6GmA: +11.87 $ (+22.8 %) cíl zisku
    2026-11-05T03:47 ANSEM·9cRC: +11.77 $ (+22.6 %) cíl zisku
    2026-11-05T07:18 GATO·Hspr: -7.16 $ (-13.0 %) stop-loss
 
-Stín [ALIVE] $1017.19 (+1.72 %) | obchodů 7, úspěšnost 57 %, PF 3.71, max propad 2.8 %, poplatky $2.07
-   SHORT WIF/USD: prodáno za 0.171613, teď 0.1723 (-0.4 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody +1.1 % -> sázk
+Stín [ALIVE] $1018.64 (+1.86 %) | obchodů 7, úspěšnost 57 %, PF 3.71, max propad 2.8 %, poplatky $2.07
+   SHORT WIF/USD: prodáno za 0.171613, teď 0.171414 (+0.1 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody +1.1 % -> sázk
    2026-11-03T13:00 BONK/USD: +0.32 $ (+0.1 %) trailing stop
    2026-11-04T05:00 BAT/USD: -4.95 $ (-2.0 %) stop-loss
    2026-11-04T05:00 TRUMP/USD: +5.69 $ (+2.9 %) trailing stop
@@ -53,7 +53,7 @@ Stín [ALIVE] $1017.19 (+1.72 %) | obchodů 7, úspěšnost 57 %, PF 3.71, max p
 
 Věštec [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10981.93 z $11000 (-0.16 %)
+CELKEM $10980.65 z $11000 (-0.18 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-04T20:12:38+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↑, S&P ↓)
