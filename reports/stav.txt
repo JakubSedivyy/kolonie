@@ -14,10 +14,10 @@ Memec [ALIVE] $992.20 (-0.78 %) | obchodů 9, úspěšnost 22 %, PF 0.40, max pr
    2026-11-04T19:10 BONK/USD: -5.65 $ (-5.2 %) časový limit
    2026-11-04T21:10 TRUMP/USD: +4.50 $ (+4.2 %) časový limit
 
-Vlna [ALIVE] $985.14 (-1.49 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
-   otevřeno UNI/USD: nákup 7.32627, teď 7.64255 (+4.3 %) - vlna: hype 3.2, +4 % za 24 h
-   otevřeno ADA/USD: nákup 0.197599, teď 0.195446 (-1.1 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
-   otevřeno AVAX/USD: nákup 8.97555, teď 8.75826 (-2.4 %) - vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1
+Vlna [ALIVE] $989.39 (-1.06 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 2.6 %, poplatky $2.57
+   otevřeno UNI/USD: nákup 7.32627, teď 7.64466 (+4.3 %) - vlna: hype 3.2, +4 % za 24 h
+   otevřeno ADA/USD: nákup 0.197599, teď 0.19879 (+0.6 %) - vlna: průraz 3denního maxima, +3 % za 24 h · paměť: podobné obchody -1
+   otevřeno AVAX/USD: nákup 8.97555, teď 8.8413 (-1.5 %) - vlna: průraz 3denního maxima, +4 % za 24 h · paměť: podobné obchody -1
    2026-11-04T06:00 BONK/USD: -5.57 $ (-5.6 %) sestupná vlna skončila (trend se otočil nahoru)
    2026-11-04T14:48 CRV/USD: -2.56 $ (-2.6 %) stop-loss
    2026-11-04T15:48 BCH/USD: -3.39 $ (-3.4 %) stop-loss
@@ -35,10 +35,10 @@ Degen II [ALIVE] $1000.05 (+0.01 %) | obchodů 2, úspěšnost 50 %, PF 1.05, ma
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
    2026-11-05T01:16 GTA·7F8B: -4.11 $ (-27.1 %) stop-loss
 
-Lovec [ALIVE] $1006.60 (+0.66 %) | obchodů 3, úspěšnost 33 %, PF 0.75, max propad 2.1 %, poplatky $2.55
-   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.03968 (+3.1 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
-   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04937 (+16.1 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
-   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01114 (+2.7 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
+Lovec [ALIVE] $1007.05 (+0.70 %) | obchodů 3, úspěšnost 33 %, PF 0.75, max propad 2.1 %, poplatky $2.55
+   otevřeno CATE·Ai66: nákup 0.0384911, teď 0.0404 (+5.0 %) - skóre 1.9 · paměť: podobné obchody -4.6 % -> sázka 0.5x
+   otevřeno ANSEM·9cRC: nákup 0.042521, teď 0.04941 (+16.2 %) - skóre 1.7 · paměť: podobné obchody -4.8 % -> sázka 0.5x
+   otevřeno GATO·Hspr: nákup 0.0108474, teď 0.01102 (+1.6 %) - skóre 1.5 · paměť: podobné obchody -4.5 % -> sázka 0.5x
    2026-11-02T14:50 DESSA·npz2: -8.93 $ (-13.4 %) stop-loss
    2026-11-03T10:44 FLOAT·Bv1a: -6.87 $ (-11.9 %) stop-loss
    2026-11-04T15:13 STONK·6GmA: +11.87 $ (+22.8 %) cíl zisku
@@ -52,7 +52,7 @@ Stín [ALIVE] $1018.49 (+1.85 %) | obchodů 7, úspěšnost 57 %, PF 3.71, max p
 
 Věštec [ALIVE] $999.85 (-0.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10987.61 z $11000 (-0.11 %)
+CELKEM $10992.31 z $11000 (-0.07 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-04T16:11:18+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↑, S&P ↓)
