@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 215 signálů, 49 obchodů, 89 hodinových snímků radaru, 153 událostí
+Celkem zapsáno: 217 signálů, 50 obchodů, 90 hodinových snímků radaru, 156 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 0, průměr -49.3 %
@@ -12,7 +12,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Memec     | plno pozic                                    |   1x, vyhrálo by 0, průměr -4.1 %
-  Stín      | plno pozic                                    |  28x, vyhrálo by 0, průměr -3.6 %
+  Stín      | plno pozic                                    |  31x, vyhrálo by 0, průměr -3.7 %
 
 UZAVŘENÉ OBCHODY:
   Degen II  |   4 obchodů, 2 výher, průměr +1.7 %, celkem +1.04 $
@@ -20,9 +20,9 @@ UZAVŘENÉ OBCHODY:
   Medvěd    |   5 obchodů, 1 výher, průměr +3.0 %, celkem +31.29 $
   Memec     |  14 obchodů, 4 výher, průměr -0.5 %, celkem -3.09 $
   Orbit     |   1 obchodů, 1 výher, průměr +1.8 %, celkem +3.35 $
-  Stín      |  11 obchodů, 7 výher, průměr +1.7 %, celkem +30.02 $
+  Stín      |  12 obchodů, 7 výher, průměr +1.4 %, celkem +27.09 $
   Trendy    |   1 obchodů, 0 výher, průměr -1.5 %, celkem -2.22 $
   Vlna      |   7 obchodů, 0 výher, průměr -4.8 %, celkem -46.25 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (89h), CATE (88h), XRP (71h), ETH (56h), DACITYCOIN (49h), PENGU (47h), SUI (40h), PEARL (39h), TRUMP (38h), NEAR (37h), HYPE (33h), SOL (30h), LIT (29h), ANAKIN (23h), CAPY (23h), SI (18h), WASTED (15h), ZEC (14h), KNTQ (12h), CARDS (11h)
+  BTC (90h), CATE (89h), XRP (71h), ETH (57h), DACITYCOIN (49h), PENGU (48h), SUI (41h), PEARL (40h), NEAR (38h), TRUMP (38h), HYPE (33h), SOL (30h), LIT (29h), ANAKIN (23h), CAPY (23h), SI (18h), WASTED (15h), ZEC (14h), KNTQ (12h), CARDS (11h)
