@@ -1,10 +1,11 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 237 signálů, 58 obchodů, 106 hodinových snímků radaru, 175 událostí
+Celkem zapsáno: 240 signálů, 58 obchodů, 107 hodinových snímků radaru, 176 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 0, průměr -49.3 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 2, průměr +24.9 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 1, průměr +6.2 %
+  Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 1, průměr +35.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -20.0 %
@@ -15,6 +16,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +14.9 %
   Degen II  | paměť: když kupci/prodejci = 1,5-2,5x, proděl |   1x, vyhrálo by 1, průměr +0.0 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -10.0 %
+  Medvěd    | plno pozic                                    |   2x, vyhrálo by 0, průměr -1.6 %
   Memec     | plno pozic                                    |   1x, vyhrálo by 0, průměr -4.1 %
   Stín      | plno pozic                                    |  97x, vyhrálo by 0, průměr -4.0 %
 
@@ -29,4 +31,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   7 obchodů, 0 výher, průměr -4.8 %, celkem -46.25 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (106h), CATE (100h), XRP (72h), ETH (66h), PENGU (63h), SUI (51h), DACITYCOIN (49h), PEARL (44h), NEAR (43h), HYPE (40h), TRUMP (40h), SOL (38h), LIT (29h), ZEC (24h), ANAKIN (23h), CAPY (23h), SI (18h), INJ (17h), COGE (16h), WASTED (15h)
+  BTC (107h), CATE (101h), XRP (72h), ETH (66h), PENGU (64h), SUI (51h), DACITYCOIN (49h), PEARL (45h), NEAR (43h), HYPE (41h), TRUMP (41h), SOL (38h), LIT (29h), ZEC (25h), ANAKIN (23h), CAPY (23h), SI (18h), INJ (17h), COGE (17h), WASTED (15h)

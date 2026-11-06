@@ -3,8 +3,8 @@
 Orbit [ALIVE] $1003.15 (+0.32 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
-Trendy [ALIVE] $996.84 (-0.32 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
-   SHORT ETH/USD: prodáno za 2248.22, teď 2228.49 (+0.9 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
+Trendy [ALIVE] $996.96 (-0.30 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
+   SHORT ETH/USD: prodáno za 2248.22, teď 2226.34 (+1.0 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
 
@@ -41,17 +41,18 @@ Degen II [ALIVE] $1000.84 (+0.08 %) | obchodů 4, úspěšnost 50 %, PF 1.13, ma
    2026-11-05T03:49 PIRATE·2StN: -3.87 $ (-25.6 %) stop-loss
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
 
-Lovec [ALIVE] $987.53 (-1.25 %) | obchodů 7, úspěšnost 29 %, PF 0.66, max propad 2.7 %, poplatky $4.13
+Lovec [ALIVE] $980.99 (-1.90 %) | obchodů 7, úspěšnost 29 %, PF 0.66, max propad 3.4 %, poplatky $4.57
+   otevřeno ANSEM·9cRC: nákup 0.059085, teď 0.05494 (-7.0 %) - skóre 2.6 · paměť: podobné obchody -1.3 % -> sázka 0.9x
    2026-11-04T15:13 STONK·6GmA: +11.87 $ (+22.8 %) cíl zisku
    2026-11-05T03:47 ANSEM·9cRC: +11.77 $ (+22.6 %) cíl zisku
    2026-11-05T07:18 GATO·Hspr: -7.16 $ (-13.0 %) stop-loss
    2026-11-05T15:40 CATE·Ai66: -3.06 $ (-5.7 %) časový limit
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
 
-Stín [ALIVE] $1034.84 (+3.48 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
-   SHORT BAT/USD: prodáno za 0.129535, teď 0.125342 (+3.2 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
-   SHORT XRP/USD: prodáno za 1.21403, teď 1.18449 (+2.4 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
-   SHORT BTC/USD: prodáno za 75886.1, teď 75776.5 (+0.1 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
+Stín [ALIVE] $1036.36 (+3.64 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
+   SHORT BAT/USD: prodáno za 0.129535, teď 0.125835 (+2.9 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
+   SHORT XRP/USD: prodáno za 1.21403, teď 1.17331 (+3.4 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
+   SHORT BTC/USD: prodáno za 75886.1, teď 75770.5 (+0.2 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
    2026-11-05T20:00 WIF/USD: +10.87 $ (+3.8 %) trailing stop
    2026-11-05T21:00 TRUMP/USD: +0.18 $ (+0.2 %) trailing stop
    2026-11-06T01:00 ADA/USD: -1.64 $ (-0.7 %) stop-loss
@@ -60,13 +61,9 @@ Stín [ALIVE] $1034.84 (+3.48 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max 
 
 Věštec [ALIVE] $999.80 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10988.45 z $11000 (-0.10 %)
+CELKEM $10983.55 z $11000 (-0.15 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-06T10:00:50+00:00 🟢 Vlna KOUPIL PEPE/USD za $66.00 @ 5.09254e-06 (vlna: hype 3.2, +2 % za 24 h · paměť: podobné obchody -1.4 % -> sázka 0.9x)
-   2026-11-06T12:01:47+00:00 🔻 Stín (simulace) uzavřel short AVAX/USD: -1.97 $ (-0.9 %) - stop-loss
-   2026-11-06T13:01:31+00:00 🐻 Stín (simulace) otevřel short BTC/USD za $201 @ 75924.1, stop 78961 - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 %
-   2026-11-06T14:33:34+00:00 🔻 Medvěd PRODAL SOXS: -11.79 $ (-12.0 %) - stop-loss
    2026-11-06T14:35:07+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, RCT, SHFS, VIVK, SOXL, KPTI, DBGI, DVLT, SNXX, CENN, CIIT
    2026-11-06T14:45:47+00:00 ✅ Medvěd PRODAL SDOW: +4.71 $ (+1.7 %) - trailing stop
    2026-11-06T15:00:56+00:00 🔻 Trendy UZAVŘEL SHORT SOL/USD: -1.50 $ (-1.4 %) - průraz nad maximum kanálu
@@ -78,3 +75,9 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-06T19:45:21+00:00 🧠 Medvěd nekoupil SDOW - paměť: když nálada trhu = risk_off, prodělal jsem 6x (průměr -3.9 %)
    2026-11-06T20:01:55+00:00 🧠 Medvěd nekoupil SDOW - paměť: když nálada trhu = risk_off, prodělal jsem 6x (průměr -3.9 %)
    2026-11-06T20:01:55+00:00 🧠 Medvěd nekoupil SPXS - paměť: když nálada trhu = risk_off, prodělal jsem 6x (průměr -3.9 %)
+   2026-11-06T20:45:43+00:00 🧠 Medvěd nekoupil SQQQ - paměť: když nálada trhu = risk_off, prodělal jsem 6x (průměr -3.9 %)
+   2026-11-06T21:02:01+00:00 🧠 Vlna nekoupil XRP/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
+   2026-11-06T21:15:24+00:00 📊 Denní souhrn 06.11. · nálada trhu: risk_off
+🟢 Orbit: $1003.15 (+0.3 %) · 1 obch. · úspěšnost 100 % · PF ∞
+🟢 Trendy: $996.86 (-0.3 %)
+   2026-11-06T21:16:24+00:00 🏹 Lovec (simulace) koupil ANSEM·9cRC za $87, likvidita $1,414,279 - https://dexscreener.com/solana/fnzky6x7entq1er3d225dqyt7ybfka4pskb
