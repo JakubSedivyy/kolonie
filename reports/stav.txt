@@ -3,8 +3,8 @@
 Orbit [ALIVE] $1003.10 (+0.31 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
-Trendy [ALIVE] $996.01 (-0.40 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
-   SHORT ETH/USD: prodáno za 2248.22, teď 2242.99 (+0.2 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
+Trendy [ALIVE] $996.02 (-0.40 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
+   SHORT ETH/USD: prodáno za 2248.22, teď 2242.81 (+0.2 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
 
@@ -15,15 +15,14 @@ Memec [ALIVE] $996.00 (-0.40 %) | obchodů 15, úspěšnost 27 %, PF 0.75, max p
    2026-11-06T00:45 DOGE/USD: -0.94 $ (-1.5 %) časový limit
    2026-11-06T07:35 DOGE/USD: -0.66 $ (-1.1 %) časový limit
 
-Vlna [ALIVE] $948.25 (-5.18 %) | obchodů 7, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $4.71
+Vlna [ALIVE] $947.97 (-5.20 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $4.87
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.2044 (-7.6 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   otevřeno PEPE/USD: nákup 5.09254e-06, teď 4.91e-06 (-3.6 %) - vlna: hype 3.2, +2 % za 24 h · paměť: podobné obchody -1.4 % -> sázka 
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.16701 (-0.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   2026-11-04T15:48 BCH/USD: -3.39 $ (-3.4 %) stop-loss
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.1683 (-0.2 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
+   2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
 
 Šeptač [ALIVE] $999.75 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
@@ -49,10 +48,10 @@ Lovec [ALIVE] $977.11 (-2.29 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1040.96 (+4.10 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
-   SHORT BAT/USD: prodáno za 0.129535, teď 0.123586 (+4.6 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
-   SHORT XRP/USD: prodáno za 1.21403, teď 1.16075 (+4.4 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
-   SHORT BTC/USD: prodáno za 75886.1, teď 75803.9 (+0.1 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
+Stín [ALIVE] $1041.10 (+4.11 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
+   SHORT BAT/USD: prodáno za 0.129535, teď 0.12263 (+5.3 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
+   SHORT XRP/USD: prodáno za 1.21403, teď 1.16511 (+4.0 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
+   SHORT BTC/USD: prodáno za 75886.1, teď 75844.6 (+0.1 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
    2026-11-05T20:00 WIF/USD: +10.87 $ (+3.8 %) trailing stop
    2026-11-05T21:00 TRUMP/USD: +0.18 $ (+0.2 %) trailing stop
    2026-11-06T01:00 ADA/USD: -1.64 $ (-0.7 %) stop-loss
@@ -61,10 +60,9 @@ Stín [ALIVE] $1040.96 (+4.10 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max 
 
 Věštec [ALIVE] $999.75 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10981.31 z $11000 (-0.17 %)
+CELKEM $10981.18 z $11000 (-0.17 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-06T15:00:56+00:00 🔻 Trendy UZAVŘEL SHORT SOL/USD: -1.50 $ (-1.4 %) - průraz nad maximum kanálu
    2026-11-06T18:01:40+00:00 🟢 Medvěd KOUPIL SQQQ za $125.17 @ 47.8039 (trh padá: SQQQ +2.0 % za hodinu, nad EMA 20/50)
    2026-11-06T18:30:28+00:00 🟢 Medvěd KOUPIL SOXS za $58.44 @ 73.7689 (trh padá: SOXS +3.3 % za hodinu, nad EMA 20/50)
    2026-11-06T19:01:59+00:00 🔻 Medvěd PRODAL SOXS: -2.13 $ (-3.6 %) - pád se zastavil (ETF pod EMA 50)
@@ -81,3 +79,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-06T21:16:24+00:00 🏹 Lovec (simulace) koupil ANSEM·9cRC za $87, likvidita $1,414,279 - https://dexscreener.com/solana/fnzky6x7entq1er3d225dqyt7ybfka4pskb
    2026-11-06T22:01:37+00:00 🔻 Lovec (simulace) prodal ANSEM·9cRC: -10.37 $ (-12 %) - stop-loss
    2026-11-07T03:00:28+00:00 🐻 Vlna (simulace) SHORT XRP/USD za $79.79 @ 1.16712, stop 1.23715 (sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: pod
+   2026-11-07T14:00:39+00:00 🔻 Vlna PRODAL PEPE/USD: -2.71 $ (-4.1 %) - vlna opadla (trend se otočil)
