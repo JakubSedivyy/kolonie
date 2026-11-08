@@ -3,8 +3,8 @@
 Orbit [ALIVE] $1003.05 (+0.31 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
-Trendy [ALIVE] $996.52 (-0.35 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
-   SHORT ETH/USD: prodáno za 2248.22, teď 2232.6 (+0.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
+Trendy [ALIVE] $996.60 (-0.34 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
+   SHORT ETH/USD: prodáno za 2248.22, teď 2231.2 (+0.8 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
 
@@ -15,9 +15,9 @@ Memec [ALIVE] $995.05 (-0.49 %) | obchodů 16, úspěšnost 25 %, PF 0.71, max p
    2026-11-06T07:35 DOGE/USD: -0.66 $ (-1.1 %) časový limit
    2026-11-08T01:25 DOGE/USD: -0.89 $ (-1.4 %) časový limit
 
-Vlna [ALIVE] $949.35 (-5.07 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $4.87
+Vlna [ALIVE] $948.65 (-5.14 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $4.87
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.182 (-5.6 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.1567 (+0.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.167 (-0.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
@@ -48,10 +48,10 @@ Lovec [ALIVE] $977.06 (-2.29 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1044.77 (+4.48 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
-   SHORT BAT/USD: prodáno za 0.129535, teď 0.12035 (+7.1 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
-   SHORT XRP/USD: prodáno za 1.21403, teď 1.1596 (+4.5 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
-   SHORT BTC/USD: prodáno za 75886.1, teď 75759.1 (+0.2 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
+Stín [ALIVE] $1044.82 (+4.48 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
+   SHORT BAT/USD: prodáno za 0.129535, teď 0.120075 (+7.3 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
+   SHORT XRP/USD: prodáno za 1.21403, teď 1.1615 (+4.3 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
+   SHORT BTC/USD: prodáno za 75886.1, teď 75722.6 (+0.2 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
    2026-11-05T20:00 WIF/USD: +10.87 $ (+3.8 %) trailing stop
    2026-11-05T21:00 TRUMP/USD: +0.18 $ (+0.2 %) trailing stop
    2026-11-06T01:00 ADA/USD: -1.64 $ (-0.7 %) stop-loss
@@ -60,10 +60,9 @@ Stín [ALIVE] $1044.77 (+4.48 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max 
 
 Věštec [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10985.43 z $11000 (-0.13 %)
+CELKEM $10984.86 z $11000 (-0.14 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-06T20:01:55+00:00 🧠 Medvěd nekoupil SDOW - paměť: když nálada trhu = risk_off, prodělal jsem 6x (průměr -3.9 %)
    2026-11-06T20:01:55+00:00 🧠 Medvěd nekoupil SPXS - paměť: když nálada trhu = risk_off, prodělal jsem 6x (průměr -3.9 %)
    2026-11-06T20:45:43+00:00 🧠 Medvěd nekoupil SQQQ - paměť: když nálada trhu = risk_off, prodělal jsem 6x (průměr -3.9 %)
    2026-11-06T21:02:01+00:00 🧠 Vlna nekoupil XRP/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
@@ -82,3 +81,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-07T21:25:31+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $62.31 @ 0.070969, stop 0.0752271 (výplach: objem 28.1x průměru, nové 2h minimum · paměť: podobné
    2026-11-08T01:25:46+00:00 🔻 Memec UZAVŘEL SHORT DOGE/USD: -0.89 $ (-1.4 %) - časový limit
    2026-11-08T05:00:54+00:00 🧠 Vlna nekoupil BAT/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
+   2026-11-08T06:01:04+00:00 🧠 Vlna nekoupil BAT/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
