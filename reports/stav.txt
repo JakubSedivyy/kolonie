@@ -1,14 +1,14 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Orbit [ALIVE] $1003.10 (+0.31 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
+Orbit [ALIVE] $1003.05 (+0.31 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
-Trendy [ALIVE] $996.63 (-0.34 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
-   SHORT ETH/USD: prodáno za 2248.22, teď 2231.47 (+0.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
+Trendy [ALIVE] $996.37 (-0.36 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $1.54
+   SHORT ETH/USD: prodáno za 2248.22, teď 2235.4 (+0.6 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.16 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
 
-Memec [ALIVE] $995.38 (-0.46 %) | obchodů 15, úspěšnost 27 %, PF 0.75, max propad 1.1 %, poplatky $6.61
+Memec [ALIVE] $995.33 (-0.47 %) | obchodů 15, úspěšnost 27 %, PF 0.75, max propad 1.1 %, poplatky $6.61
    SHORT DOGE/USD: prodáno za 0.0708271, teď 0.071351 (-0.7 %) - výplach: objem 28.1x průměru, nové 2h minimum · paměť: podobné obchody
    2026-11-05T16:35 PEPE/USD: +2.80 $ (+2.6 %) časový limit
    2026-11-05T18:40 DOGE/USD: +4.03 $ (+3.7 %) časový limit
@@ -16,52 +16,52 @@ Memec [ALIVE] $995.38 (-0.46 %) | obchodů 15, úspěšnost 27 %, PF 0.75, max p
    2026-11-06T00:45 DOGE/USD: -0.94 $ (-1.5 %) časový limit
    2026-11-06T07:35 DOGE/USD: -0.66 $ (-1.1 %) časový limit
 
-Vlna [ALIVE] $949.15 (-5.09 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $4.87
+Vlna [ALIVE] $949.12 (-5.09 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $4.87
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.182 (-5.6 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.1604 (+0.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.16 (+0.6 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
 
-Šeptač [ALIVE] $999.75 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Šeptač [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Medvěd [ALIVE] $1019.84 (+1.98 %) | obchodů 9, úspěšnost 22 %, PF 1.52, max propad 3.5 %, poplatky $0.0
+Medvěd [ALIVE] $1019.79 (+1.98 %) | obchodů 9, úspěšnost 22 %, PF 1.52, max propad 3.5 %, poplatky $0.0
    2026-11-05T19:49 SQQQ: -5.22 $ (-2.8 %) stop-loss
    2026-11-06T14:33 SOXS: -11.79 $ (-12.0 %) stop-loss
    2026-11-06T14:45 SDOW: +4.71 $ (+1.7 %) trailing stop
    2026-11-06T19:00 SOXS: -2.13 $ (-3.6 %) pád se zastavil (ETF pod EMA 50)
    2026-11-06T19:00 SQQQ: -1.98 $ (-1.6 %) pád se zastavil (ETF pod EMA 50)
 
-Kapitán [ALIVE] $999.75 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Kapitán [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen II [ALIVE] $1000.79 (+0.08 %) | obchodů 4, úspěšnost 50 %, PF 1.13, max propad 1.0 %, poplatky $1.22
+Degen II [ALIVE] $1000.74 (+0.07 %) | obchodů 4, úspěšnost 50 %, PF 1.13, max propad 1.0 %, poplatky $1.22
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
    2026-11-05T01:16 GTA·7F8B: -4.11 $ (-27.1 %) stop-loss
    2026-11-05T03:49 PIRATE·2StN: -3.87 $ (-25.6 %) stop-loss
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
 
-Lovec [ALIVE] $977.11 (-2.29 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max propad 3.8 %, poplatky $4.96
+Lovec [ALIVE] $977.06 (-2.29 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max propad 3.8 %, poplatky $4.96
    2026-11-05T03:47 ANSEM·9cRC: +11.77 $ (+22.6 %) cíl zisku
    2026-11-05T07:18 GATO·Hspr: -7.16 $ (-13.0 %) stop-loss
    2026-11-05T15:40 CATE·Ai66: -3.06 $ (-5.7 %) časový limit
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1043.54 (+4.35 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
-   SHORT BAT/USD: prodáno za 0.129535, teď 0.121935 (+5.9 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
-   SHORT XRP/USD: prodáno za 1.21403, teď 1.15843 (+4.6 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
-   SHORT BTC/USD: prodáno za 75886.1, teď 75670.5 (+0.3 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
+Stín [ALIVE] $1040.78 (+4.08 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
+   SHORT BAT/USD: prodáno za 0.129535, teď 0.123482 (+4.7 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
+   SHORT XRP/USD: prodáno za 1.21403, teď 1.16276 (+4.2 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
+   SHORT BTC/USD: prodáno za 75886.1, teď 75757.4 (+0.2 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
    2026-11-05T20:00 WIF/USD: +10.87 $ (+3.8 %) trailing stop
    2026-11-05T21:00 TRUMP/USD: +0.18 $ (+0.2 %) trailing stop
    2026-11-06T01:00 ADA/USD: -1.64 $ (-0.7 %) stop-loss
    2026-11-06T03:00 WIF/USD: -2.93 $ (-1.5 %) stop-loss
    2026-11-06T12:01 AVAX/USD: -1.97 $ (-0.9 %) stop-loss
 
-Věštec [ALIVE] $999.75 (-0.02 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Věštec [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10984.79 z $11000 (-0.14 %)
+CELKEM $10981.34 z $11000 (-0.17 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-06T19:03:15+00:00 🧠 Medvěd se poučil: když nálada trhu = risk_off, prodělal 6x (průměr -3.9 %) - příště to nekoupí
