@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 270 signálů, 62 obchodů, 152 hodinových snímků radaru, 199 událostí
+Celkem zapsáno: 270 signálů, 62 obchodů, 153 hodinových snímků radaru, 200 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 0, průměr -49.3 %
@@ -27,7 +27,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Medvěd    | plno pozic                                    |   2x, vyhrálo by 0, průměr -1.6 %
   Memec     | coin drží kolega                              |   2x, vyhrálo by 1, průměr -0.7 %
   Memec     | plno pozic                                    |   1x, vyhrálo by 0, průměr -4.1 %
-  Stín      | plno pozic                                    |  98x, vyhrálo by 1, průměr -3.9 %
+  Stín      | plno pozic                                    | 100x, vyhrálo by 1, průměr -3.9 %
   Šeptač    | poplatky by sežraly zisk (stop moc blízko)    |   1x, vyhrálo by 0, průměr -3.6 %
 
 UZAVŘENÉ OBCHODY:
@@ -41,4 +41,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   8 obchodů, 0 výher, průměr -4.7 %, celkem -48.96 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (152h), CATE (145h), XRP (113h), PENGU (105h), PEARL (73h), ETH (73h), HYPE (64h), SUI (60h), NEAR (52h), SOL (50h), DACITYCOIN (49h), TRUMP (43h), ZEC (40h), LIT (35h), KNTQ (26h), COGE (26h), ANAKIN (23h), WASTED (23h), CAPY (23h), DACITY (23h)
+  BTC (153h), CATE (146h), XRP (114h), PENGU (106h), PEARL (73h), ETH (73h), HYPE (64h), SUI (60h), NEAR (52h), SOL (50h), DACITYCOIN (49h), TRUMP (43h), ZEC (40h), LIT (35h), KNTQ (26h), COGE (26h), WASTED (24h), DACITY (24h), ANAKIN (23h), CAPY (23h)
