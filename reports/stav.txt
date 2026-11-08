@@ -48,10 +48,10 @@ Lovec [ALIVE] $977.06 (-2.29 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1038.79 (+3.88 %) | obchodů 14, úspěšnost 57 %, PF 3.08, max propad 2.8 %, poplatky $3.96
-   SHORT XRP/USD: prodáno za 1.21403, teď 1.15061 (+5.2 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
-   SHORT BTC/USD: prodáno za 75886.1, teď 75833.4 (+0.1 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
-   SHORT BCH/USD: prodáno za 245.582, teď 245.705 (-0.1 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+Stín [ALIVE] $1038.68 (+3.87 %) | obchodů 14, úspěšnost 57 %, PF 3.08, max propad 2.8 %, poplatky $3.96
+   SHORT XRP/USD: prodáno za 1.21403, teď 1.152 (+5.1 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
+   SHORT BTC/USD: prodáno za 75886.1, teď 75643.8 (+0.3 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
+   SHORT BCH/USD: prodáno za 245.582, teď 246.125 (-0.2 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
    2026-11-05T21:00 TRUMP/USD: +0.18 $ (+0.2 %) trailing stop
    2026-11-06T01:00 ADA/USD: -1.64 $ (-0.7 %) stop-loss
    2026-11-06T03:00 WIF/USD: -2.93 $ (-1.5 %) stop-loss
@@ -60,10 +60,9 @@ Stín [ALIVE] $1038.79 (+3.88 %) | obchodů 14, úspěšnost 57 %, PF 3.08, max 
 
 Věštec [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10978.94 z $11000 (-0.19 %)
+CELKEM $10978.83 z $11000 (-0.19 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-08T05:00:54+00:00 🧠 Vlna nekoupil BAT/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T06:01:04+00:00 🧠 Vlna nekoupil BAT/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T07:00:31+00:00 🧠 Vlna nekoupil GRT/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T07:06:34+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
@@ -80,3 +79,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-08T18:00:44+00:00 🧠 Vlna nekoupil SUSHI/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T19:00:58+00:00 ✅ Stín (simulace) uzavřel short BAT/USD: +2.75 $ (+1.9 %) - trailing stop
    2026-11-08T20:01:16+00:00 🐻 Stín (simulace) otevřel short BCH/USD za $212 @ 245.705, stop 255.533 - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8
+   2026-11-08T21:15:21+00:00 📊 Denní souhrn 08.11. · nálada trhu: risk_off
+🟢 Orbit: $1003.05 (+0.3 %) · 1 obch. · úspěšnost 100 % · PF ∞
+🟢 Trendy: $995.87 (-0.4 %)
