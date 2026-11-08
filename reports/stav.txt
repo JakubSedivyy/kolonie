@@ -48,10 +48,10 @@ Lovec [ALIVE] $977.06 (-2.29 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1043.29 (+4.33 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
-   SHORT BAT/USD: prodáno za 0.129535, teď 0.121775 (+6.0 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
-   SHORT XRP/USD: prodáno za 1.21403, teď 1.15873 (+4.6 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
-   SHORT BTC/USD: prodáno za 75886.1, teď 75791.3 (+0.1 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
+Stín [ALIVE] $1041.70 (+4.17 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max propad 2.8 %, poplatky $3.74
+   SHORT BAT/USD: prodáno za 0.129535, teď 0.122052 (+5.8 %) - sestupný trend, -8.9 % za 24 h · paměť: podobné obchody -1.7 % -> sázk
+   SHORT XRP/USD: prodáno za 1.21403, teď 1.16465 (+4.1 %) - sestupný trend, -7.0 % za 24 h · paměť: podobné obchody -1.4 % -> sázk
+   SHORT BTC/USD: prodáno za 75886.1, teď 75869.3 (+0.0 %) - sestupný trend, -4.6 % za 24 h · paměť: podobné obchody -2.1 % -> sázk
    2026-11-05T20:00 WIF/USD: +10.87 $ (+3.8 %) trailing stop
    2026-11-05T21:00 TRUMP/USD: +0.18 $ (+0.2 %) trailing stop
    2026-11-06T01:00 ADA/USD: -1.64 $ (-0.7 %) stop-loss
@@ -60,7 +60,7 @@ Stín [ALIVE] $1043.29 (+4.33 %) | obchodů 13, úspěšnost 54 %, PF 2.87, max 
 
 Věštec [ALIVE] $999.70 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10983.58 z $11000 (-0.15 %)
+CELKEM $10981.99 z $11000 (-0.16 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-06T22:01:37+00:00 🔻 Lovec (simulace) prodal ANSEM·9cRC: -10.37 $ (-12 %) - stop-loss
