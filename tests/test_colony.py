@@ -924,6 +924,25 @@ def test_memory_import_once():
     assert m.import_once(os.path.join(d, "neni.json")) == 0
 
 
+def test_memec_long_only_when_lab_recommends():
+    import numpy as np
+    idx = pd.date_range("2026-01-01", periods=400, freq="5min", tz="UTC")
+    base = 1.0 + 0.01 * np.sin(np.arange(400))   # drobné kolísání, ať RSI není extrém
+    df = pd.DataFrame({"open": base, "high": base * 1.001, "low": base * 0.999, "close": base,
+                       "volume": np.full(400, 100.0)}, index=idx)
+    up = df.copy()                                 # výbuch objemu + nové 2h maximum -> nákup
+    up.iloc[-1] = [1.0, 1.03, 1.0, 1.025, 2000.0]
+    dn = df.copy()                                 # výplach -> short
+    dn.iloc[-1] = [1.0, 1.0, 0.97, 0.975, 2000.0]
+    m = MemeAgent()
+    pu, pd_ = m.prepare(up), m.prepare(dn)
+    assert m.entry(pu, len(pu) - 1, {}) is not None
+    m.lab_warn = True                              # laboratoř longy nedoporučuje
+    assert m.entry(pu, len(pu) - 1, {}) is None
+    assert m.short_entry(pd_, len(pd_) - 1, {}) is not None   # shorty dál
+    assert TrendAgent().lab_warn is False          # ostatní boti beze změny
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

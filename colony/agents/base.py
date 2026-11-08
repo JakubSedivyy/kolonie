@@ -49,6 +49,7 @@ class BarAgent:
     max_positions = 3
     trades_in_risk_off = True
     benched = False             # laboratoř nenašla ziskovou variantu -> bot odpočívá (nové obchody ne)
+    lab_warn = False            # laboratoř ho nedoporučuje (na papíře obchoduje dál, pokud strategie neřekne jinak)
     TUNABLE: dict = {}          # parametry, které smí laboratoř měnit
 
     def __init__(self, wallet: Wallet | None = None):

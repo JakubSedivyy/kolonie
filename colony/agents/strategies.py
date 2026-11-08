@@ -227,6 +227,10 @@ class MemeAgent(BarAgent):
     target_pct = 0.10
 
     hot_vol_mult = 2.0           # coin, o kterém se mluví na internetu, stačí menší výbuch objemu
+    # Nákupy (long) jen když je laboratoř doporučí: v laboratoři prodělávaly všechny varianty
+    # (8. 11.: test 65 obch., PF 0.24) a naživo 6 z 6 nákupů skončilo ztrátou. Shorty zůstávají.
+    # Laboratoř si longy dál zkouší, takže když začnou vydělávat, zapnou se samy.
+    long_needs_lab = True
 
     def universe(self, ctx):
         memes = ctx.get("crypto_memes") or ["DOGE/USD", "SHIB/USD", "PEPE/USD"]
@@ -243,6 +247,8 @@ class MemeAgent(BarAgent):
         return df
 
     def entry(self, df, i, ctx):
+        if self.long_needs_lab and self.lab_warn:
+            return None
         r = df.iloc[i]
         if pd.isna(r["vol_avg"]) or r["vol_avg"] <= 0 or pd.isna(r["hh2h"]):
             return None
