@@ -15,10 +15,10 @@ Memec [ALIVE] $993.22 (-0.68 %) | obchodů 18, úspěšnost 22 %, PF 0.64, max p
    2026-11-09T01:50 PEPE/USD: -0.31 $ (-0.5 %) časový limit
    2026-11-09T01:55 BONK/USD: -1.47 $ (-2.4 %) časový limit
 
-Vlna [ALIVE] $954.55 (-4.55 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $5.07
+Vlna [ALIVE] $953.85 (-4.62 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $5.07
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.133 (-1.2 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.0912 (+6.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 86.2918 (-0.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.0983 (+5.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 86.53 (-0.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
@@ -49,10 +49,10 @@ Lovec [ALIVE] $977.01 (-2.30 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1054.44 (+5.44 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.78
-   SHORT BCH/USD: prodáno za 245.582, teď 238.402 (+2.9 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
-   SHORT XRP/USD: prodáno za 1.09615, teď 1.09078 (+0.5 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
-   SHORT ETH/USD: prodáno za 2129.95, teď 2123.46 (+0.3 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+Stín [ALIVE] $1052.75 (+5.27 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.78
+   SHORT BCH/USD: prodáno za 245.582, teď 239.42 (+2.5 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+   SHORT XRP/USD: prodáno za 1.09615, teď 1.09333 (+0.3 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+   SHORT ETH/USD: prodáno za 2129.95, teď 2126.13 (+0.2 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
    2026-11-06T12:01 AVAX/USD: -1.97 $ (-0.9 %) stop-loss
    2026-11-08T19:00 BAT/USD: +2.75 $ (+1.9 %) trailing stop
    2026-11-09T03:00 XRP/USD: +17.68 $ (+8.0 %) časový limit
@@ -61,7 +61,7 @@ Stín [ALIVE] $1054.44 (+5.44 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max 
 
 Věštec [ALIVE] $999.65 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10997.42 z $11000 (-0.02 %)
+CELKEM $10995.03 z $11000 (-0.05 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-08T22:00:31+00:00 🧠 Vlna nekoupil BAT/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
