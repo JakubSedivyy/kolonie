@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 311 signálů, 68 obchodů, 178 hodinových snímků radaru, 223 událostí
+Celkem zapsáno: 311 signálů, 68 obchodů, 179 hodinových snímků radaru, 223 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -27.5 %
@@ -26,12 +26,14 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +14.9 %
   Degen II  | paměť: když kupci/prodejci = 1,5-2,5x, proděl |   1x, vyhrálo by 1, průměr +0.0 %
+  Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +18.3 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -10.0 %
   Lovec     | paměť: když kupci/prodejci = do 1,5x, proděla |   1x, vyhrálo by 1, průměr +14.6 %
   Medvěd    | plno pozic                                    |   5x, vyhrálo by 0, průměr -2.0 %
+  Medvěd    | paměť: když nálada trhu = risk_off, prodělal  |   2x, vyhrálo by 0, průměr -1.6 %
   Memec     | coin drží kolega                              |   3x, vyhrálo by 2, průměr -0.1 %
   Memec     | plno pozic                                    |   1x, vyhrálo by 0, průměr -4.1 %
-  Stín      | plno pozic                                    |  90x, vyhrálo by 12, průměr -3.0 %
+  Stín      | plno pozic                                    |  89x, vyhrálo by 12, průměr -3.0 %
   Šeptač    | poplatky by sežraly zisk (stop moc blízko)    |   1x, vyhrálo by 0, průměr -3.6 %
 
 UZAVŘENÉ OBCHODY:
@@ -45,4 +47,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   8 obchodů, 0 výher, průměr -4.7 %, celkem -48.96 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (161h), XRP (129h), PENGU (128h), HYPE (79h), ETH (78h), PEARL (73h), SUI (63h), NEAR (57h), SOL (49h), ZEC (43h), TRUMP (43h), DACITYCOIN (39h), LIT (37h), KNTQ (34h), DACITY (34h), STONK (30h), PUMP (27h), COGE (26h), WASTED (23h)
+  BTC (168h), CATE (161h), XRP (129h), PENGU (129h), HYPE (79h), ETH (77h), PEARL (73h), SUI (63h), NEAR (57h), SOL (49h), ZEC (43h), TRUMP (43h), DACITYCOIN (38h), LIT (37h), KNTQ (35h), DACITY (35h), STONK (30h), PUMP (27h), COGE (26h), WASTED (23h)
