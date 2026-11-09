@@ -15,10 +15,10 @@ Memec [ALIVE] $993.22 (-0.68 %) | obchodů 18, úspěšnost 22 %, PF 0.64, max p
    2026-11-09T01:50 PEPE/USD: -0.31 $ (-0.5 %) časový limit
    2026-11-09T01:55 BONK/USD: -1.47 $ (-2.4 %) časový limit
 
-Vlna [ALIVE] $953.78 (-4.62 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $5.07
+Vlna [ALIVE] $952.83 (-4.72 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $5.07
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.133 (-1.2 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.09624 (+6.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 86.76 (-1.1 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.102 (+5.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 87.37 (-1.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
@@ -49,9 +49,9 @@ Lovec [ALIVE] $977.01 (-2.30 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1049.90 (+4.99 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.64
-   SHORT BCH/USD: prodáno za 245.582, teď 241.601 (+1.6 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
-   SHORT XRP/USD: prodáno za 1.09615, teď 1.0967 (-0.1 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+Stín [ALIVE] $1048.76 (+4.88 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.64
+   SHORT BCH/USD: prodáno za 245.582, teď 242 (+1.5 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+   SHORT XRP/USD: prodáno za 1.09615, teď 1.1005 (-0.4 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
    2026-11-06T12:01 AVAX/USD: -1.97 $ (-0.9 %) stop-loss
    2026-11-08T19:00 BAT/USD: +2.75 $ (+1.9 %) trailing stop
    2026-11-09T03:00 XRP/USD: +17.68 $ (+8.0 %) časový limit
@@ -60,10 +60,9 @@ Stín [ALIVE] $1049.90 (+4.99 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max 
 
 Věštec [ALIVE] $999.65 (-0.03 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10992.11 z $11000 (-0.07 %)
+CELKEM $10990.02 z $11000 (-0.09 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-08T22:00:31+00:00 🧠 Vlna nekoupil ADA/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T22:00:31+00:00 🧠 Vlna nekoupil AVAX/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T22:00:31+00:00 🧠 Vlna nekoupil BAT/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T22:00:31+00:00 🧠 Vlna nekoupil BCH/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
@@ -78,3 +77,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-09T10:01:04+00:00 🔻 Stín (simulace) uzavřel short XTZ/USD: -0.67 $ (-0.3 %) - stop-loss
    2026-11-09T13:01:15+00:00 ✅ Stín (simulace) uzavřel short BTC/USD: +2.31 $ (+1.1 %) - časový limit
    2026-11-09T14:01:12+00:00 🐻 Stín (simulace) otevřel short XRP/USD za $229 @ 1.0967, stop 1.14057 - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 
+   2026-11-09T14:35:19+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, JDZG, HRTX, SHFS, NVDA, INLF, SOXL, NTCL, SOC, GPUS, EDSA
