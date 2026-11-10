@@ -47,6 +47,7 @@ class BarAgent:
     risk_per_trade = 0.01       # kolik % peněženky smí ztratit na jednom obchodu
     max_position_frac = 0.30    # max podíl peněženky v jedné pozici
     max_positions = 3
+    max_same_side = None        # max pozic stejným směrem (long/short) naráz; krypto se hýbe spolu
     trades_in_risk_off = True
     benched = False             # laboratoř nenašla ziskovou variantu -> bot odpočívá (nové obchody ne)
     lab_warn = False            # laboratoř ho nedoporučuje (na papíře obchoduje dál, pokud strategie neřekne jinak)
@@ -54,6 +55,13 @@ class BarAgent:
 
     def __init__(self, wallet: Wallet | None = None):
         self.wallet = wallet or Wallet(self.name, self.asset_class)
+
+    def side_full(self, short: bool) -> bool:
+        """True, když už bot drží max_same_side pozic stejným směrem (např. 2 longy na kryptu)."""
+        if not self.max_same_side:
+            return False
+        same = sum(1 for lot in self.wallet.lots.values() if is_short(lot) == short)
+        return same >= self.max_same_side
 
     def apply(self, params: dict):
         for k, v in (params or {}).items():

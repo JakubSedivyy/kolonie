@@ -44,8 +44,19 @@ def main():
         for e in ev:
             print("  ", " ".join(str(x) for x in e)[:160])
     est = (st.get("oracle") or {}).get("estimates") or []
+    g = st.get("grok")
     if est:
         print(f"\nVĚŠTEC: {len(est)} odhadů z posledního skenu")
+    elif g is not None:                              # proč Věštec nic nedělá
+        if not g.get("enabled"):
+            why = "chybí XAI_API_KEY v .env na serveru"
+        elif g.get("paused_until"):
+            why = f"Grok odmítl klíč, pauza do {str(g['paused_until'])[:16]} - {g.get('last_error', '')[:100]}"
+        elif g.get("last_error"):
+            why = f"poslední chyba Groka: {g['last_error'][:120]}"
+        else:
+            why = f"Grok funguje (dnes {g.get('calls', 0)} dotazů, ${g.get('spent', 0)} z ${g.get('budget', 0)}), zatím bez odhadů"
+        print(f"\nVĚŠTEC: zatím žádné odhady - {why}")
 
 
 if __name__ == "__main__":

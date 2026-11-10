@@ -943,6 +943,42 @@ def test_memec_long_only_when_lab_recommends():
     assert TrendAgent().lab_warn is False          # ostatní boti beze změny
 
 
+def test_wave_max_same_side():
+    from colony.wallet import Lot
+    v = WaveAgent()
+    def lot(sym, short):
+        return Lot(sym, 1.0, 100.0, 90.0, None, None, "2026-11-05T00:00:00+00:00", None,
+                   meta={"side": "short", "p0": 100.0} if short else {})
+    v.wallet.lots = {"AVAX/USD": lot("AVAX/USD", False)}
+    assert not v.side_full(False)                  # 1 long -> další long smí
+    v.wallet.lots["ADA/USD"] = lot("ADA/USD", False)
+    assert v.side_full(False)                      # 2 longy -> třetí ne
+    assert not v.side_full(True)                   # short (opačný směr) smí
+    v.wallet.lots["SOL/USD"] = lot("SOL/USD", True)
+    assert not v.side_full(True)
+    t = TrendAgent(); t.wallet.lots = dict(v.wallet.lots)
+    assert not t.side_full(False)                  # ostatní boti bez limitu
+
+
+def test_stav_shows_grok_status():
+    import io, contextlib, stav
+    st = {"started": "2026-11-02T00:00", "wallets": {}, "events": [],
+          "grok": {"enabled": False, "last_error": "", "paused_until": None}}
+    path = os.path.join(config.STATE_DIR, "colony.json")
+    old = open(path).read() if os.path.exists(path) else None
+    json.dump(st, open(path, "w"))
+    try:
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            stav.main()
+        assert "chybí XAI_API_KEY" in buf.getvalue()
+    finally:
+        if old is None:
+            os.remove(path)
+        else:
+            open(path, "w").write(old)
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

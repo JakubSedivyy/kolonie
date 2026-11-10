@@ -47,7 +47,8 @@ def replay(agent: BarAgent, data: dict, executor: Executor, mood_mult: float = 1
         # 1) vyplnit signál z minulé svíčky za dnešní open
         if s in pending:
             e, sig_px = pending.pop(s)
-            if s not in w.lots and w.status == "ALIVE" and len(w.lots) < agent.max_positions:
+            if s not in w.lots and w.status == "ALIVE" and len(w.lots) < agent.max_positions \
+                    and not agent.side_full(False):
                 k = r["open"] / sig_px
                 e2 = replace(e, stop=e.stop * k, target=e.target * k if e.target else None)
                 if e2.stop < r["open"]:

@@ -293,6 +293,7 @@ class WaveAgent(BarAgent):
     risk_per_trade = 0.015
     max_position_frac = 0.30
     max_positions = 3
+    max_same_side = 2            # 5. 11. ji 3 longy naráz (AVAX, ADA, ETH) shodil jeden propad krypta
     trades_in_risk_off = False
     min_hold_hours = 24          # otočení trendu řeší až po prvním dni, ať ji nevyhodí šum
     atr_mult = 3.0

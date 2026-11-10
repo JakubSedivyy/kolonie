@@ -97,6 +97,8 @@ class Colony:
                             for a in (self.degen, self.lovec)},
               "oracle": {"last_scan": self.oracle.last_scan, "evaluated": self.oracle.evaluated,
                          "estimates": self.oracle.last_estimates},
+              "grok": {**self.grok.status(), "paused_until": self.grok.paused_until.isoformat()
+                       if self.grok.paused_until else None},
               "paused": self.paused, "started": self.started, "last_summary": self.last_summary,
               "eval_sent": self.eval_sent, "events": self.events[-150:]}
         tmp = self.state_path + ".tmp"
@@ -325,6 +327,8 @@ class Colony:
             skip, usd, note = "", 0.0, ""
             if len(w.lots) >= a.max_positions:
                 skip = "plno pozic"
+            elif a.side_full(short):
+                skip = "moc sázek stejným směrem"
             elif not a.fees_ok(price, e.stop):
                 skip = "poplatky by sežraly zisk (stop moc blízko)"
             elif self.blacklist.get(s, 0) >= 2:
