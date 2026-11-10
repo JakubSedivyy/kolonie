@@ -1,2 +1,1 @@
-Nov 10 14:35:35 ubuntu-1gb-hel1-1 python[234660]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
-Nov 10 14:37:08 ubuntu-1gb-hel1-1 python[234660]: 2026-11-10 14:37:08,084 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 10 15:38:40 ubuntu-1gb-hel1-1 python[234660]: 2026-11-10 15:38:40,339 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
