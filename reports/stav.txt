@@ -16,10 +16,10 @@ Memec [ALIVE] $992.91 (-0.71 %) | obchodů 18, úspěšnost 22 %, PF 0.64, max p
    2026-11-09T01:50 PEPE/USD: -0.31 $ (-0.5 %) časový limit
    2026-11-09T01:55 BONK/USD: -1.47 $ (-2.4 %) časový limit
 
-Vlna [ALIVE] $958.14 (-4.19 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.07
+Vlna [ALIVE] $958.70 (-4.13 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.07
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.11936 (+0.0 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.06893 (+8.4 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 84.3868 (+1.7 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.06169 (+9.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 84.313 (+1.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
@@ -51,10 +51,10 @@ Lovec [ALIVE] $976.96 (-2.30 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1061.62 (+6.16 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.78
-   SHORT BCH/USD: prodáno za 245.582, teď 236.298 (+3.8 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
-   SHORT XRP/USD: prodáno za 1.09615, teď 1.07814 (+1.6 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
-   SHORT ETH/USD: prodáno za 2129.95, teď 2097.45 (+1.5 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+Stín [ALIVE] $1070.10 (+7.01 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.78
+   SHORT BCH/USD: prodáno za 245.582, teď 233.966 (+4.7 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+   SHORT XRP/USD: prodáno za 1.09615, teď 1.06442 (+2.9 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+   SHORT ETH/USD: prodáno za 2129.95, teď 2063.74 (+3.1 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
    2026-11-06T12:01 AVAX/USD: -1.97 $ (-0.9 %) stop-loss
    2026-11-08T19:00 BAT/USD: +2.75 $ (+1.9 %) trailing stop
    2026-11-09T03:00 XRP/USD: +17.68 $ (+8.0 %) časový limit
@@ -63,10 +63,9 @@ Stín [ALIVE] $1061.62 (+6.16 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max 
 
 Věštec [ALIVE] $999.60 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11003.78 z $11000 (+0.03 %)
+CELKEM $11012.82 z $11000 (+0.12 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-09T04:01:18+00:00 🐻 Stín (simulace) otevřel short XTZ/USD za $233 @ 0.251571, stop 0.261634 - sestupný trend, -5.6 % za 24 h · paměť: podobné obchody -1
    2026-11-09T10:01:04+00:00 🔻 Stín (simulace) uzavřel short XTZ/USD: -0.67 $ (-0.3 %) - stop-loss
    2026-11-09T13:01:15+00:00 ✅ Stín (simulace) uzavřel short BTC/USD: +2.31 $ (+1.1 %) - časový limit
    2026-11-09T14:01:12+00:00 🐻 Stín (simulace) otevřel short XRP/USD za $229 @ 1.0967, stop 1.14057 - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 
@@ -84,5 +83,6 @@ POSLEDNÍ UDÁLOSTI:
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-11-10T13:24:15+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-10T13:35:44+00:00 🐻 Memec (simulace) SHORT DOGE/USD za $62.76 @ 0.0689135, stop 0.0730483 (výplach: objem 11.7x průměru, nové 2h minimum · paměť: podobn
+   2026-11-10T14:35:36+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, MI, CODX, SOXL, SHFS, PEPG, NVDA, PARA, VIVK, SOXS, SNXX
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-10T19:24 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 

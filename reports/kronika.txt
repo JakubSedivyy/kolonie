@@ -1,9 +1,8 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 314 signálů, 69 obchodů, 195 hodinových snímků radaru, 231 událostí
+Celkem zapsáno: 315 signálů, 69 obchodů, 196 hodinových snímků radaru, 232 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -27.5 %
-  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 2, průměr +24.9 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 1, průměr -27.5 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -7.2 %
@@ -17,6 +16,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když růst za hodinu = 20-60 %, proděla |   1x, vyhrálo by 0, průměr -1.0 %
   Degen II  | paměť: když růst za hodinu = 20-60 %, proděla |   1x, vyhrálo by 1, průměr +29.7 %
   Degen II  | paměť: když růst za hodinu = 20-60 %, proděla |   1x, vyhrálo by 0, průměr -20.0 %
+  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +14.9 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -0.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -20.0 %
@@ -47,4 +47,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   8 obchodů, 0 výher, průměr -4.7 %, celkem -48.96 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (161h), PENGU (142h), XRP (125h), ETH (78h), HYPE (77h), PEARL (74h), SUI (60h), NEAR (50h), SOL (47h), DACITY (47h), KNTQ (43h), TRUMP (43h), ZEC (42h), LIT (36h), STONK (31h), DACITYCOIN (29h), COGE (26h), PUMP (25h), INJ (24h)
+  BTC (168h), CATE (161h), PENGU (143h), XRP (124h), ETH (78h), HYPE (78h), PEARL (73h), SUI (60h), NEAR (50h), SOL (48h), DACITY (48h), KNTQ (43h), TRUMP (43h), ZEC (42h), LIT (36h), STONK (31h), DACITYCOIN (28h), COGE (26h), PUMP (25h), INJ (24h)
