@@ -3,8 +3,8 @@
 Orbit [ALIVE] $1002.95 (+0.30 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
-Trendy [ALIVE] $994.01 (-0.60 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $2.14
-   SHORT ETH/USD: prodáno za 2020.59, teď 2045.61 (-1.2 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.24 % · paměť: podobn
+Trendy [ALIVE] $994.43 (-0.56 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $2.14
+   SHORT ETH/USD: prodáno za 2020.59, teď 2038.49 (-0.9 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.24 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
    2026-11-08T08:00 ETH/USD: -0.11 $ (-0.1 %) průraz nad maximum kanálu
@@ -16,10 +16,10 @@ Memec [ALIVE] $994.19 (-0.58 %) | obchodů 19, úspěšnost 26 %, PF 0.70, max p
    2026-11-09T01:55 BONK/USD: -1.47 $ (-2.4 %) časový limit
    2026-11-10T17:35 DOGE/USD: +1.01 $ (+1.6 %) časový limit
 
-Vlna [ALIVE] $959.83 (-4.02 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.07
+Vlna [ALIVE] $959.85 (-4.02 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.07
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.11936 (+0.0 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.06677 (+8.6 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 82.6933 (+3.7 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.064 (+8.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 82.884 (+3.4 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
@@ -51,22 +51,20 @@ Lovec [ALIVE] $976.96 (-2.30 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1081.62 (+8.16 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.78
-   SHORT BCH/USD: prodáno za 245.582, teď 228.036 (+7.1 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
-   SHORT XRP/USD: prodáno za 1.09615, teď 1.05255 (+4.0 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
-   SHORT ETH/USD: prodáno za 2129.95, teď 2026.86 (+4.8 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
-   2026-11-06T12:01 AVAX/USD: -1.97 $ (-0.9 %) stop-loss
+Stín [ALIVE] $1075.18 (+7.52 %) | obchodů 18, úspěšnost 61 %, PF 4.69, max propad 2.8 %, poplatky $4.92
+   SHORT BCH/USD: prodáno za 245.582, teď 228.699 (+6.9 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+   SHORT ETH/USD: prodáno za 2129.95, teď 2042.13 (+4.1 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
    2026-11-08T19:00 BAT/USD: +2.75 $ (+1.9 %) trailing stop
    2026-11-09T03:00 XRP/USD: +17.68 $ (+8.0 %) časový limit
    2026-11-09T10:00 XTZ/USD: -0.67 $ (-0.3 %) stop-loss
    2026-11-09T13:00 BTC/USD: +2.31 $ (+1.1 %) časový limit
+   2026-11-10T19:00 XRP/USD: +4.71 $ (+2.1 %) trailing stop
 
 Věštec [ALIVE] $999.60 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11024.99 z $11000 (+0.23 %)
+CELKEM $11018.99 z $11000 (+0.17 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-09T14:01:12+00:00 🐻 Stín (simulace) otevřel short XRP/USD za $229 @ 1.0967, stop 1.14057 - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 
    2026-11-09T14:35:19+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, JDZG, HRTX, SHFS, NVDA, INLF, SOXL, NTCL, SOC, GPUS, EDSA
    2026-11-09T17:02:29+00:00 🐻 Stín (simulace) otevřel short ETH/USD za $228 @ 2131.02, stop 2216.26 - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3
    2026-11-09T21:15:14+00:00 📊 Denní souhrn 09.11. · nálada trhu: risk_off
@@ -84,5 +82,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-10T14:35:36+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, MI, CODX, SOXL, SHFS, PEPG, NVDA, PARA, VIVK, SOXS, SNXX
    2026-11-10T16:00:49+00:00 🐻 Trendy (simulace) SHORT ETH/USD za $118.39 @ 2021.61, stop 2084.14 (propad pod 24-svíčkové minimum pod EMA 200, ATR 1.24 % · paměť: 
    2026-11-10T17:35:58+00:00 ✅ Memec UZAVŘEL SHORT DOGE/USD: +1.01 $ (+1.6 %) - časový limit
+   2026-11-10T19:01:54+00:00 ✅ Stín (simulace) uzavřel short XRP/USD: +4.71 $ (+2.1 %) - trailing stop
 
-VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-10T19:24 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-11T01:30 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
