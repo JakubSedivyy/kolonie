@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 313 signálů, 69 obchodů, 191 hodinových snímků radaru, 228 událostí
+Celkem zapsáno: 313 signálů, 69 obchodů, 192 hodinových snímků radaru, 228 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -27.5 %
@@ -33,7 +33,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Medvěd    | paměť: když nálada trhu = risk_off, prodělal  |   2x, vyhrálo by 0, průměr -1.6 %
   Memec     | coin drží kolega                              |   3x, vyhrálo by 2, průměr -0.1 %
   Memec     | plno pozic                                    |   1x, vyhrálo by 0, průměr -4.1 %
-  Stín      | plno pozic                                    |  20x, vyhrálo by 12, průměr +1.2 %
+  Stín      | plno pozic                                    |  19x, vyhrálo by 12, průměr +1.5 %
   Šeptač    | poplatky by sežraly zisk (stop moc blízko)    |   1x, vyhrálo by 0, průměr -3.6 %
 
 UZAVŘENÉ OBCHODY:
@@ -42,9 +42,9 @@ UZAVŘENÉ OBCHODY:
   Medvěd    |   9 obchodů, 2 výher, průměr -0.0 %, celkem +20.09 $
   Memec     |  16 obchodů, 4 výher, průměr -0.6 %, celkem -5.23 $
   Orbit     |   1 obchodů, 1 výher, průměr +1.8 %, celkem +3.35 $
-  Stín      |  17 obchodů, 10 výher, průměr +1.6 %, celkem +47.19 $
+  Stín      |  16 obchodů, 9 výher, průměr +1.6 %, celkem +43.77 $
   Trendy    |   3 obchodů, 0 výher, průměr -1.0 %, celkem -3.83 $
   Vlna      |   8 obchodů, 0 výher, průměr -4.7 %, celkem -48.96 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (161h), PENGU (140h), XRP (126h), ETH (79h), HYPE (76h), PEARL (75h), SUI (59h), NEAR (52h), SOL (45h), DACITY (44h), ZEC (43h), TRUMP (43h), KNTQ (42h), LIT (36h), DACITYCOIN (33h), STONK (30h), COGE (26h), PUMP (25h), INJ (24h)
+  BTC (168h), CATE (161h), PENGU (141h), XRP (125h), ETH (78h), HYPE (77h), PEARL (74h), SUI (59h), NEAR (52h), SOL (45h), DACITY (45h), ZEC (43h), KNTQ (43h), TRUMP (43h), LIT (36h), DACITYCOIN (32h), STONK (30h), COGE (26h), PUMP (25h), INJ (24h)
