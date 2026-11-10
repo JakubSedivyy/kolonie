@@ -19,3 +19,7 @@ Please make sure you have the correct access rights
 and the repository exists.
 2026-11-05T16:01:31Z push reportu selhal
 2026-11-08T07:06:33Z nasazena verze de2e7f7: Memec: nákupy jen s doporučením laboratoře, shorty dál
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
+2026-11-10T13:24:13Z nasazena verze 29d8a17: Vlna: max 2 sázky stejným směrem; hlášení ukáže, proč Věštec nic nedělá
