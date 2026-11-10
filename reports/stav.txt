@@ -15,10 +15,10 @@ Memec [ALIVE] $993.17 (-0.68 %) | obchodů 18, úspěšnost 22 %, PF 0.64, max p
    2026-11-09T01:50 PEPE/USD: -0.31 $ (-0.5 %) časový limit
    2026-11-09T01:55 BONK/USD: -1.47 $ (-2.4 %) časový limit
 
-Vlna [ALIVE] $955.15 (-4.49 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $5.07
+Vlna [ALIVE] $955.84 (-4.42 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.1 %, poplatky $5.07
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.11936 (+0.0 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.0909 (+6.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 86.03 (-0.2 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.0883 (+6.7 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 85.4645 (+0.4 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
@@ -36,12 +36,12 @@ Medvěd [ALIVE] $1019.69 (+1.97 %) | obchodů 9, úspěšnost 22 %, PF 1.52, max
 
 Kapitán [ALIVE] $999.60 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen II [ALIVE] $999.79 (-0.02 %) | obchodů 4, úspěšnost 50 %, PF 1.13, max propad 1.0 %, poplatky $1.37
-   otevřeno OnlyCats·BAft: nákup 0.00167787, teď 0.0016 (-4.6 %) - skóre 4.5 · paměť: podobné obchody -7.7 % -> sázka 0.5x
+Degen II [ALIVE] $996.94 (-0.31 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
    2026-11-05T01:16 GTA·7F8B: -4.11 $ (-27.1 %) stop-loss
    2026-11-05T03:49 PIRATE·2StN: -3.87 $ (-25.6 %) stop-loss
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
+   2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
 Lovec [ALIVE] $976.96 (-2.30 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max propad 3.8 %, poplatky $4.96
    2026-11-05T03:47 ANSEM·9cRC: +11.77 $ (+22.6 %) cíl zisku
@@ -50,10 +50,10 @@ Lovec [ALIVE] $976.96 (-2.30 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1053.22 (+5.32 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.78
-   SHORT BCH/USD: prodáno za 245.582, teď 237.882 (+3.1 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
-   SHORT XRP/USD: prodáno za 1.09615, teď 1.09872 (-0.2 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
-   SHORT ETH/USD: prodáno za 2129.95, teď 2123.18 (+0.3 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+Stín [ALIVE] $1055.13 (+5.51 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max propad 2.8 %, poplatky $4.78
+   SHORT BCH/USD: prodáno za 245.582, teď 237.464 (+3.3 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+   SHORT XRP/USD: prodáno za 1.09615, teď 1.0928 (+0.3 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+   SHORT ETH/USD: prodáno za 2129.95, teď 2120.22 (+0.5 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
    2026-11-06T12:01 AVAX/USD: -1.97 $ (-0.9 %) stop-loss
    2026-11-08T19:00 BAT/USD: +2.75 $ (+1.9 %) trailing stop
    2026-11-09T03:00 XRP/USD: +17.68 $ (+8.0 %) časový limit
@@ -62,10 +62,9 @@ Stín [ALIVE] $1053.22 (+5.32 %) | obchodů 17, úspěšnost 59 %, PF 4.35, max 
 
 Věštec [ALIVE] $999.60 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10995.50 z $11000 (-0.04 %)
+CELKEM $10995.25 z $11000 (-0.04 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-08T22:00:31+00:00 🧠 Vlna nekoupil SHIB/USD - paměť: když o coinu se mluví = ne, prodělal jsem 7x (průměr -4.9 %)
    2026-11-08T22:00:31+00:00 🐻 Vlna (simulace) SHORT SOL/USD za $78.41 @ 85.87, stop 91.0222 (sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podob
    2026-11-09T01:50:42+00:00 🔻 Memec UZAVŘEL SHORT PEPE/USD: -0.31 $ (-0.5 %) - časový limit
    2026-11-09T01:55:42+00:00 🔻 Memec UZAVŘEL SHORT BONK/USD: -1.47 $ (-2.4 %) - časový limit
@@ -82,3 +81,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-10T00:11:39+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
    2026-11-10T01:12:09+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-10T02:42:11+00:00 🎰 Degen II (simulace) koupil OnlyCats·BAft za $15, likvidita $100,513 - https://dexscreener.com/solana/tc3dbfimqpxjs92naqdmcrhyb9zur1m
+   2026-11-10T03:01:24+00:00 🔻 Degen II (simulace) prodal OnlyCats·BAft: -3.70 $ (-24 %) - stop-loss
