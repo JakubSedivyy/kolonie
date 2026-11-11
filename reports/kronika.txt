@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 374 signálů, 75 obchodů, 220 hodinových snímků radaru, 252 událostí
+Celkem zapsáno: 374 signálů, 75 obchodů, 221 hodinových snímků radaru, 253 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -9.3 %
@@ -34,17 +34,17 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Medvěd    | paměť: když nálada trhu = risk_off, prodělal  |   2x, vyhrálo by 0, průměr -1.6 %
   Memec     | coin drží kolega                              |   3x, vyhrálo by 2, průměr -0.1 %
   Orbit     | příkaz neprošel                               |   1x, vyhrálo by 0, průměr -0.6 %
-  Stín      | plno pozic                                    |  26x, vyhrálo by 15, průměr +1.1 %
+  Stín      | plno pozic                                    |  27x, vyhrálo by 16, průměr +1.2 %
   Šeptač    | poplatky by sežraly zisk (stop moc blízko)    |   1x, vyhrálo by 0, průměr -3.6 %
 
 UZAVŘENÉ OBCHODY:
   Degen II  |   5 obchodů, 2 výher, průměr -3.5 %, celkem -2.66 $
   Lovec     |   6 obchodů, 2 výher, průměr +0.5 %, celkem -6.84 $
-  Medvěd    |   8 obchodů, 2 výher, průměr +0.3 %, celkem +25.78 $
+  Medvěd    |   7 obchodů, 2 výher, průměr +0.6 %, celkem +32.54 $
   Memec     |  15 obchodů, 4 výher, průměr -0.4 %, celkem -1.58 $
   Stín      |  13 obchodů, 8 výher, průměr +1.8 %, celkem +40.82 $
   Trendy    |   2 obchodů, 0 výher, průměr -0.8 %, celkem -1.61 $
-  Vlna      |   8 obchodů, 0 výher, průměr -8.1 %, celkem -53.80 $
+  Vlna      |   7 obchodů, 0 výher, průměr -8.9 %, celkem -51.24 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (161h), PENGU (139h), XRP (128h), ETH (80h), HYPE (80h), PEARL (72h), SUI (61h), SOL (59h), DACITY (58h), ZEC (57h), NEAR (43h), KNTQ (40h), TRUMP (39h), AVAX (31h), LIT (30h), STONK (30h), PUMP (26h), COGE (26h), PEPE (25h)
+  BTC (168h), CATE (161h), PENGU (139h), XRP (128h), HYPE (81h), ETH (80h), PEARL (71h), SUI (60h), SOL (58h), ZEC (58h), DACITY (58h), NEAR (43h), KNTQ (40h), TRUMP (38h), AVAX (32h), STONK (30h), LIT (29h), PUMP (27h), COGE (26h), PEPE (25h)
