@@ -23,3 +23,7 @@ and the repository exists.
 [notice] A new release of pip is available: 26.2.2 -> 26.3
 [notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
 2026-11-10T13:24:13Z nasazena verze 29d8a17: Vlna: max 2 sázky stejným směrem; hlášení ukáže, proč Věštec nic nedělá
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
+2026-11-11T07:10:06Z nasazena verze a55f58c: Pojistka stop-lossu: když chybí živá cena, stop hlídá hodinová svíčka
