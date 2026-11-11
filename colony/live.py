@@ -76,6 +76,8 @@ class Colony:
         self.last_bar: dict[str, str] = {}
         self.blacklist: dict[str, int] = {}        # sdílené: symbol -> počet stop-lossů dnes
         self.blacklist_day = ""
+        self._quote_warned: set = set()
+        self.last_quote: dict = {}                    # (bot, symbol) -> čas poslední ceny z guard_stops
         self.paused = False
         self.started = utcnow().isoformat()
         self.last_summary = ""
@@ -298,6 +300,17 @@ class Colony:
                 if a.must_flatten(ts):
                     self.exec.exit(a, s, price, "konec obchodního dne", now)
                     continue
+                # pojistka: guard_stops pro tenhle coin nedostal cenu (11. 11. Vlna kvůli tomu držela short TRUMP
+                # 6 dní přes stop +15 % a skončila na -32 %) -> stop/časový limit zkontrolovat ze zavřené svíčky
+                seen = self.last_quote.get((a.name, s))
+                if seen is None or (now - seen).total_seconds() > a.minutes * 60 * 2:
+                    hi, lo, op = float(r["high"]), float(r["low"]), float(r["open"])
+                    x = a.check_exit_short(lot, hi, lo, price, op, now) if is_short(lot) \
+                        else a.check_exit(lot, hi, lo, price, op, now)
+                    if x:
+                        log.warning("%s %s: stop podle svíčky (chybí živá cena)", a.name, s)
+                        self.exec.exit(a, s, price, x[1], now)
+                        continue
                 why = a.short_exit_signal(df, i, lot) if is_short(lot) else a.exit_signal(df, i, lot)
                 if why:
                     self.exec.exit(a, s, price, why, now)
@@ -368,7 +381,13 @@ class Colony:
                 for s, p in prices.items():
                     self.exec.exit(a, s, p, "smrt bota", now)
                 continue
+            missing = [s for s in w.lots if s not in prices]
+            for s in missing:
+                if (a.name, s) not in self._quote_warned:
+                    self._quote_warned.add((a.name, s))
+                    log.warning("%s: chybí živá cena %s - stop hlídá jen hodinová svíčka", a.name, s)
             for s, p in prices.items():
+                self.last_quote[(a.name, s)] = now
                 lot = w.lots.get(s)
                 if not lot:
                     continue

@@ -586,6 +586,18 @@ def test_live_colony_ticks():
     c.guard_stops(now)
     assert "DOGE/USD" not in c.bar_agents[2].wallet.lots
     assert any("Memec PRODAL DOGE/USD" in m for m in sent), sent
+    # short bez živé ceny (TRUMP 11. 11.): stop musí chytit aspoň hodinová svíčka
+    vl = c.bar_agents[3]
+    assert vl.name == "Vlna"
+    c.exec.enter(vl, "ETH/USD", 50.0, Entry(stop=55.0, reason="test"), 100.0, now, short=True)
+    assert "ETH/USD" in vl.wallet.lots
+    c.data.latest_prices = lambda syms, crypto=False: {}       # Alpaca cenu nevrátí
+    c.guard_stops(now)
+    assert "ETH/USD" in vl.wallet.lots                         # guard_stops nic neví
+    c.last_bar = {}
+    c.tick()                                                   # svíčka ~100 > stop 55
+    assert "ETH/USD" not in vl.wallet.lots, vl.wallet.lots
+    assert any("Vlna UZAVŘEL SHORT ETH/USD" in m and "stop-loss" in m for m in sent), sent[-5:]
     assert os.path.exists(c.state_path)
     # snapshot pro dashboard: čisté JSON hodnoty (žádné numpy "False" jako text)
     import json
