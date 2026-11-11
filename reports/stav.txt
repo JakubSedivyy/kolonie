@@ -1,7 +1,7 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Orbit [ALIVE] $1003.68 (+0.37 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.4 %, poplatky $0.0
-   otevřeno NVDA: nákup 175.824, teď 176.56 (+0.4 %) - průraz ranního rozpětí 175.12, objem 2.9x běžného
+Orbit [ALIVE] $1003.89 (+0.39 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.4 %, poplatky $0.0
+   otevřeno NVDA: nákup 175.824, teď 176.76 (+0.5 %) - průraz ranního rozpětí 175.12, objem 2.9x běžného
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
 Trendy [ALIVE] $991.92 (-0.81 %) | obchodů 4, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $2.43
@@ -18,9 +18,9 @@ Memec [ALIVE] $991.28 (-0.87 %) | obchodů 21, úspěšnost 24 %, PF 0.64, max p
    2026-11-11T06:25 DOGE/USD: -0.90 $ (-1.4 %) časový limit
    2026-11-11T11:06 WIF/USD: -0.79 $ (-1.3 %) časový limit
 
-Vlna [ALIVE] $947.06 (-5.29 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.0713 (+8.2 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 84.98 (+1.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $947.29 (-5.27 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.063 (+8.9 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 85.353 (+0.6 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
@@ -45,32 +45,28 @@ Degen II [ALIVE] $996.89 (-0.31 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Lovec [ALIVE] $978.48 (-2.15 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max propad 4.0 %, poplatky $5.36
-   otevřeno TTWO·TTWo: nákup 230.583, teď 236.22 (+2.4 %) - skóre 1.8 · paměť: podobné obchody -1.9 % -> sázka 0.8x
+Lovec [ALIVE] $977.34 (-2.27 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max propad 4.0 %, poplatky $5.36
+   otevřeno TTWO·TTWo: nákup 230.583, teď 232.97 (+1.0 %) - skóre 1.8 · paměť: podobné obchody -1.9 % -> sázka 0.8x
    2026-11-05T03:47 ANSEM·9cRC: +11.77 $ (+22.6 %) cíl zisku
    2026-11-05T07:18 GATO·Hspr: -7.16 $ (-13.0 %) stop-loss
    2026-11-05T15:40 CATE·Ai66: -3.06 $ (-5.7 %) časový limit
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1052.66 (+5.27 %) | obchodů 20, úspěšnost 60 %, PF 3.11, max propad 2.9 %, poplatky $5.42
-   SHORT BCH/USD: prodáno za 245.582, teď 232.999 (+5.1 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
-   SHORT GRT/USD: prodáno za 0.0175637, teď 0.017944 (-2.2 %) - sestupný trend, -4.2 % za 24 h · paměť: podobné obchody -1.0 % -> sázk
-   2026-11-09T10:00 XTZ/USD: -0.67 $ (-0.3 %) stop-loss
+Stín [ALIVE] $1051.01 (+5.10 %) | obchodů 21, úspěšnost 57 %, PF 2.36, max propad 3.1 %, poplatky $5.67
+   SHORT BCH/USD: prodáno za 245.582, teď 232.5 (+5.3 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+   SHORT PEPE/USD: prodáno za 4.91754e-06, teď 4.92e-06 (-0.1 %) - sestupný trend, -6.6 % za 24 h
    2026-11-09T13:00 BTC/USD: +2.31 $ (+1.1 %) časový limit
    2026-11-10T19:00 XRP/USD: +4.71 $ (+2.1 %) trailing stop
    2026-11-11T03:00 BAT/USD: -8.52 $ (-4.5 %) stop-loss
    2026-11-11T16:00 ETH/USD: +4.36 $ (+1.9 %) trailing stop
+   2026-11-11T18:00 GRT/USD: -7.22 $ (-3.0 %) stop-loss
 
 Věštec [ALIVE] $999.55 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10980.26 z $11000 (-0.18 %)
+CELKEM $10977.91 z $11000 (-0.20 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-11T07:05:38+00:00 🐻 Memec (simulace) SHORT WIF/USD za $62.23 @ 0.155631, stop 0.164969 (výplach: objem 60.2x průměru, nové 2h minimum · paměť: podobné o
-   2026-11-11T07:10:07+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
-   2026-11-11T07:10:07+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-11-11T07:10:08+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-11T11:06:02+00:00 🔻 Memec UZAVŘEL SHORT WIF/USD: -0.79 $ (-1.3 %) - časový limit
    2026-11-11T13:00:53+00:00 🧠 Vlna nekoupil AVAX/USD - paměť: když nálada trhu = risk_off, prodělal jsem 14x (průměr -6.8 %)
@@ -83,5 +79,8 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-11T16:04:53+00:00 ✅ Stín (simulace) uzavřel short ETH/USD: +4.36 $ (+1.9 %) - trailing stop
    2026-11-11T17:00:56+00:00 🧠 Vlna nekoupil AVAX/USD - paměť: když nálada trhu = risk_off, prodělal jsem 14x (průměr -6.8 %)
    2026-11-11T17:12:08+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
+   2026-11-11T18:02:33+00:00 🔻 Stín (simulace) uzavřel short GRT/USD: -7.22 $ (-3.0 %) - stop-loss
+   2026-11-11T18:02:33+00:00 🐻 Stín (simulace) otevřel short PEPE/USD za $186 @ 4.92e-06, stop 5.1955e-06 - sestupný trend, -6.6 % za 24 h
+   2026-11-11T18:12:36+00:00 🌡️ Nálada trhu: neutral → risk_on (BTC ↑, S&P ↑)
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-11T19:10 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
