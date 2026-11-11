@@ -3,8 +3,8 @@
 Orbit [ALIVE] $1002.90 (+0.29 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.3 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
 
-Trendy [ALIVE] $993.37 (-0.66 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 0.8 %, poplatky $2.14
-   SHORT ETH/USD: prodáno za 2020.59, teď 2055.78 (-1.7 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.24 % · paměť: podobn
+Trendy [ALIVE] $993.09 (-0.69 %) | obchodů 3, úspěšnost 0 %, PF 0.00, max propad 0.8 %, poplatky $2.14
+   SHORT ETH/USD: prodáno za 2020.59, teď 2060.64 (-2.0 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.24 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
    2026-11-08T08:00 ETH/USD: -0.11 $ (-0.1 %) průraz nad maximum kanálu
@@ -17,10 +17,10 @@ Memec [ALIVE] $993.52 (-0.65 %) | obchodů 19, úspěšnost 26 %, PF 0.70, max p
    2026-11-09T01:55 BONK/USD: -1.47 $ (-2.4 %) časový limit
    2026-11-10T17:35 DOGE/USD: +1.01 $ (+1.6 %) časový limit
 
-Vlna [ALIVE] $959.10 (-4.09 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.07
+Vlna [ALIVE] $959.38 (-4.06 %) | obchodů 8, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.07
    SHORT TRUMP/USD: prodáno za 1.11961, teď 1.143 (-2.1 %) - sestupná vlna: propad pod 3denní minimum, -10 % za 24 h · paměť: podob
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.062 (+9.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 83.062 (+3.2 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.0548 (+9.6 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 83.29 (+3.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T14:00 UNI/USD: -1.17 $ (-1.2 %) stop-loss
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
@@ -52,9 +52,9 @@ Lovec [ALIVE] $976.91 (-2.31 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1063.95 (+6.39 %) | obchodů 19, úspěšnost 58 %, PF 2.92, max propad 2.8 %, poplatky $5.14
-   SHORT BCH/USD: prodáno za 245.582, teď 230.05 (+6.3 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
-   SHORT ETH/USD: prodáno za 2129.95, teď 2056.06 (+3.5 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
+Stín [ALIVE] $1063.45 (+6.35 %) | obchodů 19, úspěšnost 58 %, PF 2.92, max propad 2.8 %, poplatky $5.14
+   SHORT BCH/USD: prodáno za 245.582, teď 230.115 (+6.3 %) - sestupný trend, -4.4 % za 24 h · paměť: podobné obchody -1.8 % -> sázk
+   SHORT ETH/USD: prodáno za 2129.95, teď 2060.18 (+3.3 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -1.3 % -> sázk
    2026-11-09T03:00 XRP/USD: +17.68 $ (+8.0 %) časový limit
    2026-11-09T10:00 XTZ/USD: -0.67 $ (-0.3 %) stop-loss
    2026-11-09T13:00 BTC/USD: +2.31 $ (+1.1 %) časový limit
@@ -63,7 +63,7 @@ Stín [ALIVE] $1063.95 (+6.39 %) | obchodů 19, úspěšnost 58 %, PF 2.92, max 
 
 Věštec [ALIVE] $999.55 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $11004.93 z $11000 (+0.04 %)
+CELKEM $11004.43 z $11000 (+0.04 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-10T01:12:09+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
