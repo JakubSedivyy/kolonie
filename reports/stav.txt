@@ -1,8 +1,8 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Orbit [ALIVE] $1001.63 (+0.16 %) | obchodů 1, úspěšnost 100 %, PF ∞, max propad 0.4 %, poplatky $0.0
-   otevřeno NVDA: nákup 175.824, teď 174.62 (-0.7 %) - průraz ranního rozpětí 175.12, objem 2.9x běžného
+Orbit [ALIVE] $1001.46 (+0.15 %) | obchodů 2, úspěšnost 50 %, PF 2.33, max propad 0.4 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
+   2026-11-11T20:50 NVDA: -1.44 $ (-0.8 %) konec obchodního dne
 
 Trendy [ALIVE] $991.92 (-0.81 %) | obchodů 4, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $2.43
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
@@ -17,9 +17,9 @@ Memec [ALIVE] $991.45 (-0.86 %) | obchodů 22, úspěšnost 23 %, PF 0.61, max p
    2026-11-11T11:06 WIF/USD: -0.79 $ (-1.3 %) časový limit
    2026-11-11T19:25 BONK/USD: -1.00 $ (-1.6 %) časový limit
 
-Vlna [ALIVE] $947.77 (-5.22 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.0621 (+9.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 84.89 (+1.1 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $947.35 (-5.26 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.0651 (+8.7 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 85.125 (+0.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
@@ -52,8 +52,8 @@ Lovec [ALIVE] $976.79 (-2.32 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max pr
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1055.70 (+5.57 %) | obchodů 22, úspěšnost 59 %, PF 2.74, max propad 3.1 %, poplatky $5.81
-   SHORT PEPE/USD: prodáno za 4.91754e-06, teď 4.8e-06 (+2.4 %) - sestupný trend, -6.6 % za 24 h
+Stín [ALIVE] $1057.21 (+5.72 %) | obchodů 22, úspěšnost 59 %, PF 2.74, max propad 3.1 %, poplatky $5.81
+   SHORT PEPE/USD: prodáno za 4.91754e-06, teď 4.76e-06 (+3.2 %) - sestupný trend, -6.6 % za 24 h
    2026-11-10T19:00 XRP/USD: +4.71 $ (+2.1 %) trailing stop
    2026-11-11T03:00 BAT/USD: -8.52 $ (-4.5 %) stop-loss
    2026-11-11T16:00 ETH/USD: +4.36 $ (+1.9 %) trailing stop
@@ -62,12 +62,9 @@ Stín [ALIVE] $1055.70 (+5.57 %) | obchodů 22, úspěšnost 59 %, PF 2.74, max 
 
 Věštec [ALIVE] $999.55 (-0.04 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10980.44 z $11000 (-0.18 %)
+CELKEM $10981.36 z $11000 (-0.17 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-11T15:25:33+00:00 🐻 Memec (simulace) SHORT BONK/USD za $62.56 @ 2.82e-06, stop 2.9892e-06 (výplach: objem 39198.2x průměru, nové 2h minimum · paměť: pod
-   2026-11-11T15:35:33+00:00 🔻 Trendy UZAVŘEL SHORT ETH/USD: -3.80 $ (-3.2 %) - stop-loss
-   2026-11-11T15:55:42+00:00 🟢 Orbit KOUPIL NVDA za $185.96 @ 175.824 (průraz ranního rozpětí 175.12, objem 2.9x běžného)
    2026-11-11T16:01:46+00:00 🧠 Vlna nekoupil AVAX/USD - paměť: když nálada trhu = risk_off, prodělal jsem 14x (průměr -6.8 %)
    2026-11-11T16:04:53+00:00 ✅ Stín (simulace) uzavřel short ETH/USD: +4.36 $ (+1.9 %) - trailing stop
    2026-11-11T17:00:56+00:00 🧠 Vlna nekoupil AVAX/USD - paměť: když nálada trhu = risk_off, prodělal jsem 14x (průměr -6.8 %)
@@ -81,5 +78,10 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-11T20:02:34+00:00 🧠 Vlna nekoupil AVAX/USD - paměť: když o coinu se mluví = ano, prodělal jsem 7.5x (průměr -8.6 %)
    2026-11-11T20:05:43+00:00 ✅ Stín (simulace) uzavřel short BCH/USD: +11.29 $ (+5.3 %) - časový limit
    2026-11-11T20:12:46+00:00 🌡️ Nálada trhu: risk_on → neutral (BTC ↑, S&P ↓)
+   2026-11-11T20:50:30+00:00 🔻 Orbit PRODAL NVDA: -1.44 $ (-0.8 %) - konec obchodního dne
+   2026-11-11T21:01:06+00:00 🧠 Vlna nekoupil AVAX/USD - paměť: když o coinu se mluví = ano, prodělal jsem 7.5x (průměr -8.6 %)
+   2026-11-11T21:15:21+00:00 📊 Denní souhrn 11.11. · nálada trhu: neutral
+🟢 Orbit: $1001.46 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33
+🟢 Trendy: $991.92 (-0.8 %
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-12T01:10 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
