@@ -1,2 +1,1 @@
-Nov 12 22:27:56 ubuntu-1gb-hel1-1 python[255182]: 2026-11-12 22:27:56,046 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 12 22:49:04 ubuntu-1gb-hel1-1 python[255182]: 2026-11-12 22:49:04,823 WARNING colony.market: dexscreener pair: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Nov 12 23:29:23 ubuntu-1gb-hel1-1 python[255182]: 2026-11-12 23:29:23,368 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
