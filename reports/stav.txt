@@ -17,9 +17,9 @@ Memec [ALIVE] $990.82 (-0.92 %) | obchodů 24, úspěšnost 25 %, PF 0.60, max p
    2026-11-12T01:40 SHIB/USD: -1.05 $ (-1.0 %) časový limit
    2026-11-12T02:40 DOGE/USD: +0.48 $ (+0.4 %) časový limit
 
-Vlna [ALIVE] $951.15 (-4.88 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.04279 (+10.6 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 82.573 (+3.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $951.19 (-4.88 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.03877 (+11.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 82.834 (+3.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
@@ -44,18 +44,18 @@ Degen II [ALIVE] $996.84 (-0.32 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Lovec [ALIVE] $976.97 (-2.30 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max propad 4.0 %, poplatky $5.36
-   otevřeno TTWO·TTWo: nákup 230.583, teď 232.057 (+0.6 %) - skóre 1.8 · paměť: podobné obchody -1.9 % -> sázka 0.8x
+Lovec [ALIVE] $976.93 (-2.31 %) | obchodů 8, úspěšnost 25 %, PF 0.51, max propad 4.0 %, poplatky $5.36
+   otevřeno TTWO·TTWo: nákup 230.583, teď 231.95 (+0.6 %) - skóre 1.8 · paměť: podobné obchody -1.9 % -> sázka 0.8x
    2026-11-05T03:47 ANSEM·9cRC: +11.77 $ (+22.6 %) cíl zisku
    2026-11-05T07:18 GATO·Hspr: -7.16 $ (-13.0 %) stop-loss
    2026-11-05T15:40 CATE·Ai66: -3.06 $ (-5.7 %) časový limit
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
 
-Stín [ALIVE] $1066.71 (+6.67 %) | obchodů 22, úspěšnost 59 %, PF 2.74, max propad 3.1 %, poplatky $6.09
-   SHORT PEPE/USD: prodáno za 4.91754e-06, teď 4.56e-06 (+7.3 %) - sestupný trend, -6.6 % za 24 h
-   SHORT UNI/USD: prodáno za 6.33383, teď 6.2412 (+1.5 %) - sestupný trend, -4.6 % za 24 h
-   SHORT CRV/USD: prodáno za 0.239217, teď 0.240944 (-0.7 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
+Stín [ALIVE] $1070.25 (+7.03 %) | obchodů 22, úspěšnost 59 %, PF 2.74, max propad 3.1 %, poplatky $6.09
+   SHORT PEPE/USD: prodáno za 4.91754e-06, teď 4.55e-06 (+7.5 %) - sestupný trend, -6.6 % za 24 h
+   SHORT UNI/USD: prodáno za 6.33383, teď 6.19785 (+2.1 %) - sestupný trend, -4.6 % za 24 h
+   SHORT CRV/USD: prodáno za 0.239217, teď 0.23935 (-0.1 %) - sestupný trend, -4.3 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
    2026-11-10T19:00 XRP/USD: +4.71 $ (+2.1 %) trailing stop
    2026-11-11T03:00 BAT/USD: -8.52 $ (-4.5 %) stop-loss
    2026-11-11T16:00 ETH/USD: +4.36 $ (+1.9 %) trailing stop
@@ -64,7 +64,7 @@ Stín [ALIVE] $1066.71 (+6.67 %) | obchodů 22, úspěšnost 59 %, PF 2.74, max 
 
 Věštec [ALIVE] $999.50 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-CELKEM $10993.86 z $11000 (-0.06 %)
+CELKEM $10997.40 z $11000 (-0.02 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-11T19:25:44+00:00 🔻 Memec UZAVŘEL SHORT BONK/USD: -1.00 $ (-1.6 %) - časový limit
