@@ -1,70 +1,70 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Orbit [ALIVE] $1001.41 (+0.14 %) | obchodů 2, úspěšnost 50 %, PF 2.33, max propad 0.4 %, poplatky $0.0
+Orbit [ALIVE] $1001.36 (+0.14 %) | obchodů 2, úspěšnost 50 %, PF 2.33, max propad 0.4 %, poplatky $0.0
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
    2026-11-11T20:50 NVDA: -1.44 $ (-0.8 %) konec obchodního dne
 
-Trendy [ALIVE] $991.87 (-0.81 %) | obchodů 4, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $2.43
+Trendy [ALIVE] $991.82 (-0.82 %) | obchodů 4, úspěšnost 0 %, PF 0.00, max propad 0.9 %, poplatky $2.43
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
    2026-11-08T08:00 ETH/USD: -0.11 $ (-0.1 %) průraz nad maximum kanálu
    2026-11-11T15:35 ETH/USD: -3.80 $ (-3.2 %) stop-loss
 
-Memec [ALIVE] $991.22 (-0.88 %) | obchodů 26, úspěšnost 27 %, PF 0.63, max propad 1.2 %, poplatky $10.34
+Memec [ALIVE] $991.17 (-0.88 %) | obchodů 26, úspěšnost 27 %, PF 0.63, max propad 1.2 %, poplatky $10.34
    2026-11-11T19:25 BONK/USD: -1.00 $ (-1.6 %) časový limit
    2026-11-12T01:40 SHIB/USD: -1.05 $ (-1.0 %) časový limit
    2026-11-12T02:40 DOGE/USD: +0.48 $ (+0.4 %) časový limit
    2026-11-12T15:55 DOGE/USD: +0.96 $ (+1.6 %) časový limit
    2026-11-12T16:55 BONK/USD: -0.56 $ (-0.9 %) časový limit
 
-Vlna [ALIVE] $952.23 (-4.78 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
-   SHORT XRP/USD: prodáno za 1.16654, teď 1.04 (+10.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
-   SHORT SOL/USD: prodáno za 85.8271, teď 81.602 (+4.9 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $953.01 (-4.70 %) | obchodů 9, úspěšnost 0 %, PF 0.00, max propad 6.3 %, poplatky $5.12
+   SHORT XRP/USD: prodáno za 1.16654, teď 1.03144 (+11.6 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+   SHORT SOL/USD: prodáno za 85.8271, teď 81.3284 (+5.2 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T15:13 AVAX/USD: -14.75 $ (-7.5 %) stop-loss
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
    2026-11-11T05:00 TRUMP/USD: -10.40 $ (-32.5 %) sestupná vlna skončila (trend se otočil nahoru)
 
-Šeptač [ALIVE] $999.50 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Šeptač [ALIVE] $999.45 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-Medvěd [ALIVE] $1019.59 (+1.96 %) | obchodů 9, úspěšnost 22 %, PF 1.52, max propad 3.5 %, poplatky $0.0
+Medvěd [ALIVE] $1019.54 (+1.95 %) | obchodů 9, úspěšnost 22 %, PF 1.52, max propad 3.5 %, poplatky $0.0
    2026-11-05T19:49 SQQQ: -5.22 $ (-2.8 %) stop-loss
    2026-11-06T14:33 SOXS: -11.79 $ (-12.0 %) stop-loss
    2026-11-06T14:45 SDOW: +4.71 $ (+1.7 %) trailing stop
    2026-11-06T19:00 SOXS: -2.13 $ (-3.6 %) pád se zastavil (ETF pod EMA 50)
    2026-11-06T19:00 SQQQ: -1.98 $ (-1.6 %) pád se zastavil (ETF pod EMA 50)
 
-Kapitán [ALIVE] $999.50 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Kapitán [ALIVE] $999.45 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Degen II [ALIVE] $996.84 (-0.32 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
+Degen II [ALIVE] $996.79 (-0.32 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
    2026-11-05T01:16 GTA·7F8B: -4.11 $ (-27.1 %) stop-loss
    2026-11-05T03:49 PIRATE·2StN: -3.87 $ (-25.6 %) stop-loss
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Lovec [ALIVE] $965.07 (-3.49 %) | obchodů 9, úspěšnost 22 %, PF 0.42, max propad 5.0 %, poplatky $6.19
-   otevřeno TTWO·TTWo: nákup 230.583, teď 227.83 (-1.2 %) - skóre 1.8 · paměť: podobné obchody -1.9 % -> sázka 0.8x
+Lovec [ALIVE] $965.04 (-3.50 %) | obchodů 9, úspěšnost 22 %, PF 0.42, max propad 5.0 %, poplatky $6.19
+   otevřeno TTWO·TTWo: nákup 230.583, teď 227.88 (-1.2 %) - skóre 1.8 · paměť: podobné obchody -1.9 % -> sázka 0.8x
    2026-11-05T07:18 GATO·Hspr: -7.16 $ (-13.0 %) stop-loss
    2026-11-05T15:40 CATE·Ai66: -3.06 $ (-5.7 %) časový limit
    2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
    2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
 
-Stín [ALIVE] $1058.82 (+5.88 %) | obchodů 26, úspěšnost 54 %, PF 2.69, max propad 3.1 %, poplatky $7.24
-   SHORT SOL/USD: prodáno za 81.4486, teď 81.3505 (+0.1 %) - sestupný trend, -4.0 % za 24 h
-   SHORT UNI/USD: prodáno za 6.00265, teď 6.0196 (-0.3 %) - sestupný trend, -7.4 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
-   SHORT AAVE/USD: prodáno za 113.743, teď 113.8 (-0.1 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -0.7 % -> sázk
+Stín [ALIVE] $1055.92 (+5.59 %) | obchodů 26, úspěšnost 54 %, PF 2.69, max propad 3.1 %, poplatky $7.24
+   SHORT SOL/USD: prodáno za 81.4486, teď 81.6159 (-0.2 %) - sestupný trend, -4.0 % za 24 h
+   SHORT UNI/USD: prodáno za 6.00265, teď 6.0634 (-1.0 %) - sestupný trend, -7.4 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
+   SHORT AAVE/USD: prodáno za 113.743, teď 113.9 (-0.1 %) - sestupný trend, -5.3 % za 24 h · paměť: podobné obchody -0.7 % -> sázk
    2026-11-11T20:00 BCH/USD: +11.29 $ (+5.3 %) časový limit
    2026-11-12T08:00 UNI/USD: -1.33 $ (-0.5 %) stop-loss
    2026-11-12T19:00 BONK/USD: -1.77 $ (-0.7 %) stop-loss
    2026-11-12T22:00 CRV/USD: -2.75 $ (-1.3 %) stop-loss
    2026-11-12T22:00 PEPE/USD: +14.29 $ (+7.7 %) trailing stop
 
-Věštec [ALIVE] $999.50 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
+Věštec [ALIVE] $999.45 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $10975.55 z $11000 (-0.22 %)
+CELKEM $10973.00 z $11000 (-0.25 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-12T16:17:14+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↓, S&P ↑)
