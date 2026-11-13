@@ -1,2 +1,0 @@
-Nov 13 21:57:47 ubuntu-1gb-hel1-1 python[292473]: 2026-11-13 21:57:47,473 WARNING colony: clock: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-Nov 13 22:06:59 ubuntu-1gb-hel1-1 python[292473]: 2026-11-13 22:06:59,817 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
