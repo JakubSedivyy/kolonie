@@ -1,3 +1,2 @@
-Nov 13 13:08:28 ubuntu-1gb-hel1-1 python[292473]: 2026-11-13 13:08:28,913 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
-Nov 13 13:20:52 ubuntu-1gb-hel1-1 python[292473]: 2026-11-13 13:20:52,262 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 13 13:29:33 ubuntu-1gb-hel1-1 python[292473]: 2026-11-13 13:29:33,078 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 13 14:30:46 ubuntu-1gb-hel1-1 python[292473]: 2026-11-13 14:30:46,000 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 13 14:35:14 ubuntu-1gb-hel1-1 python[292473]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
