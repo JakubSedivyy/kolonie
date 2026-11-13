@@ -991,6 +991,17 @@ def test_stav_shows_grok_status():
             open(path, "w").write(old)
 
 
+def test_lab_verdict_says_where_it_failed():
+    from lab import lab_verdict
+    assert lab_verdict(0.05, 0.02) == (True, "NASAZEN ✅")
+    ok, txt = lab_verdict(-0.015, 0.089)             # Medvěd 13. 11.
+    assert not ok and "v tréninku neprošel" in txt
+    ok, txt = lab_verdict(0.2, -0.07)                # Vlna 13. 11.
+    assert not ok and "v testu neprošel" in txt
+    ok, txt = lab_verdict(-0.09, -0.09)              # Memec 13. 11.
+    assert not ok and "i v testu" in txt
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

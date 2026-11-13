@@ -80,6 +80,18 @@ def universe_for(agent_cls, params, majors, memes):
     return a.universe(ctx)
 
 
+def lab_verdict(train_ret: float, test_ret: float):
+    """Bot se nasadí, jen když vydělal v tréninku i v testu. Text říká, kde přesně neprošel
+    (13. 11.: Medvěd měl test +8.9 %, ale hlášení psalo "v testu neprošel" - neprošel v tréninku)."""
+    if train_ret > 0 and test_ret > 0:
+        return True, "NASAZEN ✅"
+    if train_ret <= 0 and test_ret <= 0:
+        return False, "ODPOČÍVÁ 💤 (prodělal v tréninku i v testu)"
+    if train_ret <= 0:
+        return False, "ODPOČÍVÁ 💤 (v tréninku neprošel, test vyšel - sledovat)"
+    return False, "ODPOČÍVÁ 💤 (v testu neprošel)"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=90)
@@ -126,10 +138,9 @@ def main():
         proto = cls().apply(best["params"])
         key = (proto.minutes, proto.crypto, tuple(sorted(universe_for(cls, best["params"], majors, memes))))
         te = score(run(cls, best["params"], cache[key], split, end))
-        good = best["train"]["return"] > 0 and te["return"] > 0
+        good, verdict = lab_verdict(best["train"]["return"], te["return"])
         out["bots"][name] = {"chosen": best["params"], "train": best["train"], "test": te,
                              "benched": not good, "variants": rows}
-        verdict = "NASAZEN ✅" if good else "ODPOČÍVÁ 💤 (v testu neprošel)"
         lines.append(f"{name}: {verdict} | nejlepší {best['params']} | trénink {best['train']['return']*100:+.1f} % "
                      f"| test {te['return']*100:+.1f} % ({te['trades']} obch., PF {te['pf']})")
 
