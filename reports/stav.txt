@@ -11,16 +11,16 @@ Trendy [ALIVE] $989.82 (-1.02 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max pr
    2026-11-11T15:35 ETH/USD: -3.80 $ (-3.2 %) stop-loss
    2026-11-13T10:25 ETH/USD: -1.95 $ (-1.5 %) stop-loss
 
-Memec [ALIVE] $987.43 (-1.26 %) | obchodů 31, úspěšnost 23 %, PF 0.53, max propad 1.5 %, poplatky $12.03
-   SHORT PEPE/USD: prodáno za 4.32134e-06, teď 4.28e-06 (+1.0 %) - výplach: objem 4.6x průměru, nové 2h minimum · paměť: podobné obchody 
+Memec [ALIVE] $989.01 (-1.10 %) | obchodů 31, úspěšnost 23 %, PF 0.53, max propad 1.5 %, poplatky $12.03
+   SHORT PEPE/USD: prodáno za 4.32134e-06, teď 4.168e-06 (+3.5 %) - výplach: objem 4.6x průměru, nové 2h minimum · paměť: podobné obchody 
    2026-11-13T07:25 WIF/USD: -0.43 $ (-0.7 %) časový limit
    2026-11-13T07:25 DOGE/USD: -0.63 $ (-1.0 %) časový limit
    2026-11-13T07:55 SHIB/USD: -0.54 $ (-0.9 %) časový limit
    2026-11-13T19:40 BONK/USD: -2.19 $ (-3.5 %) časový limit
    2026-11-14T02:10 DOGE/USD: -0.34 $ (-0.6 %) časový limit
 
-Vlna [ALIVE] $959.88 (-4.01 %) | obchodů 10, úspěšnost 10 %, PF 0.18, max propad 6.3 %, poplatky $5.35
-   SHORT SOL/USD: prodáno za 85.8271, teď 75.43 (+12.1 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $959.44 (-4.06 %) | obchodů 10, úspěšnost 10 %, PF 0.18, max propad 6.3 %, poplatky $5.35
+   SHORT SOL/USD: prodáno za 85.8271, teď 75.9071 (+11.6 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
@@ -52,10 +52,10 @@ Lovec [ALIVE] $964.62 (-3.54 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1096.79 (+9.68 %) | obchodů 29, úspěšnost 55 %, PF 2.85, max propad 3.1 %, poplatky $8.09
-   SHORT BTC/USD: prodáno za 69215, teď 67020.6 (+3.2 %) - sestupný trend, -5.0 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
-   SHORT BAT/USD: prodáno za 0.116348, teď 0.104879 (+9.9 %) - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody -1.0 % -> sázk
-   SHORT ETH/USD: prodáno za 1948.53, teď 1897.39 (+2.6 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody -1.2 % -> sázk
+Stín [ALIVE] $1095.24 (+9.52 %) | obchodů 29, úspěšnost 55 %, PF 2.85, max propad 3.1 %, poplatky $8.09
+   SHORT BTC/USD: prodáno za 69215, teď 67177.3 (+2.9 %) - sestupný trend, -5.0 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
+   SHORT BAT/USD: prodáno za 0.116348, teď 0.105005 (+9.7 %) - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody -1.0 % -> sázk
+   SHORT ETH/USD: prodáno za 1948.53, teď 1904.09 (+2.3 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody -1.2 % -> sázk
    2026-11-12T22:00 CRV/USD: -2.75 $ (-1.3 %) stop-loss
    2026-11-12T22:00 PEPE/USD: +14.29 $ (+7.7 %) trailing stop
    2026-11-13T08:00 UNI/USD: +5.29 $ (+2.2 %) trailing stop
@@ -64,7 +64,7 @@ Stín [ALIVE] $1096.79 (+9.68 %) | obchodů 29, úspěšnost 55 %, PF 2.85, max 
 
 Věštec [ALIVE] $999.40 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11014.28 z $11000 (+0.13 %)
+CELKEM $11013.87 z $11000 (+0.13 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-13T14:01:51+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $178 @ 0.116406, stop 0.122679 - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody -1
