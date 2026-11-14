@@ -4,22 +4,24 @@ Orbit [ALIVE] $1001.31 (+0.13 %) | obchodů 2, úspěšnost 50 %, PF 2.33, max p
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
    2026-11-11T20:50 NVDA: -1.44 $ (-0.8 %) konec obchodního dne
 
-Trendy [ALIVE] $989.82 (-1.02 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max propad 1.1 %, poplatky $3.07
+Trendy [ALIVE] $990.74 (-0.93 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $3.39
+   SHORT ETH/USD: prodáno za 1851.43, teď 1833.9 (+0.9 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.08 % · paměť: podobn
    2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
    2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
    2026-11-08T08:00 ETH/USD: -0.11 $ (-0.1 %) průraz nad maximum kanálu
    2026-11-11T15:35 ETH/USD: -3.80 $ (-3.2 %) stop-loss
    2026-11-13T10:25 ETH/USD: -1.95 $ (-1.5 %) stop-loss
 
-Memec [ALIVE] $988.73 (-1.13 %) | obchodů 32, úspěšnost 25 %, PF 0.60, max propad 1.5 %, poplatky $12.19
+Memec [ALIVE] $989.22 (-1.08 %) | obchodů 32, úspěšnost 25 %, PF 0.60, max propad 1.5 %, poplatky $12.35
+   SHORT PEPE/USD: prodáno za 4.08182e-06, teď 4.04e-06 (+1.0 %) - výplach: objem 258.0x průměru, nové 2h minimum
    2026-11-13T07:25 DOGE/USD: -0.63 $ (-1.0 %) časový limit
    2026-11-13T07:55 SHIB/USD: -0.54 $ (-0.9 %) časový limit
    2026-11-13T19:40 BONK/USD: -2.19 $ (-3.5 %) časový limit
    2026-11-14T02:10 DOGE/USD: -0.34 $ (-0.6 %) časový limit
    2026-11-14T06:25 PEPE/USD: +1.74 $ (+2.8 %) časový limit
 
-Vlna [ALIVE] $960.83 (-3.92 %) | obchodů 10, úspěšnost 10 %, PF 0.18, max propad 6.3 %, poplatky $5.35
-   SHORT SOL/USD: prodáno za 85.8271, teď 74.3837 (+13.3 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $961.71 (-3.83 %) | obchodů 10, úspěšnost 10 %, PF 0.18, max propad 6.3 %, poplatky $5.35
+   SHORT SOL/USD: prodáno za 85.8271, teď 73.414 (+14.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
@@ -51,10 +53,10 @@ Lovec [ALIVE] $964.62 (-3.54 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1102.93 (+10.29 %) | obchodů 29, úspěšnost 55 %, PF 2.85, max propad 3.1 %, poplatky $8.09
-   SHORT BTC/USD: prodáno za 69215, teď 66785.1 (+3.5 %) - sestupný trend, -5.0 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
-   SHORT BAT/USD: prodáno za 0.116348, teď 0.101793 (+12.5 %) - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody -1.0 % -> sázk
-   SHORT ETH/USD: prodáno za 1948.53, teď 1892.58 (+2.9 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody -1.2 % -> sázk
+Stín [ALIVE] $1113.13 (+11.31 %) | obchodů 29, úspěšnost 55 %, PF 2.85, max propad 3.1 %, poplatky $8.09
+   SHORT BTC/USD: prodáno za 69215, teď 65863.1 (+4.8 %) - sestupný trend, -5.0 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
+   SHORT BAT/USD: prodáno za 0.116348, teď 0.100436 (+13.7 %) - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody -1.0 % -> sázk
+   SHORT ETH/USD: prodáno za 1948.53, teď 1852.36 (+4.9 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody -1.2 % -> sázk
    2026-11-12T22:00 CRV/USD: -2.75 $ (-1.3 %) stop-loss
    2026-11-12T22:00 PEPE/USD: +14.29 $ (+7.7 %) trailing stop
    2026-11-13T08:00 UNI/USD: +5.29 $ (+2.2 %) trailing stop
@@ -63,23 +65,23 @@ Stín [ALIVE] $1102.93 (+10.29 %) | obchodů 29, úspěšnost 55 %, PF 2.85, max
 
 Věštec [ALIVE] $999.40 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11022.67 z $11000 (+0.21 %)
+CELKEM $11035.16 z $11000 (+0.32 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-14T12:00:46+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T12:00:46+00:00 🧠 Vlna nekoupil XTZ/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T13:00:32+00:00 🧠 Vlna nekoupil AAVE/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T13:00:32+00:00 🧠 Vlna nekoupil BAT/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T13:00:33+00:00 🧠 Vlna nekoupil SUSHI/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T13:00:33+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T13:00:33+00:00 🧠 Vlna nekoupil UNI/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T13:00:33+00:00 🧠 Vlna nekoupil XTZ/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T14:00:33+00:00 🧠 Vlna nekoupil AAVE/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T14:00:33+00:00 🧠 Vlna nekoupil BONK/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T14:00:33+00:00 🧠 Vlna nekoupil DOT/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T14:00:33+00:00 🧠 Vlna nekoupil SUSHI/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T14:00:33+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T14:00:33+00:00 🧠 Vlna nekoupil UNI/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T14:00:33+00:00 🧠 Vlna nekoupil WIF/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:24+00:00 🐻 Trendy (simulace) SHORT ETH/USD za $130.98 @ 1852.36, stop 1902.57 (propad pod 24-svíčkové minimum pod EMA 200, ATR 1.08 % · paměť: 
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil AAVE/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil ADA/USD - paměť: když o coinu se mluví = ano, prodělal jsem 8.5x (průměr -6.0 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil BONK/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil BTC/USD - paměť: když o coinu se mluví = ano, prodělal jsem 8.5x (průměr -6.0 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil CRV/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil DOT/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil LINK/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil PEPE/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil SHIB/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil SUSHI/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil WIF/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:00:34+00:00 🧠 Vlna nekoupil YFI/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
+   2026-11-14T15:25:23+00:00 🐻 Memec (simulace) SHORT PEPE/USD za $63.74 @ 4.09e-06, stop 4.3354e-06 (výplach: objem 258.0x průměru, nové 2h minimum)
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-14T19:10 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
