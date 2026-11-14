@@ -231,6 +231,12 @@ class MemeAgent(BarAgent):
     # (8. 11.: test 65 obch., PF 0.24) a naživo 6 z 6 nákupů skončilo ztrátou. Shorty zůstávají.
     # Laboratoř si longy dál zkouší, takže když začnou vydělávat, zapnou se samy.
     long_needs_lab = True
+    # Objem tisíckrát větší než průměr = mrtvý trh (průměr je skoro nula, stačí jeden obchod).
+    # Takový "výbuch" nic neznamená: naživo 4 z 4 takových shortů skončily ztrátou (14. 11.).
+    max_vol_mult = 1000.0
+
+    def _vol_ratio_ok(self, r) -> bool:
+        return r["volume"] <= self.max_vol_mult * r["vol_avg"]
 
     def universe(self, ctx):
         memes = ctx.get("crypto_memes") or ["DOGE/USD", "SHIB/USD", "PEPE/USD"]
@@ -254,7 +260,7 @@ class MemeAgent(BarAgent):
             return None
         hype = ctx["radar"].score(ctx.get("symbol", "")) if ctx.get("radar") else 0.0
         mult = self.hot_vol_mult if hype >= 3 else self.vol_mult
-        if r["volume"] > mult * r["vol_avg"] and r["close"] > r["hh2h"] \
+        if r["volume"] > mult * r["vol_avg"] and self._vol_ratio_ok(r) and r["close"] > r["hh2h"] \
                 and r["close"] > r["open"] and r["rsi"] < 85:
             why = f"objem {r['volume']/r['vol_avg']:.1f}x průměru, nové 2h maximum"
             if hype >= 3:
@@ -273,7 +279,7 @@ class MemeAgent(BarAgent):
         ll2h = df["low"].rolling(24).min().shift(1).iloc[i]
         if pd.isna(ll2h):
             return None
-        if r["volume"] > self.vol_mult * r["vol_avg"] and r["close"] < ll2h and r["close"] < r["open"] and r["rsi"] > 15:
+        if r["volume"] > self.vol_mult * r["vol_avg"] and self._vol_ratio_ok(r) and r["close"] < ll2h and r["close"] < r["open"] and r["rsi"] > 15:
             return Entry(stop=r["close"] * (1 + self.stop_pct), target=r["close"] * (1 - self.target_pct),
                          trail_pct=self.stop_pct, max_hold_min=240,
                          reason=f"výplach: objem {r['volume']/r['vol_avg']:.1f}x průměru, nové 2h minimum")

@@ -955,6 +955,24 @@ def test_memec_long_only_when_lab_recommends():
     assert TrendAgent().lab_warn is False          # ostatní boti beze změny
 
 
+def test_memec_ignores_dead_market_volume():
+    import numpy as np
+    idx = pd.date_range("2026-01-01", periods=400, freq="5min", tz="UTC")
+    base = 1.0 + 0.01 * np.sin(np.arange(400))
+    df = pd.DataFrame({"open": base, "high": base * 1.001, "low": base * 0.999, "close": base,
+                       "volume": np.full(400, 100.0)}, index=idx)
+    dn = df.copy()
+    dn.iloc[-1] = [1.0, 1.0, 0.97, 0.975, 2000.0]          # 20x průměru -> short
+    m = MemeAgent()
+    assert m.short_entry(m.prepare(dn), 399, {}) is not None
+    dead = dn.copy()
+    dead["volume"] = 0.01                                   # skoro nikdo neobchoduje
+    dead.iloc[-1, 4] = 2000.0                               # jeden obchod = 200 000x "průměru"
+    assert m.short_entry(m.prepare(dead), 399, {}) is None
+    up = dead.copy(); up.iloc[-1] = [1.0, 1.03, 1.0, 1.025, 2000.0]
+    assert m.entry(m.prepare(up), 399, {}) is None          # ani nákup
+
+
 def test_wave_max_same_side():
     from colony.wallet import Lot
     v = WaveAgent()
