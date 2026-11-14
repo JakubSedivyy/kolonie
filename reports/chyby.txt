@@ -1,2 +1,1 @@
-Nov 14 01:30:47 ubuntu-1gb-hel1-1 python[292473]: 2026-11-14 01:30:47,311 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 14 02:02:29 ubuntu-1gb-hel1-1 python[292473]: 2026-11-14 02:02:29,544 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 14 03:03:29 ubuntu-1gb-hel1-1 python[292473]: 2026-11-14 03:03:29,838 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
