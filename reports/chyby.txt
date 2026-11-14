@@ -1,1 +1,3 @@
-Nov 13 23:29:06 ubuntu-1gb-hel1-1 python[292473]: 2026-11-13 23:29:06,313 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 14 00:30:39 ubuntu-1gb-hel1-1 python[292473]: 2026-11-14 00:30:39,474 WARNING colony.trends: radar gdelt: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)
+Nov 14 00:50:29 ubuntu-1gb-hel1-1 python[292473]: 2026-11-14 00:50:29,557 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 14 01:10:47 ubuntu-1gb-hel1-1 python[292473]: 2026-11-14 01:10:47,971 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
