@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 532 signálů, 102 obchodů, 295 hodinových snímků radaru, 380 událostí
+Celkem zapsáno: 536 signálů, 102 obchodů, 296 hodinových snímků radaru, 385 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -9.3 %
@@ -19,7 +19,6 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +13.6 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +9.7 %
-  Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +10.8 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   3x, vyhrálo by 2, průměr +5.4 %
@@ -27,7 +26,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -10.0 %
   Lovec     | paměť: když kupci/prodejci = do 1,5x, proděla |   1x, vyhrálo by 0, průměr -10.0 %
   Lovec     | paměť: když kupci/prodejci = do 1,5x, proděla |   1x, vyhrálo by 0, průměr -10.0 %
-  Memec     | coin drží kolega                              |   2x, vyhrálo by 1, průměr -0.6 %
+  Memec     | coin drží kolega                              |   1x, vyhrálo by 1, průměr +1.0 %
   Orbit     | příkaz neprošel                               |   1x, vyhrálo by 0, průměr -0.6 %
   Stín      | plno pozic                                    |  51x, vyhrálo by 35, průměr +3.4 %
   Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 2, průměr +3.9 %
@@ -42,4 +41,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   2 obchodů, 1 výher, průměr -9.6 %, celkem +0.16 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), XRP (124h), PENGU (108h), ETH (91h), HYPE (83h), SOL (62h), PEARL (57h), SUI (52h), DACITY (51h), ZEC (51h), MAX (42h), AVAX (40h), KNTQ (37h), PUMP (31h), MIHAO (30h), STONK (28h), $WIF (28h), LIT (27h), SEPPUKU (27h)
+  BTC (168h), CATE (168h), XRP (124h), PENGU (107h), ETH (92h), HYPE (83h), SOL (61h), PEARL (57h), SUI (52h), ZEC (51h), DACITY (50h), MAX (42h), AVAX (40h), KNTQ (37h), PUMP (31h), MIHAO (30h), STONK (28h), $WIF (28h), LIT (27h), SEPPUKU (27h)
