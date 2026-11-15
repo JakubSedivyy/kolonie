@@ -50,7 +50,10 @@ Lovec [ALIVE] $964.57 (-3.54 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1130.98 (+13.10 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $8.79
+Stín [ALIVE] $1130.17 (+13.02 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $9.23
+   SHORT BAT/USD: prodáno za 0.0935053, teď 0.0935521 (-0.1 %) - sestupný trend, -10.0 % za 24 h
+   SHORT BTC/USD: prodáno za 64756.1, teď 64788.5 (-0.1 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.213755 (-0.1 %) - sestupný trend, -6.7 % za 24 h
    2026-11-13T14:00 SOL/USD: +0.99 $ (+0.4 %) trailing stop
    2026-11-14T18:00 BAT/USD: +28.77 $ (+16.2 %) trailing stop
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
@@ -59,14 +62,9 @@ Stín [ALIVE] $1130.98 (+13.10 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max
 
 Věštec [ALIVE] $999.35 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11062.52 z $11000 (+0.57 %)
+CELKEM $11061.71 z $11000 (+0.56 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-14T21:00:53+00:00 🧠 Vlna nekoupil GRT/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T21:00:53+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T21:15:11+00:00 📊 Denní souhrn 14.11. · nálada trhu: risk_off
-🟢 Orbit: $1001.31 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33
-🟢 Trendy: $996.19 (-0.4 
    2026-11-14T23:00:51+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
    2026-11-15T00:15:39+00:00 ✅ Memec UZAVŘEL SHORT SHIB/USD: +1.93 $ (+3.1 %) - časový limit
    2026-11-15T00:20:39+00:00 ✅ Memec UZAVŘEL SHORT WIF/USD: +0.48 $ (+0.8 %) - časový limit
@@ -79,5 +77,8 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-15T03:07:10+00:00 ✅ Vlna UZAVŘEL SHORT SOL/USD: +12.37 $ (+15.8 %) - trailing stop
    2026-11-15T03:07:10+00:00 🧠 Vlna se poučil: když o coinu se mluví = ne, prodělal 19.5x (průměr -5.8 %) - příště to nekoupí
    2026-11-15T03:07:11+00:00 🧠 Vlna se poučil: když denní doba = odpoledne (12-18 UTC), prodělal 13x (průměr -5.8 %) - příště to nekoupí
+   2026-11-15T04:01:15+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $166 @ 0.0935521, stop 0.100192 - sestupný trend, -10.0 % za 24 h
+   2026-11-15T04:01:15+00:00 🐻 Stín (simulace) otevřel short BTC/USD za $296 @ 64788.5, stop 67380 - sestupný trend, -2.8 % za 24 h
+   2026-11-15T04:01:15+00:00 🐻 Stín (simulace) otevřel short XTZ/USD za $277 @ 0.213755, stop 0.223643 - sestupný trend, -6.7 % za 24 h
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-15T07:20 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
