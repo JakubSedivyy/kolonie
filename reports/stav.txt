@@ -50,10 +50,10 @@ Lovec [ALIVE] $964.57 (-3.54 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1125.92 (+12.59 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $9.23
-   SHORT BAT/USD: prodáno za 0.0935053, teď 0.0943616 (-0.9 %) - sestupný trend, -10.0 % za 24 h
-   SHORT BTC/USD: prodáno za 64756.1, teď 65100.8 (-0.5 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.214823 (-0.5 %) - sestupný trend, -6.7 % za 24 h
+Stín [ALIVE] $1126.31 (+12.63 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $9.23
+   SHORT BAT/USD: prodáno za 0.0935053, teď 0.0948307 (-1.4 %) - sestupný trend, -10.0 % za 24 h
+   SHORT BTC/USD: prodáno za 64756.1, teď 64985.6 (-0.4 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.214292 (-0.3 %) - sestupný trend, -6.7 % za 24 h
    2026-11-13T14:00 SOL/USD: +0.99 $ (+0.4 %) trailing stop
    2026-11-14T18:00 BAT/USD: +28.77 $ (+16.2 %) trailing stop
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
@@ -62,7 +62,7 @@ Stín [ALIVE] $1125.92 (+12.59 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max
 
 Věštec [ALIVE] $999.35 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11057.46 z $11000 (+0.52 %)
+CELKEM $11057.85 z $11000 (+0.53 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-15T00:15:39+00:00 ✅ Memec UZAVŘEL SHORT SHIB/USD: +1.93 $ (+3.1 %) - časový limit
