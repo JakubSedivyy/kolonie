@@ -50,10 +50,10 @@ Lovec [ALIVE] $964.57 (-3.54 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1124.72 (+12.47 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $9.23
-   SHORT BAT/USD: prodáno za 0.0935053, teď 0.0953522 (-2.0 %) - sestupný trend, -10.0 % za 24 h
-   SHORT BTC/USD: prodáno za 64756.1, teď 64913.5 (-0.2 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.215058 (-0.7 %) - sestupný trend, -6.7 % za 24 h
+Stín [ALIVE] $1125.92 (+12.59 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $9.23
+   SHORT BAT/USD: prodáno za 0.0935053, teď 0.0943616 (-0.9 %) - sestupný trend, -10.0 % za 24 h
+   SHORT BTC/USD: prodáno za 64756.1, teď 65100.8 (-0.5 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.214823 (-0.5 %) - sestupný trend, -6.7 % za 24 h
    2026-11-13T14:00 SOL/USD: +0.99 $ (+0.4 %) trailing stop
    2026-11-14T18:00 BAT/USD: +28.77 $ (+16.2 %) trailing stop
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
@@ -62,10 +62,9 @@ Stín [ALIVE] $1124.72 (+12.47 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max
 
 Věštec [ALIVE] $999.35 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11056.26 z $11000 (+0.51 %)
+CELKEM $11057.46 z $11000 (+0.52 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-14T23:00:51+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
    2026-11-15T00:15:39+00:00 ✅ Memec UZAVŘEL SHORT SHIB/USD: +1.93 $ (+3.1 %) - časový limit
    2026-11-15T00:20:39+00:00 ✅ Memec UZAVŘEL SHORT WIF/USD: +0.48 $ (+0.8 %) - časový limit
    2026-11-15T00:35:39+00:00 ✅ Memec UZAVŘEL SHORT DOGE/USD: +1.33 $ (+2.1 %) - časový limit
@@ -80,5 +79,8 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-15T04:01:15+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $166 @ 0.0935521, stop 0.100192 - sestupný trend, -10.0 % za 24 h
    2026-11-15T04:01:15+00:00 🐻 Stín (simulace) otevřel short BTC/USD za $296 @ 64788.5, stop 67380 - sestupný trend, -2.8 % za 24 h
    2026-11-15T04:01:15+00:00 🐻 Stín (simulace) otevřel short XTZ/USD za $277 @ 0.213755, stop 0.223643 - sestupný trend, -6.7 % za 24 h
+   2026-11-15T21:15:10+00:00 📊 Denní souhrn 15.11. · nálada trhu: risk_off
+🟢 Orbit: $1001.26 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33
+🟢 Trendy: $994.91 (-0.5 
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-16T01:40 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
