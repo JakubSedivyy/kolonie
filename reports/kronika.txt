@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 543 signálů, 109 obchodů, 303 hodinových snímků radaru, 404 událostí
+Celkem zapsáno: 544 signálů, 109 obchodů, 304 hodinových snímků radaru, 404 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -9.3 %
@@ -28,17 +28,17 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Memec     | coin drží kolega                              |   1x, vyhrálo by 1, průměr +1.0 %
   Orbit     | příkaz neprošel                               |   1x, vyhrálo by 0, průměr -0.6 %
   Stín      | plno pozic                                    |  51x, vyhrálo by 35, průměr +3.4 %
+  Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 0, průměr -4.9 %
   Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 2, průměr +3.9 %
-  Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   2x, vyhrálo by 0, průměr -5.3 %
 
 UZAVŘENÉ OBCHODY:
   Degen II  |   1 obchodů, 0 výher, průměr -24.4 %, celkem -3.70 $
   Lovec     |   2 obchodů, 0 výher, průměr -7.0 %, celkem -12.14 $
-  Memec     |  23 obchodů, 9 výher, průměr -0.1 %, celkem -1.88 $
+  Memec     |  22 obchodů, 9 výher, průměr -0.1 %, celkem -0.99 $
   Orbit     |   1 obchodů, 0 výher, průměr -0.8 %, celkem -1.44 $
   Stín      |  17 obchodů, 10 výher, průměr +2.1 %, celkem +69.95 $
   Trendy    |   3 obchodů, 0 výher, průměr -1.6 %, celkem -5.85 $
   Vlna      |   2 obchodů, 1 výher, průměr -9.6 %, celkem +0.16 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), XRP (124h), PENGU (101h), ETH (97h), HYPE (86h), SOL (67h), PEARL (56h), SUI (50h), ZEC (50h), DACITY (44h), MAX (42h), AVAX (41h), KNTQ (34h), MIHAO (34h), PUMP (32h), $WIF (32h), SEPPUKU (27h), LIT (26h), STONK (25h)
+  BTC (168h), CATE (168h), XRP (124h), PENGU (100h), ETH (98h), HYPE (87h), SOL (67h), PEARL (56h), SUI (50h), ZEC (50h), DACITY (43h), MAX (42h), AVAX (41h), MIHAO (34h), KNTQ (33h), $WIF (33h), PUMP (32h), SEPPUKU (27h), LIT (26h), NEAR (25h)

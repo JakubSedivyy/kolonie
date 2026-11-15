@@ -4,14 +4,12 @@ Orbit [ALIVE] $1001.26 (+0.13 %) | obchodů 2, úspěšnost 50 %, PF 2.33, max p
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
    2026-11-11T20:50 NVDA: -1.44 $ (-0.8 %) konec obchodního dne
 
-Trendy [ALIVE] $1004.35 (+0.44 %) | obchodů 5, úspěšnost 0 %, PF 0.00, max propad 1.2 %, poplatky $3.73
-   SHORT ETH/USD: prodáno za 1851.43, teď 1712.4 (+7.5 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.08 % · paměť: podobn
-   SHORT BTC/USD: prodáno za 64682.5, teď 62069 (+4.0 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.04 % · paměť: podobn
-   2026-11-03T13:00 SOL/USD: -2.22 $ (-1.5 %) průraz nad maximum kanálu
-   2026-11-06T15:00 SOL/USD: -1.50 $ (-1.4 %) průraz nad maximum kanálu
+Trendy [ALIVE] $994.91 (-0.51 %) | obchodů 7, úspěšnost 29 %, PF 0.54, max propad 1.2 %, poplatky $4.41
    2026-11-08T08:00 ETH/USD: -0.11 $ (-0.1 %) průraz nad maximum kanálu
    2026-11-11T15:35 ETH/USD: -3.80 $ (-3.2 %) stop-loss
    2026-11-13T10:25 ETH/USD: -1.95 $ (-1.5 %) stop-loss
+   2026-11-15T02:09 BTC/USD: +1.46 $ (+1.1 %) trailing stop
+   2026-11-15T02:17 ETH/USD: +3.67 $ (+2.8 %) trailing stop
 
 Memec [ALIVE] $993.71 (-0.63 %) | obchodů 38, úspěšnost 34 %, PF 0.79, max propad 1.5 %, poplatky $14.08
    2026-11-14T20:16 WIF/USD: -0.34 $ (-0.5 %) časový limit
@@ -20,8 +18,8 @@ Memec [ALIVE] $993.71 (-0.63 %) | obchodů 38, úspěšnost 34 %, PF 0.79, max p
    2026-11-15T00:20 WIF/USD: +0.48 $ (+0.8 %) časový limit
    2026-11-15T00:35 DOGE/USD: +1.33 $ (+2.1 %) časový limit
 
-Vlna [ALIVE] $966.86 (-3.31 %) | obchodů 10, úspěšnost 10 %, PF 0.18, max propad 6.3 %, poplatky $5.35
-   SHORT SOL/USD: prodáno za 85.8271, teď 67.71 (+21.1 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $964.00 (-3.60 %) | obchodů 10, úspěšnost 10 %, PF 0.18, max propad 6.3 %, poplatky $5.35
+   SHORT SOL/USD: prodáno za 85.8271, teď 70.85 (+17.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    2026-11-05T15:34 ADA/USD: -9.57 $ (-6.7 %) stop-loss
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
@@ -53,10 +51,10 @@ Lovec [ALIVE] $964.57 (-3.54 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1146.11 (+14.61 %) | obchodů 30, úspěšnost 57 %, PF 3.65, max propad 3.1 %, poplatky $8.35
-   SHORT BTC/USD: prodáno za 69215, teď 63404.1 (+8.4 %) - sestupný trend, -5.0 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
-   SHORT ETH/USD: prodáno za 1948.53, teď 1740.09 (+10.7 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody -1.2 % -> sázk
-   SHORT GRT/USD: prodáno za 0.0164073, teď 0.01593 (+2.9 %) - sestupný trend, -6.5 % za 24 h
+Stín [ALIVE] $1152.23 (+15.22 %) | obchodů 30, úspěšnost 57 %, PF 3.65, max propad 3.1 %, poplatky $8.35
+   SHORT BTC/USD: prodáno za 69215, teď 62578.6 (+9.6 %) - sestupný trend, -5.0 % za 24 h · paměť: podobné obchody -0.9 % -> sázk
+   SHORT ETH/USD: prodáno za 1948.53, teď 1729.57 (+11.2 %) - sestupný trend, -2.7 % za 24 h · paměť: podobné obchody -1.2 % -> sázk
+   SHORT GRT/USD: prodáno za 0.0164073, teď 0.0157858 (+3.8 %) - sestupný trend, -6.5 % za 24 h
    2026-11-12T22:00 PEPE/USD: +14.29 $ (+7.7 %) trailing stop
    2026-11-13T08:00 UNI/USD: +5.29 $ (+2.2 %) trailing stop
    2026-11-13T14:00 AAVE/USD: -0.22 $ (-0.1 %) trailing stop
@@ -65,11 +63,9 @@ Stín [ALIVE] $1146.11 (+14.61 %) | obchodů 30, úspěšnost 57 %, PF 3.65, max
 
 Věštec [ALIVE] $999.35 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11091.04 z $11000 (+0.83 %)
+CELKEM $11084.86 z $11000 (+0.77 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-14T20:00:32+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
-   2026-11-14T20:15:31+00:00 🐻 Memec (simulace) SHORT SHIB/USD za $61.74 @ 3.9e-06, stop 4.134e-06 (výplach: objem 26.5x průměru, nové 2h minimum · paměť: podobné 
    2026-11-14T20:16:04+00:00 🔻 Memec UZAVŘEL SHORT WIF/USD: -0.34 $ (-0.5 %) - časový limit
    2026-11-14T20:16:14+00:00 ✅ Memec UZAVŘEL SHORT BONK/USD: +0.65 $ (+1.0 %) - časový limit
    2026-11-14T20:20:31+00:00 🐻 Memec (simulace) SHORT WIF/USD za $62.80 @ 0.130156, stop 0.137965 (výplach: objem 30.1x průměru, nové 2h minimum)
@@ -85,5 +81,7 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-15T00:15:39+00:00 ✅ Memec UZAVŘEL SHORT SHIB/USD: +1.93 $ (+3.1 %) - časový limit
    2026-11-15T00:20:39+00:00 ✅ Memec UZAVŘEL SHORT WIF/USD: +0.48 $ (+0.8 %) - časový limit
    2026-11-15T00:35:39+00:00 ✅ Memec UZAVŘEL SHORT DOGE/USD: +1.33 $ (+2.1 %) - časový limit
+   2026-11-15T02:09:21+00:00 ✅ Trendy UZAVŘEL SHORT BTC/USD: +1.46 $ (+1.1 %) - trailing stop
+   2026-11-15T02:17:10+00:00 ✅ Trendy UZAVŘEL SHORT ETH/USD: +3.67 $ (+2.8 %) - trailing stop
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-15T07:20 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
