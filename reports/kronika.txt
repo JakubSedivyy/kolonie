@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 548 signálů, 115 obchodů, 309 hodinových snímků radaru, 415 událostí
+Celkem zapsáno: 548 signálů, 115 obchodů, 310 hodinových snímků radaru, 415 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -9.3 %
@@ -28,7 +28,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Memec     | plno pozic                                    |   2x, vyhrálo by 1, průměr +1.8 %
   Memec     | coin drží kolega                              |   1x, vyhrálo by 1, průměr +1.0 %
   Orbit     | příkaz neprošel                               |   1x, vyhrálo by 0, průměr -0.6 %
-  Stín      | plno pozic                                    |  53x, vyhrálo by 36, průměr +3.4 %
+  Stín      | plno pozic                                    |  50x, vyhrálo by 35, průměr +3.7 %
   Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 0, průměr -4.9 %
   Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 2, průměr +3.9 %
 
@@ -38,8 +38,8 @@ UZAVŘENÉ OBCHODY:
   Memec     |  22 obchodů, 9 výher, průměr -0.1 %, celkem -0.99 $
   Orbit     |   1 obchodů, 0 výher, průměr -0.8 %, celkem -1.44 $
   Stín      |  20 obchodů, 13 výher, průměr +2.6 %, celkem +106.50 $
-  Trendy    |   5 obchodů, 2 výher, průměr -0.2 %, celkem -0.72 $
+  Trendy    |   4 obchodů, 2 výher, průměr -0.2 %, celkem -0.61 $
   Vlna      |   3 obchodů, 2 výher, průměr -1.2 %, celkem +12.53 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), XRP (122h), ETH (101h), PENGU (95h), HYPE (89h), SOL (69h), PEARL (56h), ZEC (50h), SUI (50h), DACITY (42h), MAX (42h), AVAX (41h), $WIF (37h), MIHAO (34h), PUMP (32h), KNTQ (30h), NEAR (27h), LIT (27h), SEPPUKU (27h)
+  BTC (168h), CATE (168h), XRP (122h), ETH (102h), PENGU (94h), HYPE (89h), SOL (70h), PEARL (56h), SUI (50h), ZEC (49h), DACITY (42h), MAX (42h), AVAX (41h), $WIF (38h), MIHAO (34h), PUMP (32h), KNTQ (29h), LIT (27h), SEPPUKU (27h), NEAR (26h)
