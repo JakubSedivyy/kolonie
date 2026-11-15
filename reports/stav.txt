@@ -50,10 +50,10 @@ Lovec [ALIVE] $964.57 (-3.54 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1129.42 (+12.94 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $9.23
-   SHORT BAT/USD: prodáno za 0.0935053, teď 0.0941488 (-0.7 %) - sestupný trend, -10.0 % za 24 h
-   SHORT BTC/USD: prodáno za 64756.1, teď 64699.1 (+0.1 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.21383 (-0.1 %) - sestupný trend, -6.7 % za 24 h
+Stín [ALIVE] $1124.72 (+12.47 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max propad 3.1 %, poplatky $9.23
+   SHORT BAT/USD: prodáno za 0.0935053, teď 0.0953522 (-2.0 %) - sestupný trend, -10.0 % za 24 h
+   SHORT BTC/USD: prodáno za 64756.1, teď 64913.5 (-0.2 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.215058 (-0.7 %) - sestupný trend, -6.7 % za 24 h
    2026-11-13T14:00 SOL/USD: +0.99 $ (+0.4 %) trailing stop
    2026-11-14T18:00 BAT/USD: +28.77 $ (+16.2 %) trailing stop
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
@@ -62,7 +62,7 @@ Stín [ALIVE] $1129.42 (+12.94 %) | obchodů 33, úspěšnost 61 %, PF 4.67, max
 
 Věštec [ALIVE] $999.35 (-0.06 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11060.96 z $11000 (+0.55 %)
+CELKEM $11056.26 z $11000 (+0.51 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-14T23:00:51+00:00 🧠 Vlna nekoupil TRUMP/USD - paměť: když směr = short, prodělal jsem 13x (průměr -5.9 %)
