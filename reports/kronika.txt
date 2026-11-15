@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 548 signálů, 115 obchodů, 319 hodinových snímků radaru, 415 událostí
+Celkem zapsáno: 548 signálů, 115 obchodů, 320 hodinových snímků radaru, 415 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -9.3 %
@@ -14,7 +14,6 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -7.2 %
   Degen II  | paměť: když růst za hodinu = 20-60 %, proděla |   1x, vyhrálo by 0, průměr -1.0 %
   Degen II  | paměť: když růst za hodinu = 20-60 %, proděla |   1x, vyhrálo by 1, průměr +21.8 %
-  Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +13.6 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +9.7 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +10.8 %
@@ -26,7 +25,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Memec     | plno pozic                                    |   2x, vyhrálo by 1, průměr +1.8 %
   Memec     | coin drží kolega                              |   1x, vyhrálo by 1, průměr +1.0 %
   Orbit     | příkaz neprošel                               |   1x, vyhrálo by 0, průměr -0.6 %
-  Stín      | plno pozic                                    |  46x, vyhrálo by 33, průměr +4.1 %
+  Stín      | plno pozic                                    |  48x, vyhrálo by 35, průměr +4.5 %
   Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 0, průměr -4.9 %
   Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 2, průměr +3.9 %
 
@@ -40,4 +39,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   3 obchodů, 2 výher, průměr -1.2 %, celkem +12.53 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), XRP (121h), ETH (107h), PENGU (90h), HYPE (89h), SOL (75h), SUI (51h), PEARL (49h), ZEC (47h), MAX (42h), AVAX (41h), $WIF (40h), DACITY (36h), MIHAO (35h), PUMP (32h), NEAR (28h), SEPPUKU (27h), KNTQ (26h), LIT (25h)
+  BTC (168h), CATE (168h), XRP (121h), ETH (108h), PENGU (91h), HYPE (88h), SOL (75h), SUI (51h), PEARL (49h), ZEC (47h), MAX (42h), AVAX (41h), $WIF (40h), MIHAO (36h), DACITY (35h), PUMP (31h), NEAR (28h), SEPPUKU (27h), KNTQ (26h), LIT (25h)
