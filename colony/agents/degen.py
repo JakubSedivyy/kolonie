@@ -202,7 +202,7 @@ class HunterAgent(DegenAgent):  # noqa: D101 - popis níže
     take_profit, stop_loss = 0.25, 0.10
     max_hold_min = 48 * 60
     rug_liquidity_drop = 0.4
-    cooldown_min = 6 * 60
+    cooldown_min = 7 * 24 * 60    # po prodeji týden pauza: 3 ze 3 znovunákupů téhož coinu skončily -12 % (2.-12. 11.)
 
     def score(self, p: dict, now_ms: int) -> float | None:
         try:

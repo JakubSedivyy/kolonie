@@ -227,6 +227,22 @@ def test_hunter_only_trending_established():
     assert any("Lovec" in m for m in msgs)
 
 
+def test_hunter_waits_week_before_rebuying_same_coin():
+    class R:
+        tokens = {"TokW"}
+    dex = FakeDexEstablished()
+    h = HunterAgent(dex, radar=R())
+    now = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    h.tick(now, "neutral", lambda m: None)
+    dex.price *= 1.3                                   # cíl zisku -> prodá
+    h.tick(now + timedelta(hours=1), "neutral", lambda m: None)
+    assert not h.wallet.lots and h.wallet.trades[0]["why"] == "cíl zisku"
+    h.tick(now + timedelta(days=3), "neutral", lambda m: None)
+    assert not h.wallet.lots                           # za 3 dny ještě ne (dřív kupoval znovu už po 6 h)
+    h.tick(now + timedelta(days=8), "neutral", lambda m: None)
+    assert list(h.wallet.lots) == ["TOKW·TokW"]        # po týdnu zase smí
+
+
 def test_whisper_needs_two_sources():
     class R:
         def __init__(self, sources):
