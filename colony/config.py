@@ -27,6 +27,12 @@ RISK_OFF_TRADING = os.getenv("RISK_OFF_TRADING", "no" if IS_LIVE else "yes").low
 START_CAPITAL = 1000.0          # každý bot začíná s $1000
 DEATH_EQUITY = 800.0            # pod $800 (-20 %) bot umírá
 PROFIT_DEADLINE_DAYS = 30       # když po 30 dnech nemá víc než na začátku, umírá
+# dlouhodobí boti obchodují málo a drží týdny až měsíce -> delší lhůta (Jakub schválil 16. 11. 2026)
+PROFIT_DEADLINE_BY_BOT = {"Kompas": 90, "Lev": 90, "Sokol": 90, "Spořič": 90}
+
+
+def profit_deadline(name: str) -> int:
+    return PROFIT_DEADLINE_BY_BOT.get(name, PROFIT_DEADLINE_DAYS)
 DAILY_LOSS_LIMIT = 0.05         # -5 % za den = "zraněný", do konce dne nesmí obchodovat
 RENT_PER_DAY = 0.05             # "nájem" za server (~5 €/měsíc rozpočítané mezi boty)
 COLONY_KILL_SWITCH = 0.85       # když celá kolonie klesne pod 85 % startu, všichni se uspí

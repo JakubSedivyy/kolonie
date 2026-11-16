@@ -651,7 +651,7 @@ class Colony:
                             "chart_target": l.meta.get("target_px") if l.meta.get("side") == "short" else l.target})
             bots.append({**s, "asset_class": w.asset_class, "desc": (a.__doc__ or "").strip().split("\n")[0],
                          "start": w.start, "cash": w.cash, "born": w.born, "died": w.died, "age_days": age,
-                         "days_left": max(0, config.PROFIT_DEADLINE_DAYS - age), "curve": w.equity_curve[-600:],
+                         "days_left": max(0, config.profit_deadline(w.name) - age), "curve": w.equity_curve[-600:],
                          "positions": pos, "simulated": w.asset_class in ("degen", "dexmeme", "short", "predict"),
                          "benched": bool(getattr(a, "benched", False)),
                          "lab_warn": bool(getattr(a, "lab_warn", False)),

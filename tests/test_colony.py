@@ -428,6 +428,16 @@ def test_dashboard_html_ids_exist():
     assert used and not (used - have), used - have                      # každý prvek, na který JS sahá, v HTML existuje
 
 
+def test_long_term_bots_get_90_days():
+    now = datetime(2026, 12, 20, tzinfo=timezone.utc)
+    for name, dies in (("Spořič", False), ("Lev", False), ("Trendy", True)):
+        w = Wallet(name, "stock"); w.born = (now - timedelta(days=40)).isoformat(); w.day = now.strftime("%Y-%m-%d")
+        ev = survival.check(w, now, 995.0)
+        assert any(t == "DEATH" for t, _ in ev) == dies, (name, ev)
+    w = Wallet("Kompas", "stock"); w.born = (now - timedelta(days=91)).isoformat(); w.day = now.strftime("%Y-%m-%d")
+    assert any("za 90 dní" in txt for _, txt in survival.check(w, now, 995.0))
+
+
 def test_whisper_needs_two_sources():
     class R:
         def __init__(self, sources):

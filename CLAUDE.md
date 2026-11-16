@@ -24,7 +24,8 @@ Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, 
    Nová logika = nový test.
 4. Změny dělej malé a vysvětlitelné. Do commit zprávy napiš česky co a proč.
 5. Nepřeceňuj výsledky: pár dní papíru je statisticky málo. Při hodnocení uváděj počet obchodů.
-6. Pravidla přežití (smrt pod $800, 30 dní bez zisku) neměň bez souhlasu Jakuba. Mrtvé boty nevzkřišuj
+6. Pravidla přežití (smrt pod $800, 30 dní bez zisku; dlouhodobí Kompas/Lev/Sokol/Spořič 90 dní - Jakub schválil
+   16. 11. 2026, `config.PROFIT_DEADLINE_BY_BOT`) neměň bez souhlasu Jakuba. Mrtvé boty nevzkřišuj
    bez jeho souhlasu (16. 10. sám požádal o vzkříšení Degena -> Degen II, původní je na hřbitově).
 
 ## Denní kontrola (naplánovaná úloha)

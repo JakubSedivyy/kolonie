@@ -33,8 +33,9 @@ def check(wallet, now: datetime, equity: float) -> list[tuple[str, str]]:
     # smrt: po termínu nevydělal
     born = datetime.fromisoformat(wallet.born)
     age_days = (now - born).total_seconds() / 86400
-    if age_days >= config.PROFIT_DEADLINE_DAYS and equity <= wallet.start:
-        ev.append(("DEATH", f"za {config.PROFIT_DEADLINE_DAYS} dní nevydělal (${equity:.2f})"))
+    deadline = config.profit_deadline(wallet.name)
+    if age_days >= deadline and equity <= wallet.start:
+        ev.append(("DEATH", f"za {deadline} dní nevydělal (${equity:.2f})"))
         return ev
 
     # zranění: denní ztráta
