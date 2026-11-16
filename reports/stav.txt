@@ -50,10 +50,10 @@ Lovec [ALIVE] $964.52 (-3.55 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1124.51 (+12.45 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max propad 3.2 %, poplatky $9.48
-   SHORT BTC/USD: prodáno za 64756.1, teď 64374.2 (+0.6 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.214008 (-0.2 %) - sestupný trend, -6.7 % za 24 h
-   SHORT CRV/USD: prodáno za 0.203898, teď 0.203062 (+0.4 %) - sestupný trend, -2.2 % za 24 h
+Stín [ALIVE] $1131.59 (+13.16 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max propad 3.2 %, poplatky $9.48
+   SHORT BTC/USD: prodáno za 64756.1, teď 64094.5 (+1.0 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.21265 (+0.5 %) - sestupný trend, -6.7 % za 24 h
+   SHORT CRV/USD: prodáno za 0.203898, teď 0.199923 (+1.9 %) - sestupný trend, -2.2 % za 24 h
    2026-11-14T18:00 BAT/USD: +28.77 $ (+16.2 %) trailing stop
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
    2026-11-15T03:00 ETH/USD: +19.92 $ (+8.5 %) trailing stop
@@ -62,7 +62,7 @@ Stín [ALIVE] $1124.51 (+12.45 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max
 
 Věštec [ALIVE] $999.30 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11054.57 z $11000 (+0.50 %)
+CELKEM $11061.65 z $11000 (+0.56 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-15T03:00:59+00:00 ✅ Stín (simulace) uzavřel short GRT/USD: +0.35 $ (+0.2 %) - trailing stop
@@ -84,4 +84,4 @@ POSLEDNÍ UDÁLOSTI:
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-11-16T07:07:34+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
 
-VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-16T13:07 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-16T19:10 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
