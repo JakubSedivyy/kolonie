@@ -50,10 +50,10 @@ Lovec [ALIVE] $964.52 (-3.55 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1124.69 (+12.47 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max propad 3.2 %, poplatky $9.48
-   SHORT BTC/USD: prodáno za 64756.1, teď 64651.5 (+0.2 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.213845 (-0.1 %) - sestupný trend, -6.7 % za 24 h
-   SHORT CRV/USD: prodáno za 0.203898, teď 0.202105 (+0.9 %) - sestupný trend, -2.2 % za 24 h
+Stín [ALIVE] $1120.82 (+12.08 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max propad 3.2 %, poplatky $9.48
+   SHORT BTC/USD: prodáno za 64756.1, teď 64927.9 (-0.3 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.21475 (-0.5 %) - sestupný trend, -6.7 % za 24 h
+   SHORT CRV/USD: prodáno za 0.203898, teď 0.203226 (+0.3 %) - sestupný trend, -2.2 % za 24 h
    2026-11-14T18:00 BAT/USD: +28.77 $ (+16.2 %) trailing stop
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
    2026-11-15T03:00 ETH/USD: +19.92 $ (+8.5 %) trailing stop
@@ -62,12 +62,9 @@ Stín [ALIVE] $1124.69 (+12.47 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max
 
 Věštec [ALIVE] $999.30 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11054.75 z $11000 (+0.50 %)
+CELKEM $11050.88 z $11000 (+0.46 %)
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-15T02:17:10+00:00 ✅ Trendy UZAVŘEL SHORT ETH/USD: +3.67 $ (+2.8 %) - trailing stop
-   2026-11-15T03:00:59+00:00 ✅ Stín (simulace) uzavřel short BTC/USD: +16.28 $ (+6.6 %) - trailing stop
-   2026-11-15T03:00:59+00:00 ✅ Stín (simulace) uzavřel short ETH/USD: +19.92 $ (+8.5 %) - trailing stop
    2026-11-15T03:00:59+00:00 ✅ Stín (simulace) uzavřel short GRT/USD: +0.35 $ (+0.2 %) - trailing stop
    2026-11-15T03:07:10+00:00 ✅ Vlna UZAVŘEL SHORT SOL/USD: +12.37 $ (+15.8 %) - trailing stop
    2026-11-15T03:07:10+00:00 🧠 Vlna se poučil: když o coinu se mluví = ne, prodělal 19.5x (průměr -5.8 %) - příště to nekoupí
@@ -82,5 +79,9 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-16T00:05:26+00:00 🐻 Memec (simulace) SHORT TRUMP/USD za $64.84 @ 0.943222, stop 0.999815 (výplach: objem 29.7x průměru, nové 2h minimum)
    2026-11-16T04:01:27+00:00 🐻 Stín (simulace) otevřel short CRV/USD za $262 @ 0.204, stop 0.212291 - sestupný trend, -2.2 % za 24 h
    2026-11-16T04:05:29+00:00 🔻 Memec UZAVŘEL SHORT TRUMP/USD: -0.98 $ (-1.5 %) - časový limit
+   2026-11-16T07:07:32+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Degen II, Lovec, Stín, Věštec. Příkazy:
+   2026-11-16T07:07:32+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
+   2026-11-16T07:07:34+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
 
-VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-16T07:40 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-16T13:07 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
