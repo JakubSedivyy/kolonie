@@ -17,7 +17,7 @@ from datetime import datetime, timedelta, timezone
 
 from colony import config
 from colony.agents.base import Executor
-from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, BearAgent
+from colony.agents.strategies import OrbitAgent, TrendAgent, WaveAgent, BearAgent
 from colony.broker import SimBroker
 from colony.engine import replay
 
@@ -36,12 +36,6 @@ VARIANTS = {
         {"minutes": 60, "mode": "donchian", "donchian_n": 48, "top_n": 6},
         {"minutes": 60, "mode": "cross", "top_n": 3},
         {"minutes": 15, "mode": "donchian", "donchian_n": 96, "top_n": 3},
-    ]),
-    "Memec": (MemeAgent, [
-        {"vol_mult": 3.0, "stop_pct": 0.04, "target_pct": 0.10},
-        {"vol_mult": 4.0, "stop_pct": 0.05, "target_pct": 0.15},
-        {"vol_mult": 2.5, "stop_pct": 0.03, "target_pct": 0.08},
-        {"vol_mult": 4.0, "stop_pct": 0.06, "target_pct": 0.20},
     ]),
     "Vlna": (WaveAgent, [
         {"atr_mult": 3.0},

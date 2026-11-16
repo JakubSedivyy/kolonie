@@ -11,7 +11,8 @@ import pandas as pd
 
 from . import config, survival, report
 from .agents.base import Executor, BarAgent
-from .agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent
+from .agents.strategies import (OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent,
+                                RotationAgent, LeaderAgent, DipAgent, SaverAgent)
 from .agents.degen import DegenAgent, HunterAgent
 from .agents.shadow import ShadowAgent
 from .broker import AlpacaBroker
@@ -52,11 +53,12 @@ class Colony:
         self.dex = DexScreener()
         self.exec = Executor(self.broker, self.tg.send)
         self.bar_agents: list[BarAgent] = [OrbitAgent(), TrendAgent(), MemeAgent(), WaveAgent(), WhisperAgent(), BearAgent(),
-                                           CaptainAgent()]
+                                           CaptainAgent(), RotationAgent(), LeaderAgent(), DipAgent(), SaverAgent()]
         self.degen = DegenAgent(self.dex, radar=self.radar)
         self.lovec = HunterAgent(self.dex, radar=self.radar)
         self.stin = ShadowAgent(self.data)
         self.oracle = OracleAgent(self.grok)
+        self.retired = dict(config.RETIRED)          # boti, kteří mají odejít na hřbitov
         self.lab, self._lab_mtime, self._lab_checked = {}, 0.0, 0.0
         self.memory = Memory(os.path.join(config.STATE_DIR, "memory.json"))
         # zkušenosti z prvního běhu (14.-19. 10. 2026, starý server) - převezmou se jen jednou
@@ -282,8 +284,12 @@ class Colony:
             log.warning("%s bars: %s", a.name, e)
             return
         mult = MOOD_MULT[self.mood]
-        for s, raw in bars.items():
-            raw = raw[raw.index + pd.Timedelta(minutes=a.minutes) <= pd.Timestamp(now)]   # jen zavřené svíčky
+        closed = {s: raw[raw.index + pd.Timedelta(minutes=a.minutes) <= pd.Timestamp(now)]   # jen zavřené svíčky
+                  for s, raw in bars.items()}
+        if hasattr(a, "on_bars"):                       # boti, kteří porovnávají symboly mezi sebou (žebříček)
+            a.on_bars({s: r for s, r in closed.items() if len(r)}, now)
+        # nejdřív držené pozice (prodeje uvolní hotovost pro nákupy, např. měsíční rotace)
+        for s, raw in sorted(closed.items(), key=lambda kv: kv[0] not in w.lots):
             if len(raw) < 3:
                 continue
             df = a.prepare(raw)
@@ -291,7 +297,7 @@ class Colony:
                 continue
             i = len(df) - 1
             r, ts = df.iloc[i], df.index[i]
-            if (pd.Timestamp(now) - ts) > pd.Timedelta(minutes=a.minutes * 3):
+            if (pd.Timestamp(now) - ts) > pd.Timedelta(minutes=a.minutes * getattr(a, "stale_bars", 3)):
                 continue                                # stará data, nejednat
             price = float(r["close"])
             w.mark({s: price}, now)
@@ -314,6 +320,10 @@ class Colony:
                 why = a.short_exit_signal(df, i, lot) if is_short(lot) else a.exit_signal(df, i, lot)
                 if why:
                     self.exec.exit(a, s, price, why, now)
+                elif hasattr(a, "topup") and not is_short(lot) and not self.paused and w.status == "ALIVE":
+                    add = a.topup(df, i, lot, now)          # pravidelné přikupování (Spořič)
+                    if add and self.exec.add(a, s, price, add[0], now, add[2]):
+                        lot.meta["topup_key"] = add[1]
                 continue
             if self.paused or a.benched or w.status != "ALIVE":
                 continue
@@ -349,7 +359,7 @@ class Colony:
             elif any(s in o.wallet.lots for o in self.bar_agents if o is not a):
                 skip = "coin drží kolega"            # na účtu se pozice nesmí míchat
             else:
-                ok, mem_mult, note = self.memory.judge(a.name, feats)
+                ok, mem_mult, note = self.memory.judge(a.name, feats) if getattr(a, "use_memory", True) else (True, 1.0, "")
                 if not ok:
                     skip = note
                     self._memory_skip(a.name, s, note)
@@ -398,6 +408,22 @@ class Colony:
                         self.blacklist[s] = self.blacklist.get(s, 0) + 1
                         if self.blacklist[s] == 2:
                             self.tg.send(f"🚫 {s} dnes 2x vyhodil stop-loss - kolonie ho do zítřka nebude obchodovat")
+
+    def retire_bots(self, now):
+        """Boti ze seznamu config.RETIRED prodají pozice a odejdou na hřbitov (historie zůstane)."""
+        for a in self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]:
+            why, w = self.retired.get(a.name), a.wallet
+            if not why or w.status == "DEAD":
+                continue
+            if isinstance(a, BarAgent):
+                self._close_all(a, "vyřazení z kolonie", now)
+            else:                                      # simulace (DEX): prodej za poslední známou cenu
+                for s in list(w.lots):
+                    w.close(s, w.last_prices.get(s, w.lots[s].entry), "vyřazení z kolonie", now)
+            survival.kill(w, now, why)                 # neprodané pozice dál zkouší prodat guard_stops
+            st = w.stats()
+            self.tg.send(f"🪦 {w.name} odchází na hřbitov: {why}. Končí s ${w.equity():.2f}, "
+                         f"{st['trades']} obchodů, úspěšnost {st['win_rate']*100:.0f} %.")
 
     def check_survival(self, now):
         agents = self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]
@@ -499,6 +525,10 @@ class Colony:
         self.handle_commands(now)
         self.refresh_universe(now)
         self.update_mood(now)
+        try:
+            self.retire_bots(now)
+        except Exception as e:
+            log.exception("vyřazení: %s", e)
         try:
             if self.radar.maybe_refresh():
                 top = [h["symbol"] for h in self.radar.snapshot(8)["hot"]]

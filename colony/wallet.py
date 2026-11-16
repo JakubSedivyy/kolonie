@@ -109,6 +109,22 @@ class Wallet:
                                 high=price, cost=gross + fee, reason=reason, meta=meta)
         return self.lots[symbol]
 
+    def add(self, symbol, qty, fill_price, now=None, apply_slippage=True):
+        """Přikoupí k existující pozici (pravidelné spoření): průměrná cena, náklady se sčítají."""
+        lot = self.lots[symbol]
+        price = fill_price * (1 + self.costs["slip"]) if apply_slippage else fill_price
+        gross = qty * price
+        fee = gross * self.costs["fee"]
+        if gross + fee > self.cash + 1e-6:
+            raise ValueError(f"{self.name}: málo hotovosti na {symbol}")
+        self.cash -= gross + fee
+        self.fees_paid += fee
+        lot.entry = (lot.entry * lot.qty + price * qty) / (lot.qty + qty)
+        lot.qty += qty
+        lot.cost += gross + fee
+        lot.high = max(lot.high, price)
+        return lot
+
     def close(self, symbol, fill_price, why, now=None, apply_slippage=True, qty=None):
         lot = self.lots.pop(symbol)
         q = lot.qty if qty is None else min(qty, lot.qty)

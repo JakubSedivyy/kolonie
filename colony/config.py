@@ -31,6 +31,13 @@ DAILY_LOSS_LIMIT = 0.05         # -5 % za den = "zraněný", do konce dne nesmí
 RENT_PER_DAY = 0.05             # "nájem" za server (~5 €/měsíc rozpočítané mezi boty)
 COLONY_KILL_SWITCH = 0.85       # když celá kolonie klesne pod 85 % startu, všichni se uspí
 
+# --- vyřazení boti (na přání Jakuba) ---------------------------------------------------
+# Bot z tohohle seznamu při dalším běhu prodá pozice a odejde na hřbitov (jeho historie zůstane).
+RETIRED = {
+    "Memec": "vyřazen na přání Jakuba 16. 11. 2026 (dlouhodobě prodělával)",
+    "Lovec": "vyřazen na přání Jakuba 16. 11. 2026 (dlouhodobě prodělával)",
+}
+
 # --- realistické náklady (aby papír nelhal) ----------------------------------------------
 COSTS = {
     # fee = poplatek z objemu, slip = skluz ceny při plnění (každým směrem)

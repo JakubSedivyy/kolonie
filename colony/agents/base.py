@@ -191,6 +191,23 @@ class Executor:
         self.notify(f"🟢 {agent.name} KOUPIL {symbol} za ${lot.cost:.2f} @ {lot.entry:.6g} ({e.reason})")
         return lot
 
+    def add(self, agent: BarAgent, symbol: str, price: float, usd: float, now: datetime, reason: str = ""):
+        """Přikoupí k pozici, kterou bot už drží (jen long)."""
+        w = agent.wallet
+        usd = min(usd, w.cash / (1 + w.costs["fee"] + w.costs["slip"]))
+        if symbol not in w.lots or usd < config.MIN_ORDER_USD:
+            return None
+        try:
+            f = self.broker.buy_usd(symbol, usd, price, crypto=agent.crypto)
+        except Exception as ex:
+            log.warning("%s add %s failed: %s", agent.name, symbol, ex)
+            return None
+        if not f or f.qty <= 0:
+            return None
+        lot = w.add(symbol, f.qty, f.price, now=now, apply_slippage=self.slip)
+        self.notify(f"🟢 {agent.name} PŘIKOUPIL {symbol} za ${usd:.2f} @ {f.price:.6g} - celkem vloženo ${lot.cost:.2f} ({reason})")
+        return lot
+
     def _enter_short(self, agent, symbol, price, e, usd, now, meta):
         """Short: akcie skutečně přes Alpaku (paper), krypto jen simulovaně (Alpaca krypto short neumí)."""
         w = agent.wallet

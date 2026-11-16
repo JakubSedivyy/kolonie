@@ -1,6 +1,6 @@
 """Testy bez internetu: syntetická data, falešná Alpaka a DexScreener.
 Spuštění:  python -m pytest -q tests   (nebo python tests/test_colony.py)"""
-import os, sys, tempfile, types, json
+import os, sys, tempfile, time, types, json
 from datetime import datetime, timedelta, timezone
 
 import numpy as np
@@ -16,7 +16,8 @@ from colony import config, survival
 config.TELEGRAM_TOKEN = config.TELEGRAM_CHAT_ID = ""     # testy nikdy nepíšou na skutečný Telegram
 from colony.wallet import Wallet
 from colony.agents.base import Executor, Entry
-from colony.agents.strategies import OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent
+from colony.agents.strategies import (OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent,
+                                     RotationAgent, LeaderAgent, DipAgent, SaverAgent)
 from colony.agents.shadow import ShadowAgent, mirror
 from colony.agents.degen import DegenAgent, HunterAgent
 from colony.broker import SimBroker, Fill
@@ -241,6 +242,87 @@ def test_hunter_waits_week_before_rebuying_same_coin():
     assert not h.wallet.lots                           # za 3 dny ještě ne (dřív kupoval znovu už po 6 h)
     h.tick(now + timedelta(days=8), "neutral", lambda m: None)
     assert list(h.wallet.lots) == ["TOKW·TokW"]        # po týdnu zase smí
+
+
+def daily(n=300, drift=0.0, seed=0, p0=100.0, vol=0.01, end="2026-11-13"):
+    idx = pd.date_range(end=pd.Timestamp(end, tz="UTC") + pd.Timedelta(hours=5), periods=n, freq="1D")
+    df = bars(n, idx[0], 1440, drift=drift, vol=vol, seed=seed, p0=p0)
+    df.index = idx
+    return df
+
+
+def test_kompas_monthly_rotation():
+    k = RotationAgent()
+    drifts = {"VTI": 0.001, "XLK": 0.002, "VEA": 0.0005, "VWO": -0.001, "GLD": 0.0015,
+              "TLT": -0.002, "IEF": -0.0005, "VNQ": -0.001, "DBC": -0.0015, "BIL": 0.0001}
+    data = {s: daily(drift=d, seed=i, vol=0.003) for i, (s, d) in enumerate(drifts.items())}
+    now = datetime(2026, 11, 16, 15, tzinfo=timezone.utc)
+    k.on_bars(data, now)
+    assert set(k.targets) == {"XLK", "GLD", "VTI"}, k.targets       # tři nejsilnější, žádné dluhopisy
+    assert abs(sum(k.targets.values()) - 0.98) < 1e-9
+    k.wallet.cash = 1000
+    df = data["XLK"]
+    e = k.entry(df, len(df) - 1, {"symbol": "XLK"})
+    assert e and e.stop < df["close"].iloc[-1]
+    assert 300 < k.size_usd(df["close"].iloc[-1], e.stop) < 340      # třetina peněženky
+    assert k.entry(df, len(df) - 1, {"symbol": "TLT"}) is None
+    from colony.wallet import Lot
+    lot = Lot("TLT", 1, 100, 85, None, None, now.isoformat(), None)
+    assert "rotace" in k.exit_signal(df, len(df) - 1, lot)
+    # během měsíce se cíle nemění, i když se trh otočí
+    k.on_bars({s: daily(drift=-0.003, seed=i) for i, s in enumerate(drifts)}, now + timedelta(days=5))
+    assert set(k.targets) == {"XLK", "GLD", "VTI"}
+    # nový měsíc a všechno padá -> všechno do bezpečných krátkých dluhopisů
+    k.on_bars({s: daily(drift=-0.003, seed=i, vol=0.003) for i, s in enumerate(drifts)}, now + timedelta(days=20))
+    assert list(k.targets) == ["BIL"] and abs(k.targets["BIL"] - 0.98) < 1e-9, k.targets
+
+
+def test_lev_holds_leaders_sells_laggards():
+    lev = LeaderAgent()
+    data = {s: daily(drift=0.0005 + 0.0002 * i, seed=i, vol=0.004) for i, s in enumerate(lev.stocks)}
+    data["WMT"] = daily(drift=-0.002, seed=99, vol=0.004)            # padá -> nesmí koupit
+    now = datetime(2026, 11, 16, 15, tzinfo=timezone.utc)
+    lev.on_bars(data, now)
+    top = sorted(lev.rank, key=lev.rank.get)[:5]
+    assert "WMT" not in lev.rank and lev.ready
+    s = top[0]
+    assert lev.entry(data[s], 299, {"symbol": s})
+    last = sorted(lev.rank, key=lev.rank.get)[-1]
+    assert lev.entry(data[last], 299, {"symbol": last}) is None or lev.rank[last] <= 5
+    from colony.wallet import Lot
+    assert "trend zlomen" in lev.exit_signal(data["WMT"], 299, Lot("WMT", 1, 100, 80, None, 0.2, now.isoformat(), None))
+    assert lev.exit_signal(data[s], 299, Lot(s, 1, 100, 80, None, 0.2, now.isoformat(), None)) is None
+    lev.on_bars({}, now)                                              # bez dat nerozhoduje
+    assert lev.exit_signal(data["WMT"], 299, Lot("WMT", 1, 100, 80, None, 0.2, now.isoformat(), None)) is None
+
+
+def test_sokol_buys_dip_in_uptrend():
+    sok = DipAgent()
+    df = daily(drift=0.002, seed=3, vol=0.004)
+    for k in range(3):                                                # tři dny prudkého poklesu
+        df.iloc[-3 + k, 3] = df["close"].iloc[-4] * (1 - 0.02 * (k + 1))
+    p = sok.prepare(df)
+    e = sok.entry(p, len(p) - 1, {"symbol": "IVV"})
+    assert e and e.max_hold_min == 14 * 24 * 60 and e.stop < p["close"].iloc[-1]
+    falling = sok.prepare(daily(drift=-0.002, seed=3, vol=0.004))
+    falling.iloc[-1, falling.columns.get_loc("rsi2")] = 3
+    assert sok.entry(falling, len(falling) - 1, {"symbol": "IVV"}) is None    # pod 200denním průměrem nekupuje
+    up = sok.prepare(daily(drift=0.002, seed=3, vol=0.004))
+    from colony.wallet import Lot
+    lot = Lot("IVV", 1, 100, 90, None, None, "2026-11-10T15:00:00+00:00", None)
+    if up["close"].iloc[-1] > up["sma5"].iloc[-1]:
+        assert "odraz" in sok.exit_signal(up, len(up) - 1, lot)
+
+
+def test_wallet_add_averages_price():
+    w = Wallet("Spořič", "stock")
+    w.open("VOO", 1.0, 100.0, stop=1.0, apply_slippage=False)
+    w.add("VOO", 1.0, 120.0, apply_slippage=False)
+    lot = w.lots["VOO"]
+    assert lot.qty == 2 and abs(lot.entry - 110) < 1e-9 and abs(lot.cost - 220) < 1e-9
+    assert abs(w.cash - 780) < 1e-9
+    t = w.close("VOO", 121.0, "test", apply_slippage=False)
+    assert abs(t["pnl"] - 22) < 1e-9
 
 
 def test_whisper_needs_two_sources():
@@ -584,6 +666,7 @@ def test_live_colony_ticks():
     live.DexScreener = FakeDex
     sent = []
     c = live.Colony()
+    c.retired = {}                                    # tady testujeme obchodování Memce; vyřazení má vlastní test
     c.radar.maybe_refresh = lambda force=False: False
     c.oracle.tick = lambda *a, **k: None
     assert not c.grok.enabled
@@ -619,7 +702,7 @@ def test_live_colony_ticks():
     import json
     from colony.dashboard import _jsonable
     snap = json.loads(json.dumps(c.snapshot(now), default=_jsonable))
-    assert len(snap["bots"]) == 11
+    assert len(snap["bots"]) == 15
     assert all("kronika" in b and "lessons" in b for b in snap["bots"])
     assert os.path.exists(os.path.join(config.STATE_DIR, "kronika.txt"))     # hodinový přehled kroniky vznikl
     assert all(isinstance(ok, bool) for e in snap["eval"] for _, ok in e["checks"])
@@ -637,12 +720,48 @@ def test_live_colony_ticks():
     c2 = live.Colony()                                # obnovení ze souboru
     assert "TokCool" in c2.degen.cooldown and "TokOld" not in c2.degen.cooldown, c2.degen.cooldown
     assert "TokL" in c2.lovec.cooldown                # pauza po prodeji přežije restart
-    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Kapitán", "Degen II", "Lovec", "Stín", "Věštec", "Degen"]
+    assert [w.name for w in c2.wallets] == ["Orbit", "Trendy", "Memec", "Vlna", "Šeptač", "Medvěd", "Kapitán", "Kompas", "Lev", "Sokol", "Spořič",
+                                          "Degen II", "Lovec", "Stín", "Věštec", "Degen"]
     assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets) - 796.78) < 1e-6
     snap2 = c2.snapshot(datetime.now(timezone.utc))
     ghost = [b for b in snap2["bots"] if b["name"] == "Degen"][0]
     assert ghost["status"] == "DEAD" and "lessons" in ghost
     print("\n".join(sent[:15]))
+
+    # vyřazení botů na přání Jakuba (16. 11.): Memec prodá pozici a odejde na hřbitov, ostatní žijí dál
+    out = []
+    c2.tg.send = c2.exec.notify = out.append
+    mem = c2.bar_agents[2]
+    assert mem.name == "Memec" and c2.retired.keys() >= {"Memec", "Lovec"}
+    c2.exec.enter(mem, "DOGE/USD", 100.0, Entry(stop=90.0, reason="test"), 100.0, now)
+    c2.retire_bots(now)
+    assert mem.wallet.status == "DEAD" and not mem.wallet.lots, mem.wallet.lots
+    assert mem.wallet.trades[-1]["why"] == "vyřazení z kolonie"
+    assert c2.lovec.wallet.status == "DEAD" and "na přání Jakuba" in c2.lovec.wallet.cause_of_death
+    assert c2.bar_agents[0].wallet.status == "ALIVE" and c2.stin.wallet.status == "ALIVE"
+    assert sum("odchází na hřbitov" in m for m in out) == 2
+    c2.retire_bots(now)
+    assert sum("odchází na hřbitov" in m for m in out) == 2      # podruhé už nic
+    c2.last_bar = {}
+    c2.run_bar_agent(mem, now)
+    assert not mem.wallet.lots                                    # mrtvý bot nenakupuje
+
+    # dlouhodobí boti na denních svíčkách běží jen při otevřené burze
+    c2._clock, c2._clock_at = types.SimpleNamespace(is_open=True), time.time() + 1e9
+    sav = [a for a in c2.bar_agents if a.name == "Spořič"][0]
+    c2.mood = "risk_off"                                          # nálada spoření nezmenší
+    c2.run_bar_agent(sav, now)
+    assert set(sav.wallet.lots) == {"VOO", "IBIT"}, sav.wallet.lots
+    assert all(abs(l.cost - 50) < 0.5 for l in sav.wallet.lots.values())
+    c2.last_bar = {}
+    c2.run_bar_agent(sav, now)
+    assert all(abs(l.cost - 50) < 0.5 for l in sav.wallet.lots.values())   # stejný týden nepřikupuje
+    sav.wallet.lots["VOO"].meta["topup_key"] = "2000-01"          # jako by minulý nákup byl dávno
+    c2.last_bar = {}
+    c2.run_bar_agent(sav, now)
+    assert abs(sav.wallet.lots["VOO"].cost - 100) < 1, sav.wallet.lots["VOO"].cost
+    assert sav.wallet.lots["VOO"].meta["topup_key"] == SaverAgent.week(now)
+    assert any("Spořič PŘIKOUPIL VOO" in m for m in out)
 
 
 class FakeResp:

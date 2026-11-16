@@ -51,8 +51,12 @@ class AlpacaData:
         if crypto:
             req = CryptoBarsRequest(symbol_or_symbols=list(symbols), timeframe=_tf(minutes), start=start, end=end)
             return _split(self.crypto.get_crypto_bars(req).df)
+        extra = {}
+        if minutes >= 1440:          # denní svíčky dlouhodobých botů: očištěné o splity a dividendy (jinak lže momentum)
+            from alpaca.data.enums import Adjustment
+            extra["adjustment"] = Adjustment.ALL
         req = StockBarsRequest(symbol_or_symbols=list(symbols), timeframe=_tf(minutes), start=start, end=end,
-                               feed=DataFeed.IEX)   # IEX = zdarma
+                               feed=DataFeed.IEX, **extra)   # IEX = zdarma
         return _split(self.stocks.get_stock_bars(req).df)
 
     def latest_prices(self, symbols, crypto=False) -> dict[str, float]:

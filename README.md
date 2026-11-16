@@ -8,12 +8,16 @@ v prohlížeči nebo na mobilu a zprávy ti chodí do **Telegramu**.
 |---|---|---|---|
 | **Orbit** | US akcie, které si každé ráno sám vybere (nejaktivnější a nejvíc rostoucí) | průraz ranního rozpětí s objemem nad VWAP | minuty až hodiny, večer vše prodá |
 | **Trendy** | BTC, ETH, SOL a další velké krypto | otočení trendu EMA 20/50 nad EMA 200 | hodiny až 3 dny |
-| **Memec** | meme coiny na Alpace (DOGE, SHIB, PEPE…) | výbuch objemu + nové maximum; coiny v trendu na internetu mají přednost | max. 4 hodiny |
+| ~~**Memec**~~ | meme coiny na Alpace (DOGE, SHIB, PEPE…) | **na hřbitově od 16. 11. 2026** (prodělával) | – |
 | **Vlna** | krypto i meme coiny | swing: coin v trendu na internetu nebo průraz 3denního maxima, rostoucí trend | 3–7 dní |
 | **Šeptač** | meme coiny na Alpace | kupuje, jen když o coinu mluví aspoň 2 různé zdroje (X, 4chan, StockTwits, Telegram…) a cena to potvrzuje | max. 24 hodin |
-| **Lovec** | zavedené meme coiny na Solaně (3+ dny staré, likvidita od $250k) | **jen simulace**: coiny z radaru, které rostou a kupci převažují; cíl +25 %, stop −10 % | max. 2 dny |
+| ~~**Lovec**~~ | zavedené meme coiny na Solaně | **na hřbitově od 16. 11. 2026** (prodělával) | – |
 | **Medvěd** | inverzní ETF (SQQQ, SPXS, SOXS…), které rostou, když trh padá | vstup jen když pád potvrzuje trend; stop 2x ATR, trailing | max. 3 dny |
 | **Kapitán** | velké kryptoměny (BTC, ETH, SOL…) | pomalý trend: tři páry denních průměrů (8/24, 16/48, 32/96 dní), koupí když rostou aspoň 2 ze 3, prodá až když neroste žádný; sázka podle kolísavosti | týdny až měsíce |
+| **Kompas** | koš ETF: akcie USA, technologie, svět, rozvíjející se trhy, zlato, dluhopisy, nemovitosti, komodity | rotace: jednou měsíčně drží 3 nejsilnější podle růstu za 3/6/12 měsíců (jen ty, co rostou); zbytek v krátkých dluhopisech (BIL) | týdny až měsíce |
+| **Lev** | 16 velkých US firem (Apple, Microsoft, Nvidia…) | drží 5 nejsilnějších za 6 měsíců nad 200denním průměrem; prodá při pádu z první desítky nebo pod průměr; posuvný stop 20 % | týdny až měsíce |
+| **Sokol** | indexy: S&P 500, Nasdaq 100, Dow, malé firmy (IVV, QQQM, DIA, IWM) | nákup krátkého poklesu (RSI 2 pod 10) v dlouhodobém růstu; prodá po odrazu nad 5denní průměr | dny, max. 2 týdny |
+| **Spořič** | S&P 500 (VOO) a bitcoin přes ETF (IBIT) | každý týden přikoupí $50 + $50, nic neprodává - srovnání pro ostatní boty | trvale |
 | **Degen II** | úplně nové meme coiny na Solaně | **jen simulace**, vzkříšený po smrti prvního Degena: až 2 h staré coiny, likvidita od $100k, 3% sázky, hlídání každých 30 s | max. 4 hodiny |
 | **Stín** | krypto - sázky na pokles (short) | **jen simulace** (Alpaca short krypta neumí): sestupný trend, coin padá 2-15 % za 24 h; nikdy v býčím trhu; poplatky a funding jako na burze | max. 3 dny |
 | **Věštec** | predikční trhy Polymarket | **jen simulace**: Grok přečte X a zprávy, odhadne pravděpodobnost; sází při hraně ≥ 8 b., čtvrtinový Kelly | do vyhodnocení trhu |

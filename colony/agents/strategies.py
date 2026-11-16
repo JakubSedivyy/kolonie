@@ -541,3 +541,220 @@ class CaptainAgent(BarAgent):
         if df["votes"].iloc[i] == 0:
             return "trend se otočil (žádný průměr neroste)"
         return None
+
+
+# ====================================================================== dlouhodobí boti (od 16. 11. 2026)
+class DailyAgent(BarAgent):
+    """Společný základ dlouhodobých botů: denní svíčky, akcie a ETF (na Alpace bez poplatků),
+    pevný podíl peněženky na pozici (nezmenšuje se podle hodinové nálady trhu) a bez paměti
+    (paměť se učí z krátkých obchodů, u dlouhodobých by zakazovala náhodné věci)."""
+    asset_class = "stock"
+    crypto = False
+    minutes = 1440
+    lookback_bars = 420        # kalendářních dní historie (~290 obchodních) - stačí na roční momentum
+    stale_bars = 5             # víkend + svátek: poslední denní svíčka může být 4 dny stará
+    use_memory = False
+    slot_frac = 0.30           # kolik peněženky dostane jedna pozice
+
+    def size_usd(self, price, stop, mood_mult=1.0):
+        w = self.wallet
+        usd = min(w.equity() * self.slot_frac, w.cash * 0.98)
+        return usd if usd >= 10.0 else 0.0
+
+    @staticmethod
+    def sma(s, n):
+        return s.rolling(n, min_periods=n).mean()
+
+
+class RotationAgent(DailyAgent):
+    """KOMPAS - rotace ETF podle síly (tzv. dual momentum, známá dlouhodobá strategie).
+    Jednou měsíčně seřadí koš ETF (akcie USA, technologie, vyspělý svět, rozvíjející se trhy, zlato,
+    dlouhé a střední dluhopisy, nemovitosti, komodity) podle průměrného růstu za 3, 6 a 12 měsíců.
+    Drží 3 nejsilnější, ale jen ty, které za tu dobu opravdu rostly. Volná místa schová do
+    krátkodobých státních dluhopisů USA (BIL ~ úrok). Nouzový stop -15 %. Drží týdny až měsíce."""
+    name = "Kompas"
+    basket = ["VTI", "XLK", "VEA", "VWO", "GLD", "TLT", "IEF", "VNQ", "DBC"]
+    safe = "BIL"
+    top_n = 3
+    max_positions = 4
+    stop_pct = 0.15
+
+    def __init__(self, wallet=None):
+        super().__init__(wallet)
+        self.targets: dict[str, float] = {}       # symbol -> podíl peněženky
+        self.month = ""
+        self._sym = ""
+
+    def universe(self, ctx):
+        return self.basket + [self.safe]
+
+    @staticmethod
+    def score(close) -> float | None:
+        if len(close) < 253:
+            return None
+        c = close.iloc[-1]
+        return float(np.mean([c / close.iloc[-1 - n] - 1 for n in (63, 126, 252)]))
+
+    def on_bars(self, bars: dict, now):
+        month = pd.Timestamp(now).strftime("%Y-%m")
+        if month == self.month:
+            return
+        scores = {s: self.score(df["close"]) for s, df in bars.items() if s in self.basket}
+        scores = {s: v for s, v in scores.items() if v is not None}
+        if len(scores) < 5:                        # málo dat - radši nic neměnit
+            return
+        best = [s for s, v in sorted(scores.items(), key=lambda kv: -kv[1]) if v > 0][: self.top_n]
+        frac = 0.98 / self.top_n
+        self.targets = {s: frac for s in best}
+        if len(best) < self.top_n:
+            self.targets[self.safe] = frac * (self.top_n - len(best))
+        self.month = month
+        self.scores = scores
+
+    def size_usd(self, price, stop, mood_mult=1.0):
+        w = self.wallet
+        usd = min(w.equity() * self.targets.get(self._sym, 0.0), w.cash * 0.98)
+        return usd if usd >= 10.0 else 0.0
+
+    def entry(self, df, i, ctx):
+        s = ctx.get("symbol", "")
+        self._sym = s
+        if s not in self.targets:
+            return None
+        p = df["close"].iloc[i]
+        why = ("bezpečný přístav (krátké dluhopisy) - málo ETF roste" if s == self.safe else
+               f"mezi {self.top_n} nejsilnějšími ETF (průměrný růst 3/6/12 měs. {getattr(self, 'scores', {}).get(s, 0)*100:+.1f} %)")
+        return Entry(stop=p * (1 - self.stop_pct), reason=why)
+
+    def exit_signal(self, df, i, lot):
+        if self.month and lot.symbol not in self.targets:
+            return "měsíční rotace: už není mezi nejsilnějšími"
+        return None
+
+
+class LeaderAgent(DailyAgent):
+    """LEV - velké americké firmy v dlouhodobém trendu (momentum).
+    Každý den seřadí 16 velkých firem podle růstu za posledních 6 měsíců (bez posledního měsíce,
+    ten bývá šum). Kupuje jen firmy nad 200denním průměrem, kde i 50denní průměr je nad 200denním.
+    Drží 5 nejlepších; prodá, když firma vypadne z první desítky nebo spadne pod 200denní průměr.
+    Posuvný stop 20 % od maxima. Drží týdny až měsíce."""
+    name = "Lev"
+    stocks = ["AAPL", "MSFT", "NVDA", "AMZN", "GOOGL", "META", "AVGO", "TSLA",
+              "JPM", "LLY", "V", "MA", "COST", "NFLX", "ORCL", "WMT"]
+    top_n, keep_n = 5, 10
+    max_positions = 5
+    slot_frac = 0.19
+    stop_pct = 0.20
+
+    def __init__(self, wallet=None):
+        super().__init__(wallet)
+        self.rank: dict[str, int] = {}
+        self.mom: dict[str, float] = {}
+        self.ready = False                         # má data o dost firmách, aby mohl řadit
+
+    def universe(self, ctx):
+        return list(self.stocks)
+
+    def on_bars(self, bars: dict, now):
+        mom, seen = {}, 0
+        for s, df in bars.items():
+            c = df["close"]
+            if len(c) < 200:
+                continue
+            seen += 1
+            sma50, sma200 = c.tail(50).mean(), c.tail(200).mean()
+            m = c.iloc[-22] / c.iloc[-127] - 1 if len(c) >= 127 else -1
+            if c.iloc[-1] > sma200 and sma50 > sma200 and m > 0:
+                mom[s] = float(m)
+        self.mom, self.ready = mom, seen >= len(self.stocks) // 2
+        self.rank = {s: k for k, (s, _) in enumerate(sorted(mom.items(), key=lambda kv: -kv[1]), 1)}
+
+    def entry(self, df, i, ctx):
+        s = ctx.get("symbol", "")
+        k = self.rank.get(s)
+        if not k or k > self.top_n:
+            return None
+        p = df["close"].iloc[i]
+        return Entry(stop=p * (1 - self.stop_pct), trail_pct=self.stop_pct,
+                     reason=f"{k}. nejsilnější velká firma (6 měs. {self.mom[s]*100:+.0f} %), nad 200denním průměrem")
+
+    def exit_signal(self, df, i, lot):
+        if not self.ready:
+            return None                            # chybí data o ostatních - nerozhodovat
+        k = self.rank.get(lot.symbol)
+        if not k:
+            return "trend zlomen (pod 200denním průměrem nebo 6 měsíců bez růstu)"
+        if k > self.keep_n:
+            return f"vypadl z první desítky ({k}. místo)"
+        return None
+
+
+class DipAgent(DailyAgent):
+    """SOKOL - nákup krátkých poklesů indexů v dlouhodobém růstu (známá strategie "RSI 2").
+    Hlídá S&P 500 (IVV), Nasdaq 100 (QQQM), Dow Jones (DIA) a malé firmy (IWM).
+    Koupí, když je index nad 200denním průměrem (dlouhodobě roste), ale 2denní RSI spadne pod 10
+    (pár dní prudkého prodávání). Prodá po odrazu nad 5denní průměr, nejpozději za 2 týdny.
+    Nouzový stop -10 %. Hodně malých výher, občas větší ztráta."""
+    name = "Sokol"
+    indexes = ["IVV", "QQQM", "DIA", "IWM"]
+    max_positions = 2
+    slot_frac = 0.48
+    rsi_max = 10
+    stop_pct = 0.10
+
+    def universe(self, ctx):
+        return list(self.indexes)
+
+    def prepare(self, df):
+        df = df.copy()
+        df["sma200"], df["sma5"] = self.sma(df["close"], 200), self.sma(df["close"], 5)
+        df["rsi2"] = rsi(df["close"], 2)
+        return df
+
+    def entry(self, df, i, ctx):
+        r = df.iloc[i]
+        if np.isnan(r["sma200"]) or not (r["close"] > r["sma200"] and r["rsi2"] < self.rsi_max):
+            return None
+        return Entry(stop=r["close"] * (1 - self.stop_pct), max_hold_min=14 * 24 * 60,
+                     reason=f"pokles v růstovém trendu (RSI 2 = {r['rsi2']:.0f}, nad 200denním průměrem)")
+
+    def exit_signal(self, df, i, lot):
+        r = df.iloc[i]
+        if not np.isnan(r["sma5"]) and r["close"] > r["sma5"]:
+            return "odraz hotový (nad 5denním průměrem)"
+        return None
+
+
+class SaverAgent(DailyAgent):
+    """SPOŘIČ - pravidelné investování, srovnání pro ostatní boty.
+    Každý týden přikoupí za $50 index S&P 500 (VOO) a za $50 bitcoin (přes ETF IBIT - akcie,
+    takže bez poplatků za krypto). Nic nechytá, nic neprodává. Peníze dojdou zhruba za 10 týdnů,
+    pak jen drží. Ukazuje, jestli ostatní boti porazí obyčejné spoření."""
+    name = "Spořič"
+    plan = ["VOO", "IBIT"]
+    weekly_usd = 50.0
+    cap_usd = 490.0            # max vloženo do jednoho symbolu
+    max_positions = 2
+
+    def universe(self, ctx):
+        return list(self.plan)
+
+    @staticmethod
+    def week(now) -> str:
+        return pd.Timestamp(now).strftime("%G-%V")
+
+    def size_usd(self, price, stop, mood_mult=1.0):
+        usd = min(self.weekly_usd, self.wallet.cash * 0.98)
+        return usd if usd >= 10.0 else 0.0
+
+    def entry(self, df, i, ctx):
+        return Entry(stop=df["close"].iloc[i] * 0.01, reason="pravidelné spoření: první týdenní nákup")
+
+    def topup(self, df, i, lot, now):
+        """Vrátí (dolary, klíč týdne, důvod), když je čas přikoupit, jinak None."""
+        wk = self.week(now)
+        last = lot.meta.get("topup_key") or self.week(lot.opened)
+        if wk == last or lot.cost >= self.cap_usd:
+            return None
+        usd = self.size_usd(0, 0)
+        return (usd, wk, f"pravidelné spoření (týden {wk})") if usd else None
