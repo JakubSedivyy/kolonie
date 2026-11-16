@@ -255,9 +255,11 @@ def test_kompas_monthly_rotation():
     k = RotationAgent()
     drifts = {"VTI": 0.001, "XLK": 0.002, "VEA": 0.0005, "VWO": -0.001, "GLD": 0.0015,
               "TLT": -0.002, "IEF": -0.0005, "VNQ": -0.001, "DBC": -0.0015, "BIL": 0.0001}
-    data = {s: daily(drift=d, seed=i, vol=0.003) for i, (s, d) in enumerate(drifts.items())}
+    data = {s: daily(n=400, drift=d, seed=i, vol=0.003) for i, (s, d) in enumerate(drifts.items())}
+    data["GLD"] = data["GLD"].iloc[::5].combine_first(data["GLD"].iloc[-100:])   # díry v datech IEX (každý 5. den)
     now = datetime(2026, 11, 16, 15, tzinfo=timezone.utc)
     k.on_bars(data, now)
+    assert len(k.scores) == 9 and "GLD" in k.news and "9 z 9 ETF" in k.news, k.news
     assert set(k.targets) == {"XLK", "GLD", "VTI"}, k.targets       # tři nejsilnější, žádné dluhopisy
     assert abs(sum(k.targets.values()) - 0.98) < 1e-9
     k.wallet.cash = 1000
@@ -270,10 +272,10 @@ def test_kompas_monthly_rotation():
     lot = Lot("TLT", 1, 100, 85, None, None, now.isoformat(), None)
     assert "rotace" in k.exit_signal(df, len(df) - 1, lot)
     # během měsíce se cíle nemění, i když se trh otočí
-    k.on_bars({s: daily(drift=-0.003, seed=i) for i, s in enumerate(drifts)}, now + timedelta(days=5))
+    k.on_bars({s: daily(n=400, drift=-0.003, seed=i) for i, s in enumerate(drifts)}, now + timedelta(days=5))
     assert set(k.targets) == {"XLK", "GLD", "VTI"}
     # nový měsíc a všechno padá -> všechno do bezpečných krátkých dluhopisů
-    k.on_bars({s: daily(drift=-0.003, seed=i, vol=0.003) for i, s in enumerate(drifts)}, now + timedelta(days=20))
+    k.on_bars({s: daily(n=400, drift=-0.003, seed=i, vol=0.003) for i, s in enumerate(drifts)}, now + timedelta(days=20))
     assert list(k.targets) == ["BIL"] and abs(k.targets["BIL"] - 0.98) < 1e-9, k.targets
 
 
@@ -371,12 +373,14 @@ def test_daily_bots_guards():
     lev.wallet.trades.append({"symbol": top, "why": "trailing stop", "closed": "2026-11-10T15:00:00+00:00", "pnl": -5})
     assert lev.entry(data[top], 299, {"symbol": top}) is None          # měsíc po stopu nekupuje zpět
     k = RotationAgent()
-    k.restore({"month": "2026-11", "targets": {"GLD": 0.49}, "scores": {}})
+    k.restore({"v": 2, "month": "2026-11", "targets": {"GLD": 0.49}, "scores": {}})
     k.wallet.trades.append({"symbol": "GLD", "why": "stop-loss", "closed": "2026-11-12T15:00:00+00:00", "pnl": -5})
     df = daily(drift=0.001)
     assert k.entry(df, 299, {"symbol": "GLD"}) is None                 # do další rotace ne
     k.on_bars({}, datetime(2026, 11, 20, tzinfo=timezone.utc))         # stejný měsíc -> cíle drží i po restartu
     assert k.state()["targets"] == {"GLD": 0.49}
+    old = RotationAgent(); old.restore({"month": "2026-11", "targets": {"VTI": 0.33}})
+    assert old.month == "" and not old.targets                          # výběr starou metodou se přepočítá
 
 
 def test_longtest_replays_daily_bots():
@@ -832,7 +836,7 @@ def test_live_colony_ticks():
     assert any("Spořič PŘIKOUPIL VOO" in m for m in out)
     # Kompas si výběr měsíce pamatuje přes restart
     kom = [a for a in c2.bar_agents if a.name == "Kompas"][0]
-    kom.restore({"month": "2026-11", "targets": {"XLK": 0.33}, "scores": {"XLK": 0.1}})
+    kom.restore({"v": 2, "month": "2026-11", "targets": {"XLK": 0.33}, "scores": {"XLK": 0.1}})
     c2.save()
     c3 = live.Colony()
     assert c3.bench == c2.bench and c3.bench.get("start")      # srovnání s trhem přežije restart

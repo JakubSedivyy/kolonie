@@ -321,6 +321,9 @@ class Colony:
                   for s, raw in bars.items()}
         if hasattr(a, "on_bars"):                       # boti, kteří porovnávají symboly mezi sebou (žebříček)
             a.on_bars({s: r for s, r in closed.items() if len(r)}, now)
+            if getattr(a, "news", ""):
+                self.tg.send(a.news)
+                a.news = ""
         # nejdřív držené pozice (prodeje uvolní hotovost pro nákupy, např. měsíční rotace)
         for s, raw in sorted(closed.items(), key=lambda kv: kv[0] not in w.lots):
             if len(raw) < 3:

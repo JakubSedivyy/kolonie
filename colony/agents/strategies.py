@@ -551,7 +551,7 @@ class DailyAgent(BarAgent):
     asset_class = "stock"
     crypto = False
     minutes = 1440
-    lookback_bars = 420        # kalendářních dní historie (~290 obchodních) - stačí na roční momentum
+    lookback_bars = 560        # kalendářních dní historie (~380 obchodních) - rezerva na díry v datech IEX
     stale_bars = 5             # víkend + svátek: poslední denní svíčka může být 4 dny stará
     use_memory = False
     slot_frac = 0.30           # kolik peněženky dostane jedna pozice
@@ -597,10 +597,19 @@ class RotationAgent(DailyAgent):
 
     @staticmethod
     def score(close) -> float | None:
-        if len(close) < 253:
+        """Průměrný růst za 3, 6 a 12 měsíců podle kalendáře (data z IEX mají u menších ETF občas díry,
+        počítání svíček by pak lhalo nebo symbol úplně vyřadilo)."""
+        if len(close) < 100:
             return None
-        c = close.iloc[-1]
-        return float(np.mean([c / close.iloc[-1 - n] - 1 for n in (63, 126, 252)]))
+        last = close.index[-1]
+        rets = []
+        for months in (3, 6, 12):
+            cut = last - pd.DateOffset(months=months)
+            past = close[close.index <= cut]
+            if past.empty or cut - past.index[-1] > pd.Timedelta(days=20):
+                return None                        # tak stará data nemáme
+            rets.append(close.iloc[-1] / past.iloc[-1] - 1)
+        return float(np.mean(rets))
 
     def on_bars(self, bars: dict, now):
         month = pd.Timestamp(now).strftime("%Y-%m")
@@ -617,12 +626,20 @@ class RotationAgent(DailyAgent):
             self.targets[self.safe] = frac * (self.top_n - len(best))
         self.month = month
         self.scores = scores
+        best_txt = ", ".join(f"{s} {scores[s]*100:+.1f} %" for s in best) or "nic neroste"
+        self.news = (f"🧭 Kompas: výběr na {month}: {best_txt}"
+                     + (f"; {self.targets[self.safe]*100:.0f} % do krátkých dluhopisů (BIL)" if self.safe in self.targets else "")
+                     + f" (hodnoceno {len(scores)} z {len(self.basket)} ETF)")
+
+    STATE_V = 2                # 2 = hodnocení podle kalendáře (17. 11.); starší uložený výběr se přepočítá
 
     def state(self):
-        return {"month": self.month, "targets": self.targets, "scores": getattr(self, "scores", {})}
+        return {"v": self.STATE_V, "month": self.month, "targets": self.targets, "scores": getattr(self, "scores", {})}
 
     def restore(self, st):
         """Po restartu (nasazení nové verze) pokračuje se stejným výběrem - rotace jen jednou měsíčně."""
+        if st.get("v") != self.STATE_V:
+            return
         self.month, self.targets, self.scores = st.get("month", ""), st.get("targets", {}), st.get("scores", {})
 
     def size_usd(self, price, stop, mood_mult=1.0):
