@@ -558,8 +558,15 @@ class DailyAgent(BarAgent):
 
     def size_usd(self, price, stop, mood_mult=1.0):
         w = self.wallet
-        usd = min(w.equity() * self.slot_frac, w.cash * 0.98)
+        usd = min(w.equity() * self.slot_frac, w.cash * 0.97)   # rezerva na ranní skok ceny (celé akcie)
         return usd if usd >= 10.0 else 0.0
+
+    def stopped_since(self, symbol, since: str) -> bool:
+        """Vyhodil tenhle symbol stop od data `since` (ISO)? Ať bot hned nekupuje zpátky, co ho právě vyhodilo."""
+        for t in reversed(self.wallet.trades):
+            if t["symbol"] == symbol:
+                return t["why"] in ("stop-loss", "trailing stop") and t["closed"] >= since
+        return False
 
     @staticmethod
     def sma(s, n):
@@ -611,16 +618,23 @@ class RotationAgent(DailyAgent):
         self.month = month
         self.scores = scores
 
+    def state(self):
+        return {"month": self.month, "targets": self.targets, "scores": getattr(self, "scores", {})}
+
+    def restore(self, st):
+        """Po restartu (nasazení nové verze) pokračuje se stejným výběrem - rotace jen jednou měsíčně."""
+        self.month, self.targets, self.scores = st.get("month", ""), st.get("targets", {}), st.get("scores", {})
+
     def size_usd(self, price, stop, mood_mult=1.0):
         w = self.wallet
-        usd = min(w.equity() * self.targets.get(self._sym, 0.0), w.cash * 0.98)
+        usd = min(w.equity() * self.targets.get(self._sym, 0.0), w.cash * 0.97)
         return usd if usd >= 10.0 else 0.0
 
     def entry(self, df, i, ctx):
         s = ctx.get("symbol", "")
         self._sym = s
-        if s not in self.targets:
-            return None
+        if s not in self.targets or (self.month and self.stopped_since(s, self.month)):
+            return None                            # po stopu do další rotace nekupuje znovu
         p = df["close"].iloc[i]
         why = ("bezpečný přístav (krátké dluhopisy) - málo ETF roste" if s == self.safe else
                f"mezi {self.top_n} nejsilnějšími ETF (průměrný růst 3/6/12 měs. {getattr(self, 'scores', {}).get(s, 0)*100:+.1f} %)")
@@ -645,6 +659,7 @@ class LeaderAgent(DailyAgent):
     max_positions = 5
     slot_frac = 0.19
     stop_pct = 0.20
+    cooldown_days = 30
 
     def __init__(self, wallet=None):
         super().__init__(wallet)
@@ -672,8 +687,11 @@ class LeaderAgent(DailyAgent):
     def entry(self, df, i, ctx):
         s = ctx.get("symbol", "")
         k = self.rank.get(s)
-        if not k or k > self.top_n:
+        if not self.ready or not k or k > self.top_n:
             return None
+        since = (pd.Timestamp(df.index[i]) - pd.Timedelta(days=self.cooldown_days)).isoformat()
+        if self.stopped_since(s, since):
+            return None                            # po posuvném stopu měsíc pauza (momentum se otáčí pomalu)
         p = df["close"].iloc[i]
         return Entry(stop=p * (1 - self.stop_pct), trail_pct=self.stop_pct,
                      reason=f"{k}. nejsilnější velká firma (6 měs. {self.mom[s]*100:+.0f} %), nad 200denním průměrem")

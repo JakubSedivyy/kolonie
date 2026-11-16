@@ -88,8 +88,14 @@ class Wallet:
             self.equity_curve[-1] = (self.equity_curve[-1][0], round(eq, 2))
         return eq
 
+    def real_price(self, symbol) -> float:
+        """Poslední skutečná cena trhu (u shortu se zrcadlo převede zpět)."""
+        lot = self.lots[symbol]
+        p = self.last_prices.get(symbol, lot.entry)
+        return 2 * lot.meta["p0"] - p if is_short(lot) else p
+
     def open(self, symbol, qty, fill_price, *, stop, target=None, trail_pct=None,
-             max_hold_min=None, reason="", now=None, meta=None, apply_slippage=True):
+             max_hold_min=None, reason="", now=None, meta=None, apply_slippage=True, force=False):
         """Zaúčtuje nákup. fill_price = skutečná cena plnění (live) nebo tržní cena (simulace).
         Short (meta side="short"): fill_price je cena prodeje nakrátko; peněženka drží zrcadlo s cenou P0."""
         meta = dict(meta or {})
@@ -100,22 +106,22 @@ class Wallet:
             price = fill_price * (1 + self.costs["slip"]) if apply_slippage else fill_price
         gross = qty * price
         fee = gross * self.costs["fee"]
-        if gross + fee > self.cash + 1e-6:
+        if gross + fee > self.cash + 1e-6 and not force:
             raise ValueError(f"{self.name}: málo hotovosti na {symbol}")
-        self.cash -= gross + fee
+        self.cash -= gross + fee                  # force: broker už nakoupil -> zaúčtovat i při mírném přečerpání
         self.fees_paid += fee
         self.lots[symbol] = Lot(symbol, qty, price, stop, target, trail_pct,
                                 (now or utcnow()).isoformat(), max_hold_min,
                                 high=price, cost=gross + fee, reason=reason, meta=meta)
         return self.lots[symbol]
 
-    def add(self, symbol, qty, fill_price, now=None, apply_slippage=True):
+    def add(self, symbol, qty, fill_price, now=None, apply_slippage=True, force=False):
         """Přikoupí k existující pozici (pravidelné spoření): průměrná cena, náklady se sčítají."""
         lot = self.lots[symbol]
         price = fill_price * (1 + self.costs["slip"]) if apply_slippage else fill_price
         gross = qty * price
         fee = gross * self.costs["fee"]
-        if gross + fee > self.cash + 1e-6:
+        if gross + fee > self.cash + 1e-6 and not force:
             raise ValueError(f"{self.name}: málo hotovosti na {symbol}")
         self.cash -= gross + fee
         self.fees_paid += fee
@@ -126,8 +132,10 @@ class Wallet:
         return lot
 
     def close(self, symbol, fill_price, why, now=None, apply_slippage=True, qty=None):
-        lot = self.lots.pop(symbol)
+        lot = self.lots[symbol]
         q = lot.qty if qty is None else min(qty, lot.qty)
+        if q >= lot.qty * 0.9999:
+            self.lots.pop(symbol)
         if is_short(lot):            # fill_price = skutečná cena zpětného nákupu
             real = fill_price * (1 + self.costs["slip"]) if apply_slippage else fill_price
             price = mirror(lot.meta["p0"], real)
@@ -138,6 +146,9 @@ class Wallet:
         self.cash += gross - fee
         self.fees_paid += fee
         cost = lot.cost * (q / lot.qty)
+        if symbol in self.lots:                  # částečný prodej: zbytek pozice zůstává
+            lot.cost -= cost
+            lot.qty -= q
         pnl = gross - fee - cost
         t = {"symbol": symbol, "opened": lot.opened, "closed": (now or utcnow()).isoformat(),
              "entry": lot.entry, "exit": price, "qty": q, "pnl": round(pnl, 4),

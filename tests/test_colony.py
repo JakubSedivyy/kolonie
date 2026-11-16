@@ -325,6 +325,60 @@ def test_wallet_add_averages_price():
     assert abs(t["pnl"] - 22) < 1e-9
 
 
+def test_partial_sell_keeps_rest_and_forced_fill():
+    class Half(SimBroker):
+        def sell(self, symbol, qty, price, crypto=False):
+            return Fill(qty / 2, price, "x")             # Alpaca prodala jen polovinu
+    a = BearAgent()
+    ex = Executor(Half())
+    now = datetime(2026, 1, 1, tzinfo=timezone.utc)
+    ex.enter(a, "SH", 10.0, Entry(stop=9.0), 200, now)
+    q = a.wallet.lots["SH"].qty
+    t = ex.exit(a, "SH", 11.0, "test", now)
+    lot = a.wallet.lots["SH"]                            # zbytek pozice pořád v peněžence
+    assert abs(t["qty"] - q / 2) < 1e-9 and abs(lot.qty - q / 2) < 1e-9
+    assert abs(a.wallet.equity({"SH": 11.0}) - (1000 + q * 1.0)) < 1.0
+    # broker nakoupil víc, než peněženka čekala (skok ceny u celých akcií) -> zapsat i tak
+    class Gap(SimBroker):
+        def buy_usd(self, symbol, usd, price, crypto=False):
+            return Fill(round(usd / price), price * 1.03, "x")
+    b = BearAgent(); b.wallet.cash = 100.0
+    lot = Executor(Gap()).enter(b, "PSQ", 10.0, Entry(stop=9.0), 99.0, now)
+    assert lot and "PSQ" in b.wallet.lots and b.wallet.cash < 0.5
+
+
+def test_short_death_books_real_loss():
+    from colony.live import Colony
+    w = Wallet("Stín", "short")
+    w.open("BTC/USD", 1.0, 100.0, stop=0, meta={"side": "short"}, apply_slippage=False)
+    w.mark({"BTC/USD": 110.0})                            # cena vyrostla = short prodělává
+    assert abs(w.real_price("BTC/USD") - 110.0) < 1e-9
+    real = w.real_price("BTC/USD") * 1.05
+    t = w.close("BTC/USD", real, "smrt bota", apply_slippage=False)
+    assert t["pnl"] < -10, t                              # dřív se tu zapsal zisk +14 $
+
+
+def test_daily_bots_guards():
+    lev = LeaderAgent()
+    data = {s: daily(drift=0.001 + 0.0001 * i, seed=i, vol=0.004) for i, s in enumerate(lev.stocks[:3])}
+    lev.on_bars(data, datetime(2026, 11, 16, tzinfo=timezone.utc))
+    s = next(iter(lev.rank))
+    assert not lev.ready and lev.entry(data[s], 299, {"symbol": s}) is None     # 3 firmy z 16 = málo dat
+    data = {s: daily(drift=0.001 + 0.0001 * i, seed=i, vol=0.004) for i, s in enumerate(lev.stocks)}
+    lev.on_bars(data, datetime(2026, 11, 16, tzinfo=timezone.utc))
+    top = min(lev.rank, key=lev.rank.get)
+    assert lev.entry(data[top], 299, {"symbol": top})
+    lev.wallet.trades.append({"symbol": top, "why": "trailing stop", "closed": "2026-11-10T15:00:00+00:00", "pnl": -5})
+    assert lev.entry(data[top], 299, {"symbol": top}) is None          # měsíc po stopu nekupuje zpět
+    k = RotationAgent()
+    k.restore({"month": "2026-11", "targets": {"GLD": 0.49}, "scores": {}})
+    k.wallet.trades.append({"symbol": "GLD", "why": "stop-loss", "closed": "2026-11-12T15:00:00+00:00", "pnl": -5})
+    df = daily(drift=0.001)
+    assert k.entry(df, 299, {"symbol": "GLD"}) is None                 # do další rotace ne
+    k.on_bars({}, datetime(2026, 11, 20, tzinfo=timezone.utc))         # stejný měsíc -> cíle drží i po restartu
+    assert k.state()["targets"] == {"GLD": 0.49}
+
+
 def test_whisper_needs_two_sources():
     class R:
         def __init__(self, sources):
@@ -762,6 +816,21 @@ def test_live_colony_ticks():
     assert abs(sav.wallet.lots["VOO"].cost - 100) < 1, sav.wallet.lots["VOO"].cost
     assert sav.wallet.lots["VOO"].meta["topup_key"] == SaverAgent.week(now)
     assert any("Spořič PŘIKOUPIL VOO" in m for m in out)
+    # Kompas si výběr měsíce pamatuje přes restart
+    kom = [a for a in c2.bar_agents if a.name == "Kompas"][0]
+    kom.restore({"month": "2026-11", "targets": {"XLK": 0.33}, "scores": {"XLK": 0.1}})
+    c2.save()
+    c3 = live.Colony()
+    assert [a for a in c3.bar_agents if a.name == "Kompas"][0].targets == {"XLK": 0.33}
+    # výpadek dat: denní bot to zkusí znovu (dřív propadl celý den)
+    c3._clock, c3._clock_at = types.SimpleNamespace(is_open=True), time.time() + 1e9
+    def boom(*a, **k):
+        raise RuntimeError("Alpaca nedostupná")
+    real_bars, c3.data.bars = c3.data.bars, boom
+    c3.last_bar = {}
+    sok = [a for a in c3.bar_agents if a.name == "Sokol"][0]
+    c3.run_bar_agent(sok, now)
+    assert "Sokol" not in c3.last_bar
 
 
 class FakeResp:

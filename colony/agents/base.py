@@ -187,7 +187,8 @@ class Executor:
         shift = f.price / price
         lot = w.open(symbol, f.qty, f.price, stop=e.stop * shift,
                      target=e.target * shift if e.target else None, trail_pct=e.trail_pct,
-                     max_hold_min=e.max_hold_min, reason=e.reason, now=now, apply_slippage=self.slip, meta=meta)
+                     max_hold_min=e.max_hold_min, reason=e.reason, now=now, apply_slippage=self.slip, meta=meta,
+                     force=True)                       # broker už nakoupil - účetnictví to musí zapsat vždy
         self.notify(f"🟢 {agent.name} KOUPIL {symbol} za ${lot.cost:.2f} @ {lot.entry:.6g} ({e.reason})")
         return lot
 
@@ -204,7 +205,7 @@ class Executor:
             return None
         if not f or f.qty <= 0:
             return None
-        lot = w.add(symbol, f.qty, f.price, now=now, apply_slippage=self.slip)
+        lot = w.add(symbol, f.qty, f.price, now=now, apply_slippage=self.slip, force=True)
         self.notify(f"🟢 {agent.name} PŘIKOUPIL {symbol} za ${usd:.2f} @ {f.price:.6g} - celkem vloženo ${lot.cost:.2f} ({reason})")
         return lot
 
@@ -245,8 +246,9 @@ class Executor:
             if f is None:
                 log.warning("%s cover %s nevyplněn, zkusím znovu", agent.name, symbol)
                 return None
-            t = w.close(symbol, f.price if f.qty > 0 else price, why, now=now, apply_slippage=self.slip)
-            self.notify(f"{'✅' if t['pnl'] > 0 else '🔻'} {agent.name} UZAVŘEL SHORT {symbol}: "
+            part = f.qty if 0 < f.qty < lot.qty * 0.999 else None
+            t = w.close(symbol, f.price if f.qty > 0 else price, why, now=now, apply_slippage=self.slip, qty=part)
+            self.notify(f"{'✅' if t['pnl'] > 0 else '🔻'} {agent.name} UZAVŘEL{' ČÁST' if part else ''} SHORT {symbol}: "
                         f"{t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) - {why}")
             return t
         try:
@@ -259,7 +261,8 @@ class Executor:
             log.warning("%s sell %s nevyplněn, zkusím znovu", agent.name, symbol)
             return None
         fill_price = f.price if f.qty > 0 else price      # qty 0 = na účtu už nic není, jen srovnat účetnictví
-        t = w.close(symbol, fill_price, why, now=now, apply_slippage=self.slip)
+        part = f.qty if 0 < f.qty < lot.qty * 0.98 else None   # částečně prodáno -> zbytek prodá příště
+        t = w.close(symbol, fill_price, why, now=now, apply_slippage=self.slip, qty=part)
         icon = "✅" if t["pnl"] > 0 else "🔻"
-        self.notify(f"{icon} {agent.name} PRODAL {symbol}: {t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) - {why}")
+        self.notify(f"{icon} {agent.name} PRODAL{' ČÁST' if part else ''} {symbol}: {t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) - {why}")
         return t

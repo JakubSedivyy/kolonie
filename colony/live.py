@@ -51,7 +51,7 @@ class Colony:
         self.broker = AlpacaBroker()
         self.assets = AlpacaAssets(self.broker.tc)
         self.dex = DexScreener()
-        self.exec = Executor(self.broker, self.tg.send)
+        self.exec = Executor(self.broker, self._on_trade)
         self.bar_agents: list[BarAgent] = [OrbitAgent(), TrendAgent(), MemeAgent(), WaveAgent(), WhisperAgent(), BearAgent(),
                                            CaptainAgent(), RotationAgent(), LeaderAgent(), DipAgent(), SaverAgent()]
         self.degen = DegenAgent(self.dex, radar=self.radar)
@@ -88,6 +88,15 @@ class Colony:
         self.load()
 
     # ------------------------------------------------------------------ stav
+    def _on_trade(self, msg):
+        """Po každém skutečném obchodu hned uložit stav - restart uprostřed průchodu (nasazení nové verze)
+        by jinak zapomněl nákup a bot by koupil podruhé."""
+        self.tg.send(msg)
+        try:
+            self.save()
+        except Exception as e:
+            log.warning("save po obchodu: %s", e)
+
     @property
     def wallets(self) -> list[Wallet]:
         return [a.wallet for a in self.bar_agents] + [self.degen.wallet, self.lovec.wallet, self.stin.wallet, self.oracle.wallet] + self.graveyard
@@ -104,7 +113,8 @@ class Colony:
               "grok": {**self.grok.status(), "paused_until": self.grok.paused_until.isoformat()
                        if self.grok.paused_until else None},
               "paused": self.paused, "started": self.started, "last_summary": self.last_summary,
-              "eval_sent": self.eval_sent, "events": self.events[-150:]}
+              "eval_sent": self.eval_sent, "events": self.events[-150:],
+              "agent_state": {a.name: a.state() for a in self.bar_agents if hasattr(a, "state")}}
         tmp = self.state_path + ".tmp"
         with open(tmp, "w") as f:
             json.dump(st, f)
@@ -138,6 +148,9 @@ class Colony:
         self.last_summary = st.get("last_summary", "")
         self.eval_sent = st.get("eval_sent", False)
         self.events = [tuple(e) for e in st.get("events", [])]
+        for a in self.bar_agents:
+            if hasattr(a, "restore") and a.name in st.get("agent_state", {}):
+                a.restore(st["agent_state"][a.name])
 
     # ------------------------------------------------------------------ trh
     def market_open(self):
@@ -272,8 +285,6 @@ class Colony:
         key = boundary.isoformat()
         if self.last_bar.get(a.name) == key or (now - boundary.to_pydatetime()).total_seconds() < 15:
             return
-        self.last_bar[a.name] = key
-
         syms = list(dict.fromkeys(a.universe(self.ctx) + list(w.lots)))
         start = now - timedelta(minutes=a.minutes * (a.lookback_bars + 5))
         if isinstance(a, OrbitAgent):
@@ -282,7 +293,8 @@ class Colony:
             bars = self.data.bars(syms, a.minutes, start, crypto=a.crypto)
         except Exception as e:
             log.warning("%s bars: %s", a.name, e)
-            return
+            return                                      # svíčka se zkusí znovu při dalším průchodu
+        self.last_bar[a.name] = key
         mult = MOOD_MULT[self.mood]
         closed = {s: raw[raw.index + pd.Timedelta(minutes=a.minutes) <= pd.Timestamp(now)]   # jen zavřené svíčky
                   for s, raw in bars.items()}
@@ -309,7 +321,7 @@ class Colony:
                 # pojistka: guard_stops pro tenhle coin nedostal cenu (11. 11. Vlna kvůli tomu držela short TRUMP
                 # 6 dní přes stop +15 % a skončila na -32 %) -> stop/časový limit zkontrolovat ze zavřené svíčky
                 seen = self.last_quote.get((a.name, s))
-                if seen is None or (now - seen).total_seconds() > a.minutes * 60 * 2:
+                if seen is None or (now - seen).total_seconds() > a.minutes * 60 * max(2, getattr(a, "stale_bars", 2)):
                     hi, lo, op = float(r["high"]), float(r["low"]), float(r["open"])
                     x = a.check_exit_short(lot, hi, lo, price, op, now) if is_short(lot) \
                         else a.check_exit(lot, hi, lo, price, op, now)
@@ -382,32 +394,38 @@ class Colony:
     def guard_stops(self, now):
         """Každých 30 s kontrola stop-lossů a cílů podle poslední ceny."""
         for a in self.bar_agents:
-            w = a.wallet
-            if not w.lots or (not a.crypto and not self.market_open()):
-                continue
-            prices = self.data.latest_prices(list(w.lots), crypto=a.crypto)
-            w.mark(prices, now)
-            if w.status == "DEAD":                       # mrtvý bot s neprodanou pozicí -> zkusit znovu
-                for s, p in prices.items():
-                    self.exec.exit(a, s, p, "smrt bota", now)
-                continue
-            missing = [s for s in w.lots if s not in prices]
-            for s in missing:
-                if (a.name, s) not in self._quote_warned:
-                    self._quote_warned.add((a.name, s))
-                    log.warning("%s: chybí živá cena %s - stop hlídá jen hodinová svíčka", a.name, s)
+            try:                                         # chyba u jednoho bota nesmí vypnout stopy ostatním
+                self._guard_agent(a, now)
+            except Exception as e:
+                log.exception("stops %s: %s", a.name, e)
+
+    def _guard_agent(self, a, now):
+        w = a.wallet
+        if not w.lots or (not a.crypto and not self.market_open()):
+            return
+        prices = self.data.latest_prices(list(w.lots), crypto=a.crypto)
+        w.mark(prices, now)
+        if w.status == "DEAD":                       # mrtvý bot s neprodanou pozicí -> zkusit znovu
             for s, p in prices.items():
-                self.last_quote[(a.name, s)] = now
-                lot = w.lots.get(s)
-                if not lot:
-                    continue
-                x = a.check_exit_short(lot, p, p, p, p, now) if is_short(lot) else a.check_exit(lot, p, p, p, p, now)
-                if x:
-                    t = self.exec.exit(a, s, p, x[1], now)
-                    if t and x[1] == "stop-loss":
-                        self.blacklist[s] = self.blacklist.get(s, 0) + 1
-                        if self.blacklist[s] == 2:
-                            self.tg.send(f"🚫 {s} dnes 2x vyhodil stop-loss - kolonie ho do zítřka nebude obchodovat")
+                self.exec.exit(a, s, p, "smrt bota", now)
+            return
+        missing = [s for s in w.lots if s not in prices]
+        for s in missing:
+            if (a.name, s) not in self._quote_warned:
+                self._quote_warned.add((a.name, s))
+                log.warning("%s: chybí živá cena %s - stop hlídá jen hodinová svíčka", a.name, s)
+        for s, p in prices.items():
+            self.last_quote[(a.name, s)] = now
+            lot = w.lots.get(s)
+            if not lot:
+                continue
+            x = a.check_exit_short(lot, p, p, p, p, now) if is_short(lot) else a.check_exit(lot, p, p, p, p, now)
+            if x:
+                t = self.exec.exit(a, s, p, x[1], now)
+                if t and x[1] == "stop-loss":
+                    self.blacklist[s] = self.blacklist.get(s, 0) + 1
+                    if self.blacklist[s] == 2:
+                        self.tg.send(f"🚫 {s} dnes 2x vyhodil stop-loss - kolonie ho do zítřka nebude obchodovat")
 
     def retire_bots(self, now):
         """Boti ze seznamu config.RETIRED prodají pozice a odejdou na hřbitov (historie zůstane)."""
@@ -419,7 +437,7 @@ class Colony:
                 self._close_all(a, "vyřazení z kolonie", now)
             else:                                      # simulace (DEX): prodej za poslední známou cenu
                 for s in list(w.lots):
-                    w.close(s, w.last_prices.get(s, w.lots[s].entry), "vyřazení z kolonie", now)
+                    w.close(s, w.real_price(s), "vyřazení z kolonie", now)
             survival.kill(w, now, why)                 # neprodané pozice dál zkouší prodat guard_stops
             st = w.stats()
             self.tg.send(f"🪦 {w.name} odchází na hřbitov: {why}. Končí s ${w.equity():.2f}, "
@@ -437,7 +455,9 @@ class Colony:
                         self._close_all(a, "smrt bota", now)
                     else:
                         for s in list(w.lots):
-                            w.close(s, w.last_prices.get(s, w.lots[s].entry) * 0.95, "smrt bota", now, apply_slippage=False)
+                            real = w.real_price(s)        # u shortu skutečná cena, ne zrcadlo (jinak ztráta vypadala jako zisk)
+                            haircut = real * 1.05 if is_short(w.lots[s]) else real * 0.95
+                            w.close(s, haircut, "smrt bota", now, apply_slippage=False)
                     survival.kill(w, now, txt)
                     s = w.stats()
                     self.tg.send(f"💀 {w.name} UMŘEL: {txt}\nŽil {(now - datetime.fromisoformat(w.born)).days} dní, "
