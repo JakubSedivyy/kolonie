@@ -50,10 +50,10 @@ Lovec [ALIVE] $964.52 (-3.55 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max p
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1127.58 (+12.76 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max propad 3.2 %, poplatky $9.48
-   SHORT BTC/USD: prodáno za 64756.1, teď 64275 (+0.7 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.213541 (+0.1 %) - sestupný trend, -6.7 % za 24 h
-   SHORT CRV/USD: prodáno za 0.203898, teď 0.201503 (+1.2 %) - sestupný trend, -2.2 % za 24 h
+Stín [ALIVE] $1122.40 (+12.24 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max propad 3.2 %, poplatky $9.48
+   SHORT BTC/USD: prodáno za 64756.1, teď 64517.1 (+0.4 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.214454 (-0.4 %) - sestupný trend, -6.7 % za 24 h
+   SHORT CRV/USD: prodáno za 0.203898, teď 0.20375 (+0.1 %) - sestupný trend, -2.2 % za 24 h
    2026-11-14T18:00 BAT/USD: +28.77 $ (+16.2 %) trailing stop
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
    2026-11-15T03:00 ETH/USD: +19.92 $ (+8.5 %) trailing stop
@@ -62,7 +62,7 @@ Stín [ALIVE] $1127.58 (+12.76 %) | obchodů 34, úspěšnost 59 %, PF 3.79, max
 
 Věštec [ALIVE] $999.30 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $11057.64 z $11000 (+0.52 %)
+CELKEM $11052.46 z $11000 (+0.48 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-15T03:00:59+00:00 ✅ Stín (simulace) uzavřel short GRT/USD: +0.35 $ (+0.2 %) - trailing stop

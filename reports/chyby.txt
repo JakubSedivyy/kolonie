@@ -1,8 +1,1 @@
-Nov 16 09:11:12 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 09:11:12,376 WARNING colony: clock: HTTPSConnectionPool(host='paper-api.alpaca.markets', port=443): Max retries exceeded with url: /v2/clock (Caused by ConnectTimeoutError(<HTTPSConnection(host='paper-api.alpaca.markets', port=443) at 0x7457889aa0d0>, 'Connection to paper-api.alpaca.markets timed out. (connect timeout=None)'))
-Nov 16 09:11:32 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 09:11:32,971 WARNING colony: clock: <html>
-Nov 16 09:11:32 ubuntu-1gb-hel1-1 python[349056]: <head><title>500 Internal Server Error</title></head>
-Nov 16 09:11:32 ubuntu-1gb-hel1-1 python[349056]: <center><h1>500 Internal Server Error</h1></center>
-Nov 16 09:11:45 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 09:11:45,594 WARNING colony: clock: <html>
-Nov 16 09:11:45 ubuntu-1gb-hel1-1 python[349056]: <head><title>500 Internal Server Error</title></head>
-Nov 16 09:11:45 ubuntu-1gb-hel1-1 python[349056]: <center><h1>500 Internal Server Error</h1></center>
-Nov 16 09:21:46 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 09:21:46,329 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 16 10:23:17 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 10:23:17,297 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
