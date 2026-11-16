@@ -106,7 +106,7 @@ class TrendRadar:
         def add(sym, pts, src):
             key = src.split(":")[0].split(" (")[0]
             stats[key] = stats.get(key, 0) + 1
-            sym = (sym or "").upper().strip()
+            sym = (sym or "").upper().strip().lstrip("$")          # "$WIF" od Groka = WIF
             if not sym or sym in NOT_COINS or len(sym) > 12:
                 return
             h = hot.setdefault(sym, {"score": 0.0, "sources": []})

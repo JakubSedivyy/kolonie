@@ -121,16 +121,16 @@ class Kronika:
         for _, b in bars.iterrows():
             if not short:
                 if stop and b["low"] <= stop:
-                    return stop / price - 1, "stop"
+                    return min(b["open"], stop) / price - 1, "stop"          # při gapu dolů plní za open
                 if target and b["high"] >= target:
                     return target / price - 1, "cíl"
-            else:
+            else:                                     # short: výnos = 1 - zpětný nákup / prodej (jako peněženka)
                 if stop and b["high"] >= stop:
-                    return price / stop - 1, "stop"
+                    return 1 - max(b["open"], stop) / price, "stop"
                 if target and b["low"] <= target:
-                    return price / target - 1, "cíl"
+                    return 1 - target / price, "cíl"
         last = float(bars["close"].iloc[-1])
-        return (price / last - 1 if short else last / price - 1), "konec doby"
+        return (1 - last / price if short else last / price - 1), "konec doby"
 
     # ------------------------------------------------------------------ přehledy
     def bot_summary(self, bot) -> dict:

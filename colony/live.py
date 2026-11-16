@@ -269,8 +269,8 @@ class Colony:
         meta, end = sgn["meta"], sgn["t"] + timedelta(minutes=sgn["horizon_min"])
         if meta.get("pair"):                                   # DEX coin: známe jen cenu teď (po uplynutí doby)
             p = self.dex.pair(meta["pair"])
-            if not p:
-                return None, "pool nenalezen"
+            if not p or not float(p.get("priceUsd") or 0) or "liquidity" not in p:
+                return None, "pool nenalezen / neúplná data"
             now_px = float(p.get("priceUsd") or 0)
             liq = float((p.get("liquidity") or {}).get("usd") or 0)
             if liq < meta.get("liq", 0) * 0.5:
@@ -278,15 +278,21 @@ class Colony:
             ret = now_px / sgn["price"] - 1
             lo = sgn["stop"] / sgn["price"] - 1 if sgn["stop"] else -1
             hi = sgn["target"] / sgn["price"] - 1 if sgn["target"] else 10
-            return max(lo, min(hi, ret)), "cena po uplynutí doby"
+            return max(lo, min(hi, ret)) - self._round_trip(sgn["bot"], False), "cena po uplynutí doby"
         minutes, crypto = meta.get("minutes", 60), meta.get("crypto", True)
         bars = self.data.bars([sgn["symbol"]], minutes, sgn["t"], end, crypto=crypto).get(sgn["symbol"])
         if bars is None or bars.empty:
             return None, "chybí data"
         bars = bars[bars.index > pd.Timestamp(sgn["t"])]
         ret, note = Kronika.simulate(sgn["price"], sgn["stop"], sgn["target"], bars, short=meta.get("short", False))
-        cost = 2 * (config.COSTS["short" if meta.get("short") else ("crypto" if crypto else "stock")]["fee"] + 0.0005)
-        return (None if ret is None else ret - cost), note
+        return (None if ret is None else ret - self._round_trip(sgn["bot"], meta.get("short"))), note
+
+    def _round_trip(self, bot, short) -> float:
+        """Poplatky a skluz tam i zpět podle skutečného trhu bota (stínové obchody nesmí vypadat lépe než skutečné)."""
+        w = next((x for x in self.wallets if x.name == bot), None)
+        asset = w.asset_class if w else "crypto"
+        c = config.COSTS["short" if short and asset in ("crypto", "meme", "short") else asset]   # krypto shorty = perp burza
+        return 2 * (c["fee"] + c["slip"])
 
     def _memory_skip(self, bot, symbol, note):
         key = (bot, symbol, utcnow().strftime("%Y-%m-%d %H"))

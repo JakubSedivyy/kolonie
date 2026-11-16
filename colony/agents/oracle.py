@@ -90,6 +90,8 @@ class OracleAgent:
                 continue
             try:
                 end = datetime.fromisoformat(p["end"].replace("Z", "+00:00"))
+                if end.tzinfo is None:                 # jen datum bez zóny ("2026-12-01")
+                    end = end.replace(tzinfo=timezone.utc)
             except Exception:
                 continue
             if not (now + timedelta(hours=12) <= end <= now + timedelta(days=21)):
@@ -135,8 +137,12 @@ Return ONLY valid JSON: {{"markets":[{{"id":"...","p_yes":0.00,"confidence":"low
             self.last_scan = now.isoformat()
             return
         est = self.ask_grok(markets, now)
-        if not est:                                # bez rozpočtu nebo chyba - zkusí příště
+        if not est:                                # bez rozpočtu nebo chyba - zkusí příště, ale nejvýš 2x
+            self._fails = getattr(self, "_fails", 0) + 1
+            if self._fails >= 2:                       # nepálit placené dotazy každých 10 minut
+                self.last_scan, self._fails = now.isoformat(), 0
             return
+        self._fails = 0
         self.last_scan = now.isoformat()
         self.last_estimates = []
         for m in markets:

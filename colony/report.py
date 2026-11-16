@@ -37,7 +37,7 @@ def evaluate(w, days):
         ("profit factor ≥ 1.3", bool(s["profit_factor"] >= 1.3)),
         ("max. propad ≤ 10 %", bool(s["max_drawdown"] <= 0.10)),
     ]
-    if w.asset_class == "degen":
+    if w.asset_class in ("degen", "dexmeme", "short", "predict"):     # jen simulace (Alpaca to neumí)
         checks.append(("je to simulace - na reálné peníze nejde", False))
     ok = all(c[1] for c in checks)
     return ok, checks

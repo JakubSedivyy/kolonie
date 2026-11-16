@@ -110,8 +110,8 @@ class DegenAgent:
         # 1) správa otevřených pozic
         for sym, lot in list(w.lots.items()):
             p = self.dex.pair(lot.meta["pair"])
-            if not p:
-                continue
+            if not p or not float(p.get("priceUsd") or 0) or "liquidity" not in p:
+                continue                                   # neúplná odpověď DexScreeneru - nerozhodovat (dřív falešný -100 %)
             price = float(p.get("priceUsd") or 0)
             liq = float((p.get("liquidity") or {}).get("usd") or 0)
             prices[sym] = price

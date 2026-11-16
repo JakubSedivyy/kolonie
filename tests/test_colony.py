@@ -396,6 +396,30 @@ def test_longtest_replays_daily_bots():
     assert out["Kompas"]["trades"] > 0 and all(-1 < v["return"] < 10 for v in out.values())
 
 
+def test_review2_fixes():
+    from colony.kronika import Kronika
+    from colony import report
+    idx = pd.date_range("2026-01-01", periods=3, freq="1h", tz="UTC")
+    up = pd.DataFrame({"open": [100, 100, 100], "high": [101, 111, 101], "low": [99, 99, 99], "close": [100, 100, 100]}, index=idx)
+    r, note = Kronika.simulate(100.0, 110.0, 90.0, up, short=True)
+    assert note == "stop" and abs(r - (-0.10)) < 1e-9, r                 # short se stopem +10 % = -10 % (dřív -9,1 %)
+    gap = pd.DataFrame({"open": [100, 80], "high": [101, 81], "low": [99, 79], "close": [100, 80]}, index=idx[:2])
+    r, _ = Kronika.simulate(100.0, 90.0, None, gap)
+    assert abs(r - (-0.20)) < 1e-9                                        # gap pod stop = plnění za open
+    w = Wallet("Stín", "short")
+    w.trades = [{"symbol": "X", "pnl": 5.0, "ret": 0.05}] * 30
+    ok, checks = report.evaluate(w, 20)
+    assert not ok and any("simulace" in c[0] for c in checks)            # simulace nikdy není kandidát na reálné peníze
+    dex = FakeDex()
+    d = DegenAgent(dex)
+    now = datetime(2026, 1, 1, 12, tzinfo=timezone.utc)
+    d.tick(now, "neutral", lambda m: None)
+    assert d.wallet.lots
+    dex._pair = lambda tok: {"pairAddress": "P" + tok, "priceUsd": None}  # neúplná odpověď DexScreeneru
+    d.tick(now + timedelta(minutes=5), "neutral", lambda m: None, allow_entries=False)
+    assert d.wallet.lots and not d.wallet.trades                          # žádný falešný -100 %
+
+
 def test_whisper_needs_two_sources():
     class R:
         def __init__(self, sources):
