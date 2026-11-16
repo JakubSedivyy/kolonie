@@ -1,6 +1,2 @@
-Nov 16 13:16:49 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 13:16:49,920 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
-Nov 16 13:24:45 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 13:24:45,494 WARNING colony.dashboard: candles ('Degen II', 'PIRATE·2StN', '5'): 429 Client Error: Too Many Requests for url: https://api.geckoterminal.com/api/v2/networks/solana/pools/2ouNPACQVBoDqWJ7Ft6EGhmCGScKpmRzaQn6a9vhKp6D/ohlcv/minute?aggregate=5&limit=300
-Nov 16 13:24:46 ubuntu-1gb-hel1-1 python[349056]: 2026-11-16 13:24:46,861 WARNING colony.dashboard: candles ('Degen II', 'GTA·7F8B', '5'): 429 Client Error: Too Many Requests for url: https://api.geckoterminal.com/api/v2/networks/solana/pools/DMCn25oKj7zCiWS9SS1bxEo6QbzGb8r9tA6CSfR6LG3k/ohlcv/minute?aggregate=5&limit=300
-Nov 16 13:44:16 ubuntu-1gb-hel1-1 python[354330]: 2026-11-16 13:44:16,003 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 16 13:44:16 ubuntu-1gb-hel1-1 python[354330]: 2026-11-16 13:44:16,083 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
-Nov 16 13:44:17 ubuntu-1gb-hel1-1 python[354330]: 2026-11-16 13:44:17,453 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 16 14:35:13 ubuntu-1gb-hel1-1 python[354330]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+Nov 16 14:45:56 ubuntu-1gb-hel1-1 python[354330]: 2026-11-16 14:45:56,638 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
