@@ -36,21 +36,21 @@ Medvěd [ALIVE] $1019.39 (+1.94 %) | obchodů 9, úspěšnost 22 %, PF 1.52, max
 
 Kapitán [ALIVE] $999.30 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-Kompas [ALIVE] $998.89 (-0.11 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.0
-   otevřeno VTI: nákup 368.036, teď 366.79 (-0.3 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
+Kompas [ALIVE] $998.55 (-0.15 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.5 %, poplatky $0.0
+   otevřeno VTI: nákup 368.036, teď 366.4 (-0.4 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
 
-Lev [ALIVE] $997.80 (-0.22 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.0 %, poplatky $0.0
-   otevřeno LLY: nákup 1462.96, teď 1457 (-0.4 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MA: nákup 667.504, teď 665.73 (-0.3 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno META: nákup 633.533, teď 627.67 (-0.9 %) - 5. nejsilnější velká firma (6 měs. +20 %), nad 200denním průměrem
-   otevřeno MSFT: nákup 521.475, teď 523.64 (+0.4 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
-   otevřeno V: nákup 430.027, teď 430.13 (+0.0 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
+Lev [ALIVE] $996.63 (-0.34 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.0 %, poplatky $0.0
+   otevřeno LLY: nákup 1462.96, teď 1447.67 (-1.0 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MA: nákup 667.504, teď 665.29 (-0.3 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno META: nákup 633.533, teď 628.855 (-0.7 %) - 5. nejsilnější velká firma (6 měs. +20 %), nad 200denním průměrem
+   otevřeno MSFT: nákup 521.475, teď 523.81 (+0.4 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
+   otevřeno V: nákup 430.027, teď 429.56 (-0.1 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
 
 Sokol [ALIVE] $1000.00 (+0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.0 %, poplatky $0.0
 
-Spořič [ALIVE] $999.50 (-0.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.0
-   otevřeno IBIT: nákup 36.5863, teď 36.355 (-0.6 %) - pravidelné spoření: první týdenní nákup
-   otevřeno VOO: nákup 687.472, teď 685 (-0.4 %) - pravidelné spoření: první týdenní nákup
+Spořič [ALIVE] $999.95 (-0.00 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.4 %, poplatky $0.0
+   otevřeno IBIT: nákup 36.5863, teď 36.71 (+0.3 %) - pravidelné spoření: první týdenní nákup
+   otevřeno VOO: nákup 687.472, teď 684.48 (-0.4 %) - pravidelné spoření: první týdenní nákup
 
 Degen II [ALIVE] $996.64 (-0.34 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
@@ -66,10 +66,10 @@ Lovec [DEAD] $964.52 (-3.55 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max pr
    2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
    2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
 
-Stín [ALIVE] $1118.40 (+11.84 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max propad 3.5 %, poplatky $9.8
-   SHORT BTC/USD: prodáno za 64756.1, teď 64401.4 (+0.5 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.213865 (-0.1 %) - sestupný trend, -6.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.29885e-06, teď 2.3e-06 (-0.1 %) - sestupný trend, -3.0 % za 24 h
+Stín [ALIVE] $1111.96 (+11.20 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max propad 3.5 %, poplatky $9.8
+   SHORT BTC/USD: prodáno za 64756.1, teď 64864.6 (-0.2 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.21536 (-0.8 %) - sestupný trend, -6.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.29885e-06, teď 2.32e-06 (-0.9 %) - sestupný trend, -3.0 % za 24 h
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
    2026-11-15T03:00 ETH/USD: +19.92 $ (+8.5 %) trailing stop
    2026-11-15T03:00 GRT/USD: +0.35 $ (+0.2 %) trailing stop
@@ -78,7 +78,7 @@ Stín [ALIVE] $1118.40 (+11.84 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max
 
 Věštec [ALIVE] $999.30 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $15044.65 z $15000 (+0.30 %)
+CELKEM $15037.15 z $15000 (+0.25 %)
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-16T13:44:00+00:00 🧪 Laboratoř: nové nastavení botů
