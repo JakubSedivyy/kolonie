@@ -11,13 +11,6 @@ Trendy [ALIVE] $994.86 (-0.51 %) | obchodů 7, úspěšnost 29 %, PF 0.54, max p
    2026-11-15T02:09 BTC/USD: +1.46 $ (+1.1 %) trailing stop
    2026-11-15T02:17 ETH/USD: +3.67 $ (+2.8 %) trailing stop
 
-Memec [DEAD] $992.68 (-0.73 %) | obchodů 39, úspěšnost 33 %, PF 0.76, max propad 1.5 %, poplatky $14.4
-   2026-11-14T20:16 BONK/USD: +0.65 $ (+1.0 %) časový limit
-   2026-11-15T00:15 SHIB/USD: +1.93 $ (+3.1 %) časový limit
-   2026-11-15T00:20 WIF/USD: +0.48 $ (+0.8 %) časový limit
-   2026-11-15T00:35 DOGE/USD: +1.33 $ (+2.1 %) časový limit
-   2026-11-16T04:05 TRUMP/USD: -0.98 $ (-1.5 %) časový limit
-
 Vlna [ALIVE] $962.86 (-3.71 %) | obchodů 11, úspěšnost 18 %, PF 0.39, max propad 6.3 %, poplatky $5.58
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
@@ -59,17 +52,10 @@ Degen II [ALIVE] $996.64 (-0.34 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Lovec [DEAD] $964.52 (-3.55 %) | obchodů 10, úspěšnost 20 %, PF 0.40, max propad 5.0 %, poplatky $6.59
-   2026-11-05T15:40 CATE·Ai66: -3.06 $ (-5.7 %) časový limit
-   2026-11-06T07:16 STONK·6GmA: -9.88 $ (-12.1 %) stop-loss
-   2026-11-06T22:01 ANSEM·9cRC: -10.37 $ (-11.9 %) stop-loss
-   2026-11-12T22:24 CATE·Ai66: -10.42 $ (-11.8 %) stop-loss
-   2026-11-13T13:18 TTWO·TTWo: -1.71 $ (-2.1 %) časový limit
-
-Stín [ALIVE] $1110.55 (+11.05 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max propad 3.8 %, poplatky $9.8
-   SHORT BTC/USD: prodáno za 64756.1, teď 65009.7 (-0.4 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.2141 (-0.2 %) - sestupný trend, -6.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.29885e-06, teď 2.34e-06 (-1.8 %) - sestupný trend, -3.0 % za 24 h
+Stín [ALIVE] $1106.42 (+10.64 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max propad 4.0 %, poplatky $9.8
+   SHORT BTC/USD: prodáno za 64756.1, teď 65237.2 (-0.7 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.215566 (-0.9 %) - sestupný trend, -6.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.29885e-06, teď 2.35e-06 (-2.2 %) - sestupný trend, -3.0 % za 24 h
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
    2026-11-15T03:00 ETH/USD: +19.92 $ (+8.5 %) trailing stop
    2026-11-15T03:00 GRT/USD: +0.35 $ (+0.2 %) trailing stop
@@ -78,14 +64,11 @@ Stín [ALIVE] $1110.55 (+11.05 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max
 
 Věštec [ALIVE] $999.30 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM $15026.33 z $15000 (+0.18 %)
+CELKEM (živí boti) $13065.00 z $13000 (+0.50 %)
+HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -1.6 %, bitcoin -16.5 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-16T13:44:02+00:00 🪦 Memec odchází na hřbitov: vyřazen na přání Jakuba 16. 11. 2026 (dlouhodobě prodělával). Končí s $992.68, 39 obchodů, úspěšnost 33 %.
-   2026-11-16T13:44:03+00:00 🪦 Lovec odchází na hřbitov: vyřazen na přání Jakuba 16. 11. 2026 (dlouhodobě prodělával). Končí s $964.52, 10 obchodů, úspěšnost 20 %.
-   2026-11-16T14:32:05+00:00 🟢 Kompas KOUPIL VTI za $326.81 @ 368.036 (mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %))
-   2026-11-16T14:32:07+00:00 🟢 Lev KOUPIL LLY za $190.08 @ 1462.96 (3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem)
-   2026-11-16T14:32:07+00:00 🟢 Lev KOUPIL MA za $189.63 @ 667.504 (2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem)
    2026-11-16T14:32:08+00:00 🟢 Lev KOUPIL META za $189.28 @ 633.533 (5. nejsilnější velká firma (6 měs. +20 %), nad 200denním průměrem)
    2026-11-16T14:32:08+00:00 🟢 Lev KOUPIL MSFT za $189.76 @ 521.475 (1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem)
    2026-11-16T14:32:09+00:00 🟢 Lev KOUPIL V za $189.95 @ 430.027 (4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem)
@@ -99,5 +82,12 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-16T21:15:10+00:00 📊 Denní souhrn 16.11. · nálada trhu: risk_off
 🟢 Orbit: $1001.21 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33
 🟢 Trendy: $994.86 (-0.5 
+   2026-11-16T21:32:47+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
+   2026-11-16T21:32:47+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
+   2026-11-16T21:32:49+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-16T22:03:06+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
+   2026-11-16T22:03:06+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
 
-VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-17T01:50 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-17T04:03 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 

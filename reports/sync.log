@@ -43,3 +43,15 @@ and the repository exists.
 [notice] A new release of pip is available: 26.2.2 -> 26.3
 [notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
 2026-11-16T13:44:00Z nasazena verze 6f2106f: Memec a Lovec na hřbitov, 4 noví dlouhodobí boti (Kompas, Lev, Sokol, Spořič)
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
+2026-11-16T21:32:46Z nasazena verze 3c7e11a: Kompas: hodnocení ETF podle kalendáře (odolné vůči dírám v datech IEX)
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
+2026-11-16T22:03:05Z nasazena verze 62fff9e: Druhá kontrola kódu: 7 oprav (hodnocení, Degen, kronika, Věštec, radar)
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
+2026-11-16T22:18:07Z nasazena verze 454c69a: Nový dashboard: tmavý trading terminál, aktivní vs. klidní boti, nové grafy
