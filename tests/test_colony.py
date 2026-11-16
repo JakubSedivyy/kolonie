@@ -379,6 +379,19 @@ def test_daily_bots_guards():
     assert k.state()["targets"] == {"GLD": 0.49}
 
 
+def test_longtest_replays_daily_bots():
+    from colony.longtest import run as long_run
+
+    class D:
+        def bars(self, syms, minutes, start, end=None, crypto=False):
+            assert minutes == 1440
+            return {s: daily(n=700, drift=0.0003 * (i % 4), seed=i, vol=0.01) for i, s in enumerate(syms)}
+    lines, out = long_run(D(), [RotationAgent(), LeaderAgent(), DipAgent(), SaverAgent()])
+    assert lines[0].startswith("DLOUHODOBÝ TEST") and len(lines) == 6, lines
+    assert set(out) == {"Kompas", "Lev", "Sokol", "Spořič", "S&P 500"}
+    assert out["Kompas"]["trades"] > 0 and all(-1 < v["return"] < 10 for v in out.values())
+
+
 def test_whisper_needs_two_sources():
     class R:
         def __init__(self, sources):
@@ -727,6 +740,7 @@ def test_live_colony_ticks():
     c.tg.send = sent.append
     c.exec.notify = sent.append
     c.tick()
+    assert set(c.bench.get("start", {})) == {"SPY", "BTC/USD"} and set(c.bench["now"]) == {"SPY", "BTC/USD"}, c.bench
     c.mood, c.mood_at = "risk_on", now + timedelta(days=1)   # vynutit dobrou náladu
     held = lambda: {s: l.entry for a in c.bar_agents for s, l in a.wallet.lots.items()}
     c.data.latest_prices = lambda syms, crypto=False: {s: held().get(s, 100.0) for s in syms}
@@ -821,6 +835,11 @@ def test_live_colony_ticks():
     kom.restore({"month": "2026-11", "targets": {"XLK": 0.33}, "scores": {"XLK": 0.1}})
     c2.save()
     c3 = live.Colony()
+    assert c3.bench == c2.bench and c3.bench.get("start")      # srovnání s trhem přežije restart
+    import subprocess
+    out_stav = subprocess.run([sys.executable, "stav.py"], capture_output=True, text=True,
+                              cwd=os.path.dirname(os.path.dirname(os.path.abspath(__file__)))).stdout
+    assert "SROVNÁNÍ S TRHEM" in out_stav and "Kompas" in out_stav, out_stav[-500:]
     assert [a for a in c3.bar_agents if a.name == "Kompas"][0].targets == {"XLK": 0.33}
     # výpadek dat: denní bot to zkusí znovu (dřív propadl celý den)
     c3._clock, c3._clock_at = types.SimpleNamespace(is_open=True), time.time() + 1e9

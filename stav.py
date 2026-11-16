@@ -38,6 +38,11 @@ def main():
             print(f"   {t['closed'][:16]} {t['symbol']}: {t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) {t['why']}")
     if start:
         print(f"\nCELKEM ${total:.2f} z ${start:.0f} ({(total/start-1)*100:+.2f} %)")
+    b = st.get("bench") or {}
+    if b.get("start") and b.get("now"):
+        parts = [f"{n} {(b['now'][s] / b['start'][s] - 1) * 100:+.1f} %"
+                 for s, n in (("SPY", "S&P 500"), ("BTC/USD", "bitcoin")) if s in b["start"] and s in b["now"]]
+        print(f"SROVNÁNÍ S TRHEM od {str(st.get('started'))[:10]} (kdyby se jen drželo): " + ", ".join(parts))
     ev = st.get("events", [])[-15:]
     if ev:
         print("\nPOSLEDNÍ UDÁLOSTI:")

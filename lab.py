@@ -86,6 +86,24 @@ def lab_verdict(train_ret: float, test_ret: float):
     return False, "ODPOČÍVÁ 💤 (v testu neprošel)"
 
 
+def long_test(data_api) -> list[str]:
+    """Dlouhodobí boti na ~6 letech denní historie - jednou denně (laboratoř běží každých 6 h)."""
+    from colony.longtest import run as long_run
+    from colony.agents.strategies import RotationAgent, LeaderAgent, DipAgent, SaverAgent
+    txt = os.path.join(config.STATE_DIR, "longtest.txt")
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    if os.path.exists(txt) and datetime.fromtimestamp(os.path.getmtime(txt), timezone.utc).strftime("%Y-%m-%d") == today:
+        return open(txt).read().splitlines()
+    try:
+        lines, out = long_run(data_api, [RotationAgent(), LeaderAgent(), DipAgent(), SaverAgent()])
+        json.dump(out, open(os.path.join(config.STATE_DIR, "longtest.json"), "w"), indent=1, default=str)
+    except Exception as e:
+        lines = [f"DLOUHODOBÝ TEST selhal: {e}"]
+    open(txt, "w").write("\n".join(lines) + "\n")
+    print("\n".join(lines), flush=True)
+    return lines
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=90)
@@ -139,6 +157,8 @@ def main():
                      f"| test {te['return']*100:+.1f} % ({te['trades']} obch., PF {te['pf']})")
 
     os.makedirs(config.STATE_DIR, exist_ok=True)
+    if not a.only:
+        lines += [""] + long_test(data_api)
     path = os.path.join(config.STATE_DIR, "lab.json")
     old = {}
     if a.only and os.path.exists(path):

@@ -74,6 +74,7 @@ class Colony:
             ag.memory = self.memory
             ag.kronika = self.kronika
         self.mood, self.mood_at = "neutral", None
+        self.bench: dict = {}                      # srovnání s trhem: cena S&P 500 a BTC při startu kolonie a teď
         self.ctx = {"radar": self.radar}
         self.last_bar: dict[str, str] = {}
         self.blacklist: dict[str, int] = {}        # sdílené: symbol -> počet stop-lossů dnes
@@ -114,6 +115,7 @@ class Colony:
                        if self.grok.paused_until else None},
               "paused": self.paused, "started": self.started, "last_summary": self.last_summary,
               "eval_sent": self.eval_sent, "events": self.events[-150:],
+              "bench": self.bench,
               "agent_state": {a.name: a.state() for a in self.bar_agents if hasattr(a, "state")}}
         tmp = self.state_path + ".tmp"
         with open(tmp, "w") as f:
@@ -148,6 +150,7 @@ class Colony:
         self.last_summary = st.get("last_summary", "")
         self.eval_sent = st.get("eval_sent", False)
         self.events = [tuple(e) for e in st.get("events", [])]
+        self.bench = st.get("bench", {})
         for a in self.bar_agents:
             if hasattr(a, "restore") and a.name in st.get("agent_state", {}):
                 a.restore(st["agent_state"][a.name])
@@ -177,10 +180,28 @@ class Colony:
         except Exception as e:
             log.warning("mood: %s", e)
             return
+        try:
+            self.update_bench(btc["close"].iloc[-1], spy["close"].iloc[-1])
+        except Exception as e:
+            log.warning("srovnání s trhem: %s", e)
         new = {2: "risk_on", 1: "neutral", 0: "risk_off"}[score]
         if new != self.mood:
             self.tg.send(f"🌡️ Nálada trhu: {self.mood} → {new} ({', '.join(parts)})")
         self.mood, self.mood_at = new, now
+
+    def update_bench(self, btc_now: float, spy_now: float):
+        """Jak by dopadlo obyčejné držení S&P 500 a bitcoinu od startu kolonie (porážejí boti trh?)."""
+        if "start" not in self.bench:
+            since = datetime.fromisoformat(self.started)
+            first = {}
+            for sym, crypto in (("SPY", False), ("BTC/USD", True)):
+                df = self.data.bars([sym], 1440, since - timedelta(days=4), crypto=crypto).get(sym)
+                df = df[df.index >= pd.Timestamp(since).floor("1D") - pd.Timedelta(days=1)] if df is not None else None
+                if df is None or df.empty:
+                    return
+                first[sym] = float(df["close"].iloc[0])
+            self.bench["start"] = first
+        self.bench["now"] = {"SPY": float(spy_now), "BTC/USD": float(btc_now)}
 
     def refresh_universe(self, now):
         day = now.astimezone(ZoneInfo("America/New_York")).strftime("%Y-%m-%d")
