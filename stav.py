@@ -17,9 +17,13 @@ def main():
     print(f"ŽIVÝ STAV KOLONIE (papír) | běží od {str(st.get('started'))[:16]} UTC"
           f"{' | POZASTAVENO' if st.get('paused') else ''}")
     total = start = 0.0
+    dead = []
     for name, d in st.get("wallets", {}).items():
         w = Wallet.from_dict(d)
         s = w.stats()
+        if s["status"] == "DEAD" and not w.lots:          # mrtví boti jen jedním řádkem na konci
+            dead.append(f"{name} (${s['equity']:.0f}, {s['trades']} obch.)")
+            continue
         total += s["equity"]
         start += w.start
         pf = s["profit_factor"]
@@ -37,7 +41,9 @@ def main():
         for t in w.trades[-5:]:
             print(f"   {t['closed'][:16]} {t['symbol']}: {t['pnl']:+.2f} $ ({t['ret']*100:+.1f} %) {t['why']}")
     if start:
-        print(f"\nCELKEM ${total:.2f} z ${start:.0f} ({(total/start-1)*100:+.2f} %)")
+        print(f"\nCELKEM (živí boti) ${total:.2f} z ${start:.0f} ({(total/start-1)*100:+.2f} %)")
+    if dead:
+        print("HŘBITOV: " + ", ".join(dead))
     b = st.get("bench") or {}
     if b.get("start") and b.get("now"):
         parts = [f"{n} {(b['now'][s] / b['start'][s] - 1) * 100:+.1f} %"

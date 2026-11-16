@@ -420,6 +420,14 @@ def test_review2_fixes():
     assert d.wallet.lots and not d.wallet.trades                          # žádný falešný -100 %
 
 
+def test_dashboard_html_ids_exist():
+    import re
+    html = open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "colony", "web", "dashboard.html")).read()
+    used = set(re.findall(r'\$\("([A-Za-z]+)"\)', html))
+    have = set(re.findall(r'id="([A-Za-z]+)"', html))
+    assert used and not (used - have), used - have                      # každý prvek, na který JS sahá, v HTML existuje
+
+
 def test_whisper_needs_two_sources():
     class R:
         def __init__(self, sources):
@@ -820,8 +828,9 @@ def test_live_colony_ticks():
                                           "Degen II", "Lovec", "Stín", "Věštec", "Degen"]
     assert abs(sum(w.equity() for w in c2.wallets) - sum(w.equity() for w in c.wallets) - 796.78) < 1e-6
     snap2 = c2.snapshot(datetime.now(timezone.utc))
-    ghost = [b for b in snap2["bots"] if b["name"] == "Degen"][0]
-    assert ghost["status"] == "DEAD" and "lessons" in ghost
+    assert not [b for b in snap2["bots"] if b["name"] == "Degen"]        # mrtví boti v dashboardu nejsou
+    assert all(b["group"] in ("active", "calm") and "turnover" in b for b in snap2["bots"])
+    assert "bench" in snap2 and "longtest" in snap2
     print("\n".join(sent[:15]))
 
     # vyřazení botů na přání Jakuba (16. 11.): Memec prodá pozici a odejde na hřbitov, ostatní žijí dál

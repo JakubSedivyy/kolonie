@@ -626,14 +626,17 @@ class Colony:
         dashboard.publish(self.snapshot(now))
 
     def snapshot(self, now):
-        class _Ghost:                                   # mrtvý bot bez agenta - jen na hřbitov v dashboardu
-            def __init__(self, w):
-                self.name, self.wallet, self.__doc__ = w.name, w, f"{w.name} - zemřel: {w.cause_of_death}"
-        agents = self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle] + [_Ghost(w) for w in self.graveyard]
+        agents = self.bar_agents + [self.degen, self.lovec, self.stin, self.oracle]
+        agents = [a for a in agents if a.wallet.status != "DEAD"]     # mrtví boti v dashboardu nejsou (historie zůstává v datech)
         bots = []
+        since14 = (now - timedelta(days=14)).isoformat()
         for a in agents:
             w = a.wallet
             s = w.stats()
+            recent = [t for t in w.trades if t["closed"] >= since14]
+            turnover = sum(abs(t["entry"] * t["qty"]) for t in w.trades) + sum(l.cost for l in w.lots.values())
+            turn14 = sum(abs(t["entry"] * t["qty"]) for t in recent)
+            active = len(recent) >= 4 or turn14 >= w.start      # hodně obchoduje / protočí víc než svůj kapitál
             age = (now - datetime.fromisoformat(w.born)).total_seconds() / 86400
             pos = []
             for sym, l in w.lots.items():
@@ -657,8 +660,21 @@ class Colony:
                          "lessons": self.memory.lessons(a.name),
                          "kronika": self._k(self.kronika.bot_summary, a.name) or {},
                          "bot_trades": [dict(t, bot=w.name) for t in w.trades[-40:]],
+                         "trades_14d": len(recent), "turnover": turnover, "turnover_14d": turn14,
+                         "group": "active" if active else "calm",
+                         "realized": sum(t["pnl"] for t in w.trades),
+                         "invested": sum(l.qty * w.last_prices.get(sym, l.entry) for sym, l in w.lots.items()),
                          "profit_factor": None if s["profit_factor"] == float("inf") else s["profit_factor"]})
-        trades = sorted((dict(t, bot=w.name) for w in self.wallets for t in w.trades), key=lambda t: t["closed"])
+        live_names = {a.wallet.name for a in agents}
+        trades = sorted((dict(t, bot=w.name) for w in self.wallets if w.name in live_names for t in w.trades),
+                        key=lambda t: t["closed"])
+        longtest = {}
+        try:
+            lt = os.path.join(config.STATE_DIR, "longtest.json")
+            if os.path.exists(lt):
+                longtest = json.load(open(lt))
+        except Exception as e:
+            log.warning("longtest.json: %s", e)
         return {"generated": now.isoformat(timespec="seconds"), "mode": "live" if config.IS_LIVE else "paper",
                 "mood": self.mood, "paused": self.paused, "started": self.started,
                 "days_running": (now - datetime.fromisoformat(self.started)).total_seconds() / 86400,
@@ -671,8 +687,9 @@ class Colony:
                 "lab": {k: self.lab.get(k) for k in ("updated", "train", "test")} | {
                     "bots": {n: {kk: v.get(kk) for kk in ("chosen", "benched", "train", "test")}
                              for n, v in (self.lab.get("bots") or {}).items()}},
-                "eval": [{"bot": w.name, "ok": ok, "checks": c} for w in self.wallets
-                         for ok, c in [report.evaluate(w, 0)]]}
+                "eval": [{"bot": w.name, "ok": ok, "checks": c} for w in self.wallets if w.name in live_names
+                         for ok, c in [report.evaluate(w, 0)]],
+                "bench": self.bench, "longtest": longtest}
 
     # ------------------------------------------------------------------ grafy pro dashboard
     TF = {"5": 5, "15": 15, "60": 60, "1440": 1440}
