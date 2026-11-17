@@ -1,2 +1,2 @@
-Nov 16 23:34:56 ubuntu-1gb-hel1-1 python[367777]: 2026-11-16 23:34:56,831 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 16 23:34:58 ubuntu-1gb-hel1-1 python[367777]: 2026-11-16 23:34:58,244 WARNING colony.trends: radar google_news: 429 -> pauza 60 min
+Nov 17 00:46:13 ubuntu-1gb-hel1-1 python[367777]: 2026-11-17 00:46:13,401 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 17 01:07:01 ubuntu-1gb-hel1-1 python[367777]: 2026-11-17 01:07:01,613 WARNING colony.trends: radar google_news: 429 -> pauza 60 min
