@@ -1,7 +1,7 @@
 LABORATOŘ 2026-11-17: trénink 2026-08-19..2026-10-18, test 2026-10-18..2026-11-17
 Orbit: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'or_bars': 3, 'vol_mult': 1.5, 'last_entry': '11:30'} | trénink -2.1 % | test -2.4 % (19 obch., PF 0.46)
 Trendy: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink +8.6 % | test -1.9 % (10 obch., PF 0.34)
-Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +15.3 % | test -5.0 % (12 obch., PF 0.41)
+Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +15.0 % | test -5.0 % (12 obch., PF 0.41)
 Medvěd: NASAZEN ✅ | nejlepší {'atr_mult': 2.0} | trénink +3.9 % | test +7.0 % (33 obch., PF 1.94)
 
 DLOUHODOBÝ TEST 2021-12-22..2026-11-16 (denní svíčky, nákup za ranní cenu, bez přežití)
