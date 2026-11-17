@@ -52,24 +52,22 @@ Degen II [ALIVE] $996.59 (-0.34 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1113.28 (+11.33 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max propad 4.0 %, poplatky $9.8
-   SHORT BTC/USD: prodáno za 64756.1, teď 64442.8 (+0.5 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.21395 (-0.1 %) - sestupný trend, -6.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.29885e-06, teď 2.34e-06 (-1.8 %) - sestupný trend, -3.0 % za 24 h
-   2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
+Stín [ALIVE] $1102.98 (+10.30 %) | obchodů 36, úspěšnost 56 %, PF 2.82, max propad 4.3 %, poplatky $9.96
+   SHORT BTC/USD: prodáno za 64756.1, teď 64993.8 (-0.4 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.215965 (-1.1 %) - sestupný trend, -6.7 % za 24 h
    2026-11-15T03:00 ETH/USD: +19.92 $ (+8.5 %) trailing stop
    2026-11-15T03:00 GRT/USD: +0.35 $ (+0.2 %) trailing stop
    2026-11-16T00:00 BAT/USD: -8.27 $ (-5.0 %) stop-loss
    2026-11-16T15:00 CRV/USD: -4.96 $ (-1.9 %) stop-loss
+   2026-11-17T04:00 BONK/USD: -10.25 $ (-3.7 %) stop-loss
 
 Věštec [ALIVE] $999.25 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM (živí boti) $13071.26 z $13000 (+0.55 %)
+CELKEM (živí boti) $13060.96 z $13000 (+0.47 %)
 HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -1.6 %, bitcoin -17.7 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -1.6 %, bitcoin -17.0 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-16T14:35:13+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, CYAB, SHFS, DVLT, RBNE, GMM, GIPR, POLA, AKAN, NVDA, YFOR
    2026-11-16T15:01:16+00:00 🔻 Stín (simulace) uzavřel short CRV/USD: -4.96 $ (-1.9 %) - stop-loss
    2026-11-16T16:01:20+00:00 🐻 Stín (simulace) otevřel short BONK/USD za $275 @ 2.3e-06, stop 2.39614e-06 - sestupný trend, -3.0 % za 24 h
    2026-11-16T18:44:42+00:00 🧪 Laboratoř: nové nastavení botů
@@ -91,5 +89,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-16T22:33:44+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
    2026-11-16T23:33:45+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-17T04:01:11+00:00 🔻 Stín (simulace) uzavřel short BONK/USD: -10.25 $ (-3.7 %) - stop-loss
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-17T04:34 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
