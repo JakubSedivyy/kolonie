@@ -52,10 +52,10 @@ Degen II [ALIVE] $996.59 (-0.34 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1116.62 (+11.66 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max propad 4.0 %, poplatky $9.8
-   SHORT BTC/USD: prodáno za 64756.1, teď 64571.2 (+0.3 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.213648, teď 0.212759 (+0.4 %) - sestupný trend, -6.7 % za 24 h
-   SHORT BONK/USD: prodáno za 2.29885e-06, teď 2.32e-06 (-0.9 %) - sestupný trend, -3.0 % za 24 h
+Stín [ALIVE] $1113.09 (+11.31 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max propad 4.0 %, poplatky $9.8
+   SHORT BTC/USD: prodáno za 64756.1, teď 64680.1 (+0.1 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.213648, teď 0.21326 (+0.2 %) - sestupný trend, -6.7 % za 24 h
+   SHORT BONK/USD: prodáno za 2.29885e-06, teď 2.34e-06 (-1.8 %) - sestupný trend, -3.0 % za 24 h
    2026-11-15T03:00 BTC/USD: +16.28 $ (+6.6 %) trailing stop
    2026-11-15T03:00 ETH/USD: +19.92 $ (+8.5 %) trailing stop
    2026-11-15T03:00 GRT/USD: +0.35 $ (+0.2 %) trailing stop
@@ -64,9 +64,9 @@ Stín [ALIVE] $1116.62 (+11.66 %) | obchodů 35, úspěšnost 57 %, PF 3.41, max
 
 Věštec [ALIVE] $999.25 (-0.07 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM (živí boti) $13074.60 z $13000 (+0.57 %)
+CELKEM (živí boti) $13071.07 z $13000 (+0.55 %)
 HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -1.6 %, bitcoin -17.6 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -1.6 %, bitcoin -17.4 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-16T14:35:13+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, CYAB, SHFS, DVLT, RBNE, GMM, GIPR, POLA, AKAN, NVDA, YFOR

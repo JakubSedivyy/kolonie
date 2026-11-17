@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 602 signálů, 118 obchodů, 351 hodinových snímků radaru, 451 událostí
+Celkem zapsáno: 602 signálů, 118 obchodů, 352 hodinových snímků radaru, 451 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   2x, vyhrálo by 1, průměr -9.3 %
@@ -9,7 +9,6 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -15.4 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 1, průměr +13.7 %
-  Degen II  | paměť: když růst za hodinu = 20-60 %, proděla |   1x, vyhrálo by 0, průměr -1.0 %
   Degen II  | paměť: když růst za hodinu = 20-60 %, proděla |   1x, vyhrálo by 1, průměr +21.8 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -13.4 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +9.7 %
@@ -36,4 +35,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   3 obchodů, 2 výher, průměr -1.2 %, celkem +12.53 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), ETH (107h), XRP (106h), SOL (91h), PENGU (88h), HYPE (79h), SUI (60h), PEARL (53h), ZEC (49h), MIHAO (43h), MAX (42h), $WIF (40h), LIT (39h), DACITYCOIN (31h), AVAX (29h), SEPPUKU (27h), PUMP (26h), ZIG (24h), GATO (22h)
+  BTC (168h), CATE (168h), ETH (107h), XRP (106h), SOL (91h), PENGU (88h), HYPE (80h), SUI (59h), PEARL (52h), ZEC (49h), MIHAO (43h), MAX (42h), $WIF (40h), LIT (39h), DACITYCOIN (31h), AVAX (28h), PUMP (27h), SEPPUKU (27h), ZIG (24h), GATO (22h)
