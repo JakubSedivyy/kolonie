@@ -1290,6 +1290,25 @@ def test_lab_verdict_says_where_it_failed():
     assert not ok and "i v testu" in txt
 
 
+def test_wave_no_long_on_bounce_in_downtrend():
+    """18. 11.: všech 25 longových signálů Vlny v klesajícím listopadu prodělalo. Krátký odraz
+    (průraz 3denního maxima) pod EMA 200 už není vlna - long jen když je coin i v delším trendu."""
+    rng = np.random.default_rng(0)
+    n1, n2 = 24 * 12, 72                                     # 12 dní pád, pak 3 dny odraz
+    t = np.r_[-0.0012 * np.ones(n1), 0.0012 * np.ones(n2)]
+    c = 100 * np.exp(np.cumsum(t + rng.normal(0, 0.006, n1 + n2)))
+    df = pd.DataFrame({"open": np.r_[c[0], c[:-1]], "close": c},
+                      index=pd.date_range("2026-01-01", periods=n1 + n2, freq="60min", tz="UTC"))
+    df["high"], df["low"], df["volume"] = np.maximum(df.open, df.close) * 1.002, np.minimum(df.open, df.close) * 0.998, 1000.0
+    v = WaveAgent(); p = v.prepare(df)
+    v.long_trend_filter = False
+    hits = [i for i in range(n1, n1 + n2) if v.entry(p, i, {})]
+    assert hits, "bez filtru by Vlna odraz koupila"
+    v.long_trend_filter = True
+    assert all(v.entry(p, i, {}) is None for i in hits if p["close"].iloc[i] < p["ema200"].iloc[i])
+    assert any(p["close"].iloc[i] < p["ema200"].iloc[i] for i in hits)
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

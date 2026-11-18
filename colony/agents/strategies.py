@@ -303,6 +303,9 @@ class WaveAgent(BarAgent):
     trades_in_risk_off = False
     min_hold_hours = 24          # otočení trendu řeší až po prvním dni, ať ji nevyhodí šum
     atr_mult = 3.0
+    long_trend_filter = True     # 18. 11.: všech 25 longových signálů (7 skutečných + 18 stínových) v listopadu
+                                 # prodělalo (průměr -5 až -7 %) - šlo o krátké odrazy v klesajícím trhu.
+                                 # Long proto jen když je coin i v delším trendu (nad EMA 200 = cca 8 dní).
 
     def universe(self, ctx):
         syms = list(dict.fromkeys((ctx.get("crypto_majors") or []) + (ctx.get("crypto_memes") or [])))
@@ -314,6 +317,7 @@ class WaveAgent(BarAgent):
     def prepare(self, df):
         df = df.copy()
         df["ema20"], df["ema50"] = ema(df["close"], 20), ema(df["close"], 50)
+        df["ema200"] = ema(df["close"], 200)
         df["atr"] = atr(df, 14)
         df["ret24"] = df["close"] / df["close"].shift(24) - 1
         df["hh72"] = df["high"].rolling(72).max().shift(1)
@@ -326,6 +330,8 @@ class WaveAgent(BarAgent):
         r = df.iloc[i]
         hype = ctx["radar"].score(ctx.get("symbol", "")) if ctx.get("radar") else 0.0
         uptrend = r["close"] > r["ema50"] and r["ema20"] > r["ema50"]
+        if self.long_trend_filter and i >= 200 and not r["close"] > r["ema200"]:
+            uptrend = False                                      # jen odraz v sestupném trhu
         not_hot = 0.02 <= r["ret24"] <= 0.40 and r["rsi"] < 78      # roste, ale není to kolmice
         breakout = r["close"] > r["hh72"]
         if not (uptrend and not_hot and (hype >= 3 or breakout)):
