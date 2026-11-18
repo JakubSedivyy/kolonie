@@ -54,9 +54,10 @@ Degen II [ALIVE] $996.54 (-0.35 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1084.74 (+8.47 %) | obchodů 38, úspěšnost 53 %, PF 2.12, max propad 5.9 %, poplatky $10.6
-   SHORT BTC/USD: prodáno za 64756.1, teď 64878.2 (-0.2 %) - sestupný trend, -2.8 % za 24 h
-   SHORT XTZ/USD: prodáno za 0.211011, teď 0.2125 (-0.7 %) - sestupný trend, -2.5 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
+Stín [ALIVE] $1086.94 (+8.69 %) | obchodů 38, úspěšnost 53 %, PF 2.12, max propad 5.9 %, poplatky $10.76
+   SHORT BTC/USD: prodáno za 64756.1, teď 64728 (+0.0 %) - sestupný trend, -2.8 % za 24 h
+   SHORT XTZ/USD: prodáno za 0.211011, teď 0.211189 (-0.1 %) - sestupný trend, -2.5 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
+   SHORT PEPE/USD: prodáno za 3.8031e-06, teď 3.805e-06 (-0.1 %) - sestupný trend, -2.1 % za 24 h · paměť: podobné obchody +1.0 % -> sázk
    2026-11-16T00:00 BAT/USD: -8.27 $ (-5.0 %) stop-loss
    2026-11-16T15:00 CRV/USD: -4.96 $ (-1.9 %) stop-loss
    2026-11-17T04:00 BONK/USD: -10.25 $ (-3.7 %) stop-loss
@@ -65,15 +66,11 @@ Stín [ALIVE] $1084.74 (+8.47 %) | obchodů 38, úspěšnost 53 %, PF 2.12, max 
 
 Věštec [ALIVE] $999.20 (-0.08 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM (živí boti) $13011.05 z $13000 (+0.09 %)
+CELKEM (živí boti) $13013.25 z $13000 (+0.10 %)
 HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -2.6 %, bitcoin -17.3 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -2.6 %, bitcoin -17.7 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-17T15:01:03+00:00 🐻 Stín (simulace) otevřel short XTZ/USD za $291 @ 0.211117, stop 0.219561 - sestupný trend, -2.5 % za 24 h · paměť: podobné obchody +0
-   2026-11-17T16:00:40+00:00 🐻 Trendy (simulace) SHORT ETH/USD za $139.86 @ 1784.38, stop 1838.29 (propad pod 24-svíčkové minimum pod EMA 200, ATR 1.21 % · paměť: 
-   2026-11-17T16:01:43+00:00 🐻 Stín (simulace) otevřel short PEPE/USD za $255 @ 3.73e-06, stop 3.90813e-06 - sestupný trend, -2.1 % za 24 h · paměť: podobné obchod
-   2026-11-17T19:30:27+00:00 🟢 Medvěd KOUPIL SOXS za $86.59 @ 61.3467 (trh padá: SOXS +2.3 % za hodinu, nad EMA 20/50)
    2026-11-17T20:00:44+00:00 🟢 Medvěd KOUPIL PSQ za $269.95 @ 28.1241 (trh padá: PSQ +0.3 % za hodinu, nad EMA 20/50)
    2026-11-17T20:57:41+00:00 🔻 Medvěd PRODAL SOXS: -2.38 $ (-2.7 %) - stop-loss
    2026-11-17T21:00:58+00:00 🧠 Vlna nekoupil SOL/USD - paměť: když denní doba = večer (18-24 UTC), prodělal jsem 9.5x (průměr -4.6 %)
@@ -87,5 +84,9 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-18T00:00:48+00:00 🧠 Vlna nekoupil SOL/USD - paměť: když nálada trhu = neutral, prodělal jsem 7x (průměr -6.8 %)
    2026-11-18T00:00:48+00:00 🧠 Vlna nekoupil XRP/USD - paměť: když nálada trhu = neutral, prodělal jsem 7x (průměr -6.8 %)
    2026-11-18T00:01:12+00:00 🔻 Stín (simulace) uzavřel short PEPE/USD: -9.55 $ (-3.7 %) - stop-loss
+   2026-11-18T01:00:38+00:00 🧠 Vlna nekoupil SOL/USD - paměť: když nálada trhu = neutral, prodělal jsem 7x (průměr -6.8 %)
+   2026-11-18T01:00:38+00:00 🧠 Vlna nekoupil XRP/USD - paměť: když nálada trhu = neutral, prodělal jsem 7x (průměr -6.8 %)
+   2026-11-18T01:00:48+00:00 🐻 Stín (simulace) otevřel short PEPE/USD za $268 @ 3.805e-06, stop 3.97431e-06 - sestupný trend, -2.1 % za 24 h · paměť: podobné obcho
+   2026-11-18T01:37:00+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-18T04:47 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
