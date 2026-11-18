@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 630 signálů, 125 obchodů, 387 hodinových snímků radaru, 488 událostí
+Celkem zapsáno: 631 signálů, 125 obchodů, 388 hodinových snímků radaru, 489 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -90.0 %
@@ -13,14 +13,14 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +10.8 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   3x, vyhrálo by 1, průměr -1.2 %
-  Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 2, průměr +13.1 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 0, průměr -13.0 %
+  Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +25.0 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -13.0 %
   Lovec     | paměť: když kupci/prodejci = do 1,5x, proděla |   1x, vyhrálo by 0, průměr -10.0 %
   Medvěd    | paměť: když nálada trhu = risk_off, prodělal  |   5x, vyhrálo by 4, průměr +5.5 %
   Memec     | plno pozic                                    |   2x, vyhrálo by 1, průměr +1.8 %
   Orbit     | příkaz neprošel                               |   1x, vyhrálo by 0, průměr -2.0 %
-  Stín      | plno pozic                                    |  63x, vyhrálo by 43, průměr +4.3 %
+  Stín      | plno pozic                                    |  61x, vyhrálo by 41, průměr +3.8 %
   Stín      | paměť: když denní doba = ráno (6-12 UTC), pro |   6x, vyhrálo by 6, průměr +13.1 %
   Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   3x, vyhrálo by 0, průměr -4.9 %
 
@@ -35,4 +35,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   2 obchodů, 2 výher, průměr +14.5 %, celkem +22.93 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), ETH (105h), SOL (102h), XRP (86h), PENGU (82h), HYPE (74h), MIHAO (61h), PEARL (58h), LIT (43h), MAX (42h), SUI (40h), $WIF (40h), PUMP (35h), ZEC (33h), DACITYCOIN (32h), BP (31h), GATO (28h), SEPPUKU (27h), NEAR (26h)
+  BTC (168h), CATE (168h), ETH (104h), SOL (103h), XRP (85h), PENGU (83h), HYPE (73h), MIHAO (61h), PEARL (57h), LIT (43h), MAX (42h), SUI (40h), $WIF (40h), PUMP (36h), ZEC (32h), DACITYCOIN (32h), BP (31h), GATO (28h), SEPPUKU (27h), NEAR (26h)

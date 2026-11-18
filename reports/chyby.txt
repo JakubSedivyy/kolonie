@@ -1,2 +1,4 @@
-Nov 18 13:09:42 ubuntu-1gb-hel1-1 python[387178]: 2026-11-18 13:09:42,745 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
-Nov 18 13:40:26 ubuntu-1gb-hel1-1 python[387178]: 2026-11-18 13:40:26,432 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 18 14:33:28 ubuntu-1gb-hel1-1 python[387178]: 2026-11-18 14:33:28,960 WARNING colony.agent: Medvěd sell PSQ nevyplněn, zkusím znovu
+Nov 18 14:34:01 ubuntu-1gb-hel1-1 python[387178]: 2026-11-18 14:34:01,570 WARNING colony.agent: Medvěd sell PSQ nevyplněn, zkusím znovu
+Nov 18 14:35:13 ubuntu-1gb-hel1-1 python[387178]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+Nov 18 14:41:46 ubuntu-1gb-hel1-1 python[387178]: 2026-11-18 14:41:46,650 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
