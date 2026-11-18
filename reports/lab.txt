@@ -1,8 +1,8 @@
 LABORATOŘ 2026-11-18: trénink 2026-08-20..2026-10-19, test 2026-10-19..2026-11-18
-Orbit: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'or_bars': 3, 'vol_mult': 1.5, 'last_entry': '11:30'} | trénink -2.9 % | test -2.4 % (19 obch., PF 0.46)
-Trendy: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink +2.3 % | test -1.7 % (9 obch., PF 0.36)
-Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +14.1 % | test -3.4 % (12 obch., PF 0.56)
-Medvěd: ODPOČÍVÁ 💤 (v tréninku neprošel, test vyšel - sledovat) | nejlepší {'atr_mult': 2.0} | trénink -4.2 % | test +7.8 % (34 obch., PF 2.04)
+Orbit: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'or_bars': 3, 'vol_mult': 1.5, 'last_entry': '11:30'} | trénink -3.1 % | test -2.3 % (18 obch., PF 0.47)
+Trendy: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink +1.9 % | test -1.7 % (9 obch., PF 0.36)
+Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +10.5 % | test -5.9 % (13 obch., PF 0.35)
+Medvěd: ODPOČÍVÁ 💤 (v tréninku neprošel, test vyšel - sledovat) | nejlepší {'atr_mult': 1.5} | trénink -4.9 % | test +14.8 % (36 obch., PF 3.36)
 
 DLOUHODOBÝ TEST 2021-12-23..2026-11-17 (denní svíčky, nákup za ranní cenu, bez přežití)
 Kompas   roč.  +9.5 % | celkem  +56.3 % | max propad 13.2 % | Sharpe 0.72 | 33 obch., úspěšnost 52 % | 2021:+1% 2022:-8% 2023:+11% 2024:+14% 2025:+26% 2026:+5%
