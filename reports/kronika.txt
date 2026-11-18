@@ -1,11 +1,10 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 625 signálů, 125 obchodů, 382 hodinových snímků radaru, 487 událostí
+Celkem zapsáno: 626 signálů, 125 obchodů, 383 hodinových snímků radaru, 487 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 1, průměr +1.9 %
-  Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 1, průměr -27.5 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -19.4 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -15.4 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -20.0 %
@@ -13,6 +12,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -13.4 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +10.8 %
+  Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -90.0 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   3x, vyhrálo by 2, průměr +5.4 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   3x, vyhrálo by 1, průměr -1.2 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 0, průměr -13.0 %
@@ -36,4 +36,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   2 obchodů, 2 výher, průměr +14.5 %, celkem +22.93 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), ETH (109h), SOL (100h), XRP (89h), PENGU (79h), HYPE (77h), MIHAO (61h), PEARL (59h), LIT (44h), SUI (42h), MAX (42h), $WIF (40h), ZEC (38h), DACITYCOIN (32h), PUMP (31h), BP (30h), GATO (28h), SEPPUKU (27h), NEAR (26h)
+  BTC (168h), CATE (168h), ETH (108h), SOL (100h), XRP (88h), PENGU (79h), HYPE (76h), MIHAO (61h), PEARL (59h), LIT (44h), SUI (42h), MAX (42h), $WIF (40h), ZEC (37h), PUMP (32h), DACITYCOIN (32h), BP (30h), GATO (28h), SEPPUKU (27h), NEAR (26h)
