@@ -11,8 +11,8 @@ Trendy [ALIVE] $990.73 (-0.93 %) | obchodů 8, úspěšnost 25 %, PF 0.38, max p
    2026-11-15T02:17 ETH/USD: +3.67 $ (+2.8 %) trailing stop
    2026-11-17T23:27 ETH/USD: -4.03 $ (-2.9 %) stop-loss
 
-Vlna [ALIVE] $963.15 (-3.69 %) | obchodů 11, úspěšnost 18 %, PF 0.39, max propad 6.3 %, poplatky $5.77
-   otevřeno SOL/USD: nákup 74.602, teď 75.151 (+0.7 %) - vlna: hype 3.3, +4 % za 24 h · paměť: podobné obchody -1.7 % -> sázka 
+Vlna [ALIVE] $962.83 (-3.72 %) | obchodů 11, úspěšnost 18 %, PF 0.39, max propad 6.3 %, poplatky $5.77
+   otevřeno SOL/USD: nákup 74.602, teď 74.8492 (+0.3 %) - vlna: hype 3.3, +4 % za 24 h · paměť: podobné obchody -1.7 % -> sázka 
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
    2026-11-11T05:00 TRUMP/USD: -10.40 $ (-32.5 %) sestupná vlna skončila (trend se otočil nahoru)
@@ -55,9 +55,9 @@ Degen II [ALIVE] $996.54 (-0.35 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1095.05 (+9.50 %) | obchodů 39, úspěšnost 54 %, PF 2.13, max propad 5.9 %, poplatky $10.93
-   SHORT XTZ/USD: prodáno za 0.211011, teď 0.208425 (+1.2 %) - sestupný trend, -2.5 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
-   SHORT PEPE/USD: prodáno za 3.8031e-06, teď 3.76e-06 (+1.1 %) - sestupný trend, -2.1 % za 24 h · paměť: podobné obchody +1.0 % -> sázk
+Stín [ALIVE] $1091.33 (+9.13 %) | obchodů 39, úspěšnost 54 %, PF 2.13, max propad 5.9 %, poplatky $10.93
+   SHORT XTZ/USD: prodáno za 0.211011, teď 0.210104 (+0.4 %) - sestupný trend, -2.5 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
+   SHORT PEPE/USD: prodáno za 3.8031e-06, teď 3.78e-06 (+0.6 %) - sestupný trend, -2.1 % za 24 h · paměť: podobné obchody +1.0 % -> sázk
    2026-11-16T15:00 CRV/USD: -4.96 $ (-1.9 %) stop-loss
    2026-11-17T04:00 BONK/USD: -10.25 $ (-3.7 %) stop-loss
    2026-11-17T08:00 XTZ/USD: -10.10 $ (-3.7 %) stop-loss
@@ -66,12 +66,11 @@ Stín [ALIVE] $1095.05 (+9.50 %) | obchodů 39, úspěšnost 54 %, PF 2.13, max 
 
 Věštec [ALIVE] $999.20 (-0.08 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM (živí boti) $13021.75 z $13000 (+0.17 %)
+CELKEM (živí boti) $13017.71 z $13000 (+0.14 %)
 HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
 SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -2.6 %, bitcoin -17.4 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-17T21:00:58+00:00 🧠 Vlna nekoupil SOL/USD - paměť: když denní doba = večer (18-24 UTC), prodělal jsem 9.5x (průměr -4.6 %)
    2026-11-17T21:15:38+00:00 📊 Denní souhrn 17.11. · nálada trhu: risk_off
 🟢 Orbit: $1001.16 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33
 🟢 Trendy: $993.39 (-0.7 
@@ -88,5 +87,6 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-18T01:37:00+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-18T03:00:40+00:00 🟢 Vlna KOUPIL SOL/USD za $78.95 @ 74.602 (vlna: hype 3.3, +4 % za 24 h · paměť: podobné obchody -1.7 % -> sázka 0.8x)
    2026-11-18T05:01:01+00:00 ✅ Stín (simulace) uzavřel short BTC/USD: +1.09 $ (+0.4 %) - časový limit
+   2026-11-18T06:00:50+00:00 🧠 Vlna nekoupil XRP/USD - paměť: když denní doba = ráno (6-12 UTC), prodělal jsem 7.5x (průměr -4.9 %)
 
-VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-18T04:47 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-18T12:49 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
