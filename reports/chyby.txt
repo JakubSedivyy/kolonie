@@ -1,2 +1,2 @@
-Nov 19 16:55:34 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 16:55:34,675 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 19 17:00:37 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 17:00:37,082 WARNING colony: clock: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+Nov 19 17:22:42 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 17:22:42,529 WARNING colony.market: dexscreener tokens: HTTPSConnectionPool(host='api.dexscreener.com', port=443): Read timed out. (read timeout=20)
+Nov 19 18:07:08 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 18:07:08,705 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
