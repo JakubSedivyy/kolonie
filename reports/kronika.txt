@@ -1,11 +1,10 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 661 signálů, 127 obchodů, 398 hodinových snímků radaru, 505 událostí
+Celkem zapsáno: 661 signálů, 127 obchodů, 399 hodinových snímků radaru, 505 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 1, průměr -18.5 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -28.0 %
-  Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 1, průměr +1.9 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -19.4 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -15.4 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
@@ -13,6 +12,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -13.4 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 0, průměr -20.0 %
   Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +10.8 %
+  Degen II  | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +23.7 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   3x, vyhrálo by 1, průměr -1.2 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   2x, vyhrálo by 0, průměr -13.0 %
   Lovec     | paměť: když likvidita = 150-500k $, prodělal  |   1x, vyhrálo by 1, průměr +25.0 %
@@ -23,7 +23,6 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Orbit     | příkaz neprošel                               |   1x, vyhrálo by 0, průměr -2.0 %
   Stín      | plno pozic                                    |  59x, vyhrálo by 40, průměr +3.8 %
   Stín      | paměť: když denní doba = ráno (6-12 UTC), pro |   6x, vyhrálo by 6, průměr +13.1 %
-  Stín      | paměť: když pád za 24 h = 2-4 %, prodělal jse |   1x, vyhrálo by 0, průměr -4.1 %
 
 UZAVŘENÉ OBCHODY:
   Lev       |   1 obchodů, 0 výher, průměr -2.1 %, celkem -3.92 $
@@ -35,4 +34,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   2 obchodů, 2 výher, průměr +14.5 %, celkem +22.93 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), ETH (105h), SOL (100h), PENGU (86h), XRP (82h), HYPE (66h), PEARL (62h), MIHAO (61h), MAX (42h), LIT (41h), PUMP (40h), $WIF (40h), SUI (38h), DACITYCOIN (32h), BP (32h), GATO (28h), SEPPUKU (27h), ZEC (25h), NEAR (23h)
+  BTC (168h), CATE (168h), ETH (104h), SOL (100h), PENGU (85h), XRP (82h), HYPE (66h), PEARL (63h), MIHAO (61h), MAX (42h), PUMP (41h), LIT (40h), $WIF (40h), SUI (38h), BP (33h), DACITYCOIN (32h), GATO (28h), SEPPUKU (27h), ZEC (25h), NEAR (24h)
