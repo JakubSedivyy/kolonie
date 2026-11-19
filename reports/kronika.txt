@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 683 signálů, 132 obchodů, 419 hodinových snímků radaru, 525 událostí
+Celkem zapsáno: 686 signálů, 132 obchodů, 420 hodinových snímků radaru, 527 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 1, průměr -18.5 %
@@ -27,9 +27,9 @@ UZAVŘENÉ OBCHODY:
   Lovec     |   2 obchodů, 0 výher, průměr -7.0 %, celkem -12.14 $
   Medvěd    |   4 obchodů, 0 výher, průměr -5.3 %, celkem -29.84 $
   Memec     |  13 obchodů, 6 výher, průměr +0.2 %, celkem +1.65 $
-  Stín      |  18 obchodů, 9 výher, průměr +1.1 %, celkem +33.28 $
+  Stín      |  16 obchodů, 8 výher, průměr +0.9 %, celkem +21.73 $
   Trendy    |   5 obchodů, 2 výher, průměr -0.7 %, celkem -5.65 $
   Vlna      |   2 obchodů, 2 výher, průměr +14.5 %, celkem +22.93 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), SOL (95h), ETH (93h), PENGU (89h), XRP (78h), PEARL (71h), HYPE (66h), MIHAO (54h), PUMP (46h), LIT (42h), MAX (41h), $WIF (40h), BP (34h), SUI (31h), GTA6 (30h), DACITYCOIN (28h), GATO (28h), NEAR (24h), MACCA (21h)
+  BTC (168h), CATE (168h), SOL (94h), ETH (93h), PENGU (90h), XRP (78h), PEARL (71h), HYPE (66h), MIHAO (53h), PUMP (46h), LIT (42h), MAX (40h), $WIF (40h), BP (34h), GTA6 (31h), SUI (30h), GATO (28h), DACITYCOIN (27h), NEAR (24h), MACCA (21h)
