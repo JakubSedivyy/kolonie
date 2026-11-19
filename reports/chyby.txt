@@ -1,5 +1,0 @@
-Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,636 WARNING colony.market: latest prices failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
-Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,637 WARNING colony: Vlna: chybí živá cena SOL/USD - stop hlídá jen hodinová svíčka
-Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,637 WARNING colony: Vlna: chybí živá cena BTC/USD - stop hlídá jen hodinová svíčka
-Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,637 WARNING colony: Vlna: chybí živá cena BAT/USD - stop hlídá jen hodinová svíčka
-Nov 19 07:59:25 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:59:25,765 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
