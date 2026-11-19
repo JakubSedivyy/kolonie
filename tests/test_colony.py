@@ -586,6 +586,27 @@ def test_memory_forbids_only_feature_worse_than_rest():
     assert not m.judge("Lovec", {"stáří coinu": "přes týden"})[0]
 
 
+def test_memory_judges_longs_and_shorts_separately():
+    from colony.memory import Memory
+    m = Memory(os.path.join(tempfile.mkdtemp(), "mem.json"))
+    for i in range(8):                                        # jako Vlna: odpolední longy prodělávaly
+        m.record("Vlna", {"denní doba": "odpoledne (12-18 UTC)"}, -0.07)
+    for i in range(3):
+        m.record("Vlna", {"denní doba": "noc (0-6 UTC)"}, 0.01)
+    for i in range(8):                                        # odpolední shorty byly v pořádku
+        m.record("Vlna", {"denní doba": "odpoledne (12-18 UTC)", "směr": "short"}, 0.01)
+    for i in range(3):
+        m.record("Vlna", {"denní doba": "noc (0-6 UTC)", "směr": "short"}, -0.01)
+    assert not m.judge("Vlna", {"denní doba": "odpoledne (12-18 UTC)"})[0]               # long dál zakázaný
+    assert m.judge("Vlna", {"denní doba": "odpoledne (12-18 UTC)", "směr": "short"})[0]  # short smí
+    assert [k for k, *_ in m.avoid_list("Vlna")] == ["denní doba = odpoledne (12-18 UTC)"]
+    for i in range(8):                                        # když prodělávají i shorty, zákaz se jich týká taky
+        m.record("Vlna", {"denní doba": "večer (18-24 UTC)", "směr": "short"}, -0.08)
+    ok, _, note = m.judge("Vlna", {"denní doba": "večer (18-24 UTC)", "směr": "short"})
+    assert not ok and "u shortů" in note
+    assert m.lessons("Vlna")
+
+
 def test_degen_skips_what_memory_forbids():
     from colony.memory import Memory
     dex = FakeDex()

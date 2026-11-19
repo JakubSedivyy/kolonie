@@ -8,6 +8,8 @@ se bot podívá do paměti:
 Průměry jsou "smrštěné" k nule (jako by měl navíc PRIOR obchodů s nulovým výsledkem), aby se bot
 nenechal ošálit dvěma náhodnými obchody. Paměť drží posledních MAX_TRADES obchodů, takže starší
 lekce postupně vyprchají, když se trh změní.
+Nákupy (long) a sázky na pokles (short) se posuzují zvlášť: když boti umí obojí, ztráty z nákupů
+nesmí zakázat shorty (Vlna 19. 11.: prodělané longy zakázaly "ráno" i "odpoledne" i shortům).
 """
 from __future__ import annotations
 import json
@@ -26,6 +28,10 @@ COVER_MAX = 0.9      # rys, který měl skoro každý obchod (např. "v trendu =
 MIN_REST = 2         # zákaz jen když máme s čím srovnat: aspoň tolik obchodů BEZ toho rysu, a ty dopadly líp
                      # (Lovec 19. 10.: "stáří přes týden" průměr -5,9 %, ale jediný mladší coin -11,9 % ->
                      # rys nebyl příčinou ztrát, jen ho měl skoro každý obchod)
+
+
+def side_of(features: dict) -> str:
+    return "short" if (features or {}).get("směr") == "short" else "long"
 
 
 def hour_bucket(dt: datetime) -> str:
@@ -105,9 +111,16 @@ class Memory:
         return news
 
     # ------------------------------------------------------------------ čtení
-    def stats(self, bot: str) -> dict:
+    def _rows(self, bot: str, side: str | None = None) -> list:
+        rows = self.data["bots"].get(bot, [])
+        return rows if side is None else [r for r in rows if side_of(r["f"]) == side]
+
+    def sides(self, bot: str) -> list[str]:
+        return sorted({side_of(r["f"]) for r in self.data["bots"].get(bot, [])})
+
+    def stats(self, bot: str, side: str | None = None) -> dict:
         out: dict = {}
-        for row in self.data["bots"].get(bot, []):
+        for row in self._rows(bot, side):
             wt = row.get("w", 1.0)
             for k, v in row["f"].items():
                 s = out.setdefault(f"{k} = {v}", [0.0, 0.0])
@@ -119,8 +132,8 @@ class Memory:
     def total_weight(self, bot: str) -> float:
         return sum(row.get("w", 1.0) for row in self.data["bots"].get(bot, []))
 
-    def _totals(self, bot: str) -> tuple[float, float]:
-        rows = self.data["bots"].get(bot, [])
+    def _totals(self, bot: str, side: str | None = None) -> tuple[float, float]:
+        rows = self._rows(bot, side)
         return sum(r.get("w", 1.0) for r in rows), sum(r.get("w", 1.0) * r["r"] for r in rows)
 
     def _forbids(self, n: float, shr: float, total: float, raw: float = 0.0, total_sum: float = 0.0) -> bool:
@@ -132,22 +145,29 @@ class Memory:
         rest_avg = (total_sum - raw * n) / rest_n
         return raw < rest_avg                                # rys musí dopadat hůř než zbytek
 
+    def _label(self, bot: str, side: str, key: str) -> str:
+        return f"{key} (u shortů)" if side == "short" and len(self.sides(bot)) > 1 else key
+
     def avoid_list(self, bot: str):
-        total, tsum = self._totals(bot)
-        return sorted(((k, n, raw) for k, (n, shr, raw) in self.stats(bot).items()
-                       if self._forbids(n, shr, total, raw, tsum)), key=lambda x: x[2])
+        out = []
+        for side in self.sides(bot):
+            total, tsum = self._totals(bot, side)
+            out += [(self._label(bot, side, k), n, raw) for k, (n, shr, raw) in self.stats(bot, side).items()
+                    if self._forbids(n, shr, total, raw, tsum)]
+        return sorted(out, key=lambda x: x[2])
 
     def judge(self, bot: str, features: dict) -> tuple[bool, float, str]:
         """(smí koupit?, násobek sázky, důvod)."""
         if not features:
             return True, 1.0, ""
-        st = self.stats(bot)
-        total, tsum = self._totals(bot)
+        side = side_of(features)
+        st = self.stats(bot, side)
+        total, tsum = self._totals(bot, side)
         keys = [f"{k} = {v}" for k, v in features.items()]
         for k in keys:
             n, shr, raw = st.get(k, (0, 0.0, 0.0))
             if self._forbids(n, shr, total, raw, tsum):
-                return False, 0.0, f"paměť: když {k}, prodělal jsem {n:g}x (průměr {raw*100:+.1f} %)"
+                return False, 0.0, f"paměť: když {self._label(bot, side, k)}, prodělal jsem {n:g}x (průměr {raw*100:+.1f} %)"
         known = [st[k][1] for k in keys if k in st and st[k][0] >= 3]
         if not known:
             return True, 1.0, ""
@@ -157,10 +177,13 @@ class Memory:
 
     def lessons(self, bot: str, top: int = 6) -> list[dict]:
         """Pro dashboard: co se bot zatím naučil (nejhorší a nejlepší situace)."""
-        total, tsum = self._totals(bot)
-        st = [(k, n, shr, raw) for k, (n, shr, raw) in self.stats(bot).items() if n >= 3]
+        st = []
+        for side in self.sides(bot):
+            total, tsum = self._totals(bot, side)
+            st += [(self._label(bot, side, k), n, shr, raw, self._forbids(n, shr, total, raw, tsum))
+                   for k, (n, shr, raw) in self.stats(bot, side).items() if n >= 3]
         worst = sorted(st, key=lambda x: x[2])[:top // 2]
         best = sorted((x for x in st if x[2] > 0), key=lambda x: -x[2])[:top // 2]
         return [{"when": k, "n": n, "avg": raw, "score": shr,
-                 "verdict": "vyhýbá se" if self._forbids(n, shr, total, raw, tsum) else "daří se" if shr > 0 else "sleduje"}
-                for k, n, shr, raw in worst + [b for b in best if b not in worst]]
+                 "verdict": "vyhýbá se" if forb else "daří se" if shr > 0 else "sleduje"}
+                for k, n, shr, raw, forb in worst + [b for b in best if b not in worst]]
