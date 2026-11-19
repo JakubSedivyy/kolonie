@@ -11,9 +11,9 @@ Trendy [ALIVE] $985.87 (-1.41 %) | obchodů 9, úspěšnost 22 %, PF 0.28, max p
    2026-11-17T23:27 ETH/USD: -4.03 $ (-2.9 %) stop-loss
    2026-11-19T04:00 ETH/USD: -4.81 $ (-3.1 %) průraz nad maximum kanálu
 
-Vlna [ALIVE] $960.13 (-3.99 %) | obchodů 11, úspěšnost 18 %, PF 0.39, max propad 6.3 %, poplatky $6.19
-   otevřeno SOL/USD: nákup 74.602, teď 73.689 (-1.2 %) - vlna: hype 3.3, +4 % za 24 h · paměť: podobné obchody -1.7 % -> sázka 
-   SHORT BTC/USD: prodáno za 62136, teď 62948.7 (-1.3 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $960.53 (-3.95 %) | obchodů 11, úspěšnost 18 %, PF 0.39, max propad 6.3 %, poplatky $6.19
+   otevřeno SOL/USD: nákup 74.602, teď 73.6875 (-1.2 %) - vlna: hype 3.3, +4 % za 24 h · paměť: podobné obchody -1.7 % -> sázka 
+   SHORT BTC/USD: prodáno za 62136, teď 62632.8 (-0.8 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    SHORT BAT/USD: prodáno za 0.0911377, teď 0.0911095 (+0.0 %) - sestupná vlna: propad pod 3denní minimum, -2 % za 24 h · paměť: podobn
    2026-11-05T15:52 ETH/USD: -9.24 $ (-6.6 %) stop-loss
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
@@ -23,7 +23,8 @@ Vlna [ALIVE] $960.13 (-3.99 %) | obchodů 11, úspěšnost 18 %, PF 0.39, max pr
 
 Šeptač [ALIVE] $999.15 (-0.08 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-Medvěd [ALIVE] $989.41 (-1.06 %) | obchodů 13, úspěšnost 15 %, PF 0.86, max propad 6.3 %, poplatky $0.0
+Medvěd [ALIVE] $990.17 (-0.98 %) | obchodů 13, úspěšnost 15 %, PF 0.86, max propad 6.4 %, poplatky $0.0
+   otevřeno SQQQ: nákup 48.064, teď 48.36 (+0.6 %) - trh padá: SQQQ +2.2 % za hodinu, nad EMA 20/50 · paměť: podobné obchod
    2026-11-06T19:00 SQQQ: -1.98 $ (-1.6 %) pád se zastavil (ETF pod EMA 50)
    2026-11-17T20:57 SOXS: -2.38 $ (-2.7 %) stop-loss
    2026-11-18T14:34 PSQ: -4.09 $ (-1.5 %) stop-loss
@@ -32,25 +33,25 @@ Medvěd [ALIVE] $989.41 (-1.06 %) | obchodů 13, úspěšnost 15 %, PF 0.86, max
 
 Kapitán [ALIVE] $999.15 (-0.08 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-Kompas [ALIVE] $986.81 (-1.32 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.8 %, poplatky $0.0
-   otevřeno VTI: nákup 368.036, teď 354.435 (-3.7 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
-   otevřeno DBC: nákup 29.7749, teď 29.655 (-0.4 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
+Kompas [ALIVE] $986.28 (-1.37 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.8 %, poplatky $0.0
+   otevřeno VTI: nákup 368.036, teď 354.42 (-3.7 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
+   otevřeno DBC: nákup 29.7749, teď 29.59 (-0.6 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
 
-Lev [ALIVE] $949.68 (-5.03 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 5.6 %, poplatky $0.0
-   otevřeno LLY: nákup 1462.96, teď 1353.05 (-7.5 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MA: nákup 667.504, teď 627.805 (-5.9 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MSFT: nákup 521.475, teď 503.19 (-3.5 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
-   otevřeno V: nákup 430.027, teď 402.61 (-6.4 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
-   otevřeno AAPL: nákup 352.362, teď 348.76 (-1.0 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
+Lev [ALIVE] $950.45 (-4.96 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 5.6 %, poplatky $0.0
+   otevřeno LLY: nákup 1462.96, teď 1355.23 (-7.4 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MA: nákup 667.504, teď 628.87 (-5.8 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MSFT: nákup 521.475, teď 502.56 (-3.6 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
+   otevřeno V: nákup 430.027, teď 402.71 (-6.4 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
+   otevřeno AAPL: nákup 352.362, teď 349.44 (-0.8 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
    2026-11-17T14:30 META: -3.92 $ (-2.1 %) trend zlomen (pod 200denním průměrem nebo 6 měsíců bez růstu)
 
-Sokol [ALIVE] $977.14 (-2.29 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 2.7 %, poplatky $0.0
-   otevřeno DIA: nákup 506.231, teď 492.92 (-2.6 %) - pokles v růstovém trendu (RSI 2 = 4, nad 200denním průměrem)
-   otevřeno IVV: nákup 738.305, teď 722.815 (-2.1 %) - pokles v růstovém trendu (RSI 2 = 5, nad 200denním průměrem)
+Sokol [ALIVE] $976.95 (-2.30 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 2.7 %, poplatky $0.0
+   otevřeno DIA: nákup 506.231, teď 492.625 (-2.7 %) - pokles v růstovém trendu (RSI 2 = 4, nad 200denním průměrem)
+   otevřeno IVV: nákup 738.305, teď 722.955 (-2.1 %) - pokles v růstovém trendu (RSI 2 = 5, nad 200denním průměrem)
 
-Spořič [ALIVE] $996.64 (-0.34 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $0.0
-   otevřeno IBIT: nákup 36.5863, teď 35.575 (-2.8 %) - pravidelné spoření: první týdenní nákup
-   otevřeno VOO: nákup 687.472, teď 662.31 (-3.7 %) - pravidelné spoření: první týdenní nákup
+Spořič [ALIVE] $996.42 (-0.36 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.7 %, poplatky $0.0
+   otevřeno IBIT: nákup 36.5863, teď 35.46 (-3.1 %) - pravidelné spoření: první týdenní nákup
+   otevřeno VOO: nákup 687.472, teď 661.54 (-3.8 %) - pravidelné spoření: první týdenní nákup
 
 Degen II [ALIVE] $996.49 (-0.35 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
@@ -59,10 +60,10 @@ Degen II [ALIVE] $996.49 (-0.35 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1095.95 (+9.59 %) | obchodů 42, úspěšnost 52 %, PF 1.94, max propad 7.2 %, poplatky $12.13
-   SHORT BTC/USD: prodáno za 62504, teď 62673.6 (-0.3 %) - sestupný trend, -2.2 % za 24 h
-   SHORT BAT/USD: prodáno za 0.0911366, teď 0.0887202 (+2.7 %) - sestupný trend, -3.2 % za 24 h · paměť: podobné obchody +0.5 % -> sázk
-   SHORT CRV/USD: prodáno za 0.197001, teď 0.191186 (+3.0 %) - sestupný trend, -3.9 % za 24 h · paměť: podobné obchody +0.8 % -> sázk
+Stín [ALIVE] $1090.59 (+9.06 %) | obchodů 42, úspěšnost 52 %, PF 1.94, max propad 7.2 %, poplatky $12.13
+   SHORT BTC/USD: prodáno za 62504, teď 62813.5 (-0.5 %) - sestupný trend, -2.2 % za 24 h
+   SHORT BAT/USD: prodáno za 0.0911366, teď 0.0889893 (+2.4 %) - sestupný trend, -3.2 % za 24 h · paměť: podobné obchody +0.5 % -> sázk
+   SHORT CRV/USD: prodáno za 0.197001, teď 0.193826 (+1.6 %) - sestupný trend, -3.9 % za 24 h · paměť: podobné obchody +0.8 % -> sázk
    2026-11-18T00:00 PEPE/USD: -9.55 $ (-3.7 %) stop-loss
    2026-11-18T05:00 BTC/USD: +1.09 $ (+0.4 %) časový limit
    2026-11-18T21:00 BAT/USD: -6.61 $ (-2.2 %) stop-loss
@@ -71,14 +72,11 @@ Stín [ALIVE] $1095.95 (+9.59 %) | obchodů 42, úspěšnost 52 %, PF 1.94, max 
 
 Věštec [ALIVE] $999.15 (-0.08 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM (živí boti) $12936.63 z $13000 (-0.49 %)
+CELKEM (živí boti) $12932.26 z $13000 (-0.52 %)
 HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -3.9 %, bitcoin -19.9 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.2 %, bitcoin -19.7 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-19T06:57:08+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 3, 'vol_mult': 1.5, 'last_
-   2026-11-19T06:57:19+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-19T07:00:52+00:00 🐻 Vlna (simulace) SHORT BAT/USD za $86.03 @ 0.0911832, stop 0.0966542 (sestupná vlna: propad pod 3denní minimum, -2 % za 24 h · paměť:
    2026-11-19T07:01:13+00:00 🔻 Stín (simulace) uzavřel short PEPE/USD: -1.94 $ (-0.7 %) - stop-loss
    2026-11-19T08:01:17+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $284 @ 0.0911822, stop 0.0948294 - sestupný trend, -3.2 % za 24 h · paměť: podobné obchody 
@@ -92,5 +90,8 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-19T14:34:24+00:00 🔻 Medvěd PRODAL SPXS: -9.36 $ (-3.6 %) - stop-loss
    2026-11-19T14:35:07+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, VIVS, SEAT, SPRC, SOXL, GMEX, FNGR, LICN, NVDA, GNLN, LGHL
    2026-11-19T14:58:07+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-19T18:30:28+00:00 🟢 Medvěd KOUPIL SQQQ za $123.73 @ 48.064 (trh padá: SQQQ +2.2 % za hodinu, nad EMA 20/50 · paměť: podobné obchody -0.9 % -> sázka 0.9x
+   2026-11-19T18:58:25+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-19T21:02 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
