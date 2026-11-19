@@ -1,4 +1,5 @@
-Nov 19 06:45:27 ubuntu-1gb-hel1-1 python[387178]: 2026-11-19 06:45:27,678 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 19 06:57:31 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 06:57:31,954 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 19 06:57:32 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 06:57:32,059 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
-Nov 19 06:57:33 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 06:57:33,106 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,636 WARNING colony.market: latest prices failed: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,637 WARNING colony: Vlna: chybí živá cena SOL/USD - stop hlídá jen hodinová svíčka
+Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,637 WARNING colony: Vlna: chybí živá cena BTC/USD - stop hlídá jen hodinová svíčka
+Nov 19 07:33:14 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:33:14,637 WARNING colony: Vlna: chybí živá cena BAT/USD - stop hlídá jen hodinová svíčka
+Nov 19 07:59:25 ubuntu-1gb-hel1-1 python[405288]: 2026-11-19 07:59:25,765 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
