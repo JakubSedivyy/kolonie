@@ -4,16 +4,16 @@ Orbit [ALIVE] $1001.01 (+0.10 %) | obchodů 2, úspěšnost 50 %, PF 2.33, max p
    2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
    2026-11-11T20:50 NVDA: -1.44 $ (-0.8 %) konec obchodního dne
 
-Trendy [ALIVE] $983.83 (-1.62 %) | obchodů 9, úspěšnost 22 %, PF 0.28, max propad 2.1 %, poplatky $6.21
-   SHORT ETH/USD: prodáno za 1738.75, teď 1758.48 (-1.1 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.14 %
+Trendy [ALIVE] $983.25 (-1.67 %) | obchodů 9, úspěšnost 22 %, PF 0.28, max propad 2.1 %, poplatky $6.21
+   SHORT ETH/USD: prodáno za 1738.75, teď 1765.5 (-1.5 %) - propad pod 24-svíčkové minimum pod EMA 200, ATR 1.14 %
    2026-11-13T10:25 ETH/USD: -1.95 $ (-1.5 %) stop-loss
    2026-11-15T02:09 BTC/USD: +1.46 $ (+1.1 %) trailing stop
    2026-11-15T02:17 ETH/USD: +3.67 $ (+2.8 %) trailing stop
    2026-11-17T23:27 ETH/USD: -4.03 $ (-2.9 %) stop-loss
    2026-11-19T04:00 ETH/USD: -4.81 $ (-3.1 %) průraz nad maximum kanálu
 
-Vlna [ALIVE] $962.61 (-3.74 %) | obchodů 12, úspěšnost 17 %, PF 0.37, max propad 6.3 %, poplatky $6.38
-   SHORT BTC/USD: prodáno za 62136, teď 62115 (+0.0 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $962.46 (-3.75 %) | obchodů 12, úspěšnost 17 %, PF 0.37, max propad 6.3 %, poplatky $6.38
+   SHORT BTC/USD: prodáno za 62136, teď 62237.8 (-0.2 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
    SHORT BAT/USD: prodáno za 0.0911377, teď 0.08859 (+2.8 %) - sestupná vlna: propad pod 3denní minimum, -2 % za 24 h · paměť: podobn
    2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
    2026-11-11T05:00 TRUMP/USD: -10.40 $ (-32.5 %) sestupná vlna skončila (trend se otočil nahoru)
@@ -61,10 +61,10 @@ Degen II [ALIVE] $996.44 (-0.36 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1098.95 (+9.89 %) | obchodů 42, úspěšnost 52 %, PF 1.94, max propad 7.2 %, poplatky $12.13
-   SHORT BTC/USD: prodáno za 62504, teď 61911.3 (+0.9 %) - sestupný trend, -2.2 % za 24 h
-   SHORT BAT/USD: prodáno za 0.0911366, teď 0.088413 (+3.0 %) - sestupný trend, -3.2 % za 24 h · paměť: podobné obchody +0.5 % -> sázk
-   SHORT CRV/USD: prodáno za 0.197001, teď 0.192106 (+2.5 %) - sestupný trend, -3.9 % za 24 h · paměť: podobné obchody +0.8 % -> sázk
+Stín [ALIVE] $1098.23 (+9.82 %) | obchodů 42, úspěšnost 52 %, PF 1.94, max propad 7.2 %, poplatky $12.13
+   SHORT BTC/USD: prodáno za 62504, teď 62077.8 (+0.7 %) - sestupný trend, -2.2 % za 24 h
+   SHORT BAT/USD: prodáno za 0.0911366, teď 0.088825 (+2.5 %) - sestupný trend, -3.2 % za 24 h · paměť: podobné obchody +0.5 % -> sázk
+   SHORT CRV/USD: prodáno za 0.197001, teď 0.191215 (+2.9 %) - sestupný trend, -3.9 % za 24 h · paměť: podobné obchody +0.8 % -> sázk
    2026-11-18T00:00 PEPE/USD: -9.55 $ (-3.7 %) stop-loss
    2026-11-18T05:00 BTC/USD: +1.09 $ (+0.4 %) časový limit
    2026-11-18T21:00 BAT/USD: -6.61 $ (-2.2 %) stop-loss
@@ -73,7 +73,7 @@ Stín [ALIVE] $1098.95 (+9.89 %) | obchodů 42, úspěšnost 52 %, PF 1.94, max 
 
 Věštec [ALIVE] $999.10 (-0.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
-CELKEM (živí boti) $12934.03 z $13000 (-0.51 %)
+CELKEM (živí boti) $12932.58 z $13000 (-0.52 %)
 HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
 SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.8 %, bitcoin -20.8 %
 
