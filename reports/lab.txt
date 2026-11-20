@@ -1,12 +1,12 @@
-LABORATOŘ 2026-11-19: trénink 2026-08-21..2026-10-20, test 2026-10-20..2026-11-19
-Orbit: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'or_bars': 6, 'vol_mult': 1.2, 'last_entry': '14:00'} | trénink -2.9 % | test -6.2 % (33 obch., PF 0.21)
-Trendy: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink -1.4 % | test -1.4 % (8 obch., PF 0.4)
-Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +9.3 % | test -7.0 % (12 obch., PF 0.19)
-Medvěd: ODPOČÍVÁ 💤 (v tréninku neprošel, test vyšel - sledovat) | nejlepší {'atr_mult': 1.5} | trénink -3.1 % | test +17.4 % (39 obch., PF 3.8)
+LABORATOŘ 2026-11-20: trénink 2026-08-22..2026-10-21, test 2026-10-21..2026-11-20
+Orbit: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'or_bars': 6, 'vol_mult': 1.2, 'last_entry': '14:00'} | trénink -2.5 % | test -6.2 % (33 obch., PF 0.21)
+Trendy: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink -0.9 % | test -1.4 % (8 obch., PF 0.4)
+Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +6.4 % | test -8.5 % (12 obch., PF 0.16)
+Medvěd: ODPOČÍVÁ 💤 (v tréninku neprošel, test vyšel - sledovat) | nejlepší {'atr_mult': 1.5} | trénink -3.6 % | test +18.9 % (37 obch., PF 4.35)
 
-DLOUHODOBÝ TEST 2021-12-24..2026-11-18 (denní svíčky, nákup za ranní cenu, bez přežití)
-Kompas   roč.  +9.1 % | celkem  +52.8 % | max propad 13.3 % | Sharpe 0.68 | 33 obch., úspěšnost 52 % | 2021:-0% 2022:-8% 2023:+11% 2024:+14% 2025:+26% 2026:+4%
-Lev      roč. +14.8 % | celkem  +96.2 % | max propad 32.7 % | Sharpe 0.77 | 120 obch., úspěšnost 43 % | 2021:-2% 2022:-14% 2023:+62% 2024:+78% 2025:-5% 2026:-15%
-Sokol    roč.  +5.2 % | celkem  +28.4 % | max propad  6.2 % | Sharpe 0.83 | 127 obch., úspěšnost 73 % | 2021:+0% 2022:+0% 2023:+1% 2024:+11% 2025:+8% 2026:+6%
-Spořič   roč.  +8.4 % | celkem  +48.1 % | max propad 31.0 % | Sharpe 0.47 | 0 obch., úspěšnost 0 % | 2021:-0% 2022:-7% 2023:+12% 2024:+53% 2025:+4% 2026:-11%
-S&P 500  roč. +10.5 % | celkem  +63.0 % | max propad 24.5 % | Sharpe 0.67 | srovnání: jen držet | 2021:-1% 2022:-18% 2023:+26% 2024:+25% 2025:+18% 2026:+8%
+DLOUHODOBÝ TEST 2021-12-25..2026-11-19 (denní svíčky, nákup za ranní cenu, bez přežití)
+Kompas   roč.  +8.8 % | celkem  +51.1 % | max propad 13.3 % | Sharpe 0.67 | 33 obch., úspěšnost 52 % | 2021:-0% 2022:-8% 2023:+11% 2024:+14% 2025:+26% 2026:+3%
+Lev      roč. +14.3 % | celkem  +92.6 % | max propad 32.7 % | Sharpe 0.75 | 120 obch., úspěšnost 43 % | 2021:-2% 2022:-14% 2023:+62% 2024:+78% 2025:-5% 2026:-17%
+Sokol    roč.  +4.8 % | celkem  +25.8 % | max propad  6.2 % | Sharpe 0.76 | 127 obch., úspěšnost 73 % | 2021:+0% 2022:+0% 2023:+1% 2024:+11% 2025:+8% 2026:+4%
+Spořič   roč.  +8.0 % | celkem  +45.9 % | max propad 31.0 % | Sharpe 0.46 | 0 obch., úspěšnost 0 % | 2021:-0% 2022:-7% 2023:+12% 2024:+53% 2025:+4% 2026:-12%
+S&P 500  roč. +10.0 % | celkem  +59.8 % | max propad 24.5 % | Sharpe 0.65 | srovnání: jen držet | 2021:-1% 2022:-18% 2023:+26% 2024:+25% 2025:+18% 2026:+6%
