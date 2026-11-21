@@ -13,6 +13,10 @@ Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, 
 - Laboratoř `lab.py` běží na serveru každých 6 h (walk-forward 60/30 dní).
   Jednou denně přidá do `lab.txt` i DLOUHODOBÝ TEST (`colony/longtest.py`): Kompas, Lev, Sokol, Spořič na ~6 letech
   denní historie vs. držení S&P 500. Dlouhodobé boty hodnoť hlavně podle něj (živě obchodují málo).
+- VÍCELETÝ TEST (`colony/multiyear.py`, od 21. 11. 2026 na přání Jakuba): Orbit, Trendy, Vlna, Medvěd na ~5 letech
+  po čtvrtletích, poctivý walk-forward (nastavení jen z minulosti). Běží po kouscích uvnitř laboratoře (max 2 h/běh,
+  postup v `state/multiyear.json`), přepočet 1× týdně. Prošel -> lab.json dostane nejodolnější nastavení; neprošel -> varování.
+  Výsledek na konci `lab.txt`.
 - `stav.txt` končí řádkem SROVNÁNÍ S TRHEM (kolonie vs. jen držet S&P 500 a bitcoin od startu).
 - Vyřazení boti: `config.RETIRED` (Memec, Lovec od 16. 11. 2026; Šeptač, Kapitán, Věštec od 21. 11. 2026 - vše na přání Jakuba).
 

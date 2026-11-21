@@ -1335,6 +1335,112 @@ def test_wave_no_long_on_bounce_in_downtrend():
     assert any(p["close"].iloc[i] < p["ema200"].iloc[i] for i in hits)
 
 
+def test_multiyear_periods_and_honest_walk_forward():
+    """21. 11.: Jakub chce boty prověřit na letech historie. Výběr nastavení musí vidět jen minulost,
+    jeden zázračný kvartál nesmí přebít stabilní variantu a čtvrtletí bez obchodu je neutrální."""
+    from colony import multiyear as my
+    end = datetime(2026, 11, 21, tzinfo=timezone.utc)
+    ps = my.periods(end, 5)
+    assert len(ps) == 20 and ps[-1][1] == end and all(a[1] == b[0] for a, b in zip(ps, ps[1:]))
+    R = lambda r, t=5: {"return": r, "trades": t}
+    # varianta 0: jeden kvartál +80 %, jinak ztráty; varianta 1: stabilně malý zisk
+    rows = [[R(0.8 if q == 0 else -0.03), R(0.02)] for q in range(8)]
+    assert my.pick_robust(rows) == 1
+    # režim se mění: do q=6 vydělává varianta 0, pak varianta 1 -> walk-forward se to dozví až zpětně
+    rows = [[R(0.05), R(-0.05)] for _ in range(6)] + [[R(-0.05), R(0.05)] for _ in range(2)]
+    oos = my.walk_forward(rows, min_history=4)
+    assert [o["q"] for o in oos] == [4, 5, 6, 7] and oos[2]["variant"] == 0 and oos[2]["return"] == -0.05
+    ok, txt, tot = my.verdict(oos)
+    assert ok is False and "NEPROŠEL" in txt                    # 2 plusy ze 4, ale celkem mínus
+    ok, txt, tot = my.verdict([{"return": 0.03, "trades": 4}, {"return": 0.0, "trades": 0},
+                               {"return": -0.01, "trades": 2}])
+    assert ok and abs(tot - (1.03 * 0.99 - 1)) < 1e-9       # kvartál bez obchodu nevadí
+    assert not my.verdict([{"return": 0.0, "trades": 0}] * 3)[0]
+
+
+def test_multiyear_step_resumes_in_chunks_and_feeds_lab():
+    """Server má 1 GB: test běží po kouscích (bot × čtvrtletí), postup se ukládá a příště pokračuje.
+    Výsledek pak určí nastavení v lab.json (prošel -> nejodolnější nastavení, neprošel -> varování)."""
+    from colony import multiyear as my
+    d = tempfile.mkdtemp()
+    variants = {"A": (object, [{"x": 1}, {"x": 2}]), "B": (object, [{"x": 1}])}
+    calls = []
+
+    def fetch(cls, params, s, e, cache):
+        cache.setdefault("k", 0); cache["k"] += 1
+        if s.year == 2021 and params["x"] == 1:          # první kvartál začíná v prosinci 2021
+            raise ValueError("výpadek")
+        return {"s": s}
+
+    def run_one(cls, params, data, s, e):
+        calls.append(1)
+        return {"return": 0.02 if params["x"] == 2 else -0.01, "trades": 5}
+
+    t = [0.0]
+    clock = lambda: t[0]
+    def run_counting(*a):
+        t[0] += 1.0
+        return run_one(*a)
+    now = datetime(2026, 11, 21, tzinfo=timezone.utc)
+    st = my.step(variants, fetch, run_counting, d, budget_s=5, now=now, clock=clock)
+    assert not st.get("finished") and 0 < sum(len(r) for r in st["results"].values()) < 40
+    assert "probíhá" in my.report_lines(st)[0]
+    bots = {"A": {"chosen": {"x": 1}, "benched": False}}
+    assert my.apply_to_lab(bots, st)["A"]["chosen"] == {"x": 1}  # nehotový test nic nemění
+    for _ in range(30):
+        st = my.step(variants, fetch, run_counting, d, budget_s=5, now=now, clock=clock)
+        if st.get("finished"):
+            break
+    assert st["finished"] and sum(len(r) for r in st["results"].values()) == 40
+    assert st["errors"] and st["results"]["A"]["0"][0] is None   # výpadek dat = chybějící kvartál, ne nula
+    sm = st["summary"]
+    assert sm["A"]["passed"] and sm["A"]["chosen"] == {"x": 2} and not sm["B"]["passed"]
+    bots = {"A": {"chosen": {"x": 1}, "benched": False}, "B": {"chosen": {"x": 1}, "benched": False}}
+    my.apply_to_lab(bots, st)
+    assert bots["A"]["chosen"] == {"x": 2} and not bots["A"]["benched"] and bots["A"]["multiyear"]["passed"]
+    assert bots["B"]["benched"]
+    txt = "\n".join(my.report_lines(st))
+    assert "A" in txt and "PROŠEL" in txt and "NEPROŠEL" in txt
+    # hotový test se přepočítá až po týdnu nebo při změně variant
+    n = len(calls)
+    my.step(variants, fetch, run_counting, d, now=now + timedelta(days=3), clock=clock)
+    assert len(calls) == n
+    assert my.needs_new_cycle(st, now + timedelta(days=8), variants)
+    assert my.needs_new_cycle(st, now, {"A": (object, [{"x": 3}])})
+
+
+def test_lab_multi_year_runs_real_bot_on_fake_history():
+    """Propojení laboratoře s víceletým testem na skutečném kódu Vlny (data jsou vymyšlená)."""
+    import lab
+    from colony import multiyear as my
+
+    class FakeData:
+        def bars(self, syms, minutes, start, end, crypto=False):
+            idx = pd.date_range(start, end, freq=f"{minutes}min", tz="UTC")[:-1]
+            out = {}
+            for k, sym in enumerate(syms[:3]):
+                rng = np.random.default_rng(k + idx[0].dayofyear)
+                c = 100 * np.exp(np.cumsum(rng.normal(0, 0.01, len(idx))))
+                df = pd.DataFrame({"open": np.r_[c[0], c[:-1]], "close": c}, index=idx)
+                df["high"], df["low"] = df[["open", "close"]].max(axis=1) * 1.003, df[["open", "close"]].min(axis=1) * 0.997
+                df["volume"] = rng.uniform(500, 1500, len(idx))
+                out[sym] = df
+            return out
+
+    old_v, old_dir, old_years = lab.VARIANTS, config.STATE_DIR, my.YEARS
+    try:
+        lab.VARIANTS = {"Vlna": (WaveAgent, [{"atr_mult": 3.0}, {"atr_mult": 2.5}])}
+        config.STATE_DIR = tempfile.mkdtemp()
+        my.YEARS = 0.5                                             # 2 čtvrtletí, ať test netrvá dlouho
+        st = lab.multi_year(FakeData(), ["BTC/USD", "ETH/USD", "SOL/USD"], [], budget_s=600)
+        assert st and st.get("finished") and not st.get("errors"), st.get("errors")
+        rows = st["results"]["Vlna"]
+        assert len(rows) == 2 and all(r is not None and "return" in r for row in rows.values() for r in row)
+        assert "Vlna" in st["summary"] and my.report_lines(st)[1].startswith("Vlna")
+    finally:
+        lab.VARIANTS, config.STATE_DIR, my.YEARS = old_v, old_dir, old_years
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

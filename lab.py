@@ -6,6 +6,9 @@
   4. Když vydělává i v testu, kolonie ho nasadí. Když ne, bot ODPOČÍVÁ (nové obchody nedělá),
      aby zbytečně neprodělával.
 
+  5. VÍCELETÝ TEST (colony/multiyear.py): stejné varianty na ~5 letech po čtvrtletích. Má přednost -
+     bot, který v něm prošel, dostane nejodolnější nastavení; kdo neprošel, dostane varování.
+
 Spouští se samo jednou týdně (systemd timer) nebo ručně:  python lab.py
 Výsledek: state/lab.json (kolonie si ho načte sama) a state/lab.txt (čitelné shrnutí).
 """
@@ -15,7 +18,7 @@ import logging
 import os
 from datetime import datetime, timedelta, timezone
 
-from colony import config
+from colony import config, multiyear
 from colony.agents.base import Executor
 from colony.agents.strategies import OrbitAgent, TrendAgent, WaveAgent, BearAgent
 from colony.broker import SimBroker
@@ -104,11 +107,37 @@ def long_test(data_api) -> list[str]:
     return lines
 
 
+def multi_year(data_api, majors, memes, budget_s):
+    """Víceletý test (colony/multiyear.py): data po čtvrtletích, postup se ukládá, pokračuje příště."""
+    def fetch(cls, params, s, e, cache):
+        proto = cls().apply(params)
+        syms = universe_for(cls, params, majors, memes)
+        key = (proto.minutes, proto.crypto, tuple(sorted(syms)))
+        if key not in cache:
+            warm = timedelta(minutes=proto.minutes * (proto.lookback_bars + 10))
+            cache[key] = data_api.bars(syms, proto.minutes, s - warm, e, crypto=proto.crypto)
+        if not any(len(df[df.index >= s]) for df in cache[key].values() if df is not None):
+            raise ValueError("žádná data")              # čtvrtletí bez dat se nepočítá (ne jako nula)
+        return cache[key]
+
+    def run_one(cls, params, data, s, e):
+        r = score(run(cls, params, data, s, e))
+        return {"return": float(r["return"]), "trades": int(r["trades"])}   # numpy čísla JSON neumí
+
+    try:
+        return multiyear.step(VARIANTS, fetch, run_one, config.STATE_DIR, budget_s=budget_s)
+    except Exception as e:
+        print(f"VÍCELETÝ TEST selhal: {e}", flush=True)
+        return None
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--days", type=int, default=90)
     ap.add_argument("--test-days", type=int, default=30)
     ap.add_argument("--only", default="")
+    ap.add_argument("--multiyear-budget", type=float, default=2 * 3600,
+                    help="kolik sekund smí běžet víceletý test (pokračuje při dalším běhu)")
     a = ap.parse_args()
 
     from colony.market import AlpacaData, AlpacaAssets
@@ -159,6 +188,9 @@ def main():
     os.makedirs(config.STATE_DIR, exist_ok=True)
     if not a.only:
         lines += [""] + long_test(data_api)
+        my = multi_year(data_api, majors, memes, a.multiyear_budget)
+        multiyear.apply_to_lab(out["bots"], my)
+        lines += [""] + multiyear.report_lines(my)
     path = os.path.join(config.STATE_DIR, "lab.json")
     old = {}
     if a.only and os.path.exists(path):
