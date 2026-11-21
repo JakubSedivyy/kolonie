@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 743 signálů, 142 obchodů, 451 hodinových snímků radaru, 549 událostí
+Celkem zapsáno: 744 signálů, 144 obchodů, 453 hodinových snímků radaru, 551 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 1, průměr -37.2 %
@@ -9,6 +9,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -24.8 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -19.4 %
+  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +20.3 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -90.0 %
@@ -31,10 +32,10 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
 UZAVŘENÉ OBCHODY:
   Lev       |   1 obchodů, 0 výher, průměr -2.1 %, celkem -3.92 $
   Medvěd    |   7 obchodů, 2 výher, průměr -1.4 %, celkem -20.86 $
-  Memec     |   8 obchodů, 6 výher, průměr +1.2 %, celkem +5.78 $
+  Memec     |   7 obchodů, 5 výher, průměr +0.9 %, celkem +4.05 $
   Stín      |  18 obchodů, 10 výher, průměr +1.5 %, celkem +62.60 $
-  Trendy    |   5 obchodů, 3 výher, průměr +0.0 %, celkem -0.73 $
+  Trendy    |   7 obchodů, 4 výher, průměr +0.5 %, celkem +6.55 $
   Vlna      |   2 obchodů, 1 výher, průměr +6.6 %, celkem +10.30 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), ETH (98h), PENGU (95h), SOL (88h), PEARL (81h), XRP (68h), HYPE (66h), GTA6 (46h), LIT (40h), BP (38h), SUI (35h), DCTY (35h), PUMP (34h), WASTED (32h), MIHAO (31h), VINE (30h), TRUMP (30h), GATO (28h), NEAR (25h)
+  BTC (168h), CATE (168h), ETH (98h), PENGU (95h), SOL (88h), PEARL (80h), XRP (69h), HYPE (67h), GTA6 (46h), LIT (40h), BP (38h), SUI (36h), PUMP (35h), DCTY (35h), WASTED (32h), MIHAO (31h), VINE (30h), TRUMP (30h), GATO (28h), LUCIA (25h)
