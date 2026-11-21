@@ -1,7 +1,3 @@
-fatal: Could not read from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
 2026-11-04T10:20:55Z push reportu selhal
 git@github.com: Permission denied (publickey).
 fatal: Could not read from remote repository.
@@ -58,3 +54,7 @@ and the repository exists.
 [notice] A new release of pip is available: 26.2.2 -> 26.3
 [notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
 2026-11-19T06:57:07Z nasazena verze 50cc4da: Paměť posuzuje nákupy a sázky na pokles zvlášť
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
+2026-11-21T12:20:09Z nasazena verze d11b40a: Šeptač, Kapitán a Věštec na hřbitov (na přání Jakuba)

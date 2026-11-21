@@ -11,16 +11,13 @@ Trendy [ALIVE] $996.02 (-0.40 %) | obchodů 12, úspěšnost 33 %, PF 0.86, max 
    2026-11-21T06:42 ETH/USD: +10.91 $ (+7.6 %) trailing stop
    2026-11-21T06:51 SOL/USD: -3.63 $ (-3.9 %) stop-loss
 
-Vlna [ALIVE] $976.95 (-2.31 %) | obchodů 12, úspěšnost 17 %, PF 0.37, max propad 6.3 %, poplatky $6.38
-   SHORT BTC/USD: prodáno za 62136, teď 58115.5 (+6.5 %) - sestupná vlna: propad pod 3denní minimum, -4 % za 24 h · paměť: podobn
+Vlna [ALIVE] $976.21 (-2.38 %) | obchodů 13, úspěšnost 23 %, PF 0.44, max propad 6.3 %, poplatky $6.59
    SHORT BAT/USD: prodáno za 0.0911377, teď 0.0787338 (+13.6 %) - sestupná vlna: propad pod 3denní minimum, -2 % za 24 h · paměť: podobn
-   2026-11-07T14:00 PEPE/USD: -2.71 $ (-4.1 %) vlna opadla (trend se otočil)
    2026-11-11T05:00 TRUMP/USD: -10.40 $ (-32.5 %) sestupná vlna skončila (trend se otočil nahoru)
    2026-11-14T03:00 XRP/USD: +10.56 $ (+13.2 %) časový limit
    2026-11-15T03:07 SOL/USD: +12.37 $ (+15.8 %) trailing stop
    2026-11-20T00:00 SOL/USD: -2.07 $ (-2.6 %) vlna opadla (trend se otočil)
-
-Šeptač [ALIVE] $999.05 (-0.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
+   2026-11-21T12:35 BTC/USD: +4.19 $ (+5.3 %) trailing stop
 
 Medvěd [ALIVE] $1007.18 (+0.72 %) | obchodů 16, úspěšnost 25 %, PF 0.99, max propad 6.4 %, poplatky $0.0
    otevřeno SQQQ: nákup 55.8879, teď 57.81 (+3.4 %) - trh padá: SQQQ +0.8 % za hodinu, nad EMA 20/50
@@ -30,8 +27,6 @@ Medvěd [ALIVE] $1007.18 (+0.72 %) | obchodů 16, úspěšnost 25 %, PF 0.99, ma
    2026-11-20T14:56 SOXS: +6.65 $ (+8.5 %) trailing stop
    2026-11-20T14:56 SQQQ: +5.92 $ (+4.8 %) trailing stop
    2026-11-20T18:56 SQQQ: -3.59 $ (-2.0 %) stop-loss
-
-Kapitán [ALIVE] $999.05 (-0.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
 
 Kompas [ALIVE] $970.78 (-2.92 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.3 %, poplatky $0.0
    otevřeno VTI: nákup 368.036, teď 339.46 (-7.8 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
@@ -60,30 +55,21 @@ Degen II [ALIVE] $996.39 (-0.36 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1113.81 (+11.38 %) | obchodů 50, úspěšnost 56 %, PF 2.26, max propad 7.2 %, poplatky $14.67
-   SHORT AAVE/USD: prodáno za 94.732, teď 99.4274 (-5.0 %) - sestupný trend, -8.6 % za 24 h
-   SHORT ADA/USD: prodáno za 0.138351, teď 0.14016 (-1.3 %) - sestupný trend, -7.6 % za 24 h
-   SHORT AVAX/USD: prodáno za 6.2623, teď 6.43088 (-2.7 %) - sestupný trend, -9.3 % za 24 h
+Stín [ALIVE] $1111.87 (+11.19 %) | obchodů 50, úspěšnost 56 %, PF 2.26, max propad 7.2 %, poplatky $14.67
+   SHORT AAVE/USD: prodáno za 94.732, teď 99.325 (-4.8 %) - sestupný trend, -8.6 % za 24 h
+   SHORT ADA/USD: prodáno za 0.138351, teď 0.140717 (-1.7 %) - sestupný trend, -7.6 % za 24 h
+   SHORT AVAX/USD: prodáno za 6.2623, teď 6.4825 (-3.5 %) - sestupný trend, -9.3 % za 24 h
    2026-11-21T00:00 XTZ/USD: -7.96 $ (-2.7 %) stop-loss
    2026-11-21T04:00 BTC/USD: +10.69 $ (+3.8 %) trailing stop
    2026-11-21T07:00 DOT/USD: +4.67 $ (+1.7 %) trailing stop
    2026-11-21T07:00 GRT/USD: -7.13 $ (-3.0 %) stop-loss
    2026-11-21T07:00 YFI/USD: +2.42 $ (+0.7 %) trailing stop
 
-Věštec [ALIVE] $999.05 (-0.09 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 0.1 %, poplatky $0.0
-
-CELKEM (živí boti) $12933.68 z $13000 (-0.51 %)
-HŘBITOV: Memec ($993, 39 obch.), Lovec ($965, 10 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -25.6 %
+CELKEM (živí boti) $9933.85 z $10000 (-0.66 %)
+HŘBITOV: Memec ($993, 39 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -25.3 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-21T00:01:21+00:00 ✅ Stín (simulace) uzavřel short DOGE/USD: +13.63 $ (+4.9 %) - trailing stop
-   2026-11-21T00:01:21+00:00 🐻 Stín (simulace) otevřel short DOT/USD za $270 @ 0.66105, stop 0.690153 - sestupný trend, -7.4 % za 24 h
-   2026-11-21T00:01:31+00:00 🔻 Stín (simulace) uzavřel short XTZ/USD: -7.96 $ (-2.7 %) - stop-loss
-   2026-11-21T00:01:31+00:00 🐻 Stín (simulace) otevřel short YFI/USD za $327 @ 1609.45, stop 1673.83 - sestupný trend, -4.2 % za 24 h
-   2026-11-21T04:00:38+00:00 🐻 Trendy (simulace) SHORT SOL/USD za $94.09 @ 66.195, stop 69.2239 (propad pod 24-svíčkové minimum pod EMA 200, ATR 1.83 % · paměť: po
-   2026-11-21T04:01:10+00:00 ✅ Stín (simulace) uzavřel short BTC/USD: +10.69 $ (+3.8 %) - trailing stop
-   2026-11-21T04:01:10+00:00 🐻 Stín (simulace) otevřel short GRT/USD za $235 @ 0.0152383, stop 0.0159681 - sestupný trend, -7.3 % za 24 h
    2026-11-21T06:42:42+00:00 ✅ Trendy UZAVŘEL SHORT ETH/USD: +10.91 $ (+7.6 %) - trailing stop
    2026-11-21T06:51:12+00:00 🔻 Trendy UZAVŘEL SHORT SOL/USD: -3.63 $ (-3.9 %) - stop-loss
    2026-11-21T07:01:00+00:00 ✅ Stín (simulace) uzavřel short DOT/USD: +4.67 $ (+1.7 %) - trailing stop
@@ -92,5 +78,13 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-21T08:01:17+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $141 @ 94.7794, stop 102.349 - sestupný trend, -8.6 % za 24 h
    2026-11-21T08:01:18+00:00 🐻 Stín (simulace) otevřel short ADA/USD za $233 @ 0.13842, stop 0.145441 - sestupný trend, -7.6 % za 24 h
    2026-11-21T08:01:18+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $139 @ 6.26544, stop 6.83541 - sestupný trend, -9.3 % za 24 h
+   2026-11-21T12:20:10+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
+   2026-11-21T12:20:10+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-11-21T12:20:21+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-21T12:20:21+00:00 🪦 Šeptač odchází na hřbitov: vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod). Končí s $999.05, 0 obchodů, úspěšnost 
+   2026-11-21T12:20:22+00:00 🪦 Kapitán odchází na hřbitov: vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod). Končí s $999.05, 0 obchodů, úspěšnost
+   2026-11-21T12:20:22+00:00 🪦 Věštec odchází na hřbitov: vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod, neplatný Grok klíč). Končí s $999.05, 0
+   2026-11-21T12:35:17+00:00 ✅ Vlna UZAVŘEL SHORT BTC/USD: +4.19 $ (+5.3 %) - trailing stop
 
-VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-21T13:16 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-21T18:20 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
