@@ -1,10 +1,10 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 759 signálů, 151 obchodů, 467 hodinových snímků radaru, 575 událostí
+Celkem zapsáno: 759 signálů, 151 obchodů, 468 hodinových snímků radaru, 576 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
+  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 1, průměr -37.2 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 1, průměr -18.5 %
-  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -19.4 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -27.5 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   2x, vyhrálo by 0, průměr -90.0 %
@@ -40,4 +40,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   3 obchodů, 2 výher, průměr +6.1 %, celkem +14.50 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), PENGU (105h), ETH (96h), SOL (84h), PEARL (75h), XRP (62h), HYPE (61h), GTA6 (46h), WASTED (43h), BP (42h), SUI (40h), LIT (38h), PUMP (37h), TRUMP (35h), DCTY (35h), VINE (33h), MIHAO (28h), GATO (28h), CHUNKEE (26h)
+  BTC (168h), CATE (168h), PENGU (106h), ETH (96h), SOL (83h), PEARL (75h), XRP (61h), HYPE (60h), GTA6 (46h), WASTED (44h), BP (42h), SUI (40h), LIT (38h), PUMP (37h), TRUMP (35h), DCTY (35h), VINE (34h), GATO (28h), MIHAO (27h), CHUNKEE (27h)
