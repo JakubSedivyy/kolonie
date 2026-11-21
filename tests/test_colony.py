@@ -875,9 +875,14 @@ def test_live_colony_ticks():
     assert mem.wallet.trades[-1]["why"] == "vyřazení z kolonie"
     assert c2.lovec.wallet.status == "DEAD" and "na přání Jakuba" in c2.lovec.wallet.cause_of_death
     assert c2.bar_agents[0].wallet.status == "ALIVE" and c2.stin.wallet.status == "ALIVE"
-    assert sum("odchází na hřbitov" in m for m in out) == 2
+    # 21. 11.: Šeptač, Kapitán a Věštec (0 obchodů) taky na hřbitov
+    assert c2.retired.keys() >= {"Šeptač", "Kapitán", "Věštec"}
+    assert c2.oracle.wallet.status == "DEAD" and "na přání Jakuba" in c2.oracle.wallet.cause_of_death
+    assert all(a.wallet.status == "DEAD" for a in c2.bar_agents if a.name in ("Šeptač", "Kapitán"))
+    n_gone = len(c2.retired)
+    assert sum("odchází na hřbitov" in m for m in out) == n_gone
     c2.retire_bots(now)
-    assert sum("odchází na hřbitov" in m for m in out) == 2      # podruhé už nic
+    assert sum("odchází na hřbitov" in m for m in out) == n_gone      # podruhé už nic
     c2.last_bar = {}
     c2.run_bar_agent(mem, now)
     assert not mem.wallet.lots                                    # mrtvý bot nenakupuje

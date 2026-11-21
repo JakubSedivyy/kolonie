@@ -14,7 +14,7 @@ Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, 
   Jednou denně přidá do `lab.txt` i DLOUHODOBÝ TEST (`colony/longtest.py`): Kompas, Lev, Sokol, Spořič na ~6 letech
   denní historie vs. držení S&P 500. Dlouhodobé boty hodnoť hlavně podle něj (živě obchodují málo).
 - `stav.txt` končí řádkem SROVNÁNÍ S TRHEM (kolonie vs. jen držet S&P 500 a bitcoin od startu).
-- Vyřazení boti: `config.RETIRED` (Memec, Lovec od 16. 11. 2026 na přání Jakuba).
+- Vyřazení boti: `config.RETIRED` (Memec, Lovec od 16. 11. 2026; Šeptač, Kapitán, Věštec od 21. 11. 2026 - vše na přání Jakuba).
 
 ## Pravidla (nikdy neporušit)
 1. **Nikdy nepřepínej na reálné peníze** (`TRADING_MODE=live`, `I_UNDERSTAND_REAL_MONEY`), ani to nenavrhuj

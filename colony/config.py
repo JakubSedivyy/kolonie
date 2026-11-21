@@ -42,6 +42,9 @@ COLONY_KILL_SWITCH = 0.85       # když celá kolonie klesne pod 85 % startu, v�
 RETIRED = {
     "Memec": "vyřazen na přání Jakuba 16. 11. 2026 (dlouhodobě prodělával)",
     "Lovec": "vyřazen na přání Jakuba 16. 11. 2026 (dlouhodobě prodělával)",
+    "Šeptač": "vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod)",
+    "Kapitán": "vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod)",
+    "Věštec": "vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod, neplatný Grok klíč)",
 }
 
 # --- realistické náklady (aby papír nelhal) ----------------------------------------------
