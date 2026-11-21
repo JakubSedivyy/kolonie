@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-21T12:00+00:00",
+ "updated": "2026-11-21T18:00+00:00",
  "train": [
   "2026-08-23",
   "2026-10-22"
@@ -38,11 +38,11 @@
       "last_entry": "11:30"
      },
      "train": {
-      "return": -0.0295,
-      "trades": 28,
-      "win_rate": 0.393,
-      "pf": 0.59,
-      "max_dd": 0.0489
+      "return": -0.0363,
+      "trades": 29,
+      "win_rate": 0.379,
+      "pf": 0.54,
+      "max_dd": 0.0503
      }
     },
     {
@@ -52,10 +52,10 @@
       "last_entry": "14:00"
      },
      "train": {
-      "return": -0.0333,
-      "trades": 97,
-      "win_rate": 0.412,
-      "pf": 0.8,
+      "return": -0.0446,
+      "trades": 99,
+      "win_rate": 0.404,
+      "pf": 0.75,
       "max_dd": 0.0698
      }
     },
@@ -87,7 +87,18 @@
       "max_dd": 0.0596
      }
     }
-   ]
+   ],
+   "multiyear": {
+    "passed": false,
+    "oos_return": -0.2062,
+    "oos_positive": 5,
+    "oos_quarters": 16,
+    "chosen": {
+     "or_bars": 3,
+     "vol_mult": 1.5,
+     "last_entry": "11:30"
+    }
+   }
   },
   "Trendy": {
    "chosen": {
@@ -97,10 +108,10 @@
     "top_n": 3
    },
    "train": {
-    "return": -0.0171,
-    "trades": 57,
-    "win_rate": 0.368,
-    "pf": 0.87,
+    "return": -0.0097,
+    "trades": 56,
+    "win_rate": 0.375,
+    "pf": 0.92,
     "max_dd": 0.069
    },
    "test": {
@@ -135,10 +146,10 @@
       "top_n": 3
      },
      "train": {
-      "return": -0.0171,
-      "trades": 57,
-      "win_rate": 0.368,
-      "pf": 0.87,
+      "return": -0.0097,
+      "trades": 56,
+      "win_rate": 0.375,
+      "pf": 0.92,
       "max_dd": 0.069
      }
     },
@@ -179,24 +190,35 @@
       "top_n": 3
      },
      "train": {
-      "return": -0.1778,
-      "trades": 130,
-      "win_rate": 0.2,
-      "pf": 0.31,
-      "max_dd": 0.1779
+      "return": -0.1754,
+      "trades": 129,
+      "win_rate": 0.202,
+      "pf": 0.32,
+      "max_dd": 0.1754
      }
     }
-   ]
+   ],
+   "multiyear": {
+    "passed": false,
+    "oos_return": -0.5996,
+    "oos_positive": 2,
+    "oos_quarters": 16,
+    "chosen": {
+     "minutes": 60,
+     "mode": "cross",
+     "top_n": 3
+    }
+   }
   },
   "Vlna": {
    "chosen": {
     "atr_mult": 3.5
    },
    "train": {
-    "return": 0.0725,
-    "trades": 52,
-    "win_rate": 0.308,
-    "pf": 1.23,
+    "return": 0.0861,
+    "trades": 51,
+    "win_rate": 0.314,
+    "pf": 1.28,
     "max_dd": 0.1536
    },
    "test": {
@@ -213,10 +235,10 @@
       "atr_mult": 3.0
      },
      "train": {
-      "return": 0.0134,
-      "trades": 56,
-      "win_rate": 0.304,
-      "pf": 1.04,
+      "return": 0.0257,
+      "trades": 55,
+      "win_rate": 0.309,
+      "pf": 1.07,
       "max_dd": 0.1885
      }
     },
@@ -225,10 +247,10 @@
       "atr_mult": 2.5
      },
      "train": {
-      "return": 0.0383,
-      "trades": 56,
-      "win_rate": 0.304,
-      "pf": 1.1,
+      "return": 0.0502,
+      "trades": 55,
+      "win_rate": 0.309,
+      "pf": 1.14,
       "max_dd": 0.182
      }
     },
@@ -237,32 +259,41 @@
       "atr_mult": 3.5
      },
      "train": {
-      "return": 0.0725,
-      "trades": 52,
-      "win_rate": 0.308,
-      "pf": 1.23,
+      "return": 0.0861,
+      "trades": 51,
+      "win_rate": 0.314,
+      "pf": 1.28,
       "max_dd": 0.1536
      }
     }
-   ]
+   ],
+   "multiyear": {
+    "passed": false,
+    "oos_return": -0.9026,
+    "oos_positive": 5,
+    "oos_quarters": 16,
+    "chosen": {
+     "atr_mult": 3.5
+    }
+   }
   },
   "Medv\u011bd": {
    "chosen": {
-    "atr_mult": 1.5
+    "atr_mult": 2.0
    },
    "train": {
-    "return": -0.0209,
-    "trades": 76,
-    "win_rate": 0.303,
-    "pf": 0.89,
-    "max_dd": 0.0481
+    "return": 0.0051,
+    "trades": 67,
+    "win_rate": 0.343,
+    "pf": 1.03,
+    "max_dd": 0.0543
    },
    "test": {
-    "return": 0.2186,
-    "trades": 38,
-    "win_rate": 0.5,
-    "pf": 4.86,
-    "max_dd": 0.0246
+    "return": 0.1369,
+    "trades": 35,
+    "win_rate": 0.457,
+    "pf": 2.99,
+    "max_dd": 0.0465
    },
    "benched": true,
    "variants": [
@@ -271,10 +302,10 @@
       "atr_mult": 1.5
      },
      "train": {
-      "return": -0.0209,
-      "trades": 76,
-      "win_rate": 0.303,
-      "pf": 0.89,
+      "return": -0.0047,
+      "trades": 75,
+      "win_rate": 0.347,
+      "pf": 0.98,
       "max_dd": 0.0481
      }
     },
@@ -283,10 +314,10 @@
       "atr_mult": 2.0
      },
      "train": {
-      "return": -0.0217,
-      "trades": 70,
-      "win_rate": 0.3,
-      "pf": 0.88,
+      "return": 0.0051,
+      "trades": 67,
+      "win_rate": 0.343,
+      "pf": 1.03,
       "max_dd": 0.0543
      }
     },
@@ -295,14 +326,23 @@
       "atr_mult": 3.0
      },
      "train": {
-      "return": -0.0474,
-      "trades": 69,
-      "win_rate": 0.275,
-      "pf": 0.75,
+      "return": -0.027,
+      "trades": 66,
+      "win_rate": 0.318,
+      "pf": 0.86,
       "max_dd": 0.0574
      }
     }
-   ]
+   ],
+   "multiyear": {
+    "passed": false,
+    "oos_return": -0.4905,
+    "oos_positive": 3,
+    "oos_quarters": 16,
+    "chosen": {
+     "atr_mult": 2.0
+    }
+   }
   }
  }
 }
