@@ -55,22 +55,19 @@ Degen II [ALIVE] $996.39 (-0.36 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1096.84 (+9.68 %) | obchodů 53, úspěšnost 53 %, PF 1.73, max propad 7.2 %, poplatky $14.96
+Stín [ALIVE] $1096.58 (+9.66 %) | obchodů 53, úspěšnost 53 %, PF 1.73, max propad 7.2 %, poplatky $15.1
+   SHORT BAT/USD: prodáno za 0.079048, teď 0.0790875 (-0.1 %) - sestupný trend, -2.8 % za 24 h · paměť: podobné obchody +0.9 % -> sázk
    2026-11-21T07:00 GRT/USD: -7.13 $ (-3.0 %) stop-loss
    2026-11-21T07:00 YFI/USD: +2.42 $ (+0.7 %) trailing stop
    2026-11-21T14:00 AAVE/USD: -10.39 $ (-7.3 %) stop-loss
    2026-11-21T14:00 ADA/USD: -8.80 $ (-3.8 %) stop-loss
    2026-11-21T15:00 AVAX/USD: -11.89 $ (-8.5 %) stop-loss
 
-CELKEM (živí boti) $9918.82 z $10000 (-0.81 %)
+CELKEM (živí boti) $9918.56 z $10000 (-0.81 %)
 HŘBITOV: Memec ($993, 39 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
 SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -23.4 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-21T08:01:17+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $141 @ 94.7794, stop 102.349 - sestupný trend, -8.6 % za 24 h
-   2026-11-21T08:01:18+00:00 🐻 Stín (simulace) otevřel short ADA/USD za $233 @ 0.13842, stop 0.145441 - sestupný trend, -7.6 % za 24 h
-   2026-11-21T08:01:18+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $139 @ 6.26544, stop 6.83541 - sestupný trend, -9.3 % za 24 h
-   2026-11-21T12:20:10+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
    2026-11-21T12:20:10+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
    2026-11-21T12:20:21+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
@@ -83,5 +80,10 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-21T14:20:25+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
    2026-11-21T15:00:57+00:00 🔻 Stín (simulace) uzavřel short AVAX/USD: -11.89 $ (-8.5 %) - stop-loss
    2026-11-21T15:20:18+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-21T16:38:23+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
+   2026-11-21T16:38:23+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-11-21T16:38:25+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
+   2026-11-21T17:00:52+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $235 @ 0.0790875, stop 0.08312 - sestupný trend, -2.8 % za 24 h · paměť: podobné obchody +0
 
-VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-21T18:20 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-21T22:38 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
