@@ -64,10 +64,9 @@ Stín [ALIVE] $1096.84 (+9.68 %) | obchodů 53, úspěšnost 53 %, PF 1.73, max 
 
 CELKEM (živí boti) $9918.82 z $10000 (-0.81 %)
 HŘBITOV: Memec ($993, 39 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -23.2 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -23.4 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-21T07:01:11+00:00 ✅ Stín (simulace) uzavřel short YFI/USD: +2.42 $ (+0.7 %) - trailing stop
    2026-11-21T08:01:17+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $141 @ 94.7794, stop 102.349 - sestupný trend, -8.6 % za 24 h
    2026-11-21T08:01:18+00:00 🐻 Stín (simulace) otevřel short ADA/USD za $233 @ 0.13842, stop 0.145441 - sestupný trend, -7.6 % za 24 h
    2026-11-21T08:01:18+00:00 🐻 Stín (simulace) otevřel short AVAX/USD za $139 @ 6.26544, stop 6.83541 - sestupný trend, -9.3 % za 24 h
@@ -83,5 +82,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-21T14:00:56+00:00 🔻 Stín (simulace) uzavřel short ADA/USD: -8.80 $ (-3.8 %) - stop-loss
    2026-11-21T14:20:25+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
    2026-11-21T15:00:57+00:00 🔻 Stín (simulace) uzavřel short AVAX/USD: -11.89 $ (-8.5 %) - stop-loss
+   2026-11-21T15:20:18+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
 
 VĚŠTEC: zatím žádné odhady - Grok odmítl klíč, pauza do 2026-11-21T18:20 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
