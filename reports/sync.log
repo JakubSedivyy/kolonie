@@ -1,7 +1,3 @@
-Please make sure you have the correct access rights
-and the repository exists.
-2026-11-05T16:01:31Z push reportu selhal
-2026-11-08T07:06:33Z nasazena verze de2e7f7: Memec: nákupy jen s doporučením laboratoře, shorty dál
 
 [notice] A new release of pip is available: 26.2.2 -> 26.3
 [notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
@@ -58,3 +54,7 @@ and the repository exists.
 [notice] A new release of pip is available: 26.2.2 -> 26.3
 [notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
 2026-11-21T16:38:23Z nasazena verze 8fcef73: Víceletý test: Orbit, Trendy, Vlna a Medvěd na ~5 letech po čtvrtletích
+
+[notice] A new release of pip is available: 26.2.2 -> 26.3
+[notice] To update, run: /root/colony/.venv/bin/python3 -m pip install --upgrade pip
+2026-11-22T07:07:51Z nasazena verze 3c397bf: Hlášení: po vyřazení Věštce ukazuje stav Groka pod radarem trendů
