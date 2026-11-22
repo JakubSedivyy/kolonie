@@ -45,7 +45,7 @@ Stín [ALIVE] $1079.20 (+7.92 %) | obchodů 56, úspěšnost 50 %, PF 1.53, max 
 
 CELKEM (živí boti) $6927.69 z $7000 (-1.03 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.2 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.1 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-22T07:07:53+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
