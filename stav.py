@@ -56,7 +56,9 @@ def main():
             print("  ", " ".join(str(x) for x in e)[:160])
     est = (st.get("oracle") or {}).get("estimates") or []
     g = st.get("grok")
-    if est:
+    retired_oracle = "Věštec" in config.RETIRED     # Věštec je na hřbitově, Groka dál používá jen radar trendů
+    label = "GROK (radar trendů)" if retired_oracle else "VĚŠTEC"
+    if est and not retired_oracle:
         print(f"\nVĚŠTEC: {len(est)} odhadů z posledního skenu")
     elif g is not None:                              # proč Věštec nic nedělá
         if not g.get("enabled"):
@@ -67,7 +69,7 @@ def main():
             why = f"poslední chyba Groka: {g['last_error'][:120]}"
         else:
             why = f"Grok funguje (dnes {g.get('calls', 0)} dotazů, ${g.get('spent', 0)} z ${g.get('budget', 0)}), zatím bez odhadů"
-        print(f"\nVĚŠTEC: zatím žádné odhady - {why}")
+        print(f"\n{label}: {why}" if retired_oracle else f"\nVĚŠTEC: zatím žádné odhady - {why}")
 
 
 if __name__ == "__main__":

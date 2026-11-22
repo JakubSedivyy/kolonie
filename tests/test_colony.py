@@ -1305,6 +1305,30 @@ def test_stav_shows_grok_status():
             open(path, "w").write(old)
 
 
+def test_stav_grok_line_after_oracle_retired():
+    """22. 11.: Věštec je na hřbitově, hlášení už nemá tvrdit, že Věštec čeká na odhady.
+    Grok ale dál slouží radaru trendů, takže chyba klíče se má ukázat pod jménem radaru."""
+    import io, contextlib, stav
+    st = {"started": "2026-11-02T00:00", "wallets": {}, "events": [],
+          "oracle": {"estimates": []},
+          "grok": {"enabled": True, "last_error": "HTTP 400", "paused_until": "2026-11-22T06:41"}}
+    path = os.path.join(config.STATE_DIR, "colony.json")
+    old = open(path).read() if os.path.exists(path) else None
+    json.dump(st, open(path, "w"))
+    try:
+        assert "Věštec" in config.RETIRED
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            stav.main()
+        out = buf.getvalue()
+        assert "VĚŠTEC" not in out and "GROK (radar trendů): Grok odmítl klíč" in out, out
+    finally:
+        if old is None:
+            os.remove(path)
+        else:
+            open(path, "w").write(old)
+
+
 def test_lab_verdict_says_where_it_failed():
     from lab import lab_verdict
     assert lab_verdict(0.05, 0.02) == (True, "NASAZEN ✅")
