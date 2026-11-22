@@ -18,7 +18,8 @@ Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, 
   postup v `state/multiyear.json`), přepočet 1× týdně. Prošel -> lab.json dostane nejodolnější nastavení; neprošel -> varování.
   Výsledek na konci `lab.txt`.
 - `stav.txt` končí řádkem SROVNÁNÍ S TRHEM (kolonie vs. jen držet S&P 500 a bitcoin od startu).
-- Vyřazení boti: `config.RETIRED` (Memec, Lovec od 16. 11. 2026; Šeptač, Kapitán, Věštec od 21. 11. 2026 - vše na přání Jakuba).
+- Vyřazení boti: `config.RETIRED` (Memec, Lovec od 16. 11. 2026; Šeptač, Kapitán, Věštec od 21. 11. 2026; Orbit, Trendy, Vlna, Medvěd
+  od 22. 11. 2026 po pětiletém testu - vše na přání Jakuba). Laboratoř vyřazené boty neladí (`lab.active_variants()`).
 
 ## Pravidla (nikdy neporušit)
 1. **Nikdy nepřepínej na reálné peníze** (`TRADING_MODE=live`, `I_UNDERSTAND_REAL_MONEY`), ani to nenavrhuj

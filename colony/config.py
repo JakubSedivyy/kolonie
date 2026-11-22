@@ -45,6 +45,10 @@ RETIRED = {
     "Šeptač": "vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod)",
     "Kapitán": "vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod)",
     "Věštec": "vyřazen na přání Jakuba 21. 11. 2026 (za 19 dní ani jeden obchod, neplatný Grok klíč)",
+    "Orbit": "vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -21 %, v plusu 5/16 čtvrtletí)",
+    "Trendy": "vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -60 %, v plusu 2/16 čtvrtletí)",
+    "Vlna": "vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -90 %, v plusu 5/16 čtvrtletí)",
+    "Medvěd": "vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -49 %, v plusu 3/16 čtvrtletí)",
 }
 
 # --- realistické náklady (aby papír nelhal) ----------------------------------------------

@@ -874,7 +874,12 @@ def test_live_colony_ticks():
     assert mem.wallet.status == "DEAD" and not mem.wallet.lots, mem.wallet.lots
     assert mem.wallet.trades[-1]["why"] == "vyřazení z kolonie"
     assert c2.lovec.wallet.status == "DEAD" and "na přání Jakuba" in c2.lovec.wallet.cause_of_death
-    assert c2.bar_agents[0].wallet.status == "ALIVE" and c2.stin.wallet.status == "ALIVE"
+    alive = [a for a in c2.bar_agents if a.name not in config.RETIRED]
+    assert alive and all(a.wallet.status == "ALIVE" for a in alive) and c2.stin.wallet.status == "ALIVE"
+    # 22. 11.: Orbit, Trendy, Vlna a Medvěd neprošli pětiletým testem -> na hřbitov, laboratoř je neladí
+    import lab
+    assert all(a.wallet.status == "DEAD" for a in c2.bar_agents if a.name in ("Orbit", "Trendy", "Vlna", "Medvěd"))
+    assert not lab.active_variants()
     # 21. 11.: Šeptač, Kapitán a Věštec (0 obchodů) taky na hřbitov
     assert c2.retired.keys() >= {"Šeptač", "Kapitán", "Věštec"}
     assert c2.oracle.wallet.status == "DEAD" and "na přání Jakuba" in c2.oracle.wallet.cause_of_death
@@ -1453,14 +1458,14 @@ def test_lab_multi_year_runs_real_bot_on_fake_history():
 
     old_v, old_dir, old_years = lab.VARIANTS, config.STATE_DIR, my.YEARS
     try:
-        lab.VARIANTS = {"Vlna": (WaveAgent, [{"atr_mult": 3.0}, {"atr_mult": 2.5}])}
+        lab.VARIANTS = {"Zkouška": (WaveAgent, [{"atr_mult": 3.0}, {"atr_mult": 2.5}])}   # kód Vlny, nevyřazené jméno
         config.STATE_DIR = tempfile.mkdtemp()
         my.YEARS = 0.5                                             # 2 čtvrtletí, ať test netrvá dlouho
         st = lab.multi_year(FakeData(), ["BTC/USD", "ETH/USD", "SOL/USD"], [], budget_s=600)
         assert st and st.get("finished") and not st.get("errors"), st.get("errors")
-        rows = st["results"]["Vlna"]
+        rows = st["results"]["Zkouška"]
         assert len(rows) == 2 and all(r is not None and "return" in r for row in rows.values() for r in row)
-        assert "Vlna" in st["summary"] and my.report_lines(st)[1].startswith("Vlna")
+        assert "Zkouška" in st["summary"] and my.report_lines(st)[1].startswith("Zkouška")
     finally:
         lab.VARIANTS, config.STATE_DIR, my.YEARS = old_v, old_dir, old_years
 

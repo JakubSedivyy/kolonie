@@ -54,6 +54,11 @@ VARIANTS = {
 MIN_TRADES = 8
 
 
+def active_variants() -> dict:
+    """Vyřazené boty (config.RETIRED) laboratoř neladí - šetří server."""
+    return {n: v for n, v in VARIANTS.items() if n not in config.RETIRED}
+
+
 def score(w):
     s = w.stats()
     return {"return": round(s["return"], 4), "trades": s["trades"], "win_rate": round(s["win_rate"], 3),
@@ -124,8 +129,11 @@ def multi_year(data_api, majors, memes, budget_s):
         r = score(run(cls, params, data, s, e))
         return {"return": float(r["return"]), "trades": int(r["trades"])}   # numpy čísla JSON neumí
 
+    variants = active_variants()
+    if not variants:                                   # všichni vyřazeni -> jen poslední výsledek, nic nepočítat
+        return multiyear._load(os.path.join(config.STATE_DIR, "multiyear.json"))
     try:
-        return multiyear.step(VARIANTS, fetch, run_one, config.STATE_DIR, budget_s=budget_s)
+        return multiyear.step(variants, fetch, run_one, config.STATE_DIR, budget_s=budget_s)
     except Exception as e:
         print(f"VÍCELETÝ TEST selhal: {e}", flush=True)
         return None
@@ -158,7 +166,7 @@ def main():
     cache = {}
     lines = [f"LABORATOŘ {end:%Y-%m-%d}: trénink {out['train'][0]}..{out['train'][1]}, test {out['test'][0]}..{out['test'][1]}"]
 
-    for name, (cls, variants) in VARIANTS.items():
+    for name, (cls, variants) in active_variants().items():
         if a.only and name != a.only:
             continue
         rows = []
