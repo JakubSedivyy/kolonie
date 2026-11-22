@@ -45,11 +45,9 @@ Stín [ALIVE] $1079.20 (+7.92 %) | obchodů 56, úspěšnost 50 %, PF 1.53, max 
 
 CELKEM (živí boti) $6927.69 z $7000 (-1.03 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.6 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.1 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-22T07:07:51+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
    2026-11-22T07:07:53+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-22T10:00:40+00:00 🔻 Stín (simulace) uzavřel short WIF/USD: -5.43 $ (-1.9 %) - stop-loss
    2026-11-22T10:07:52+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
@@ -66,5 +64,7 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-22T16:16:39+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
    2026-11-22T16:16:39+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-11-22T21:15:09+00:00 📊 Denní souhrn 22.11. · nálada trhu: neutral
+💀 Orbit: $1000.91 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33 · ✝ vyřazen na přání Jaku
 
 GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-22T22:16 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
