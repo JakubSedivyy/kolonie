@@ -64,7 +64,7 @@ Stín [ALIVE] $1079.20 (+7.92 %) | obchodů 56, úspěšnost 50 %, PF 1.53, max 
 
 CELKEM (živí boti) $9900.73 z $10000 (-0.99 %)
 HŘBITOV: Memec ($993, 39 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.4 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.2 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-21T16:38:25+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
@@ -87,4 +87,4 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-22T12:00:41+00:00 🔻 Stín (simulace) uzavřel short BAT/USD: -1.98 $ (-0.8 %) - stop-loss
    2026-11-22T12:00:41+00:00 🔻 Stín (simulace) uzavřel short DOT/USD: -10.18 $ (-3.4 %) - stop-loss
 
-GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-22T13:08 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-22T21:10 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
