@@ -5,6 +5,7 @@ nakupuje a prodává za ranní cenu (open), stopy hlídá podle denního minima.
 držením S&P 500 (SPY) - když bot nevydělá víc než index nebo nemá menší propady, nemá smysl.
 """
 from __future__ import annotations
+import logging
 from datetime import datetime, timezone
 
 import numpy as np
@@ -12,6 +13,8 @@ import pandas as pd
 
 from .agents.base import Executor
 from .broker import SimBroker
+
+log = logging.getLogger("colony.longtest")
 
 
 def simulate(agent, data: dict, start: pd.Timestamp, end: pd.Timestamp | None = None):
@@ -114,9 +117,15 @@ def run(data_api, agents, years: int = 6) -> tuple[list[str], dict]:
     """Stáhne denní historii (očištěnou o dividendy a splity) a přehraje všechny dlouhodobé boty."""
     end = datetime.now(timezone.utc)
     first = end - pd.Timedelta(days=int(365.25 * years))
-    syms = sorted({s for a in agents for s in a.universe({})} | {"SPY"})
+    syms = sorted({s for a in agents if not a.crypto for s in a.universe({})} | {"SPY"})
     data = data_api.bars(syms, 1440, first, end)
-    have = [df.index[0] for df in data.values() if len(df)]
+    csyms = sorted({s for a in agents if a.crypto for s in a.universe({})})
+    if csyms:                                         # krypto (Želva) + bitcoin jako srovnání
+        try:
+            data.update(data_api.bars(sorted(set(csyms) | {"BTC/USD"}), 1440, first, end, crypto=True))
+        except Exception as e:
+            log.warning("dlouhodobý test - krypto data: %s", e)
+    have = [df.index[0] for s, df in data.items() if len(df) and "/" not in s]   # začátek podle akcií
     if not have:
         return ["DLOUHODOBÝ TEST: žádná data"], {}
     base = sorted(have)[len(have) * 3 // 4]          # od kdy má data většina symbolů
@@ -131,5 +140,8 @@ def run(data_api, agents, years: int = 6) -> tuple[list[str], dict]:
     if "SPY" in data:
         bench["S&P 500"] = metrics(buy_hold(data["SPY"], start))
         out["S&P 500"] = bench["S&P 500"]
+    if "BTC/USD" in data and len(data["BTC/USD"]) and data["BTC/USD"].index[0] <= start:
+        bench["Bitcoin"] = metrics(buy_hold(data["BTC/USD"], start))
+        out["Bitcoin"] = bench["Bitcoin"]
     last = max(df.index[-1] for df in data.values() if len(df))
     return report(results, bench, start, last), out

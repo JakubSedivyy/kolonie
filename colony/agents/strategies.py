@@ -730,6 +730,64 @@ class LeaderAgent(DailyAgent):
         return None
 
 
+class LeaderBroadAgent(LeaderAgent):
+    """LEV (poctivý test) - stejná pravidla jako Lev, ale vybírá z 50 největších firem USA podle stavu
+    na KONCI ROKU 2021 (včetně těch, kterým se pak nedařilo: Intel, PayPal, Disney, Nike, Pfizer...).
+    Lev s dnešními hvězdami v testu "ví", kdo bude za 5 let velký - tohle zkreslení odstraňuje.
+    Jen pro dlouhodobý test, živě neobchoduje."""
+    name = "Lev-50"
+    stocks = ["AAPL", "MSFT", "GOOGL", "AMZN", "TSLA", "META", "NVDA", "UNH", "JNJ", "JPM",
+              "V", "PG", "HD", "MA", "BAC", "DIS", "PFE", "XOM", "ADBE", "CSCO",
+              "NFLX", "KO", "PEP", "TMO", "ABT", "AVGO", "CMCSA", "CRM", "COST", "INTC",
+              "VZ", "WMT", "MRK", "ABBV", "ACN", "NKE", "LLY", "T", "DHR", "MCD",
+              "QCOM", "TXN", "WFC", "PYPL", "NEE", "LIN", "ORCL", "UPS", "INTU", "AMD"]
+
+
+class TortoiseAgent(DailyAgent):
+    """ŽELVA - pomalý trend na bitcoinu a etheru (rozhoduje jednou týdně).
+    Každou neděli po zavření dne se podívá: je cena nad průměrem posledních 20 týdnů (140 dní)
+    a ten průměr roste? Pak coin drží, jinak je v hotovosti. Obchoduje se v pondělí ráno.
+    Žádné předpovídání - jen "drž, když roste, uteč, když padá". Málo obchodů = málo poplatků.
+    Nouzový stop -30 % (krypto je divoké). Zatím jen v dlouhodobém testu; živě až když projde."""
+    name = "Želva"
+    asset_class = "crypto"
+    crypto = True
+    coins = ["BTC/USD", "ETH/USD"]
+    max_positions = 2
+    slot_frac = 0.48
+    sma_days = 140
+    stop_pct = 0.30
+
+    def universe(self, ctx):
+        return list(self.coins)
+
+    def prepare(self, df):
+        df = df.copy()
+        df["sma"] = self.sma(df["close"], self.sma_days)
+        df["sma_up"] = df["sma"] > df["sma"].shift(7)
+        return df
+
+    @staticmethod
+    def decision_day(ts) -> bool:
+        return pd.Timestamp(ts).weekday() == 6         # nedělní svíčka -> obchod v pondělí ráno
+
+    def trend_up(self, r) -> bool:
+        return not np.isnan(r["sma"]) and r["close"] > r["sma"] and bool(r["sma_up"])
+
+    def entry(self, df, i, ctx):
+        r = df.iloc[i]
+        if not self.decision_day(df.index[i]) or not self.trend_up(r):
+            return None
+        return Entry(stop=r["close"] * (1 - self.stop_pct),
+                     reason=f"týdenní trend nahoru (nad 20týdenním průměrem {r['sma']:.0f}, průměr roste)")
+
+    def exit_signal(self, df, i, lot):
+        r = df.iloc[i]
+        if self.decision_day(df.index[i]) and not self.trend_up(r):
+            return "týdenní trend skončil (pod 20týdenním průměrem nebo průměr klesá)"
+        return None
+
+
 class DipAgent(DailyAgent):
     """SOKOL - nákup krátkých poklesů indexů v dlouhodobém růstu (známá strategie "RSI 2").
     Hlídá S&P 500 (IVV), Nasdaq 100 (QQQM), Dow Jones (DIA) a malé firmy (IWM).

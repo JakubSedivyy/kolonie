@@ -18,7 +18,8 @@ import logging
 import os
 from datetime import datetime, timedelta, timezone
 
-from colony import config, multiyear
+from colony import config, multiyear, shadowtest
+from colony.agents.shadow import ShadowAgent
 from colony.agents.base import Executor
 from colony.agents.strategies import OrbitAgent, TrendAgent, WaveAgent, BearAgent
 from colony.broker import SimBroker
@@ -52,6 +53,13 @@ VARIANTS = {
     ]),
 }
 MIN_TRADES = 8
+
+
+# Boti, kteří jdou jen do víceletého testu (90denní laboratoř je neladí): Stín - jediný krátkodobý
+# bot v plusu (listopad 2026) - je to štěstí v propadu, nebo to funguje i jindy?
+MULTIYEAR_ONLY = {
+    "Stín": (ShadowAgent, [{"atr_mult": 2.5}, {"atr_mult": 2.0}, {"atr_mult": 3.0, "max_hold_h": 48}]),
+}
 
 
 def active_variants() -> dict:
@@ -97,13 +105,17 @@ def lab_verdict(train_ret: float, test_ret: float):
 def long_test(data_api) -> list[str]:
     """Dlouhodobí boti na ~6 letech denní historie - jednou denně (laboratoř běží každých 6 h)."""
     from colony.longtest import run as long_run
-    from colony.agents.strategies import RotationAgent, LeaderAgent, DipAgent, SaverAgent
+    from colony.agents.strategies import (RotationAgent, LeaderAgent, DipAgent, SaverAgent,
+                                          LeaderBroadAgent, TortoiseAgent)
     txt = os.path.join(config.STATE_DIR, "longtest.txt")
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    agents = [RotationAgent(), LeaderAgent(), LeaderBroadAgent(), DipAgent(), SaverAgent(), TortoiseAgent()]
     if os.path.exists(txt) and datetime.fromtimestamp(os.path.getmtime(txt), timezone.utc).strftime("%Y-%m-%d") == today:
-        return open(txt).read().splitlines()
+        cached = open(txt).read()
+        if all(a.name in cached for a in agents):      # nový bot v testu -> přepočítat hned, ne až zítra
+            return cached.splitlines()
     try:
-        lines, out = long_run(data_api, [RotationAgent(), LeaderAgent(), DipAgent(), SaverAgent()])
+        lines, out = long_run(data_api, agents)
         json.dump(out, open(os.path.join(config.STATE_DIR, "longtest.json"), "w"), indent=1, default=str)
     except Exception as e:
         lines = [f"DLOUHODOBÝ TEST selhal: {e}"]
@@ -115,6 +127,15 @@ def long_test(data_api) -> list[str]:
 def multi_year(data_api, majors, memes, budget_s):
     """Víceletý test (colony/multiyear.py): data po čtvrtletích, postup se ukládá, pokračuje příště."""
     def fetch(cls, params, s, e, cache):
+        if cls is ShadowAgent:                          # Stín: hodinové krypto + S&P 500 na náladu trhu
+            if "shadow" not in cache:
+                syms = list(dict.fromkeys(list(majors) + list(memes)))
+                frames = data_api.bars(syms, 60, s - timedelta(days=20), e, crypto=True)
+                if not any(len(df[df.index >= s]) for df in frames.values() if df is not None):
+                    raise ValueError("žádná data")
+                spy = data_api.bars(["SPY"], 1440, s - timedelta(days=45), e).get("SPY")
+                cache["shadow"] = {"frames": frames, "spy": spy, "universe": syms}
+            return cache["shadow"]
         proto = cls().apply(params)
         syms = universe_for(cls, params, majors, memes)
         key = (proto.minutes, proto.crypto, tuple(sorted(syms)))
@@ -126,10 +147,16 @@ def multi_year(data_api, majors, memes, budget_s):
         return cache[key]
 
     def run_one(cls, params, data, s, e):
+        if cls is ShadowAgent:
+            ag = ShadowAgent(None)
+            for k, v in params.items():
+                setattr(ag, k, v)
+            r = score(shadowtest.simulate(ag, data["frames"], data["spy"], s, e, data["universe"]))
+            return {"return": float(r["return"]), "trades": int(r["trades"])}
         r = score(run(cls, params, data, s, e))
         return {"return": float(r["return"]), "trades": int(r["trades"])}   # numpy čísla JSON neumí
 
-    variants = active_variants()
+    variants = {**active_variants(), **MULTIYEAR_ONLY}
     if not variants:                                   # všichni vyřazeni -> jen poslední výsledek, nic nepočítat
         return multiyear._load(os.path.join(config.STATE_DIR, "multiyear.json"))
     try:

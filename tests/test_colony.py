@@ -16,7 +16,7 @@ from colony import config, survival
 config.TELEGRAM_TOKEN = config.TELEGRAM_CHAT_ID = ""     # testy nikdy nepíšou na skutečný Telegram
 from colony.wallet import Wallet
 from colony.agents.base import Executor, Entry
-from colony.agents.strategies import (OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent,
+from colony.agents.strategies import (LeaderBroadAgent, TortoiseAgent, OrbitAgent, TrendAgent, MemeAgent, WaveAgent, WhisperAgent, BearAgent, CaptainAgent,
                                      RotationAgent, LeaderAgent, DipAgent, SaverAgent)
 from colony.agents.shadow import ShadowAgent, mirror
 from colony.agents.degen import DegenAgent, HunterAgent
@@ -1459,6 +1459,7 @@ def test_lab_multi_year_runs_real_bot_on_fake_history():
     old_v, old_dir, old_years = lab.VARIANTS, config.STATE_DIR, my.YEARS
     try:
         lab.VARIANTS = {"Zkouška": (WaveAgent, [{"atr_mult": 3.0}, {"atr_mult": 2.5}])}   # kód Vlny, nevyřazené jméno
+        old_only, lab.MULTIYEAR_ONLY = lab.MULTIYEAR_ONLY, {}                               # Stín má vlastní test
         config.STATE_DIR = tempfile.mkdtemp()
         my.YEARS = 0.5                                             # 2 čtvrtletí, ať test netrvá dlouho
         st = lab.multi_year(FakeData(), ["BTC/USD", "ETH/USD", "SOL/USD"], [], budget_s=600)
@@ -1468,6 +1469,98 @@ def test_lab_multi_year_runs_real_bot_on_fake_history():
         assert "Zkouška" in st["summary"] and my.report_lines(st)[1].startswith("Zkouška")
     finally:
         lab.VARIANTS, config.STATE_DIR, my.YEARS = old_v, old_dir, old_years
+        lab.MULTIYEAR_ONLY = old_only
+
+
+def test_tortoise_weekly_trend_few_trades():
+    """22. 11.: Želva - pomalý trend na BTC/ETH. Rozhoduje jen v neděli, drží když cena i 20týdenní
+    průměr rostou, při poklesu prodá. Málo obchodů (poplatky na kryptu ~0,6 % za obchod)."""
+    from colony.longtest import simulate
+    n = 700
+    t = np.r_[0.004 * np.ones(400), -0.004 * np.ones(n - 400)]      # rok a kus růst, pak pád
+    c = 100 * np.exp(np.cumsum(t + np.random.default_rng(1).normal(0, 0.01, n)))
+    idx = pd.date_range("2024-01-01", periods=n, freq="1D", tz="UTC")
+    df = pd.DataFrame({"open": np.r_[c[0], c[:-1]], "close": c}, index=idx)
+    df["high"], df["low"], df["volume"] = df[["open", "close"]].max(axis=1) * 1.01, df[["open", "close"]].min(axis=1) * 0.99, 1.0
+    z = TortoiseAgent()
+    assert z.crypto and z.asset_class == "crypto" and z.universe({}) == ["BTC/USD", "ETH/USD"]
+    w, curve = simulate(z, {"BTC/USD": df}, idx[200])
+    assert w.trades and len(w.trades) <= 6, len(w.trades)               # pár obchodů, ne stovky
+    assert all(pd.Timestamp(t["opened"]).weekday() == 0 for t in w.trades)   # nákup v pondělí ráno
+    assert not w.lots and w.trades[-1]["why"].startswith("týdenní trend skončil")
+    assert w.equity() > 1000 and w.fees_paid > 0                         # chytil růst, utekl z pádu
+    lev = LeaderBroadAgent()
+    assert lev.name == "Lev-50" and len(set(lev.universe({}))) == 50 and {"INTC", "PYPL", "DIS"} <= set(lev.universe({}))
+
+
+def test_longtest_includes_crypto_bot_and_bitcoin():
+    from colony.longtest import run as long_run
+    asked = []
+
+    class D:
+        def bars(self, syms, minutes, start, end=None, crypto=False):
+            asked.append((tuple(syms), crypto))
+            return {s: daily(n=900, drift=0.0004 * (i % 3), seed=i, vol=0.01) for i, s in enumerate(syms)}
+    lines, out = long_run(D(), [RotationAgent(), LeaderBroadAgent(), TortoiseAgent()])
+    assert {"Kompas", "Lev-50", "Želva", "S&P 500", "Bitcoin"} <= set(out), set(out)
+    assert any(c and "BTC/USD" in s for s, c in asked) and not any(c and "SPY" in s for s, c in asked)
+    assert any(l.startswith("Želva") for l in lines) and any(l.startswith("Bitcoin") for l in lines)
+
+
+def test_shadow_history_replay_no_lookahead():
+    """Stín se přehrává stejným kódem jako živě, hodinu po hodině, bez pohledu do budoucna."""
+    from colony import shadowtest
+    idx = pd.date_range("2025-01-01", periods=24 * 40, freq="60min", tz="UTC")
+    rng = np.random.default_rng(3)
+    frames = {}
+    for k, sym in enumerate(["BTC/USD", "ETH/USD", "SOL/USD"]):
+        c = 100 * np.exp(np.cumsum(-0.0015 + rng.normal(0, 0.006, len(idx))))      # vytrvalý pád
+        df = pd.DataFrame({"open": np.r_[c[0], c[:-1]], "close": c}, index=idx)
+        df["high"], df["low"], df["volume"] = df[["open", "close"]].max(axis=1) * 1.002, df[["open", "close"]].min(axis=1) * 0.998, 1.0
+        frames[sym] = df
+    hd = shadowtest.HistData(frames)
+    hd.now = idx[100]
+    got = hd.bars(["BTC/USD"], 60, idx[0])["BTC/USD"]
+    assert got.index[-1] < idx[100]                                         # nic z budoucnosti
+    mood = shadowtest.mood_series(frames["BTC/USD"], None)
+    assert mood(idx[500].to_pydatetime()) in ("risk_off", "neutral")
+    w = shadowtest.simulate(ShadowAgent(None), frames, None, idx[24 * 3], idx[-1])
+    assert w.trades and w.equity() > 1000, (len(w.trades), w.equity())     # v pádu short vydělává
+    assert all(t["closed"] <= idx[-1].isoformat() for t in w.trades)
+    up = {s: df.assign(open=df["open"].values[::-1], close=df["close"].values[::-1],
+                       high=df["high"].values[::-1], low=df["low"].values[::-1]) for s, df in frames.items()}
+    w2 = shadowtest.simulate(ShadowAgent(None), up, None, idx[24 * 3], idx[-1])
+    assert len(w2.trades) < len(w.trades)                                   # v růstu skoro neshortuje
+
+
+def test_lab_multi_year_includes_shadow():
+    import lab
+    from colony import multiyear as my
+
+    class FakeData:
+        def bars(self, syms, minutes, start, end=None, crypto=False):
+            idx = pd.date_range(start, end, freq=f"{minutes}min", tz="UTC")[:-1]
+            out = {}
+            for k, sym in enumerate(syms[:3]):
+                rng = np.random.default_rng(k)
+                c = 100 * np.exp(np.cumsum(rng.normal(-0.0003, 0.008, len(idx))))
+                df = pd.DataFrame({"open": np.r_[c[0], c[:-1]], "close": c}, index=idx)
+                df["high"], df["low"] = df[["open", "close"]].max(axis=1) * 1.003, df[["open", "close"]].min(axis=1) * 0.997
+                df["volume"] = 1000.0
+                out[sym] = df
+            return out
+
+    old_v, old_dir, old_years, old_only = lab.VARIANTS, config.STATE_DIR, my.YEARS, lab.MULTIYEAR_ONLY
+    try:
+        lab.VARIANTS = {}
+        lab.MULTIYEAR_ONLY = {"Stín": (ShadowAgent, [{"atr_mult": 2.5}])}
+        config.STATE_DIR = tempfile.mkdtemp()
+        my.YEARS = 0.25
+        st = lab.multi_year(FakeData(), ["BTC/USD", "ETH/USD"], ["DOGE/USD"], budget_s=600)
+        assert st and st.get("finished") and not st.get("errors"), st.get("errors")
+        assert st["results"]["Stín"]["0"][0]["trades"] >= 0 and "Stín" in st["summary"]
+    finally:
+        lab.VARIANTS, config.STATE_DIR, my.YEARS, lab.MULTIYEAR_ONLY = old_v, old_dir, old_years, old_only
 
 
 if __name__ == "__main__":

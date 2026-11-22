@@ -16,7 +16,9 @@ Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, 
 - VÍCELETÝ TEST (`colony/multiyear.py`, od 21. 11. 2026 na přání Jakuba): Orbit, Trendy, Vlna, Medvěd na ~5 letech
   po čtvrtletích, poctivý walk-forward (nastavení jen z minulosti). Běží po kouscích uvnitř laboratoře (max 2 h/běh,
   postup v `state/multiyear.json`), přepočet 1× týdně. Prošel -> lab.json dostane nejodolnější nastavení; neprošel -> varování.
-  Výsledek na konci `lab.txt`.
+  Výsledek na konci `lab.txt`. Od 22. 11. v něm je i Stín (`lab.MULTIYEAR_ONLY`, přehrání `colony/shadowtest.py`).
+- V dlouhodobém testu jsou od 22. 11. i dva kandidáti, kteří ŽIVĚ NEOBCHODUJÍ: Lev-50 (Lev na 50 největších firmách
+  ke konci 2021 - bez zkreslení dnešními hvězdami) a Želva (týdenní trend BTC/ETH). Do kolonie jen když projdou (pravidlo 7).
 - `stav.txt` končí řádkem SROVNÁNÍ S TRHEM (kolonie vs. jen držet S&P 500 a bitcoin od startu).
 - Vyřazení boti: `config.RETIRED` (Memec, Lovec od 16. 11. 2026; Šeptač, Kapitán, Věštec od 21. 11. 2026; Orbit, Trendy, Vlna, Medvěd
   od 22. 11. 2026 po pětiletém testu - vše na přání Jakuba). Laboratoř vyřazené boty neladí (`lab.active_variants()`).
@@ -32,6 +34,10 @@ Majitel: Jakub (píše česky, neformálně). Odpovídej česky, srozumitelně, 
 6. Pravidla přežití (smrt pod $800, 30 dní bez zisku; dlouhodobí Kompas/Lev/Sokol/Spořič 90 dní - Jakub schválil
    16. 11. 2026, `config.PROFIT_DEADLINE_BY_BOT`) neměň bez souhlasu Jakuba. Mrtvé boty nevzkřišuj
    bez jeho souhlasu (16. 10. sám požádal o vzkříšení Degena -> Degen II, původní je na hřbitově).
+
+7. **Žádný nový bot bez víceletého testu** (Jakub souhlasil 22. 11. 2026): nový bot smí obchodovat (i na papíře)
+   až když v dlouhodobém nebo víceletém testu na ~5 letech vydělá a nemá horší propad než držení S&P 500
+   (u krypta než držení bitcoinu). Krátké výsledky z papíru nestačí.
 
 ## Denní kontrola (naplánovaná úloha)
 1. Přečti `reports/stav.txt`, `chyby.txt`, `sync.log`, `lab.txt`, `kronika.txt` (stínové obchody: jak by dopadly
