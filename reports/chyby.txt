@@ -1,2 +1,9 @@
-Nov 22 15:10:35 ubuntu-1gb-hel1-1 python[439580]: 2026-11-22 15:10:35,025 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
-Nov 22 15:21:05 ubuntu-1gb-hel1-1 python[439580]: 2026-11-22 15:21:05,135 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 22 16:01:25 ubuntu-1gb-hel1-1 python[439580]: 2026-11-22 16:01:25,514 WARNING colony.trends: radar google_news: 429 -> pauza 60 min
+Nov 22 16:02:25 ubuntu-1gb-hel1-1 python[442920]: 2026-11-22 16:02:25,844 WARNING colony.agent: Medvěd sell SQQQ nevyplněn, zkusím znovu
+Nov 22 16:02:57 ubuntu-1gb-hel1-1 python[442920]: 2026-11-22 16:02:57,355 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 22 16:03:13 ubuntu-1gb-hel1-1 python[442920]: 2026-11-22 16:03:13,466 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 22 16:03:13 ubuntu-1gb-hel1-1 python[442920]: 2026-11-22 16:03:13,528 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
+Nov 22 16:03:14 ubuntu-1gb-hel1-1 python[442920]: 2026-11-22 16:03:14,900 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 22 16:16:52 ubuntu-1gb-hel1-1 python[443029]: 2026-11-22 16:16:52,841 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 22 16:16:52 ubuntu-1gb-hel1-1 python[443029]: 2026-11-22 16:16:52,923 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
+Nov 22 16:16:54 ubuntu-1gb-hel1-1 python[443029]: 2026-11-22 16:16:54,463 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}

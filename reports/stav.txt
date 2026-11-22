@@ -1,25 +1,6 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Orbit [ALIVE] $1000.91 (+0.09 %) | obchodů 2, úspěšnost 50 %, PF 2.33, max propad 0.4 %, poplatky $0.0
-   2026-11-03T20:50 GRAB: +3.35 $ (+1.8 %) konec obchodního dne
-   2026-11-11T20:50 NVDA: -1.44 $ (-0.8 %) konec obchodního dne
-
-Trendy [ALIVE] $995.97 (-0.40 %) | obchodů 12, úspěšnost 33 %, PF 0.86, max propad 2.1 %, poplatky $7.75
-   2026-11-17T23:27 ETH/USD: -4.03 $ (-2.9 %) stop-loss
-   2026-11-19T04:00 ETH/USD: -4.81 $ (-3.1 %) průraz nad maximum kanálu
-   2026-11-20T22:37 SOL/USD: +2.97 $ (+2.2 %) trailing stop
-   2026-11-21T06:42 ETH/USD: +10.91 $ (+7.6 %) trailing stop
-   2026-11-21T06:51 SOL/USD: -3.63 $ (-3.9 %) stop-loss
-
-Vlna [ALIVE] $976.16 (-2.38 %) | obchodů 13, úspěšnost 23 %, PF 0.44, max propad 6.3 %, poplatky $6.59
-   SHORT BAT/USD: prodáno za 0.0911377, teď 0.0787338 (+13.6 %) - sestupná vlna: propad pod 3denní minimum, -2 % za 24 h · paměť: podobn
-   2026-11-11T05:00 TRUMP/USD: -10.40 $ (-32.5 %) sestupná vlna skončila (trend se otočil nahoru)
-   2026-11-14T03:00 XRP/USD: +10.56 $ (+13.2 %) časový limit
-   2026-11-15T03:07 SOL/USD: +12.37 $ (+15.8 %) trailing stop
-   2026-11-20T00:00 SOL/USD: -2.07 $ (-2.6 %) vlna opadla (trend se otočil)
-   2026-11-21T12:35 BTC/USD: +4.19 $ (+5.3 %) trailing stop
-
-Medvěd [ALIVE] $1007.13 (+0.71 %) | obchodů 16, úspěšnost 25 %, PF 0.99, max propad 6.4 %, poplatky $0.0
+Medvěd [DEAD] $1007.13 (+0.71 %) | obchodů 16, úspěšnost 25 %, PF 0.99, max propad 6.4 %, poplatky $0.0
    otevřeno SQQQ: nákup 55.8879, teď 57.81 (+3.4 %) - trh padá: SQQQ +0.8 % za hodinu, nad EMA 20/50
    otevřeno SOXS: nákup 81.2566, teď 83.79 (+3.1 %) - trh padá: SOXS +2.5 % za hodinu, nad EMA 20/50
    2026-11-19T14:32 SOXS: -14.01 $ (-13.3 %) stop-loss
@@ -62,23 +43,11 @@ Stín [ALIVE] $1079.20 (+7.92 %) | obchodů 56, úspěšnost 50 %, PF 1.53, max 
    2026-11-22T12:00 BAT/USD: -1.98 $ (-0.8 %) stop-loss
    2026-11-22T12:00 DOT/USD: -10.18 $ (-3.4 %) stop-loss
 
-CELKEM (živí boti) $9900.73 z $10000 (-0.99 %)
-HŘBITOV: Memec ($993, 39 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.2 %
+CELKEM (živí boti) $6927.69 z $7000 (-1.03 %)
+HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -22.1 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-21T16:38:25+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
-   2026-11-21T17:00:52+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $235 @ 0.0790875, stop 0.08312 - sestupný trend, -2.8 % za 24 h · paměť: podobné obchody +0
-   2026-11-21T18:38:24+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
-   2026-11-21T19:38:39+00:00 🧪 Laboratoř: nové nastavení botů
-Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
-   2026-11-21T21:15:10+00:00 📊 Denní souhrn 21.11. · nálada trhu: neutral
-🟢 Orbit: $1000.96 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33
-🟢 Trendy: $996.02 (-0.4 %
-   2026-11-21T22:00:54+00:00 🐻 Stín (simulace) otevřel short DOT/USD za $302 @ 0.64505, stop 0.670852 - sestupný trend, -3.8 % za 24 h · paměť: podobné obchody +1.
-   2026-11-21T22:00:54+00:00 🐻 Stín (simulace) otevřel short WIF/USD za $285 @ 0.118, stop 0.122857 - sestupný trend, -2.4 % za 24 h
-   2026-11-22T01:39:14+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
-   2026-11-22T07:07:51+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
    2026-11-22T07:07:51+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
    2026-11-22T07:07:53+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
@@ -86,5 +55,16 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-22T10:07:52+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
    2026-11-22T12:00:41+00:00 🔻 Stín (simulace) uzavřel short BAT/USD: -1.98 $ (-0.8 %) - stop-loss
    2026-11-22T12:00:41+00:00 🔻 Stín (simulace) uzavřel short DOT/USD: -10.18 $ (-3.4 %) - stop-loss
+   2026-11-22T16:01:31+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
+   2026-11-22T16:01:31+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
+   2026-11-22T16:01:33+00:00 🪦 Orbit odchází na hřbitov: vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -21 %, v plusu 5/16 čtvrtletí). Končí s $1000.91, 2 o
+   2026-11-22T16:01:43+00:00 🪦 Trendy odchází na hřbitov: vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -60 %, v plusu 2/16 čtvrtletí). Končí s $995.97, 12 
+   2026-11-22T16:01:43+00:00 ✅ Vlna UZAVŘEL SHORT BAT/USD: +11.18 $ (+13.0 %) - vyřazení z kolonie
+   2026-11-22T16:01:44+00:00 🪦 Vlna odchází na hřbitov: vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -90 %, v plusu 5/16 čtvrtletí). Končí s $975.88, 14 ob
+   2026-11-22T16:02:57+00:00 🪦 Medvěd odchází na hřbitov: vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -49 %, v plusu 3/16 čtvrtletí). Končí s $1007.13, 16
+   2026-11-22T16:16:39+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
+   2026-11-22T16:16:39+00:00 🧪 Laboratoř: nové nastavení botů
+Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
 
-GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-22T21:10 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-22T22:16 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
