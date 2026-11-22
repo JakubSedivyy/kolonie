@@ -1,2 +1,2 @@
-Nov 21 22:48:16 ubuntu-1gb-hel1-1 python[434374]: 2026-11-21 22:48:16,841 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
-Nov 21 22:58:35 ubuntu-1gb-hel1-1 python[434374]: 2026-11-21 22:58:35,230 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 22 00:00:31 ubuntu-1gb-hel1-1 python[434374]: 2026-11-22 00:00:31,118 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 22 00:00:51 ubuntu-1gb-hel1-1 python[434374]: 2026-11-22 00:00:51,607 WARNING colony.trends: radar hackernews: HTTPSConnectionPool(host='hn.algolia.com', port=443): Read timed out. (read timeout=20)
