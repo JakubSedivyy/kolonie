@@ -1,1 +1,0 @@
-Nov 22 03:14:44 ubuntu-1gb-hel1-1 python[434374]: 2026-11-22 03:14:44,563 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
