@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 763 signálů, 151 obchodů, 470 hodinových snímků radaru, 578 událostí
+Celkem zapsáno: 763 signálů, 151 obchodů, 471 hodinových snímků radaru, 578 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 0, průměr -28.0 %
@@ -34,10 +34,10 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
 UZAVŘENÉ OBCHODY:
   Lev       |   1 obchodů, 0 výher, průměr -2.1 %, celkem -3.92 $
   Medvěd    |   7 obchodů, 2 výher, průměr -1.4 %, celkem -20.86 $
-  Memec     |   4 obchodů, 3 výher, průměr +1.1 %, celkem +2.76 $
+  Memec     |   1 obchodů, 0 výher, průměr -1.5 %, celkem -0.98 $
   Stín      |  23 obchodů, 11 výher, průměr -0.4 %, celkem +2.71 $
   Trendy    |   7 obchodů, 4 výher, průměr +0.5 %, celkem +6.55 $
   Vlna      |   3 obchodů, 2 výher, průměr +6.1 %, celkem +14.50 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), PENGU (107h), ETH (95h), SOL (83h), PEARL (76h), XRP (60h), HYPE (59h), GTA6 (46h), WASTED (45h), SUI (42h), BP (42h), LIT (38h), PUMP (37h), TRUMP (35h), DCTY (35h), VINE (34h), GATO (28h), MIHAO (27h), CHUNKEE (27h)
+  BTC (168h), CATE (168h), PENGU (107h), ETH (96h), SOL (83h), PEARL (77h), XRP (60h), HYPE (59h), GTA6 (46h), WASTED (45h), SUI (42h), BP (42h), LIT (38h), PUMP (37h), TRUMP (35h), DCTY (35h), VINE (34h), GATO (28h), MIHAO (27h), CHUNKEE (27h)

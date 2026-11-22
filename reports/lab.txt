@@ -1,8 +1,8 @@
-LABORATOŘ 2026-11-21: trénink 2026-08-23..2026-10-22, test 2026-10-22..2026-11-21
+LABORATOŘ 2026-11-22: trénink 2026-08-24..2026-10-23, test 2026-10-23..2026-11-22
 Orbit: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'or_bars': 6, 'vol_mult': 1.2, 'last_entry': '14:00'} | trénink -2.3 % | test -8.1 % (34 obch., PF 0.16)
-Trendy: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink -1.0 % | test -0.3 % (5 obch., PF 0.75)
-Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +8.6 % | test -5.8 % (10 obch., PF 0.22)
-Medvěd: NASAZEN ✅ | nejlepší {'atr_mult': 2.0} | trénink +0.5 % | test +13.7 % (35 obch., PF 2.99)
+Trendy: ODPOČÍVÁ 💤 (prodělal v tréninku i v testu) | nejlepší {'minutes': 60, 'mode': 'donchian', 'donchian_n': 24, 'top_n': 3} | trénink -0.5 % | test -0.3 % (5 obch., PF 0.75)
+Vlna: ODPOČÍVÁ 💤 (v testu neprošel) | nejlepší {'atr_mult': 3.5} | trénink +10.2 % | test -5.8 % (10 obch., PF 0.22)
+Medvěd: NASAZEN ✅ | nejlepší {'atr_mult': 2.0} | trénink +1.3 % | test +14.3 % (33 obch., PF 3.24)
 
 DLOUHODOBÝ TEST 2021-12-28..2026-11-20 (denní svíčky, nákup za ranní cenu, bez přežití)
 Kompas   roč.  +8.2 % | celkem  +46.8 % | max propad 16.3 % | Sharpe 0.62 | 33 obch., úspěšnost 52 % | 2021:-0% 2022:-7% 2023:+11% 2024:+14% 2025:+26% 2026:-1%
