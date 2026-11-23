@@ -1,24 +1,24 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Kompas [ALIVE] $983.40 (-1.66 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.3 %, poplatky $0.0
-   otevřeno VTI: nákup 368.036, teď 352.84 (-4.1 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
-   otevřeno DBC: nákup 29.7749, teď 29.43 (-1.2 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
+Kompas [ALIVE] $984.45 (-1.55 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.3 %, poplatky $0.0
+   otevřeno VTI: nákup 368.036, teď 355.74 (-3.3 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
+   otevřeno DBC: nákup 29.7749, teď 29.24 (-1.8 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
 
-Lev [ALIVE] $954.80 (-4.52 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 6.8 %, poplatky $0.0
-   otevřeno LLY: nákup 1462.96, teď 1362.96 (-6.8 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MA: nákup 667.504, teď 636.24 (-4.7 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MSFT: nákup 521.475, teď 500.82 (-4.0 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
-   otevřeno V: nákup 430.027, teď 410.015 (-4.7 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
-   otevřeno AAPL: nákup 352.362, teď 347.31 (-1.4 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
+Lev [ALIVE] $957.20 (-4.28 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 6.8 %, poplatky $0.0
+   otevřeno LLY: nákup 1462.96, teď 1374.21 (-6.1 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MA: nákup 667.504, teď 634.3 (-5.0 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MSFT: nákup 521.475, teď 499.72 (-4.2 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
+   otevřeno V: nákup 430.027, teď 409.825 (-4.7 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
+   otevřeno AAPL: nákup 352.362, teď 351.005 (-0.4 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
    2026-11-17T14:30 META: -3.92 $ (-2.1 %) trend zlomen (pod 200denním průměrem nebo 6 měsíců bez růstu)
 
-Sokol [ALIVE] $974.93 (-2.51 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 5.7 %, poplatky $0.0
-   otevřeno DIA: nákup 506.231, teď 492.5 (-2.7 %) - pokles v růstovém trendu (RSI 2 = 4, nad 200denním průměrem)
-   otevřeno IVV: nákup 738.305, teď 720.34 (-2.4 %) - pokles v růstovém trendu (RSI 2 = 5, nad 200denním průměrem)
+Sokol [ALIVE] $981.99 (-1.80 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 5.7 %, poplatky $0.0
+   otevřeno DIA: nákup 506.231, teď 495.56 (-2.1 %) - pokles v růstovém trendu (RSI 2 = 4, nad 200denním průměrem)
+   otevřeno IVV: nákup 738.305, teď 726.72 (-1.6 %) - pokles v růstovém trendu (RSI 2 = 5, nad 200denním průměrem)
 
-Spořič [ALIVE] $995.25 (-0.48 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.0
-   otevřeno IBIT: nákup 36.3648, teď 35.61 (-2.1 %) - pravidelné spoření: první týdenní nákup
-   otevřeno VOO: nákup 675.173, teď 659.46 (-2.3 %) - pravidelné spoření: první týdenní nákup
+Spořič [ALIVE] $995.72 (-0.43 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.0
+   otevřeno IBIT: nákup 36.3648, teď 35.46 (-2.5 %) - pravidelné spoření: první týdenní nákup
+   otevřeno VOO: nákup 675.173, teď 665.48 (-1.4 %) - pravidelné spoření: první týdenní nákup
 
 Degen II [ALIVE] $996.29 (-0.37 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
@@ -34,9 +34,9 @@ Stín [ALIVE] $1058.11 (+5.81 %) | obchodů 58, úspěšnost 48 %, PF 1.34, max 
    2026-11-23T06:00 PEPE/USD: -8.67 $ (-3.0 %) stop-loss
    2026-11-23T14:00 BAT/USD: -12.36 $ (-4.1 %) stop-loss
 
-CELKEM (živí boti) $5962.78 z $6000 (-0.62 %)
+CELKEM (živí boti) $5973.76 z $6000 (-0.44 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -18.7 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -3.8 %, bitcoin -19.6 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-22T16:02:57+00:00 🪦 Medvěd odchází na hřbitov: vyřazen na přání Jakuba 22. 11. 2026 (pětiletý test: -49 %, v plusu 3/16 čtvrtletí). Končí s $1007.13, 16
