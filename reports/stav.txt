@@ -36,19 +36,19 @@ Degen II [ALIVE] $996.29 (-0.37 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1070.47 (+7.05 %) | obchodů 57, úspěšnost 49 %, PF 1.45, max propad 7.4 %, poplatky $16.28
+Stín [ALIVE] $1070.15 (+7.01 %) | obchodů 57, úspěšnost 49 %, PF 1.45, max propad 7.4 %, poplatky $16.46
+   SHORT BAT/USD: prodáno za 0.0757966, teď 0.0758346 (-0.1 %) - sestupný trend, -3.8 % za 24 h · paměť: podobné obchody +1.2 % -> sázk
    2026-11-21T15:00 AVAX/USD: -11.89 $ (-8.5 %) stop-loss
    2026-11-22T10:00 WIF/USD: -5.43 $ (-1.9 %) stop-loss
    2026-11-22T12:00 BAT/USD: -1.98 $ (-0.8 %) stop-loss
    2026-11-22T12:00 DOT/USD: -10.18 $ (-3.4 %) stop-loss
    2026-11-23T06:00 PEPE/USD: -8.67 $ (-3.0 %) stop-loss
 
-CELKEM (živí boti) $6918.71 z $7000 (-1.16 %)
+CELKEM (živí boti) $6918.39 z $7000 (-1.17 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -21.2 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -21.6 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-22T10:07:52+00:00 🌡️ Nálada trhu: risk_off → neutral (BTC ↑, S&P ↓)
    2026-11-22T12:00:41+00:00 🔻 Stín (simulace) uzavřel short BAT/USD: -1.98 $ (-0.8 %) - stop-loss
    2026-11-22T12:00:41+00:00 🔻 Stín (simulace) uzavřel short DOT/USD: -10.18 $ (-3.4 %) - stop-loss
    2026-11-22T16:01:31+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
@@ -66,5 +66,6 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
 💀 Orbit: $1000.91 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33 · ✝ vyřazen na přání Jaku
    2026-11-23T02:00:57+00:00 🐻 Stín (simulace) otevřel short PEPE/USD za $291 @ 3.345e-06, stop 3.4788e-06 - sestupný trend, -2.3 % za 24 h · paměť: podobné obchod
    2026-11-23T06:00:31+00:00 🔻 Stín (simulace) uzavřel short PEPE/USD: -8.67 $ (-3.0 %) - stop-loss
+   2026-11-23T10:00:43+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $299 @ 0.0758346, stop 0.0788679 - sestupný trend, -3.8 % za 24 h · paměť: podobné obchody 
 
 GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-23T14:21 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
