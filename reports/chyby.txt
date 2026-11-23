@@ -1,1 +1,14 @@
-Nov 23 13:19:24 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 13:19:24,132 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 23 14:32:37 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:32:37,096 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 23 14:33:07 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:33:07,790 WARNING colony.agent: Medvěd sell SQQQ nevyplněn, zkusím znovu
+Nov 23 14:33:40 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:33:40,146 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 23 14:34:10 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:34:10,665 WARNING colony.agent: Medvěd sell SQQQ nevyplněn, zkusím znovu
+Nov 23 14:34:43 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:34:43,449 WARNING colony.agent: Medvěd sell SQQQ nevyplněn, zkusím znovu
+Nov 23 14:35:14 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:35:14,703 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 23 14:35:26 ubuntu-1gb-hel1-1 python[443029]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
+Nov 23 14:35:57 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:35:57,719 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 23 14:36:28 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:36:28,330 WARNING colony.agent: Medvěd sell SQQQ nevyplněn, zkusím znovu
+Nov 23 14:37:01 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:37:01,548 WARNING colony.agent: Medvěd sell SQQQ nevyplněn, zkusím znovu
+Nov 23 14:37:32 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:37:32,098 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 23 14:38:04 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:38:04,451 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 23 14:39:03 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:39:03,009 WARNING colony.agent: Medvěd sell SOXS nevyplněn, zkusím znovu
+Nov 23 14:41:17 ubuntu-1gb-hel1-1 python[443029]: 2026-11-23 14:41:17,076 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
