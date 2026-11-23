@@ -1,14 +1,14 @@
-LABORATOŘ 2026-11-22: trénink 2026-08-24..2026-10-23, test 2026-10-23..2026-11-22
+LABORATOŘ 2026-11-23: trénink 2026-08-25..2026-10-24, test 2026-10-24..2026-11-23
 
-DLOUHODOBÝ TEST 2021-12-28..2026-11-22 (denní svíčky, nákup za ranní cenu, bez přežití)
+DLOUHODOBÝ TEST 2021-12-28..2026-11-23 (denní svíčky, nákup za ranní cenu, bez přežití)
 Kompas   roč.  +8.2 % | celkem  +46.8 % | max propad 16.3 % | Sharpe 0.62 | 33 obch., úspěšnost 52 % | 2021:-0% 2022:-7% 2023:+11% 2024:+14% 2025:+26% 2026:-1%
 Lev      roč. +14.2 % | celkem  +91.9 % | max propad 32.7 % | Sharpe 0.75 | 121 obch., úspěšnost 43 % | 2021:-2% 2022:-14% 2023:+62% 2024:+78% 2025:-5% 2026:-17%
 Lev-50   roč.  +1.7 % | celkem   +8.8 % | max propad 38.3 % | Sharpe 0.19 | 191 obch., úspěšnost 49 % | 2021:-2% 2022:-17% 2023:+44% 2024:+42% 2025:-9% 2026:-28%
 Sokol    roč.  +4.2 % | celkem  +22.6 % | max propad  7.3 % | Sharpe 0.67 | 127 obch., úspěšnost 73 % | 2021:+0% 2022:+0% 2023:+1% 2024:+11% 2025:+8% 2026:+1%
 Spořič   roč.  +7.0 % | celkem  +39.3 % | max propad 31.2 % | Sharpe 0.41 | 0 obch., úspěšnost 0 % | 2021:-0% 2022:-7% 2023:+12% 2024:+53% 2025:+4% 2026:-16%
-Želva    roč.  +7.7 % | celkem  +43.5 % | max propad 33.1 % | Sharpe 0.33 | 19 obch., úspěšnost 42 % | 2021:+0% 2022:-15% 2023:+39% 2024:+50% 2025:-6% 2026:-15%
+Želva    roč.  +7.6 % | celkem  +43.5 % | max propad 33.1 % | Sharpe 0.32 | 19 obch., úspěšnost 42 % | 2021:+0% 2022:-15% 2023:+39% 2024:+50% 2025:-6% 2026:-15%
 S&P 500  roč.  +9.3 % | celkem  +54.3 % | max propad 24.5 % | Sharpe 0.60 | srovnání: jen držet | 2021:-0% 2022:-18% 2023:+26% 2024:+25% 2025:+18% 2026:+2%
-Bitcoin  roč.  +5.6 % | celkem  +30.6 % | max propad 67.0 % | Sharpe 0.30 | srovnání: jen držet | 2021:-1% 2022:-64% 2023:+156% 2024:+121% 2025:-6% 2026:-31%
+Bitcoin  roč.  +5.8 % | celkem  +31.6 % | max propad 67.0 % | Sharpe 0.30 | srovnání: jen držet | 2021:-1% 2022:-64% 2023:+156% 2024:+121% 2025:-6% 2026:-30%
 
 VÍCELETÝ TEST 2021-11-28..2026-11-22 (po čtvrtletích; rozhoduje poctivé přehrání - nastavení vybrané jen z minulosti) | dokončen 2026-11-22
 Stín    NEPROŠEL ❌ | poctivě -99.9 % (v plusu 0/16 čtvrtletí s obchody) | nejodolnější {'atr_mult': 3.0, 'max_hold_h': 48} v plusu 2/20, 3443 obch.
