@@ -36,15 +36,15 @@ Degen II [ALIVE] $996.29 (-0.37 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1068.52 (+6.85 %) | obchodů 57, úspěšnost 49 %, PF 1.45, max propad 7.5 %, poplatky $16.46
-   SHORT BAT/USD: prodáno za 0.0757966, teď 0.0762464 (-0.6 %) - sestupný trend, -3.8 % za 24 h · paměť: podobné obchody +1.2 % -> sázk
+Stín [ALIVE] $1066.80 (+6.68 %) | obchodů 57, úspěšnost 49 %, PF 1.45, max propad 7.7 %, poplatky $16.46
+   SHORT BAT/USD: prodáno za 0.0757966, teď 0.076685 (-1.2 %) - sestupný trend, -3.8 % za 24 h · paměť: podobné obchody +1.2 % -> sázk
    2026-11-21T15:00 AVAX/USD: -11.89 $ (-8.5 %) stop-loss
    2026-11-22T10:00 WIF/USD: -5.43 $ (-1.9 %) stop-loss
    2026-11-22T12:00 BAT/USD: -1.98 $ (-0.8 %) stop-loss
    2026-11-22T12:00 DOT/USD: -10.18 $ (-3.4 %) stop-loss
    2026-11-23T06:00 PEPE/USD: -8.67 $ (-3.0 %) stop-loss
 
-CELKEM (živí boti) $6916.76 z $7000 (-1.19 %)
+CELKEM (živí boti) $6915.04 z $7000 (-1.21 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
 SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -8.2 %, bitcoin -21.7 %
 
