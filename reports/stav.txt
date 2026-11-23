@@ -1,24 +1,24 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Kompas [ALIVE] $982.46 (-1.75 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.3 %, poplatky $0.0
-   otevřeno VTI: nákup 368.036, teď 354.895 (-3.6 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
-   otevřeno DBC: nákup 29.7749, teď 29.085 (-2.3 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
+Kompas [ALIVE] $983.15 (-1.68 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.3 %, poplatky $0.0
+   otevřeno VTI: nákup 368.036, teď 355.54 (-3.4 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
+   otevřeno DBC: nákup 29.7749, teď 29.1 (-2.3 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
 
-Lev [ALIVE] $952.68 (-4.73 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 6.8 %, poplatky $0.0
-   otevřeno LLY: nákup 1462.96, teď 1365.54 (-6.7 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MA: nákup 667.504, teď 635.18 (-4.8 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MSFT: nákup 521.475, teď 492.94 (-5.5 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
-   otevřeno V: nákup 430.027, teď 409.76 (-4.7 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
-   otevřeno AAPL: nákup 352.362, teď 348.86 (-1.0 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
+Lev [ALIVE] $953.11 (-4.69 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 6.8 %, poplatky $0.0
+   otevřeno LLY: nákup 1462.96, teď 1366.1 (-6.6 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MA: nákup 667.504, teď 635.8 (-4.7 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MSFT: nákup 521.475, teď 492.51 (-5.6 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
+   otevřeno V: nákup 430.027, teď 410.31 (-4.6 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
+   otevřeno AAPL: nákup 352.362, teď 349.04 (-0.9 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
    2026-11-17T14:30 META: -3.92 $ (-2.1 %) trend zlomen (pod 200denním průměrem nebo 6 měsíců bez růstu)
 
-Sokol [ALIVE] $980.24 (-1.98 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 5.7 %, poplatky $0.0
-   otevřeno DIA: nákup 506.231, teď 495.15 (-2.2 %) - pokles v růstovém trendu (RSI 2 = 4, nad 200denním průměrem)
-   otevřeno IVV: nákup 738.305, teď 724.63 (-1.9 %) - pokles v růstovém trendu (RSI 2 = 5, nad 200denním průměrem)
+Sokol [ALIVE] $981.22 (-1.88 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 5.7 %, poplatky $0.0
+   otevřeno DIA: nákup 506.231, teď 495.71 (-2.1 %) - pokles v růstovém trendu (RSI 2 = 4, nad 200denním průměrem)
+   otevřeno IVV: nákup 738.305, teď 725.32 (-1.8 %) - pokles v růstovém trendu (RSI 2 = 5, nad 200denním průměrem)
 
-Spořič [ALIVE] $992.84 (-0.72 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.0
-   otevřeno IBIT: nákup 36.3648, teď 34.52 (-5.1 %) - pravidelné spoření: první týdenní nákup
-   otevřeno VOO: nákup 675.173, teď 663.44 (-1.7 %) - pravidelné spoření: první týdenní nákup
+Spořič [ALIVE] $993.12 (-0.69 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.0
+   otevřeno IBIT: nákup 36.3648, teď 34.605 (-4.8 %) - pravidelné spoření: první týdenní nákup
+   otevřeno VOO: nákup 675.173, teď 663.75 (-1.7 %) - pravidelné spoření: první týdenní nákup
 
 Degen II [ALIVE] $996.29 (-0.37 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
@@ -27,20 +27,19 @@ Degen II [ALIVE] $996.29 (-0.37 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1057.94 (+5.79 %) | obchodů 58, úspěšnost 48 %, PF 1.34, max propad 8.4 %, poplatky $16.73
-   SHORT BAT/USD: prodáno za 0.0771524, teď 0.077191 (-0.1 %) - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody +1.2 % -> sázk
+Stín [ALIVE] $1060.97 (+6.10 %) | obchodů 58, úspěšnost 48 %, PF 1.34, max propad 8.4 %, poplatky $16.73
+   SHORT BAT/USD: prodáno za 0.0771524, teď 0.0756949 (+1.9 %) - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody +1.2 % -> sázk
    2026-11-22T10:00 WIF/USD: -5.43 $ (-1.9 %) stop-loss
    2026-11-22T12:00 BAT/USD: -1.98 $ (-0.8 %) stop-loss
    2026-11-22T12:00 DOT/USD: -10.18 $ (-3.4 %) stop-loss
    2026-11-23T06:00 PEPE/USD: -8.67 $ (-3.0 %) stop-loss
    2026-11-23T14:00 BAT/USD: -12.36 $ (-4.1 %) stop-loss
 
-CELKEM (živí boti) $5962.45 z $6000 (-0.63 %)
+CELKEM (živí boti) $5967.86 z $6000 (-0.54 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -3.7 %, bitcoin -21.6 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -3.9 %, bitcoin -21.7 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-22T16:16:39+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
    2026-11-22T16:16:39+00:00 🧪 Laboratoř: nové nastavení botů
 Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bars': 6, 'vol_mult': 1.2, 'last_
    2026-11-22T21:15:09+00:00 📊 Denní souhrn 22.11. · nálada trhu: neutral
@@ -57,5 +56,7 @@ Orbit: ⚠️ obchoduje na papíře, laboratoř ho zatím nedoporučuje {'or_bar
    2026-11-23T14:39:24+00:00 🧠 Medvěd se poučil: když coin = SOXS, prodělal 9.5x (průměr -3.3 %) - příště to nekoupí
    2026-11-23T14:39:25+00:00 🧠 Medvěd se poučil: když nálada trhu = risk_off, prodělal 22.5x (průměr -3.2 %) - příště to nekoupí
    2026-11-23T20:00:55+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $156 @ 0.077191, stop 0.083056 - sestupný trend, -4.5 % za 24 h · paměť: podobné obchody +1
+   2026-11-23T21:15:12+00:00 📊 Denní souhrn 23.11. · nálada trhu: neutral
+💀 Orbit: $1000.91 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33 · ✝ vyřazen na přání Jaku
 
 GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-23T22:23 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
