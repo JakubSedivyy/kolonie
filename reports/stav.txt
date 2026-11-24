@@ -36,7 +36,7 @@ Stín [ALIVE] $1051.54 (+5.15 %) | obchodů 59, úspěšnost 47 %, PF 1.29, max 
 
 CELKEM (živí boti) $5958.18 z $6000 (-0.70 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -3.9 %, bitcoin -22.6 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -3.9 %, bitcoin -22.8 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-23T02:00:57+00:00 🐻 Stín (simulace) otevřel short PEPE/USD za $291 @ 3.345e-06, stop 3.4788e-06 - sestupný trend, -2.3 % za 24 h · paměť: podobné obchod
