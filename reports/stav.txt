@@ -1,24 +1,24 @@
 ŽIVÝ STAV KOLONIE (papír) | běží od 2026-11-02T11:46 UTC
 
-Kompas [ALIVE] $977.78 (-2.22 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.3 %, poplatky $0.0
-   otevřeno VTI: nákup 368.036, teď 351.43 (-4.5 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
-   otevřeno DBC: nákup 29.7749, teď 28.89 (-3.0 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
+Kompas [ALIVE] $979.91 (-2.01 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 3.3 %, poplatky $0.0
+   otevřeno VTI: nákup 368.036, teď 353.29 (-4.0 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +4.0 %)
+   otevřeno DBC: nákup 29.7749, teď 28.95 (-2.8 %) - mezi 3 nejsilnějšími ETF (průměrný růst 3/6/12 měs. +11.2 %)
 
-Lev [ALIVE] $963.41 (-3.66 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 6.8 %, poplatky $0.0
-   otevřeno LLY: nákup 1462.96, teď 1407.23 (-3.8 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MA: nákup 667.504, teď 643.02 (-3.7 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
-   otevřeno MSFT: nákup 521.475, teď 492.27 (-5.6 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
-   otevřeno V: nákup 430.027, teď 413.92 (-3.7 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
-   otevřeno AAPL: nákup 352.362, teď 351.75 (-0.2 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
+Lev [ALIVE] $967.78 (-3.22 %) | obchodů 1, úspěšnost 0 %, PF 0.00, max propad 6.8 %, poplatky $0.0
+   otevřeno LLY: nákup 1462.96, teď 1407.15 (-3.8 %) - 3. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MA: nákup 667.504, teď 645.335 (-3.3 %) - 2. nejsilnější velká firma (6 měs. +25 %), nad 200denním průměrem
+   otevřeno MSFT: nákup 521.475, teď 499.675 (-4.2 %) - 1. nejsilnější velká firma (6 měs. +28 %), nad 200denním průměrem
+   otevřeno V: nákup 430.027, teď 415.805 (-3.3 %) - 4. nejsilnější velká firma (6 měs. +23 %), nad 200denním průměrem
+   otevřeno AAPL: nákup 352.362, teď 352.12 (-0.1 %) - 5. nejsilnější velká firma (6 měs. +15 %), nad 200denním průměrem
    2026-11-17T14:30 META: -3.92 $ (-2.1 %) trend zlomen (pod 200denním průměrem nebo 6 měsíců bez růstu)
 
 Sokol [ALIVE] $973.56 (-2.64 %) | obchodů 2, úspěšnost 0 %, PF 0.00, max propad 5.7 %, poplatky $0.0
    2026-11-24T14:30 DIA: -12.58 $ (-2.6 %) odraz hotový (nad 5denním průměrem)
    2026-11-24T14:30 IVV: -13.46 $ (-2.8 %) odraz hotový (nad 5denním průměrem)
 
-Spořič [ALIVE] $989.51 (-1.05 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.0
-   otevřeno IBIT: nákup 36.3648, teď 33.73 (-7.2 %) - pravidelné spoření: první týdenní nákup
-   otevřeno VOO: nákup 675.173, teď 655.99 (-2.8 %) - pravidelné spoření: první týdenní nákup
+Spořič [ALIVE] $990.44 (-0.96 %) | obchodů 0, úspěšnost 0 %, PF 0.00, max propad 1.7 %, poplatky $0.0
+   otevřeno IBIT: nákup 36.3648, teď 33.845 (-6.9 %) - pravidelné spoření: první týdenní nákup
+   otevřeno VOO: nákup 675.173, teď 660.145 (-2.2 %) - pravidelné spoření: první týdenní nákup
 
 Degen II [ALIVE] $996.24 (-0.38 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max propad 1.0 %, poplatky $1.49
    2026-11-04T23:14 GTA·7F8B: +4.31 $ (+28.5 %) cíl zisku
@@ -27,19 +27,19 @@ Degen II [ALIVE] $996.24 (-0.38 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1060.40 (+6.04 %) | obchodů 59, úspěšnost 47 %, PF 1.29, max propad 9.0 %, poplatky $17.17
-   SHORT AAVE/USD: prodáno za 95.3897, teď 93.479 (+2.0 %) - sestupný trend, -2.6 % za 24 h
-   SHORT CRV/USD: prodáno za 0.17923, teď 0.175154 (+2.3 %) - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
-   SHORT BTC/USD: prodáno za 60154.4, teď 59644.6 (+0.8 %) - sestupný trend, -2.0 % za 24 h
+Stín [ALIVE] $1062.27 (+6.23 %) | obchodů 59, úspěšnost 47 %, PF 1.29, max propad 9.0 %, poplatky $17.17
+   SHORT AAVE/USD: prodáno za 95.3897, teď 93.5305 (+1.9 %) - sestupný trend, -2.6 % za 24 h
+   SHORT CRV/USD: prodáno za 0.17923, teď 0.17456 (+2.6 %) - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
+   SHORT BTC/USD: prodáno za 60154.4, teď 59339.4 (+1.4 %) - sestupný trend, -2.0 % za 24 h
    2026-11-22T12:00 BAT/USD: -1.98 $ (-0.8 %) stop-loss
    2026-11-22T12:00 DOT/USD: -10.18 $ (-3.4 %) stop-loss
    2026-11-23T06:00 PEPE/USD: -8.67 $ (-3.0 %) stop-loss
    2026-11-23T14:00 BAT/USD: -12.36 $ (-4.1 %) stop-loss
    2026-11-24T06:00 BAT/USD: -6.52 $ (-4.2 %) stop-loss
 
-CELKEM (živí boti) $5960.90 z $6000 (-0.65 %)
+CELKEM (živí boti) $5970.20 z $6000 (-0.50 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.5 %, bitcoin -23.7 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -5.1 %, bitcoin -23.9 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-23T14:35:26+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, RBNE, FCHL, WETO, NVDA, SOXL, GMEX, SOAR, HUHU, SNXX, NVD
@@ -59,4 +59,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-24T14:30:56+00:00 🔻 Sokol PRODAL IVV: -13.46 $ (-2.8 %) - odraz hotový (nad 5denním průměrem)
    2026-11-24T14:35:29+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, BENF, RMSG, FCHL, SOXL, FGL, PLAG, FNGR, NVDA, ZBAO, YFOR
 
-GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-24T14:28 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-24T22:32 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
