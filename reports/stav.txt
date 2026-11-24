@@ -27,20 +27,20 @@ Degen II [ALIVE] $996.24 (-0.38 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1051.54 (+5.15 %) | obchodů 59, úspěšnost 47 %, PF 1.29, max propad 9.0 %, poplatky $16.82
+Stín [ALIVE] $1051.19 (+5.12 %) | obchodů 59, úspěšnost 47 %, PF 1.29, max propad 9.0 %, poplatky $17.01
+   SHORT AAVE/USD: prodáno za 95.3897, teď 95.4374 (-0.1 %) - sestupný trend, -2.6 % za 24 h
+   SHORT CRV/USD: prodáno za 0.17923, teď 0.17932 (-0.1 %) - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
    2026-11-22T12:00 BAT/USD: -1.98 $ (-0.8 %) stop-loss
    2026-11-22T12:00 DOT/USD: -10.18 $ (-3.4 %) stop-loss
    2026-11-23T06:00 PEPE/USD: -8.67 $ (-3.0 %) stop-loss
    2026-11-23T14:00 BAT/USD: -12.36 $ (-4.1 %) stop-loss
    2026-11-24T06:00 BAT/USD: -6.52 $ (-4.2 %) stop-loss
 
-CELKEM (živí boti) $5958.18 z $6000 (-0.70 %)
+CELKEM (živí boti) $5957.83 z $6000 (-0.70 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
 SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -3.9 %, bitcoin -22.8 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-23T02:00:57+00:00 🐻 Stín (simulace) otevřel short PEPE/USD za $291 @ 3.345e-06, stop 3.4788e-06 - sestupný trend, -2.3 % za 24 h · paměť: podobné obchod
-   2026-11-23T06:00:31+00:00 🔻 Stín (simulace) uzavřel short PEPE/USD: -8.67 $ (-3.0 %) - stop-loss
    2026-11-23T10:00:43+00:00 🐻 Stín (simulace) otevřel short BAT/USD za $299 @ 0.0758346, stop 0.0788679 - sestupný trend, -3.8 % za 24 h · paměť: podobné obchody 
    2026-11-23T14:00:56+00:00 🔻 Stín (simulace) uzavřel short BAT/USD: -12.36 $ (-4.1 %) - stop-loss
    2026-11-23T14:31:55+00:00 🟢 Spořič PŘIKOUPIL IBIT za $50.00 @ 36.128 - celkem vloženo $100.03 (pravidelné spoření (týden 2026-48))
@@ -55,5 +55,7 @@ POSLEDNÍ UDÁLOSTI:
 💀 Orbit: $1000.91 (+0.1 %) · 2 obch. · úspěšnost 50 % · PF 2.33 · ✝ vyřazen na přání Jaku
    2026-11-24T02:17:43+00:00 🌡️ Nálada trhu: neutral → risk_off (BTC ↓, S&P ↓)
    2026-11-24T06:00:58+00:00 🔻 Stín (simulace) uzavřel short BAT/USD: -6.52 $ (-4.2 %) - stop-loss
+   2026-11-24T08:00:58+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $147 @ 95.4374, stop 102.336 - sestupný trend, -2.6 % za 24 h
+   2026-11-24T08:00:58+00:00 🐻 Stín (simulace) otevřel short CRV/USD za $175 @ 0.17932, stop 0.190653 - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.
 
 GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-24T06:26 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
