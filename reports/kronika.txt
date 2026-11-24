@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 794 signálů, 162 obchodů, 535 hodinových snímků radaru, 617 událostí
+Celkem zapsáno: 795 signálů, 162 obchodů, 536 hodinových snímků radaru, 617 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 0, průměr -28.0 %
@@ -15,6 +15,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -24.8 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +4.7 %
+  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -21.8 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -2.7 %
@@ -29,7 +30,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -8.8 %
   Medvěd    | plno pozic                                    |   5x, vyhrálo by 2, průměr +2.1 %
-  Stín      | plno pozic                                    |  49x, vyhrálo by 29, průměr +1.9 %
+  Stín      | plno pozic                                    |  47x, vyhrálo by 27, průměr +1.7 %
 
 UZAVŘENÉ OBCHODY:
   Medvěd    |   9 obchodů, 2 výher, průměr -6.9 %, celkem -84.47 $
@@ -39,4 +40,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   3 obchodů, 2 výher, průměr +5.2 %, celkem +13.31 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), PENGU (127h), PEARL (115h), ETH (80h), TRUMP (65h), SOL (52h), VVV (50h), WASTED (49h), GTA6 (46h), SUI (46h), HYPE (44h), XRP (44h), PUMP (42h), DCTY (35h), BP (30h), LUCIA (29h), VINE (28h), CHUNKEE (27h), WSTAR (26h)
+  BTC (168h), CATE (168h), PENGU (128h), PEARL (115h), ETH (81h), TRUMP (65h), SOL (51h), VVV (50h), WASTED (49h), GTA6 (46h), SUI (46h), XRP (44h), HYPE (43h), PUMP (42h), DCTY (35h), BP (29h), LUCIA (29h), VINE (28h), CHUNKEE (27h), WSTAR (26h)
