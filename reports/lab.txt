@@ -1,14 +1,14 @@
-LABORATOŘ 2026-11-24: trénink 2026-08-26..2026-10-25, test 2026-10-25..2026-11-24
+LABORATOŘ 2026-11-25: trénink 2026-08-27..2026-10-26, test 2026-10-26..2026-11-25
 
-DLOUHODOBÝ TEST 2021-12-29..2026-11-24 (denní svíčky, nákup za ranní cenu, bez přežití)
-Kompas   roč.  +9.0 % | celkem  +52.4 % | max propad 16.3 % | Sharpe 0.67 | 33 obch., úspěšnost 52 % | 2021:-0% 2022:-7% 2023:+11% 2024:+14% 2025:+26% 2026:+3%
-Lev      roč. +14.6 % | celkem  +95.0 % | max propad 32.7 % | Sharpe 0.76 | 121 obch., úspěšnost 43 % | 2021:-1% 2022:-14% 2023:+62% 2024:+78% 2025:-5% 2026:-16%
-Lev-50   roč.  +3.6 % | celkem  +18.9 % | max propad 38.3 % | Sharpe 0.27 | 189 obch., úspěšnost 50 % | 2021:-1% 2022:-11% 2023:+44% 2024:+42% 2025:-9% 2026:-27%
-Sokol    roč.  +5.0 % | celkem  +27.1 % | max propad  7.3 % | Sharpe 0.76 | 127 obch., úspěšnost 73 % | 2021:+0% 2022:+0% 2023:+1% 2024:+11% 2025:+8% 2026:+5%
-Spořič   roč.  +8.0 % | celkem  +45.8 % | max propad 31.2 % | Sharpe 0.46 | 0 obch., úspěšnost 0 % | 2021:-0% 2022:-7% 2023:+12% 2024:+53% 2025:+4% 2026:-12%
+DLOUHODOBÝ TEST 2021-12-30..2026-11-25 (denní svíčky, nákup za ranní cenu, bez přežití)
+Kompas   roč.  +8.5 % | celkem  +49.4 % | max propad 16.3 % | Sharpe 0.64 | 34 obch., úspěšnost 50 % | 2021:-0% 2022:-8% 2023:+11% 2024:+14% 2025:+26% 2026:+1%
+Lev      roč. +15.2 % | celkem +100.0 % | max propad 32.7 % | Sharpe 0.79 | 121 obch., úspěšnost 43 % | 2021:-1% 2022:-14% 2023:+62% 2024:+78% 2025:-5% 2026:-15%
+Lev-50   roč.  +3.9 % | celkem  +20.9 % | max propad 38.3 % | Sharpe 0.28 | 190 obch., úspěšnost 49 % | 2021:-0% 2022:-13% 2023:+44% 2024:+42% 2025:-9% 2026:-25%
+Sokol    roč.  +4.8 % | celkem  +26.1 % | max propad  7.3 % | Sharpe 0.74 | 129 obch., úspěšnost 72 % | 2021:+0% 2022:+0% 2023:+1% 2024:+11% 2025:+8% 2026:+4%
+Spořič   roč.  +7.7 % | celkem  +43.9 % | max propad 31.2 % | Sharpe 0.44 | 0 obch., úspěšnost 0 % | 2021:-0% 2022:-7% 2023:+12% 2024:+53% 2025:+4% 2026:-14%
 Želva    roč.  +7.6 % | celkem  +43.5 % | max propad 33.1 % | Sharpe 0.32 | 19 obch., úspěšnost 42 % | 2021:+0% 2022:-15% 2023:+39% 2024:+50% 2025:-6% 2026:-15%
-S&P 500  roč. +10.2 % | celkem  +61.2 % | max propad 24.5 % | Sharpe 0.65 | srovnání: jen držet | 2021:-1% 2022:-18% 2023:+26% 2024:+25% 2025:+18% 2026:+7%
-Bitcoin  roč.  +5.5 % | celkem  +29.8 % | max propad 67.0 % | Sharpe 0.30 | srovnání: jen držet | 2021:-2% 2022:-64% 2023:+156% 2024:+121% 2025:-6% 2026:-30%
+S&P 500  roč. +10.2 % | celkem  +60.9 % | max propad 24.5 % | Sharpe 0.65 | srovnání: jen držet | 2021:-0% 2022:-18% 2023:+26% 2024:+25% 2025:+18% 2026:+6%
+Bitcoin  roč.  +5.3 % | celkem  +28.6 % | max propad 67.0 % | Sharpe 0.29 | srovnání: jen držet | 2021:+0% 2022:-64% 2023:+156% 2024:+121% 2025:-6% 2026:-32%
 
 VÍCELETÝ TEST 2021-11-28..2026-11-22 (po čtvrtletích; rozhoduje poctivé přehrání - nastavení vybrané jen z minulosti) | dokončen 2026-11-22
 Stín    NEPROŠEL ❌ | poctivě -99.9 % (v plusu 0/16 čtvrtletí s obchody) | nejodolnější {'atr_mult': 3.0, 'max_hold_h': 48} v plusu 2/20, 3443 obch.
