@@ -27,19 +27,19 @@ Degen II [ALIVE] $996.19 (-0.38 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1065.04 (+6.50 %) | obchodů 59, úspěšnost 47 %, PF 1.29, max propad 9.0 %, poplatky $17.17
-   SHORT AAVE/USD: prodáno za 95.3897, teď 92.8049 (+2.7 %) - sestupný trend, -2.6 % za 24 h
-   SHORT CRV/USD: prodáno za 0.17923, teď 0.17366 (+3.1 %) - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
-   SHORT BTC/USD: prodáno za 60154.4, teď 59155.8 (+1.7 %) - sestupný trend, -2.0 % za 24 h
+Stín [ALIVE] $1061.27 (+6.13 %) | obchodů 59, úspěšnost 47 %, PF 1.29, max propad 9.0 %, poplatky $17.17
+   SHORT AAVE/USD: prodáno za 95.3897, teď 93.2025 (+2.3 %) - sestupný trend, -2.6 % za 24 h
+   SHORT CRV/USD: prodáno za 0.17923, teď 0.17608 (+1.8 %) - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.6 % -> sázk
+   SHORT BTC/USD: prodáno za 60154.4, teď 59334.6 (+1.4 %) - sestupný trend, -2.0 % za 24 h
    2026-11-22T12:00 BAT/USD: -1.98 $ (-0.8 %) stop-loss
    2026-11-22T12:00 DOT/USD: -10.18 $ (-3.4 %) stop-loss
    2026-11-23T06:00 PEPE/USD: -8.67 $ (-3.0 %) stop-loss
    2026-11-23T14:00 BAT/USD: -12.36 $ (-4.1 %) stop-loss
    2026-11-24T06:00 BAT/USD: -6.52 $ (-4.2 %) stop-loss
 
-CELKEM (živí boti) $5974.44 z $6000 (-0.43 %)
+CELKEM (živí boti) $5970.67 z $6000 (-0.49 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.4 %, bitcoin -24.1 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.4 %, bitcoin -24.2 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-23T14:38:30+00:00 🔻 Medvěd PRODAL SQQQ: -27.14 $ (-16.4 %) - smrt bota
