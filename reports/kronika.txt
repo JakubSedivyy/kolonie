@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 810 signálů, 164 obchodů, 566 hodinových snímků radaru, 624 událostí
+Celkem zapsáno: 811 signálů, 165 obchodů, 567 hodinových snímků radaru, 625 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 0, průměr -28.0 %
@@ -16,6 +16,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 1, průměr +27.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -24.8 %
+  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -18.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -10.8 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +4.7 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
@@ -36,9 +37,9 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
 UZAVŘENÉ OBCHODY:
   Medvěd    |   7 obchodů, 2 výher, průměr -8.2 %, celkem -78.00 $
   Sokol     |   2 obchodů, 0 výher, průměr -2.7 %, celkem -26.04 $
-  Stín      |  21 obchodů, 9 výher, průměr -0.9 %, celkem -23.42 $
+  Stín      |  22 obchodů, 9 výher, průměr -0.9 %, celkem -24.87 $
   Trendy    |   4 obchodů, 2 výher, průměr +0.7 %, celkem +5.44 $
   Vlna      |   3 obchodů, 2 výher, průměr +5.2 %, celkem +13.31 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), PENGU (133h), PEARL (116h), ETH (74h), TRUMP (57h), HYPE (54h), SUI (53h), VVV (52h), SOL (48h), WASTED (42h), MON (40h), XRP (40h), PUMP (35h), DCTY (35h), VINE (33h), GTA6 (30h), ZEC (27h), CHUNKEE (27h), LUCIA (26h)
+  BTC (168h), CATE (168h), PENGU (134h), PEARL (115h), ETH (75h), TRUMP (57h), HYPE (54h), SUI (53h), VVV (53h), SOL (49h), WASTED (42h), MON (40h), XRP (40h), PUMP (35h), DCTY (35h), VINE (34h), GTA6 (29h), ZEC (27h), CHUNKEE (27h), LUCIA (26h)
