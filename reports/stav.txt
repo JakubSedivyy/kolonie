@@ -27,20 +27,18 @@ Degen II [ALIVE] $996.14 (-0.39 %) | obchodů 5, úspěšnost 40 %, PF 0.77, max
    2026-11-05T22:31 COGE·8UQd: +4.71 $ (+31.1 %) cíl zisku
    2026-11-10T03:01 OnlyCats·BAft: -3.70 $ (-24.4 %) stop-loss
 
-Stín [ALIVE] $1048.73 (+4.87 %) | obchodů 62, úspěšnost 48 %, PF 1.32, max propad 9.2 %, poplatky $17.68
-   SHORT CRV/USD: prodáno za 0.170246, teď 0.17563 (-3.2 %) - sestupný trend, -2.5 % za 24 h · paměť: podobné obchody +0.7 % -> sázk
-   2026-11-23T14:00 BAT/USD: -12.36 $ (-4.1 %) stop-loss
+Stín [ALIVE] $1046.67 (+4.67 %) | obchodů 63, úspěšnost 48 %, PF 1.25, max propad 9.4 %, poplatky $17.83
    2026-11-24T06:00 BAT/USD: -6.52 $ (-4.2 %) stop-loss
    2026-11-25T18:00 BTC/USD: +2.38 $ (+0.9 %) trailing stop
    2026-11-25T20:00 CRV/USD: +4.54 $ (+2.6 %) trailing stop
    2026-11-26T01:00 AAVE/USD: -1.44 $ (-1.0 %) stop-loss
+   2026-11-26T12:00 CRV/USD: -10.26 $ (-4.0 %) stop-loss
 
-CELKEM (živí boti) $5963.63 z $6000 (-0.61 %)
+CELKEM (živí boti) $5961.57 z $6000 (-0.64 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.7 %, bitcoin -22.7 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.7 %, bitcoin -22.5 %
 
 POSLEDNÍ UDÁLOSTI:
-   2026-11-24T08:00:58+00:00 🐻 Stín (simulace) otevřel short AAVE/USD za $147 @ 95.4374, stop 102.336 - sestupný trend, -2.6 % za 24 h
    2026-11-24T08:00:58+00:00 🐻 Stín (simulace) otevřel short CRV/USD za $175 @ 0.17932, stop 0.190653 - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.
    2026-11-24T09:00:58+00:00 🐻 Stín (simulace) otevřel short BTC/USD za $271 @ 60184.5, stop 62591.9 - sestupný trend, -2.0 % za 24 h
    2026-11-24T14:30:56+00:00 🔻 Sokol PRODAL DIA: -12.58 $ (-2.6 %) - odraz hotový (nad 5denním průměrem)
@@ -57,5 +55,6 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-25T23:00:55+00:00 🐻 Stín (simulace) otevřel short CRV/USD za $254 @ 0.170331, stop 0.177903 - sestupný trend, -2.5 % za 24 h · paměť: podobné obchody +0
    2026-11-26T01:00:30+00:00 🔻 Stín (simulace) uzavřel short AAVE/USD: -1.44 $ (-1.0 %) - stop-loss
    2026-11-26T06:58:39+00:00 🐣 Kolonie startuje (papírový účet). Boti: Orbit, Trendy, Memec, Vlna, Šeptač, Medvěd, Kapitán, Kompas, Lev, Sokol, Spořič, Degen II, L
+   2026-11-26T12:00:45+00:00 🔻 Stín (simulace) uzavřel short CRV/USD: -10.26 $ (-4.0 %) - stop-loss
 
 GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-26T12:58 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
