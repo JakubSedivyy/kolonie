@@ -36,7 +36,7 @@ Stín [ALIVE] $1046.67 (+4.67 %) | obchodů 63, úspěšnost 48 %, PF 1.25, max 
 
 CELKEM (živí boti) $5961.57 z $6000 (-0.64 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.7 %, bitcoin -22.7 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.7 %, bitcoin -22.8 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-24T08:00:58+00:00 🐻 Stín (simulace) otevřel short CRV/USD za $175 @ 0.17932, stop 0.190653 - sestupný trend, -2.3 % za 24 h · paměť: podobné obchody +0.
