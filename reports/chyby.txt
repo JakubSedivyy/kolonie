@@ -1,1 +1,3 @@
-Nov 26 05:08:03 ubuntu-1gb-hel1-1 python[443029]: 2026-11-26 05:08:03,267 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
+Nov 26 05:59:21 ubuntu-1gb-hel1-1 python[443029]: 2026-11-26 05:59:21,420 WARNING colony.trends: radar stocktwits: 403 -> pauza 360 min
+Nov 26 06:09:40 ubuntu-1gb-hel1-1 python[443029]: 2026-11-26 06:09:40,553 WARNING colony.trends: radar geckoterminal: HTTPSConnectionPool(host='api.geckoterminal.com', port=443): Read timed out. (read timeout=20)
+Nov 26 06:09:53 ubuntu-1gb-hel1-1 python[443029]: 2026-11-26 06:09:53,724 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
