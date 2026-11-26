@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 814 signálů, 166 obchodů, 586 hodinových snímků radaru, 627 událostí
+Celkem zapsáno: 814 signálů, 166 obchodů, 587 hodinových snímků radaru, 627 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 0, průměr -28.0 %
@@ -18,6 +18,7 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 1, průměr +27.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -24.8 %
+  Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +27.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -10.8 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +4.7 %
@@ -30,7 +31,6 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +27.0 %
-  Medvěd    | plno pozic                                    |   3x, vyhrálo by 2, průměr +4.8 %
   Stín      | plno pozic                                    |  25x, vyhrálo by 10, průměr -1.9 %
 
 UZAVŘENÉ OBCHODY:
@@ -41,4 +41,4 @@ UZAVŘENÉ OBCHODY:
   Vlna      |   3 obchodů, 2 výher, průměr +5.2 %, celkem +13.31 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), PENGU (138h), PEARL (105h), ETH (80h), VVV (65h), HYPE (59h), SUI (56h), TRUMP (49h), VINE (46h), MON (46h), SOL (44h), XRP (40h), WASTED (32h), PUMP (32h), ZEC (31h), CHUNKEE (27h), TOSHI (25h), PEI (25h), BONK (23h)
+  BTC (168h), CATE (168h), PENGU (138h), PEARL (106h), ETH (80h), VVV (65h), HYPE (60h), SUI (56h), TRUMP (48h), MON (46h), VINE (45h), SOL (44h), XRP (40h), PUMP (32h), WASTED (31h), ZEC (31h), CHUNKEE (27h), TOSHI (25h), PEI (25h), BONK (23h)
