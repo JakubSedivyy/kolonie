@@ -1563,6 +1563,20 @@ def test_lab_multi_year_includes_shadow():
         lab.VARIANTS, config.STATE_DIR, my.YEARS, lab.MULTIYEAR_ONLY = old_v, old_dir, old_years, old_only
 
 
+def test_retired_orbit_sends_no_watch_message():
+    """Vyřazený Orbit (22. 11.) dál každé ráno hlásil 'dnes sleduje' - už nesmí."""
+    import colony.live as live
+    import types
+    orbit = types.SimpleNamespace(name="Orbit", wallet=types.SimpleNamespace(status="ALIVE"),
+                                  universe=lambda ctx: ["SPY", "QQQ"])
+    c = types.SimpleNamespace(bar_agents=[orbit], retired={}, ctx={})
+    assert live.Colony.orbit_watch_msg(c) == "🔭 Orbit dnes sleduje: SPY, QQQ"
+    c.retired = {"Orbit": "pětiletý test"}
+    assert live.Colony.orbit_watch_msg(c) is None
+    c.retired, orbit.wallet.status = {}, "DEAD"
+    assert live.Colony.orbit_watch_msg(c) is None
+
+
 if __name__ == "__main__":
     for name, fn in list(globals().items()):
         if name.startswith("test_"):

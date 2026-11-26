@@ -219,7 +219,16 @@ class Colony:
             if movers:
                 self.ctx["stock_movers"] = movers
                 self.ctx["movers_day"] = day
-                self.tg.send("🔭 Orbit dnes sleduje: " + ", ".join(self.bar_agents[0].universe(self.ctx)))
+                msg = self.orbit_watch_msg()
+                if msg:
+                    self.tg.send(msg)
+
+    def orbit_watch_msg(self):
+        """Ranní zpráva, co Orbit sleduje - jen když Orbit ještě žije (vyřazený ji nemá posílat)."""
+        orbit = self.bar_agents[0]
+        if orbit.wallet.status == "DEAD" or orbit.name in self.retired:
+            return None
+        return "🔭 Orbit dnes sleduje: " + ", ".join(orbit.universe(self.ctx))
 
     # ------------------------------------------------------------------ boti
     def _close_all(self, agent, why, now):
