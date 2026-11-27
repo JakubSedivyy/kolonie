@@ -58,4 +58,4 @@ POSLEDNÍ UDÁLOSTI:
    2026-11-27T05:00:42+00:00 🔻 Stín (simulace) uzavřel short TRUMP/USD: -10.08 $ (-9.1 %) - stop-loss
    2026-11-27T05:00:42+00:00 🧠 Stín se poučil: když coin = TRUMP/USD, prodělal 11.5x (průměr -3.4 %) - příště to nekoupí
 
-GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-27T05:01 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
+GROK (radar trendů): Grok odmítl klíč, pauza do 2026-11-27T13:02 - HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key 
