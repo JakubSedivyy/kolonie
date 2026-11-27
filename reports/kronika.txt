@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 817 signálů, 167 obchodů, 607 hodinových snímků radaru, 632 událostí
+Celkem zapsáno: 817 signálů, 167 obchodů, 608 hodinových snímků radaru, 632 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 0, průměr -28.0 %
@@ -24,14 +24,14 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -21.8 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -2.7 %
-  Stín      | plno pozic                                    |  19x, vyhrálo by 1, průměr -5.3 %
+  Stín      | plno pozic                                    |  20x, vyhrálo by 1, průměr -5.2 %
 
 UZAVŘENÉ OBCHODY:
   Medvěd    |   3 obchodů, 0 výher, průměr -18.0 %, celkem -67.20 $
   Sokol     |   2 obchodů, 0 výher, průměr -2.7 %, celkem -26.04 $
-  Stín      |  21 obchodů, 7 výher, průměr -1.6 %, celkem -49.34 $
+  Stín      |  20 obchodů, 6 výher, průměr -2.1 %, celkem -74.75 $
   Trendy    |   3 obchodů, 2 výher, průměr +2.0 %, celkem +10.25 $
   Vlna      |   2 obchodů, 2 výher, průměr +9.1 %, celkem +15.38 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), PENGU (147h), PEARL (101h), ETH (79h), VVV (68h), HYPE (65h), SUI (53h), XRP (48h), MON (48h), SOL (47h), TRUMP (40h), ZEC (36h), VINE (35h), TOSHI (33h), PUMP (31h), PEI (25h), BONK (23h), ZYLO (23h), WASTED (22h)
+  BTC (168h), CATE (168h), PENGU (148h), PEARL (101h), ETH (78h), VVV (68h), HYPE (65h), SUI (53h), XRP (49h), MON (48h), SOL (47h), TRUMP (39h), ZEC (36h), VINE (34h), TOSHI (34h), PUMP (31h), PEI (25h), BONK (23h), ZYLO (23h), WASTED (21h)
