@@ -1,5 +1,5 @@
 KRONIKA - posledních 7 dní (archiv od začátku: state/kronika.db)
-Celkem zapsáno: 816 signálů, 167 obchodů, 604 hodinových snímků radaru, 631 událostí
+Celkem zapsáno: 817 signálů, 167 obchodů, 605 hodinových snímků radaru, 632 událostí
 
 NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   3x, vyhrálo by 0, průměr -28.0 %
@@ -15,7 +15,6 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 1, průměr +27.0 %
-  Degen II  | paměť: když stáří coinu = 6-24 h, prodělal js |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -90.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 1, průměr +27.0 %
@@ -27,14 +26,14 @@ NEKOUPENÉ SIGNÁLY A JAK BY DOPADLY (stínové obchody):
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -2.7 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -28.0 %
   Degen II  | paměť: když likvidita = do 150k $, prodělal j |   1x, vyhrálo by 0, průměr -90.0 %
-  Stín      | plno pozic                                    |  10x, vyhrálo by 0, průměr -6.1 %
+  Stín      | plno pozic                                    |  11x, vyhrálo by 0, průměr -6.4 %
 
 UZAVŘENÉ OBCHODY:
-  Medvěd    |   5 obchodů, 2 výher, průměr -8.1 %, celkem -54.63 $
+  Medvěd    |   3 obchodů, 0 výher, průměr -18.0 %, celkem -67.20 $
   Sokol     |   2 obchodů, 0 výher, průměr -2.7 %, celkem -26.04 $
   Stín      |  21 obchodů, 7 výher, průměr -1.6 %, celkem -49.34 $
   Trendy    |   3 obchodů, 2 výher, průměr +2.0 %, celkem +10.25 $
   Vlna      |   2 obchodů, 2 výher, průměr +9.1 %, celkem +15.38 $
 
 NEJČASTĚJŠÍ COINY NA RADARU:
-  BTC (168h), CATE (168h), PENGU (145h), PEARL (103h), ETH (77h), VVV (68h), HYPE (64h), SUI (53h), MON (48h), XRP (46h), SOL (45h), TRUMP (43h), VINE (37h), ZEC (34h), PUMP (31h), TOSHI (31h), WASTED (25h), PEI (25h), CHUNKEE (23h), BONK (23h)
+  BTC (168h), CATE (168h), PENGU (146h), PEARL (102h), ETH (78h), VVV (68h), HYPE (65h), SUI (53h), MON (48h), XRP (46h), SOL (46h), TRUMP (42h), VINE (37h), ZEC (35h), PUMP (31h), TOSHI (31h), PEI (25h), WASTED (24h), BONK (23h), CHUNKEE (22h)
