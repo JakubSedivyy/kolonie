@@ -1,4 +1,1 @@
-Nov 27 14:13:18 ubuntu-1gb-hel1-1 python[524152]: 2026-11-27 14:13:18,585 WARNING colony.trends: radar gdelt: HTTPSConnectionPool(host='api.gdeltproject.org', port=443): Read timed out. (read timeout=20)
-Nov 27 14:33:45 ubuntu-1gb-hel1-1 python[524152]: 2026-11-27 14:33:45,600 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
-Nov 27 14:35:01 ubuntu-1gb-hel1-1 python[524152]: /root/colony/.venv/lib/python3.14/site-packages/pydantic/main.py:520: UserWarning: Pydantic serializer warnings:
-Nov 27 15:04:03 ubuntu-1gb-hel1-1 python[524152]: 2026-11-27 15:04:03,243 WARNING colony.grok: grok: neplatný XAI_API_KEY - pauza 6 h (oprav klíč v .env na serveru): HTTP 400: {"code":"invalid-argument","error":"Incorrect API key provided. You can obtain an API key from https://console.x.ai."}
+Nov 27 15:35:23 ubuntu-1gb-hel1-1 python[524152]: 2026-11-27 15:35:23,695 WARNING colony.trends: radar gdelt: 429 -> pauza 60 min
