@@ -36,7 +36,7 @@ Stín [ALIVE] $1036.54 (+3.65 %) | obchodů 64, úspěšnost 47 %, PF 1.19, max 
 
 CELKEM (živí boti) $5951.19 z $6000 (-0.81 %)
 HŘBITOV: Orbit ($1001, 2 obch.), Trendy ($996, 12 obch.), Memec ($993, 39 obch.), Vlna ($976, 14 obch.), Šeptač ($999, 0 obch.), Medvěd ($935, 18 obch.), Kapitán ($999, 0 obch.), Lovec ($965, 10 obch.), Věštec ($999, 0 obch.)
-SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.7 %, bitcoin -21.4 %
+SROVNÁNÍ S TRHEM od 2026-11-02 (kdyby se jen drželo): S&P 500 -4.7 %, bitcoin -21.5 %
 
 POSLEDNÍ UDÁLOSTI:
    2026-11-24T14:35:29+00:00 🔭 Orbit dnes sleduje: SPY, QQQ, BENF, RMSG, FCHL, SOXL, FGL, PLAG, FNGR, NVDA, ZBAO, YFOR
